@@ -45,7 +45,7 @@ h4 {
   margin-bottom: 2%;
 }
 
-/*--------------------------------*/
+/*--------------Navigation interne------------------*/
 
 .nav2 {
   display: flex;
@@ -71,27 +71,17 @@ h4 {
 
 /*--------------------Images-----------------------*/
 
-.nav2 .physiques {
+.nav2 .physiques,
+.nav2 .psychologiques,
+.nav2 .sociaux {
   width: 240px;
   height: 120px;
   border-radius: 20%;
   margin-top: -50px;
 }
 .nav2 .psychologiques {
-  width: 240px;
-  height: 120px;
-  border-radius: 20%;
   margin-left: 50px;
   margin-right: 50px;
-  margin-top: -50px;
-}
-
-.nav2 .sociaux {
-  width: 240px;
-  height: 120px;
-  border-radius: 20%;
-
-  margin-top: -50px;
 }
 
 /*----------------------Introduction---------------*/

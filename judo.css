@@ -109,7 +109,7 @@ body .Début {
   padding: 2%;
 }
 
-/*---------------------------------------*/
+/*--------------Evolution-------------------------*/
 
 #Evolution {
   text-align: center;
@@ -170,24 +170,19 @@ body .Début {
   margin-bottom: 2%;
 }
 
-.La-pratique1 {
-  display: none;
-}
-
+.La-pratique1,
 .test {
   display: none;
 }
 
 @media screen and (max-width: 992px) {
-  .La-pratique1 {
+  .La-pratique1,
+  .test {
     display: block;
     text-align: center;
   }
   .La-pratique2 {
     display: none;
-  }
-  .test {
-    display: block;
   }
 }
 
@@ -195,16 +190,7 @@ body .Début {
 #La-pratique .block2,
 #La-pratique .block3 {
   text-align: center;
-  padding: 2%;
-}
-
-.texte-tatamis,
-.texte-dojo {
-}
-
-/*----------------------------*/
-
-#La-pratique h2 {
+  padding: 1%;
 }
 
 #La-pratique .La-pratique2 {
@@ -220,7 +206,7 @@ body .Début {
 #La-pratique img {
   width: 150px;
   height: 150px;
-  margin: 4% 0%;
+  margin: 3% 0%;
 }
 
 /*-------------------------------------*/
