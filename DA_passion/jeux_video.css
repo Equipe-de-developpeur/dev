@@ -1,0 +1,189 @@
+body {
+  background-color: #7b7171 !important;
+}
+
+.divvidéo {
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.vidéo1 {
+  width: 80%;
+  box-shadow: 0px 0px 10px white;
+}
+
+/*----------------------carousel------------------------------*/
+
+.carousel img {
+  width: 100%;
+}
+
+.fléche1 {
+  filter: invert(1);
+}
+
+/*---------------------------OGAME------------*/
+
+#OGAME {
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(
+    to top right,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 1) 30%
+  );
+  text-align: justify;
+  padding: 1% 5%;
+  width: 80%;
+  margin: auto;
+  margin-top: 9%;
+  margin-bottom: 9%;
+  box-shadow: 30px 30px 30px #bbb7b7;
+}
+
+#OGAME .titre1 {
+  margin-bottom: 5%;
+}
+
+#OGAME .planète1 {
+  display: flex;
+  margin: auto;
+  width: 60%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#OGAME .ogamenom {
+  display: flex;
+  margin: auto;
+  width: 45%;
+}
+
+#OGAME h4 {
+  color: #1b85ac;
+}
+
+#OGAME .divimage {
+  background-image: url(image/jeux/ogameplanete2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120px;
+}
+
+/*---------------------------LOL-----------------*/
+
+#LOL {
+  color: #dfbf37;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-image: url(image/jeux/fondLOLmodifié.jpg);
+  background-repeat: repeat-y;
+  background-size: cover;
+  text-align: justify;
+  padding: 1% 5%;
+  width: 80%;
+  margin: auto;
+  box-shadow: 30px 30px 30px #bbb7b7;
+}
+
+#LOL .titre2 {
+  margin-bottom: 5%;
+}
+
+#LOL .lolnom {
+  display: flex;
+  margin: auto;
+  width: 40%;
+}
+
+#LOL .jeu {
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+
+@media screen and (max-width: 1000px) {
+  #LOL .jeu {
+    margin-bottom: 5%;
+  }
+}
+
+#LOL .carte {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  margin-bottom: 4%;
+}
+
+#LOL h4 {
+  color: white;
+}
+
+/*---------------------------C.A.T.S.-----------------*/
+
+#CATS {
+  color: #ffe55e;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(
+    to top right,
+    rgba(119, 119, 148, 0.5),
+    rgba(119, 119, 148, 1) 30%
+  );
+  text-align: justify;
+  padding: 1% 5%;
+  width: 80%;
+  margin: auto;
+  box-shadow: 30px 30px 30px #bbb7b7;
+  margin-top: 9%;
+}
+
+#CATS .catsnom {
+  display: flex;
+  margin: auto;
+  width: 50%;
+}
+
+#CATS .combat {
+  display: flex;
+  margin: auto;
+  width: 95%;
+  margin-bottom: 4%;
+}
+
+#CATS .chat {
+  display: flex;
+  margin: auto;
+  width: 75%;
+  margin-top: 8%;
+  margin-bottom: 4%;
+}
+
+#CATS .titre3 {
+  margin-bottom: 5%;
+}
+
+#CATS h4 {
+  color: white;
+}
+
+/*--------------------footer---------------*/
+
+footer {
+  margin-top: 4%;
+  height: 200px;
+  background-image: url(image/jeux/footer1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding-top: 70px;
+}
+
+.fondcontact {
+  text-align: center;
+}
+
+.fondcontact a:link {
+  color: rgb(183, 209, 226);
+}
