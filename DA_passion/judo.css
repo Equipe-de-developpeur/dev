@@ -8,8 +8,7 @@ h1 {
   position: relative;
   color: white;
   text-align: center;
-  font-size: 600% !important;
-  margin-top: -3% !important;
+  font-size: 9vw;
 }
 
 ul {
@@ -37,5 +36,5 @@ ul .moiexpé a {
 a {
   text-decoration: none !important;
   color: white !important;
-  font-size: 170% !important;
+  font-size: 1.45vw !important;
 }
