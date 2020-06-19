@@ -46,7 +46,7 @@
         
         .container {
             background-color: #fff;
-            box-shadow: 5px, 5px, 25px, black;
+            box-shadow: 5px 5px 25px grey;
             padding: 20px;
         }
         
