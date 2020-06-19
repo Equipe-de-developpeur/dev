@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Ma passion moto</title>
+		<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script src="js/effets.js" type="text/javascript"></script>
+		<link href="bootstrap-4.5.0-examples/assets/dist/css/bootstrap.css" rel="stylesheet">
+	</head>
+	<body>
+		<button class="wobble" onclick="topFunction()" id="myBtn" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+		width="26" height="26"
+		viewBox="0 0 172 172"
+		style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M99.07572,154.01442l6.61538,-87.86058h20.82812c2.17067,0 3.79868,-1.05949 5.42669,-3.17849c0.54267,-2.11899 0.54267,-4.23798 -0.54267,-5.8143c-15.19471,-21.70673 -40.64844,-42.35397 -41.73377,-42.87079c-1.03365,-0.51683 -2.58413,-1.00781 -3.66947,-1.03365c-0.02584,0 -0.07753,-0.02584 -0.10337,-0.02584c-1.08533,0 -2.71334,0.51683 -3.25601,1.05949c-1.08534,0.51683 -26.61659,20.64724 -41.8113,42.87079c-1.08533,2.11899 -1.62801,4.23798 -0.54267,5.8143c1.08533,2.11899 2.71334,3.17849 4.88401,3.17849h20.82813l6.61538,87.86058c2.11899,2.63582 7.44231,4.75481 13.28245,4.75481c5.27163,0 11.0601,-1.57632 13.17909,-4.75481z"></path></g></g></svg></button>
+		<div class="fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#intro"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+			width="30" height="30"
+			viewBox="0 0 172 172"
+			style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M149.253,164.518c-11.352,-7.14875 -45.193,-23.76825 -132.2035,-40.34475c-7.2455,-11.524 -11.6745,-34.615 -11.6745,-50.4605c0,-13.0075 3.66575,-25.6495 10.58875,-36.56075l1.77375,-2.7735l-5.96625,-10.0835c9.4385,-5.77275 34.013,-18.92 61.9415,-18.92c39.44175,0 75.36825,32.5725 75.36825,68.33775c0,1.6985 -4.09575,3.698 -15.66275,3.698c-4.8375,0 -9.976,-0.31175 -14.749,-0.61275c-4.33225,-0.258 -8.37425,-0.4945 -11.66375,-0.4945c-3.655,0 -13.3945,0 -13.3945,7.77225v3.655l3.397,1.34375c15.3295,6.0415 57.48025,34.49675 68.9935,42.34425c-1.34375,5.1385 -5.375,16.77 -16.7485,33.09925z" fill="#000000"></path><path d="M73.71275,10.75c35.69,0 68.27325,28.4875 69.92875,60.42575c-1.62325,0.39775 -4.69775,0.86 -10.22325,0.86c-4.6225,0 -9.6105,-0.301 -14.4265,-0.59125c-4.35375,-0.26875 -8.471,-0.516 -11.997,-0.516c-3.655,0 -6.2995,0.26875 -8.54625,0.84925c-7.5465,1.978 -10.2125,7.85825 -10.2125,12.28725v7.31l6.80475,2.6875c12.58825,4.97725 46.6765,27.348 64.68275,39.56c-1.72,5.031 -5.203,13.1365 -12.083,23.68225c-15.265,-8.43875 -50.5895,-23.1985 -127.1725,-37.95825c-5.90175,-10.965 -9.718,-31.35775 -9.718,-45.63375c0,-11.9755 3.3755,-23.61775 9.75025,-33.67975l3.526,-5.55775l-3.34325,-5.66525l-1.548,-2.61225c10.95425,-6.09525 31.519,-15.44775 54.57775,-15.44775M73.71275,0c-37.87225,0 -69.187,22.58575 -69.187,22.58575l6.9015,11.68525c-7.23475,11.40575 -11.42725,24.94 -11.42725,39.44175c0,16.0605 4.6655,42.77425 13.85675,55.3195c114.4015,21.586 136.64325,42.96775 136.64325,42.96775c19.81225,-26.79975 21.5,-43 21.5,-43c0,0 -54.5025,-37.625 -73.014,-44.935c0,-1.849 3.182,-2.39725 8.0195,-2.39725c6.9015,0 17.18925,1.10725 26.4235,1.10725c11.309,0 21.03775,-1.66625 21.03775,-9.06225c-0.01075,-40.71025 -40.04375,-73.71275 -80.754,-73.71275z" fill="#e74c3c"></path><path d="M129.52675,154.63875c-19.23175,-8.041 -53.54575,-19.2425 -112.47725,-30.4655c-5.3965,-8.58925 -9.04075,-23.263 -10.67475,-36.163c69.8965,21.9085 115.498,46.83775 128.8495,54.61z" fill="#e74c3c"></path><path d="M13.03975,95.7825c58.7165,19.12425 98.86775,39.8825 115.197,49.03075l-1.3975,2.93475c-19.9305,-7.8475 -53.019,-18.11375 -106.382,-28.4015c-3.19275,-5.96625 -5.7405,-14.67375 -7.4175,-23.564M0.24725,80.496c1.0535,16.0175 5.6115,37.625 13.6095,48.53625c64.715,12.212 99.9105,24.34875 118.293,32.594l10.02975,-21.12375c0,0 -51.7935,-32.75525 -141.93225,-60.0065z" fill="#e74c3c"></path><g><path d="M76.583,79.593c-3.7625,-2.15 -5.332,-4.78375 -5.461,-9.2665c1.677,-6.20275 5.77275,-14.319 9.57825,-14.319c2.3005,0.1935 50.3315,4.33225 71.54125,5.40725c5.547,9.27725 11.31975,31.2825 1.6125,62.2855z" fill="#3498db"></path><path d="M81.356,61.43625c6.794,0.59125 46.483,3.9775 67.54225,5.1815c3.77325,8.15925 7.68625,25.12275 1.6555,49.00925l-71.294,-40.68875c-1.6985,-0.9675 -2.52625,-1.6985 -2.7305,-4.00975c1.161,-3.8055 3.34325,-8.127 4.82675,-9.49225M80.711,50.62175c-10.30925,0 -14.97475,19.049 -14.97475,19.049c0,6.6435 2.41875,11.2875 8.18075,14.5985l82.93625,47.3215c14.147,-38.7 5.5255,-65.876 -1.64475,-75.422c-19.565,-0.80625 -73.8525,-5.5255 -73.8525,-5.5255c-0.215,-0.01075 -0.43,-0.0215 -0.645,-0.0215z" fill="#333333"></path></g><g fill="#e74c3c"><path d="M75.25,48.375c-8.90559,0 -16.125,7.21941 -16.125,16.125c0,8.90559 7.21941,16.125 16.125,16.125c8.90559,0 16.125,-7.21941 16.125,-16.125c0,-8.90559 -7.21941,-16.125 -16.125,-16.125z"></path><path d="M75.25,53.75c5.92325,0 10.75,4.82675 10.75,10.75c0,5.92325 -4.82675,10.75 -10.75,10.75c-5.92325,0 -10.75,-4.82675 -10.75,-10.75c0,-5.92325 4.82675,-10.75 10.75,-10.75M75.25,43c-11.87875,0 -21.5,9.62125 -21.5,21.5c0,11.87875 9.62125,21.5 21.5,21.5c11.87875,0 21.5,-9.62125 21.5,-21.5c0,-11.87875 -9.62125,-21.5 -21.5,-21.5z"></path></g></g></g></svg></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls=	"navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#intro">Introduction</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#voyageramoto">Voyager à moto</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#dangermoto">Le danger en moto</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#motosport">La moto un sport</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#designmoto">Le design moto</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#entretien">L'entretien</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#conclusion">Conclusion</a>
+					</li>
+				</ul>
+			</div>
+			</nav>
+		</div>
+		
+		<div id="progress01"></div>
+		
+		
+		<div id="intro" ></div>
+		<hr class="featurette-divider" style="visibility: hidden;">
+		<hr class="featurette-divider" style="visibility: hidden;">
+		<hr class="featurette-divider" style="visibility: hidden;">
+		
+		<div class="main" style="background-color: #2b2e33; color:white;">
+			<div class="row featurette" style="margin-top: 5rem;">
+				<div class="col-md-7">
+					<h2 class="featurette-heading">Laissez moi vous présenter ma passion plus en détails...</h2>
+					<p class="lead">Pour commencer, pour ceux qui ne le sauraient pas la moto est un motocycle à deux roues d'une cylindrée de plus de 50cm3. Voilà une bonne chose faite vous savez à peu près ce qu'est une moto. Mais il faut savoir que c'est plus qu’un simple moyen de transport, la moto, c’est avant tout une passion. Une passion partagée par une communauté à la fois hétéroclite et fraternelle, qui réunit des motards aussi différents que le sportif, le hipster ou l’aventurier. Pour moi cette passion trouve ces origines à mes 10 ans quand j'ai vu mon oncle arrivé sur la selle d'une HONDA CB600F HORNET. Emerveillé par cette machine, j'ai tout de suite voulu en savoir plus. Et dès mes 14 ans j'ai enfourcher mon premier engin à deux roues, puis quelques années plus tard j'ai obtenu mon permis A2 et j'ai fais mes premières balades dans ce magnifique cadre qu'est la région P.A.C.A. Certaines personnes se demandent surement pourquoi la moto et pas autre chose ? Tout en soulignant les aspects négatifs que cela entraine. Laissez moi donc vous montrez que la moto est la chose la plus cool qui existe.</p>
+				</div>
+				<div class="col-md-5">
+					<img class="img-fluid" src="img/accueilmoto.jpg">
+				</div>
+			</div>
+
+			<div id="voyageramoto" ></div>
+			<hr class="featurette-divider">
+			<hr class="featurette-divider" style="visibility: hidden;">
+			<hr class="featurette-divider" style="visibility: hidden;">
+
+			<div class="from-right">
+				<div class="row featurette">
+					<div class="col-md-7 order-md-2">
+						<h2 class="featurette-heading">Voyager en moto...</h2>
+						<p class="lead">Certes voyager à moto n'est pas ce qu'il y a de plus pratique. Mais c'est une expèrience unique qui procure des sensations qu'on ne peut ressentir qu'à bord d'un de ses engins. C’est le meilleur moyen de s’immiscer dans tous les paysages traversés, de ressentir les variations de températures, les vibrations de la machine, la vitesse, cette sensation de gravité dans les virages, l'adrénaline que cela procure, de sentir la force du vent, profiter des odeurs, des intempéries...<br>
+						C'est vrai aussi qu'une moto n'a pas de rangement ou très peu comparé à d'autres moyens de transport. Mais on peut toujours trouver des solutions annexes pour transporter ses affaires comme avec par exemple des valises cavalières et quelques tendeurs ce qui peut procurer un sentiment d'aventure, chose que vous n'aurez pas si vous mettez une valise dans le coffre de votre monospace.<br>
+						Et oui il est vrai qu'en moto il n'y a que deux places et c’est pas facile de se parler (à moins d’avoir un Intercom). Mais connaissez vous beaucoup de communauté aussi nombreuses qui se disent (presque tous) bonjour quand ils se croisent ? Et puis c’est le seul moyen de transport qui permet de traverser les bouchons de huit heures du matin, se garer presque n’importe où et payer moitié prix au péage.</p>
+					</div>
+					<div class="col-md-5 order-md-1">
+						<img class="img-fluid" src="img/voyage_moto.jpg">
+					</div>
+				</div>
+			</div>
+
+			<div id="dangermoto" ></div>
+			<hr class="featurette-divider">
+			<hr class="featurette-divider" style="visibility: hidden;">
+			<hr class="featurette-divider" style="visibility: hidden;">
+
+			<div class="from-left">
+				<div class="row featurette">
+					<div class="col-md-7">
+						<h2 class="featurette-heading">Le danger en moto...</h2>
+						<p class="lead">Oui la moto c'est dangereux, et cela même sans rouler vite : rouler à moto, c’est tout simplement se mettre en danger. C’est accepter d’être le seul maitre à bord, responsable de son intégrité physique. Savoir anticipé deux fois plus qu'avec un autre moyen de transport. Être à l'affut à chaque instant une fois derrière son guidon. Être responsable de ses actions et pourvoir les assumer. Et pour ça, c’est le meilleur moyen de se sentir vivant. Et vous, c’est quand la dernière fois que vous vous êtes senti vivant ?</p>
+					</div>
+					<div class="col-md-5">
+						<img class="img-fluid" src="img/danger_moto.jpg">
+					</div>
+				</div>
+			</div>
+
+			<div id="motosport" ></div>
+			<hr class="featurette-divider">
+			<hr class="featurette-divider" style="visibility: hidden;">
+			<hr class="featurette-divider" style="visibility: hidden;">
+
+			<div class="from-right">
+				<div class="row featurette">
+					<div class="col-md-7 order-md-2">
+						<h2 class="featurette-heading">La moto, un sport...</h2>
+						<p class="lead">Allez dire que la moto n'est pas une discipline sportive à un pilote de Supercross qui vient de passer 15 minutes à 190 pulsations/minute. Ou à un pilote d’Enduro Extrême qui vient de porter sa moto dans une pierrier de 150 mètres. Ou à un type qui vient de finir une endurance de 24 heures sans dormir, par 2 degrés. Et puis les courses de voiture sont considéré comme un sport mais pourtant ce n'est pas en F1 que l'on verra des pilotes protégés par seulement 1,2 mm de cuir, à plus de 300 km/h, coude au sol dans les virages, qui se doublent (et se touchent !) plusieurs fois par tour. Cette discipline nécéssite une maitrise avancée, des années d'expèrience, une bonne condition physique et ceci est valable même si l'on n'est pas pilote de GP. Tout le monde n'est pas capable de conduire une moto correctement.</p>
+					</div>
+					<div class="col-md-5 order-md-1">
+						<img class="img-fluid" src="img/sport_moto.jpg">
+					</div>
+				</div>
+			</div>
+			
+			<div id="designmoto" ></div>
+			<hr class="featurette-divider">
+			<hr class="featurette-divider" style="visibility: hidden;">
+			<hr class="featurette-divider" style="visibility: hidden;">
+
+
+			<div class="from-left">
+				<div class="row featurette">
+					<div class="col-md-7">
+						<h2 class="featurette-heading">Le Design moto...</h2>
+						<p class="lead">Saviez-vous que certaines personnes consacrent une part importante de leur temps à bricoler, embellir, réparer des vieux tas de ferraille et les exposer dans des salons. Il y a même des marques de parfums, de vêtements, etc.. qui utilise cette vision de la moto pour vendre leurs produits. Chaque moto est personalisable, c'est aussi un moyen de faire parler sa créativité. Finalement on pourrait dire que les personnes qui ont fait du design moto leur travail sont des artistes non ?</p>
+					</div>
+					<div class="col-md-5">
+						<img class="img-fluid" src="img/design_moto.jpg">
+					</div>
+				</div>
+			</div>	
+		
+		
+		
+			<div id="entretien" ></div>
+			<hr class="featurette-divider">
+			<hr class="featurette-divider" style="visibility: hidden;">
+			<hr class="featurette-divider" style="visibility: hidden;">
+
+			<div class="from-right">
+				<div class="row featurette">
+					<div class="col-md-7 order-md-2">
+						<h2 class="featurette-heading">L'entretien...</h2>
+						<p class="lead">Il est vrai que la moto demande plus d'entretien que d'autres moyens de transport, mais cela peut être un mal pour un bien, car quand on est en possession d'une moto, cela force à s'y interresser d'avantage (si ce n'est un minimum) pour le bien de son portefeuille. Donc comprendre les lois physiques qui s’appliquent à une moto en mouvement, le fonctionnement des assistances électroniques ou le sens dans lequel on desserre un rétroviseur est intérréssant, et vous permet en plus de renforcer votre coté manuel. Ce qui n'est pas le cas du possesseur d'un monospace, qui ira au garage dès que son essuie glace sera cassé.</p>
+					</div>
+					<div class="col-md-5 order-md-1">
+						<img class="img-fluid" src="img/entretien_moto.jpg">
+					</div>
+				</div>
+			</div>
+			
+			<div id="conclusion" ></div>
+			<hr class="featurette-divider">
+			<hr class="featurette-divider" style="visibility: hidden;">
+			<hr class="featurette-divider" style="visibility: hidden;">
+			
+			<div class="from-left">
+				<div class="row featurette">
+					<div class="col-md-7">
+						<h2 class="featurette-heading">Conclusion</h2>
+						<p class="lead">Je ne sais pas si j'ai réussi à vous convaincre que la moto était la chose la plus cool qui existe, en tout cas peut être que vous ne vous doutiez pas que c'était une passion qui regroupait autant de facettes. Peut  être même que je vous ai donné envie d'en faire ...<br>
+						Et si vous êtes motard, vous savez maintenant quoi répondre si on vous pose la question "Pourquoi avez-vous une moto ?"<br>
+						Un grand V à vous <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+						width="30" height="30"
+						viewBox="0 0 172 172"
+						style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#e74c3c"><path d="M86,28.66667c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,2.843h13.52708l21.14167,45.81067c-7.07501,5.23359 -11.73542,13.56682 -11.73542,22.98933c0,15.76425 12.90241,28.66667 28.66667,28.66667c15.76425,0 28.66667,-12.90241 28.66667,-28.66667c0,-15.76425 -12.90241,-28.66667 -28.66667,-28.66667c-2.25431,0 -4.42049,0.33031 -6.52839,0.82864l-10.97396,-23.76198h6.03567v-17.2h-8.6c-1.74439,0 -3.35825,0.52847 -4.71433,1.42214l-2.87786,-6.22604c-1.86779,-4.05644 -5.95333,-6.66276 -10.41406,-6.66276zM31.53333,57.33333c-3.73744,0 -6.88868,2.40083 -8.0737,5.73333h-11.99297c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,2.843h17.2h3.86328l-1.66849,5.86771c-0.72935,-0.05681 -1.45039,-0.13438 -2.19479,-0.13438c-15.8068,0 -28.66667,12.85987 -28.66667,28.66667c0,15.8068 12.85987,28.66667 28.66667,28.66667c13.84235,0 25.41928,-9.86652 28.08438,-22.93333h23.21328h0.30234c0.08957,0.0021 0.17918,0.0021 0.26875,0h5.46458h2.06042c5.46387,0 10.17058,-3.85522 11.24271,-9.21589l3.89688,-19.45078h-29.42812l-6.55079,-11.46667h7.31224h34.4l-3.04583,-6.92031c-2.74627,-6.2436 -8.92161,-10.27969 -15.74427,-10.27969h-21.34323c-3.59802,0 -6.76683,1.68686 -8.86875,4.27761l-26.98698,-4.16563l-0.03359,0.0336c-0.45293,-0.07453 -0.90148,-0.14558 -1.37734,-0.14558zM44.45573,74.53333h9.54063l16.38255,28.66667h-34.10886l3.26979,-11.46667h11.91458c-2.5518,-3.37352 -5.83173,-6.16967 -9.58542,-8.16328zM137.6,91.73333c9.56721,0 17.2,7.63279 17.2,17.2c0,9.56721 -7.63279,17.2 -17.2,17.2c-9.56721,0 -17.2,-7.63279 -17.2,-17.2c0,-4.86743 1.99491,-9.21328 5.19583,-12.32891l6.79714,14.73646c1.32965,2.87576 4.73882,4.12913 7.61458,2.79948c2.87576,-1.32965 4.12913,-4.73882 2.79948,-7.61458l-6.75234,-14.63567c0.51787,-0.04601 1.01456,-0.15677 1.54531,-0.15677zM27.59167,91.84531l-4.18802,14.65808c-0.53476,1.13846 -0.68035,2.42117 -0.41432,3.65052c0.2903,1.54811 1.20465,2.90863 2.52841,3.76219c1.32376,0.85356 2.94035,1.12499 4.47029,0.75057h14.82604c-2.37513,6.65784 -8.68483,11.46667 -16.1474,11.46667c-9.48293,0 -17.2,-7.71707 -17.2,-17.2c0,-9.11452 7.15099,-16.52034 16.125,-17.08802z"></path></g></g></svg></p>
+					</div>
+					<div class="col-md-5">
+						<img class="img-fluid" src="img/IMG_20191002_193250.jpg">
+					</div>
+				</div>
+			</div>
+
+    <!-- /END THE FEATURETTES -->
+		
+  </div><!-- /.container -->
+
+		<hr class="featurette-divider" style="visibility: hidden;">
+		<hr class="featurette-divider" style="visibility: hidden;">
+		<hr class="featurette-divider" style="visibility: hidden;">
+
+  <!-- FOOTER -->
+  <footer id="pieddepage">
+    <button class="shake"><a id="signature" href="http://kenji-nguyen.pro/cv/" target="_blank">© 2020 Kenji Nguyen</a></button>
+  </footer>
+</div>
+</body>
+</html>
