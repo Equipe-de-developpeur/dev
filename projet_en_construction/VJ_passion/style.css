@@ -211,8 +211,15 @@
         .footer {
             margin-top: 10%;
         }
+
+        .modal-image{
+            width: 100%;
+            max-width: 100%;
+        }
         /* IMAGES FLIP */
-        
+        .no-shadow{
+            box-shadow: none;
+        }
         .image-flip {
             margin: auto;
         }
