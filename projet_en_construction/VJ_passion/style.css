@@ -201,6 +201,7 @@
         
         .carousel {
             margin: auto;
+            padding-top: 5%;
         }
         
         .p-carousel {
@@ -211,15 +212,17 @@
         .footer {
             margin-top: 10%;
         }
-
-        .modal-image{
+        
+        .modal-image {
             width: 100%;
             max-width: 100%;
         }
         /* IMAGES FLIP */
-        .no-shadow{
+        
+        .no-shadow {
             box-shadow: none;
         }
+        
         .image-flip {
             margin: auto;
         }
@@ -289,9 +292,7 @@
             margin-top: 15%;
             margin-bottom: 5%;
         }
-
         /* BUTTONS MES PASSIONS */
-
         
         @media only screen and (max-width: 768px) {
             .banner {
