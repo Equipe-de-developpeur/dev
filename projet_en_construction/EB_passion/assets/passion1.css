@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    font-family: verdana;
+}
+
+.bg {
+    background-image: url("main1.png");
+}
+
+
+.navbar ul li a {
+    color: white;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-size: 20px ;
+}
+
+.navbar ul li a:hover {
+    color: #D8D8D8;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+}
+
+
+/* barre progressante */
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+  }
+  
+.progress-container {
+    width: 100%;
+    height: 5px;
+    background: rgb(212, 209, 209);
+  }
+  
+.progress-bar {
+    height: 5px;
+    background-color: rgb(0, 134, 123);
+    width: 0%;
+  }
+
+/*Nous Contacter*/
+#mail {
+  padding: 1px 2px ;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+}
+
