@@ -3,13 +3,6 @@ body, html
 	margin:0;
 	padding:0;
 }
-.modal-open {
-    overflow: scroll;
-}
-.modal_.show
-{
-	display:flex!important;
-}
 *
 {
 	box-sizing:border-box;
@@ -24,9 +17,8 @@ body, html
 	left:0;
 	width:100%;
 	height:100%;
-	background: rgba(255,255,255,0.8);
 	animation: fadeIn 4s both;
-	z-index: 5;
+	z-index:10;
 }
 .exit
 {
@@ -34,16 +26,16 @@ body, html
 	font-weight: bold;
 	background-color: black;
 	color: white;
+	float:left;
+	z-index:2;
 }
 .modal-wrapper
 {
 	background-color:white;
-	padding:1vw 0 1vw 1vw;
 	max-height: calc(100vh - 20px);
 	animation: slideLeft 4s both;
 	border-radius: 0.7vw;
-	box-shadow: 0 -0.1vw 1.5vw -0.2vw;
-	margin-left: 8vw;
+	box-shadow: red 0 -0.1vw 1.5vw -0.2vw;
 	width:100%;
 }
 .modal_[aria-hidden="true"]
@@ -52,7 +44,7 @@ body, html
 }
 .modal_[aria-hidden="true"] .modal-wrapper
 {
-	animation: slideRight 4s both;
+	animation: slideLeft2 4s both;
 }
 
 @keyframes fadeOut
@@ -70,10 +62,10 @@ body, html
 	from {transform:translateX(100%);}
 	to {transform:translateX(0);}
 }
-@keyframes slideRight
+@keyframes slideLeft2
 {
 	from {transform:translateX(0);}
-	to {transform:translateX(100%);}
+	to {transform:translateX(-100%);}
 }
 @media screen and (max-width:1366px)
 {
