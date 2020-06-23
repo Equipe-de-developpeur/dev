@@ -3,7 +3,3 @@ if ((navigator.userAgent.match(/Linux/i)) || (navigator.userAgent.match(/iPhone/
 {
 	location.replace("m.var_nature.html");
 }
-else
-{
-	location.replace("var_nature.html");
-}
