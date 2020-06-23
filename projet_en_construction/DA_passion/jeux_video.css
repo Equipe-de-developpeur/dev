@@ -1,5 +1,35 @@
 body {
-  background-color: #7b7171 !important;
+  background-color: #417781 !important;
+}
+
+.nav_du_bas {
+  margin: auto;
+  text-align: center;
+  padding: auto;
+  width: 22%;
+  font-size: 120%;
+}
+
+.nav_du_bas a {
+  color: black;
+  text-decoration: background;
+  transition: all 0.8s ease 0s;
+  text-align: center;
+  padding: auto;
+  width: 100%;
+  border-radius: 60%;
+  border: black 1px solid;
+  font-size: 100%;
+}
+
+.nav_du_bas a:hover {
+  background-color: beige;
+  text-align: center;
+  padding: auto;
+  width: 100%;
+  border-radius: 40%;
+  border: black 1px solid;
+  font-size: 100%;
 }
 
 .divvidéo {
@@ -9,7 +39,6 @@ body {
 
 .vidéo1 {
   width: 80%;
-  box-shadow: 0px 0px 10px white;
 }
 
 /*----------------------carousel------------------------------*/
@@ -22,28 +51,26 @@ body {
   filter: invert(1);
 }
 
+.testtest {
+  width: 100%;
+}
 /*---------------------------OGAME------------*/
 
 #OGAME {
   color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(
-    to top right,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 1) 30%
-  );
   text-align: justify;
   padding: 4% 5%;
   width: 80%;
   margin: auto;
-  margin-top: 9%;
-  margin-bottom: 9%;
-  box-shadow: 30px 30px 30px #bbb7b7;
+  margin-top: 4%;
+  margin-bottom: 6%;
+  box-shadow: 0px 0px 60px #bbb7b7;
 }
 
 #OGAME:hover {
-  box-shadow: 30px 30px 30px white;
+  box-shadow: 0px 0px 60px white;
 }
 
 @media screen and (max-width: 780px) {
@@ -94,6 +121,8 @@ body {
   padding: 4% 5%;
   width: 80%;
   margin: auto;
+  margin-top: 4%;
+  margin-bottom: 6%;
   box-shadow: 30px 30px 30px #bbb7b7;
 }
 
@@ -155,8 +184,9 @@ body {
   padding: 4% 5%;
   width: 80%;
   margin: auto;
+  margin-top: 4%;
+  margin-bottom: 6%;
   box-shadow: 30px 30px 30px #bbb7b7;
-  margin-top: 9%;
 }
 
 #CATS:hover {
