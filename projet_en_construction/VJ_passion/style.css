@@ -227,6 +227,18 @@
             text-align: center;
             margin: auto;
         }
+        .footer-modal-separator{
+            height: 1px;
+            width: 100%;
+            border: none;
+            background-color: #FAAE34;
+            margin-bottom: 5%;
+        }
+        .close-btn{
+           width: 40%;
+          position: relative;
+          left: 30%;
+        }
         
             
     
