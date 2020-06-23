@@ -212,11 +212,25 @@
         .footer {
             margin-top: 10%;
         }
-        
+        /* MODALE */
         .modal-image {
             width: 100%;
             max-width: 100%;
         }
+        .separator-modal{
+            height: 1px;
+            width: 50%;
+            border: none;
+            background-color: #FAAE34;
+        }
+        .modal-content h5{
+            text-align: center;
+            margin: auto;
+        }
+        
+            
+    
+        
         /* IMAGES FLIP */
         
         .no-shadow {
