@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Var Nature 2</title>
+    <title>Var Nature</title>
+	<script src="redirection.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="maquetteFinaleResp.css" type="text/css">
+    <link rel="stylesheet" href="var_nature.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
 			<link rel="stylesheet" href="modale.css">
-		<link rel="stylesheet" href="test.css">
+		<link rel="stylesheet" href="var_nature2.css">
 				<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
     
-    <header>
-        <div class="Parallax" style="background-image:url(img/nature.jpg); background-size: cover; background-position: center;
-        background-repeat: no-repeat; background-attachment: fixed; height: 93vh;">
+
+        <div style="background-image:url(img/nature.jpg); background-size: cover; background-position: center;
+        background-repeat: no-repeat; background-attachment: fixed;">
 
             <div class="container pt-5">
-                <div class="bloc mb-5" style="height: 307vh;  box-shadow: 0px 4px 30px 7px black; width:60vw; margin:auto;">
+                <div class="bloc" style="box-shadow: 0px 4px 30px 7px black; width:60vw; margin:auto; background-color:white;">
                     
                     <!--NAVBAR RESEAUX ET LOGO-->
-                        <div class="row d-flex flex-column " style="background-image: url(img/natureZoom.jpg); background-size: auto; background-position: center;
-                        background-repeat: no-repeat; background-attachment: auto; height: 88vh; margin: 0 0;">
+                        <div class="d-flex flex-column" style="background-image: url(img/natureZoom.jpg); background-size: cover; background-position: center;
+                        background-repeat: no-repeat; background-attachment: auto; margin: 0 0;">
                             <div class="row d-flex justify-content-between">
-                                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 pt-2 pl-4 order-xl-1 order-lg-1 order-md-2 w-100">
+                                <div class="col-sm-4_  order-xl-1 order-lg-1 order-md-2 " style="padding-left:2vw!important; padding-top:1vw!important;">
                                     <img src="img/fb.svg" alt="facebook" class="reseaux mr-2">
                                     <img src="img/lin.svg" alt="linkedin"class="reseaux mr-2">
                                     <img src="img/wa.svg" alt="what's app" class="reseaux mr-2">
                                 </div>
 
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4  offset-xl-1 order-xl-2 order-lg-2 order-md-1 position-relative">
-                                    <nav class="navbar navbar-expand-xl navbar-expand-lg navbar-light bg-rouge position-absolute ">
+                                <div class="col-sm-4_ order-xl-2 order-lg-2 order-md-1 ">
+                                    <nav class="navbar navbar-expand-xl navbar-expand-lg navbar-light bg-rouge ">
                                         
                                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon"></span>
@@ -57,13 +59,13 @@
                                         </div>
                                     </nav>
                                 </div>
-                                <div class="col-xl-1 offset-xl-3 col-lg-4 col-md-4 col-sm-4  order-xl-3 order-lg-3 order-md-3 pt-2 pl-0 pr-0">
+                                <div class="col-sm-4_  order-xl-3 order-lg-3 order-md-3">
                                     <img src="img/logo.png" alt="logo" class="logo">
                                 </div>
                             </div>
                             
                             <div class="row d-flex justify-content-between rowHeightTitreLogo mt-5">
-                                <div class="col-lg-1">
+                                <div class="col-sm-9">
                                     <div class="spinner-grow" role="status">
                                         <span class="sr-only">Loading...</span>
                                       </div>
@@ -78,21 +80,21 @@
                                       </div>
 
                                 </div>
-                                <div class="col-xl-1 col-lg-1 col-md-1 offset-xl-11 offset-lg-10 offset-md-10 float-lg-right float-md-right float-right mr-3">
-                                    <h6 class="text-light titreLogo" style="font-size:0.8vw!important;">Pour l'écologie dans notre région</h6>
+                                <div class="col-sm-3">
+                                    <h6 class="text-light titreLogo text_contenu" style="float:right;">Pour l'écologie dans notre région</h6>
                                 </div>  
                             </div>
                             
                             
                                 <div class="d-flex justify-content-end mr-5 mt-5">
                             <div class="jumbotron text-right bgJumbotron d-flex text-right justify-content-end p-0 m-0">
-                                <div class="d-flex flex-column">
+                                <div class="d-flex flex-column" style="margin-bottom:14vw;">
                                     <h1 class="display-3 text-light" style="font-family: 'Fira Sans Extra Condensed', sans-serif; font-size:4vw;">Explorez nos villes</h1>
-                                    <p class="text-blanc font-weight-bold" style="font-size:0.8vw;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br> 
+                                    <p class="text-blanc font-weight-bold text_contenu">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br> 
                                         incididunt ut labore et dolore magna aliqua. Quis ipsum<br> suspendisse ultrices gravida.</p>
                                     
                                     <p class="lead">
-                                    <a class="btn btn-warning" href="#" role="button">Découvrir</a>
+                                    <a class="btn btn-warning" href="#" role="button" style="font-size:1.25vw;">Découvrir</a>
                                     </p>
                                 </div>  
                                 <!--<hr class=" SeparateurHero d-flex mr-0 ml-0 mt-0 mb-0">-->
@@ -115,21 +117,21 @@
                         </div>
                         <!--ENCART BLANC CIGALES-->
                         <div class="row">
-                            <div class="bg-light roundedEncart p-5 ml-3 mx-auto d-block d-flex" style="height: 35vh; width:50vw; box-shadow: 0px 4px 30px 7px black;">
-                                <div class="d-flex flex-column">
+                            <div class="bg-light roundedEncart p-5 ml-3 mx-auto d-block d-flex CIGALE" style="width:50vw; box-shadow: 0px 4px 30px 7px black;">
+                                <div class="d-flex flex-column none_cigale">
                                     <img src="img/cigale.png" alt="" class="cigale1">
                                     <img src="img/cigale.png" alt="" class="cigale2">
                                 </div>
                                 <div class="d-flex flex-column">
-                                    <p class="text-uppercase font-weight-bold" style="font-family: 'Fira Sans Condensed', sans-serif; color: #ea5a00; font-size:1vw!important;">Explorer | Voyager | Découvrir | S'aventurer</p>
+                                    <p class="text-uppercase font-weight-bold titre_orange" style="font-family: 'Fira Sans Condensed', sans-serif; color: #ea5a00;">Explorer | Voyager | Découvrir | S'aventurer</p>
                                     <h1 class="text-uppercase" style="font-family: 'Fira Sans Extra Condensed', sans-serif; color: #0f8581; font-size:2.2vw!important;">L'esterel - Le verdon - La montagne</h1>
-                                    <p><span class="font-weight-bold" style="font-size: 0.9vw;">Comparandis ut cogitandum</span> inimicitiarum odisse inciperemus 
+                                    <p class="text_contenu"><span class="font-weight-bold text_contenu">Comparandis ut cogitandum</span> inimicitiarum odisse inciperemus 
                                         cogitandum potius praeceptum amicitiam in si potius quando 
                                         ut illud odisse inimicitiarum valet ne fuit ad hoc minus felices
                                         valet etiam in illud quando quem diligendo odisse praecipiendum
                                         valet quam cuiuscumque.</p>
                                     <p class="lead">
-                                        <a class="btn btn-warning" href="#" role="button">Découvrir</a>
+                                        <a class="btn btn-warning text_contenu" href="#" role="button">Découvrir</a>
                                     </p>
                                 </div>
                             </div>
@@ -158,63 +160,63 @@
                                 <ul class="profilSlide col-xl-10">
                                     <li>
                                         <div class="contenu">
-                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_adrien" style="width:50%;">
+                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_adrien" data-backdrop="false" style="width:50%;">
                                         </div>
                                     </li>
                                     <li>
                                         <div class="contenu">
-										<img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_aurelien" style="width:50%;">
+										<img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_aurelien" data-backdrop="false" style="width:50%;">
                                             
                                         </div>
                                     </li>
                                     <li>
                                         <div class="contenu">
-                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_bilal" style="width:50%;">
+                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_bilal" data-backdrop="false"style="width:50%;">
                                         </div>
                                     </li>
                                     <li>
                                         <div class="contenu">
-                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_damien" style="width:50%;">
+                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_damien" data-backdrop="false" style="width:50%;">
                                         </div>
                                     </li>
                                     <li>
                                         <div class="contenu">
-                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_david" style="width:50%;">
+                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_david" data-backdrop="false" style="width:50%;">
                                         </div>
                                     </li>
                                     <li>
                                         <div class="contenu">
-                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_jerome" style="width:50%;">
+                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_jerome" data-backdrop="false" style="width:50%;">
                                         </div>
                                     </li>
                                     <li>
                                         <div class="contenu">
-                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_jeremy" style="width:50%;">
+                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_jeremy" data-backdrop="false" style="width:50%;">
                                         </div>
                                     </li>
                                     <li>
                                         <div class="contenu">
-                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_karima" style="width:50%;">
+                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_karima" data-backdrop="false" style="width:50%;">
                                         </div>
                                     </li>
                                     <li>
                                         <div class="contenu">
-                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_kenji" style="width:50%;">
+                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_kenji" data-backdrop="false" style="width:50%;">
                                         </div>
                                     </li>
                                     <li>
                                         <div class="contenu">
-                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_marie" style="width:50%;">
+                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_marie" data-backdrop="false" style="width:50%;">
                                         </div>
                                     </li>
                                     <li>
                                         <div class="contenu">
-                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_marnia" style="width:50%;">
+                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_marnia" data-backdrop="false" style="width:50%;">
                                         </div>
                                     </li>
                                     <li>
                                         <div class="contenu">
-                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_mathieu" style="width:50%;">
+                                            <img class="js-modal image_pre" src="img/boutonProfil.png" data-toggle="modal" data-target="#modal_mathieu" data-backdrop="false" style="width:50%;">
                                         </div>
                                     </li>
                                 </ul>
@@ -224,18 +226,18 @@
 							<div class="tablet_view" style="width:100%; height:100%; top:0; left:0; justify-content:center; display:flex;">
 	<div style="width:60vw; text-align:center; margin:auto; display:block ruby; overflow:auto;">
 	<!-- IMAGE -->
-	<img class="js-modal image_pre" src="img/adrien.png" data-toggle="modal" data-target="#modal_adrien">
-	<img class="js-modal image_pre" src="img/aurelien.png" data-toggle="modal" data-target="#modal_aurelien">
-	<img class="js-modal image_pre" src="img/bilal.png" data-toggle="modal" data-target="#modal_bilal">
-	<img class="js-modal image_pre" src="img/damien.png" data-toggle="modal" data-target="#modal_damien">
-	<img class="js-modal image_pre" src="img/david.png" data-toggle="modal" data-target="#modal_david">
-	<img class="js-modal image_pre" src="img/jerome.png" data-toggle="modal" data-target="#modal_jerome">
-	<img class="js-modal image_pre" src="img/jeremy.png" data-toggle="modal" data-target="#modal_jeremy">
-	<img class="js-modal image_pre" src="img/karima.png" data-toggle="modal" data-target="#modal_karima">
-	<img class="js-modal image_pre" src="img/kenji.png" data-toggle="modal" data-target="#modal_kenji">
-	<img class="js-modal image_pre" src="img/marie.png" data-toggle="modal" data-target="#modal_marie">
-	<img class="js-modal image_pre" src="img/marnia.png" data-toggle="modal" data-target="#modal_marnia">
-	<img class="js-modal image_pre" src="img/mathieu.png" data-toggle="modal" data-target="#modal_mathieu">
+	<img class="js-modal image_pre" src="img/adrien.png" data-toggle="modal" data-target="#modal_adrien" data-backdrop="false">
+	<img class="js-modal image_pre" src="img/aurelien.png" data-toggle="modal" data-target="#modal_aurelien" data-backdrop="false">
+	<img class="js-modal image_pre" src="img/bilal.png" data-toggle="modal" data-target="#modal_bilal" data-backdrop="false">
+	<img class="js-modal image_pre" src="img/damien.png" data-toggle="modal" data-target="#modal_damien" data-backdrop="false">
+	<img class="js-modal image_pre" src="img/david.png" data-toggle="modal" data-target="#modal_david" data-backdrop="false">
+	<img class="js-modal image_pre" src="img/jerome.png" data-toggle="modal" data-target="#modal_jerome" data-backdrop="false">
+	<img class="js-modal image_pre" src="img/jeremy.png" data-toggle="modal" data-target="#modal_jeremy" data-backdrop="false">
+	<img class="js-modal image_pre" src="img/karima.png" data-toggle="modal" data-target="#modal_karima" data-backdrop="false">
+	<img class="js-modal image_pre" src="img/kenji.png" data-toggle="modal" data-target="#modal_kenji" data-backdrop="false">
+	<img class="js-modal image_pre" src="img/marie.png" data-toggle="modal" data-target="#modal_marie" data-backdrop="false">
+	<img class="js-modal image_pre" src="img/marnia.png" data-toggle="modal" data-target="#modal_marnia" data-backdrop="false">
+	<img class="js-modal image_pre" src="img/mathieu.png" data-toggle="modal" data-target="#modal_mathieu" data-backdrop="false">
 	</div>
 	</div>
 	
@@ -428,7 +430,7 @@ Je me considère comme un bon orateur et ayant un bon sens du relationnel.
 			Je suis âgé de 32 ans, l’informatique est une passion où j’aurai toujours soif de connaissances. Mais je suis également passionné de physique quantique, des mystères de l’univers, de handball, de musique rock / hard rock, sans oublier DragonBall Z.
 </p>
 	    <footer style="padding-top:3%;"><div class="drop_" style="display:flex;">
-      <div class="passion_deroulante" id="passion"><button style="padding-left:6vw; padding-right:6vw;"><a href="WD_passion/les_mysteres_de_l_univers.html" target="_blank">Les Mystères de L'Univers</a></button>
+      <div class="passion_deroulante" id="passion"><button><a href="WD_passion/les_mysteres_de_l_univers.html" target="_blank">Les Mystères de L'Univers</a></button><button><a href="WD_passion/hanoi.html" target="_blank">Hanoï</a></button>
     </div><button class="passion_david">Mes Passions</button>
 	</div></footer>
 			</div>
@@ -549,7 +551,7 @@ Je me considère comme un bon orateur et ayant un bon sens du relationnel.
 			Je suis une personne déterminée, qui s'adapte aux différentes situations, qui aime la rigueur et le travail bien fait.                                                                                                                                                                       Actuellement en Formation de développeur, je m'investi pour atteindre les compétences nécessaires afin d'arriver au maximum de mes capacités.
 </p>
 	    <footer style="padding-top:3%;"><div class="drop_" style="display:flex;">
-      <div class="passion_deroulante" id="passion"><button><a href="TK_passion/nature.html" target="_blank">Nature</a></button><button><a href="TK_passion/technologie.html" target="_blank">Technologie</a></button><button><a href="TK_passion/peinture.html" target="_blank">Peinture</a></button>
+      <div class="passion_deroulante" id="passion"><button><a href="TK_passion/nature.html" target="_blank">Nature</a></button><button><a href="TK_passion/technologie.html" target="_blank">Technologie</a></button>
     </div><button class="passion_karima">Mes Passions</button>
 	</div></footer>
 			</div>
@@ -741,62 +743,45 @@ Je me considère comme un bon orateur et ayant un bon sens du relationnel.
                         </div>
                         <hr class="hrProfil2 offset-xl-1">
                         <!-- PHOTOS GALIENI -->
-                        <div class="d-flex">
-                            <div class="offset-xl-1" style="width:100%;">
-                                <img src="img/galieni1.png" alt="" class="mr-3" style="width:10vw;">
-                                <img src="img/galieni2.png" alt="" class="mr-3" style="width:10vw;">
-                                <img src="img/galieni3.png" alt="" class="mr-3" style="width:10vw;">
+                        <div class="d-flex" style="margin-left: 1vw;">
+                            <div class="col-sm-8_" style="text-align:center; margin:auto; z-index:3;">
+                                <img src="img/galieni1.png" alt=""  style="width:25%; margin-right:1vw;">
+                                <img src="img/galieni2.png" alt=""  style="width:25%; margin-right:1vw;">
+                                <img src="img/galieni3.png" alt=""  style="width:25%; margin-right:1vw;">
                             </div>
-                            <div class="d-flex flex-column ml-5 p-3 text-right">
-                                <h4 class="font-weight-bold" style="color: #ea5a00; font-size: 0.8vw;">EN IMAGE</h4>
-                                <h1 style="font-family: 'Fira Sans Extra Condensed', sans-serif; color: #0f8581; font-size: 2vw!important;">
+                            <div class="col-sm-4_" style="z-index:3;">
+                                <h4 class="font-weight-bold text_contenu" style="color: #ea5a00;">EN IMAGE</h4>
+                                <h1 style="font-family: 'Fira Sans Extra Condensed', sans-serif; color: #0f8581; font-size: 4vw!important;">
                                     NOS<br>BUREAUX
                                 </h1>
-                                <p class="font-weight-bold" style="line-height: 3vh; color: #372f22; font-size: 0.8vw;">Retrouvez-nous au<br>
+                                <p class="font-weight-bold text_contenu" style="line-height: 2vh; color: #372f22;">Retrouvez-nous au<br>
                                     château Galieni<br>
                                     pour discuter et boire
                                     un café!
                                 </p>
-                                <button type="button" class="btn btn-warning text-light mb-5" >EN SAVOIR PLUS</button>
+                                <button type="button" class="btn btn-warning text-light" style="font-size:1vw;">EN SAVOIR PLUS</button>
                             </div>
                         </div>
                             <!-- FOOTER -->
-                            <div class="d-flex flex-column mt-5">
-                                <h4 class="font-weight-bold d-flex justify-content-center" style="color: #ea5a00; font-size: 0.8vw;">DWWM FORMATION</h4>
-                                <h1 class="d-flex justify-content-center" style="font-family: 'Fira Sans Extra Condensed', sans-serif; color: #0f8581;">ECOLOGIE - TOURISME</h1>
-                                <p class="font-weight-bold d-flex justify-content-center text-center" style="line-height: 3vh; color: #372f22; font-size: 0.8vw;">Pensons autrement, adoptons les bons gestes au quotidien.<br>
+                            <div class="d-flex flex-column mt-5" style="padding-bottom: 3vw;">
+                                <h4 class="font-weight-bold d-flex justify-content-center text_contenu" style="color: #ea5a00;">DWWM FORMATION</h4>
+                                <h1 class="d-flex justify-content-center" style=" font-size:4vw; font-family: 'Fira Sans Extra Condensed', sans-serif; color: #0f8581;">ECOLOGIE - TOURISME</h1>
+                                <p class="font-weight-bold d-flex justify-content-center text-center text_contenu" style="line-height: 3vh; color: #372f22;">Pensons autrement, adoptons les bons gestes au quotidien.<br>
                                 Découvrons notre environnement en le respectant.<br>
                                 Soyons bienveillant à l'égard du monde<br>
                                 qui nous entoure.</p>
                                 <img src="img/logo.png" alt="logo VarNature" class="logoFooter mx-auto d-block">
                             </div>
-                            <!-- VAGUE -->
-                            <div style="background: url(img/vagues.png); background-size: cover; height: 58vh;">
-                                <h6 class="copyright font-weight-bold" style="color: #372f22;">DWWM ©Copyright 2020</h6>
-                                <div class="contactFooter d-inline-block text-center">
-                                    <img src="img/enveloppe.png" alt="contact" style="width: 5vw;">
-                                    <h5 class="text-light font-weight-bold">Contactez-nous</h5>
-                                </div>
-                            </div>
+                            
                     </div>
                  </div>
             </div>
         </div>
-    
-
-    </header>
-
-    <section>
-
-    </section>
-
-    <footer>
-
-    </footer>
 
 
-<script src="js/bootstrap.js"></script>
-<script src="js/jquery-3.4.1.min.js"></script>
+
+
+
 <script src="app.js"></script>
 </body>
 </html>

@@ -193,16 +193,21 @@ h2
 /*footer*/
 h4
 {
-  /*margin-top: 4%;*/
+  
   margin-bottom: 3%;
 
 }
  /*page loisir*/
 /*gallery loisir*/
+h6
+{
+margin-left: 5%;margin-right: 5%;  
+}
 
 .ccar
 {
   overflow: hidden;
+  margin-bottom: 3%;
 }
 
 .ccar>div
@@ -233,7 +238,8 @@ h4
 }
 
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px)
+{
   .campingCar{
     margin-right: 20px;
   }
@@ -277,6 +283,7 @@ h4
     text-align: center;
     margin-top: 3rem;
   }
+  
   .image
   {
     display: block;
@@ -307,13 +314,8 @@ h4
     text-align: center;
     margin-top: 3rem;
   }
-  /* .image
-  {
-    display: block;
-    justify-content: center;
-    text-align: center;
-    margin-top: 3rem;
-  } */
+  /* .image*/
+
   .ccar>div
   {
     display: block;
@@ -334,13 +336,7 @@ h4
     text-align: center;
     margin-top: 3rem;
   }
-  /* .image
-  {
-    display: block;
-    justify-content: center;
-    text-align: center;
-    margin-top: 3rem;
-  } */
+  /* .image */
   .ccar>div
   {
     display: block;

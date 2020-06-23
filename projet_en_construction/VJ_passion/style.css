@@ -201,6 +201,7 @@
         
         .carousel {
             margin: auto;
+            padding-top: 5%;
         }
         
         .p-carousel {
@@ -211,7 +212,42 @@
         .footer {
             margin-top: 10%;
         }
+        /* MODALE */
+        .modal-image {
+            width: 100%;
+            max-width: 100%;
+        }
+        .separator-modal{
+            height: 1px;
+            width: 50%;
+            border: none;
+            background-color: #FAAE34;
+        }
+        .modal-content h5{
+            text-align: center;
+            margin: auto;
+        }
+        .footer-modal-separator{
+            height: 1px;
+            width: 100%;
+            border: none;
+            background-color: #FAAE34;
+            margin-bottom: 5%;
+        }
+        .close-btn{
+           width: 40%;
+          position: relative;
+          left: 30%;
+        }
+        
+            
+    
+        
         /* IMAGES FLIP */
+        
+        .no-shadow {
+            box-shadow: none;
+        }
         
         .image-flip {
             margin: auto;
@@ -282,9 +318,7 @@
             margin-top: 15%;
             margin-bottom: 5%;
         }
-
         /* BUTTONS MES PASSIONS */
-
         
         @media only screen and (max-width: 768px) {
             .banner {
