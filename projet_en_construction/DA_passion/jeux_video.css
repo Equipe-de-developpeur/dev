@@ -34,7 +34,7 @@ body {
     rgba(0, 0, 0, 1) 30%
   );
   text-align: justify;
-  padding: 1% 5%;
+  padding: 4% 5%;
   width: 80%;
   margin: auto;
   margin-top: 9%;
@@ -44,6 +44,12 @@ body {
 
 #OGAME:hover {
   box-shadow: 30px 30px 30px white;
+}
+
+@media screen and (max-width: 780px) {
+  #OGAME {
+    box-shadow: 30px 30px 30px white;
+  }
 }
 
 #OGAME .titre1 {
@@ -85,7 +91,7 @@ body {
   background-repeat: repeat-y;
   background-size: cover;
   text-align: justify;
-  padding: 1% 5%;
+  padding: 4% 5%;
   width: 80%;
   margin: auto;
   box-shadow: 30px 30px 30px #bbb7b7;
@@ -93,6 +99,12 @@ body {
 
 #LOL:hover {
   box-shadow: 30px 30px 30px #dfbf37;
+}
+
+@media screen and (max-width: 780px) {
+  #LOL {
+    box-shadow: 30px 30px 30px #dfbf37;
+  }
 }
 
 #LOL .titre2 {
@@ -140,7 +152,7 @@ body {
     rgba(119, 119, 148, 1) 30%
   );
   text-align: justify;
-  padding: 1% 5%;
+  padding: 4% 5%;
   width: 80%;
   margin: auto;
   box-shadow: 30px 30px 30px #bbb7b7;
@@ -149,6 +161,12 @@ body {
 
 #CATS:hover {
   box-shadow: 30px 30px 30px #ffe55e;
+}
+
+@media screen and (max-width: 780px) {
+  #CATS {
+    box-shadow: 30px 30px 30px #ffe55e;
+  }
 }
 
 #CATS .catsnom {
