@@ -3,6 +3,38 @@ body, html
 	margin:0;
 	padding:0;
 }
+.mobile_slide
+{
+	width:60vw; 
+	text-align:center; 
+	margin:auto; 
+	display:flex; 
+	overflow:auto;
+}
+.mobile_slide2
+{ 
+	text-align:center; 
+	margin:auto; 
+	display:flex; 
+	overflow:auto;
+}
+@-moz-document url-prefix() {
+  .mobile_slide
+{
+	width:60vw; 
+	text-align:center; 
+	margin:auto; 
+	display:block ruby; 
+	overflow:auto;
+}
+  .mobile_slide2
+{
+	text-align:center; 
+	margin:auto; 
+	display:block ruby; 
+	overflow:auto;
+}
+}
 .modal-open {
     overflow: scroll;
 }

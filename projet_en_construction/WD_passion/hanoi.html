@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>La Tour de Hanoï</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Hanoï</h1>
+				<nav>
+					<ul>
+						<li><a href="#intro_hanoi">Intro</a></li>
+						<li><a href="#one_hanoi">Origine</a></li>
+						<li><a href="#two_hanoi">Jeu</a></li>
+						<li><a href="#work">Solution</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Intro -->
+			<section id="intro_hanoi" class="main style1 dark fullscreen">
+				<div class="content">
+					<header>
+						<h2>Tour de Hanoï</h2>
+					</header>
+					
+					<footer>
+						<a href="#one_hanoi" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one_hanoi" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Origine</h2>
+					</header>
+					<p>Le problème mathématique des tours de Hanoï a été inventé par Édouard Lucas. Il est publié dans le tome 3 de ses Récréations mathématiques, parues à titre posthume en 1892. Il annonce que ce problème est dû à un de ses amis, N. Claus de Siam (anagramme de Lucas d'Amiens, Amiens étant sa ville de naissance), prétendument professeur au collège de Li-Sou-Stian (anagramme de Saint Louis, le lycée où Lucas enseignait).
+
+Sous le titre « Les brahmes tombent », Lucas relate que « N. Claus de Siam a vu, dans ses voyages pour la publication des écrits de l'illustre Fer-Fer-Tam-Tam, dans le grand temple de Bénarès, au-dessous du dôme qui marque le centre du monde, trois aiguilles de diamant, plantées dans une dalle d'airain, hautes d'une coudée et grosses comme le corps d'une abeille. Sur une de ces aiguilles, Dieu enfila au commencement des siècles, 64 disques d'or pur, le plus large reposant sur l'airain, et les autres, de plus en plus étroits, superposés jusqu'au sommet. C'est la tour sacrée du Brahmâ. Nuit et jour, les prêtres se succèdent sur les marches de l'autel, occupés à transporter la tour de la première aiguille sur la troisième, sans s'écarter des règles fixes que nous venons d'indiquer, et qui ont été imposées par Brahma. Quand tout sera fini, la tour et les brahmes tomberont, et ce sera la fin des mondes ! ».
+
+En admettant qu'il faille 1 seconde pour déplacer un disque, ce qui fait 86 400 déplacements par jour, la fin du jeu aurait lieu au bout d'environ 213 000 milliards de jours, ce qui équivaut à peu près à 584,5 milliards d'années, soit 43 fois l'âge estimé de l'univers (13,7 milliards d'années selon certaines sources).</p>
+					 
+				</div>
+				<a href="#two_hanoi" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two_hanoi" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Jeu</h2>
+					</header>
+					<p>Le but de la Tour de Hanoï, en tant que jeu, est de déplacer les pièces de l’axe vertical gauche vers l’axe vertical droit, à raison d'une par une. Les pièces peuvent être déplacées d’un axe à un autre si l’axe de destination ne contient aucune pièce plus petite que celle que vous souhaitez déplacée</p>
+				<a href="jeu_hanoi.html" target="_blank" style="color:red;">Tester Ce Jeu </a>
+				</div>
+				<a href="#work" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Work -->
+			<section id="work" class="main style3 primary">
+				<div class="content">
+					<header>
+						<h2>Solution</h2>
+						<p style="font-style: italic;">
+							Nous allons ici parler de solution récursive, qui est l'une des manières de résoudre ce problème en énumérant, pas à pas, les déplacements nécessaires
+							à la réussite de ce défi.
+						</p>
+						<p style="font-style: italic;">
+							Petite Astuce : Si le nombre de Disques de Départ est impair, le premier déplacement se fait sur la troisième Tige
+						</p>
+						<p style="font-style: italic;">
+							Voici l'algorithme permettant de construire cette solution :
+						</p>
+<pre style="font-weight:bold; text-align:left;">
+	procedure Hanoi (nombre_de_disques, Debut, Milieu, Fin )
+		si nombre_de_disques egal à 1
+			Ecrire "Deplacer le Disque 1 de la tige 'Debut' à la tige 'Fin'"
+		Fin-si
+		sinon
+			Hanoi (nombre_de_disques - 1, Debut, Fin, Milieu )
+			Ecrire "Deplacer le Disque 'nombre_de_disques' de la tige 'Debut' à la tige 'Fin'"
+			Hanoi (nombre_de_disques - 1, Milieu, Debut, Fin)
+		Fin-sinon
+	Fin-procedure
+</pre>
+					</header>
+
+					<!-- Gallery  -->
+						<div class="gallery" style="background-color:black;">
+								<a href="images/hanoi_c.png" class="image fit"><img src="" title="Hanoi en C" alt="Solution Hanoi en C" /></a>
+							
+								<a href="images/hanoi_php.png" class="image fit"><img src="" title="Hanoi en PHP" alt="Solution Hanoi en PHP" /></a>
+							
+								<a href="images/hanoi_js.png" class="image fit"><img src="" title="Hanoi en JS" alt="Solution Hanoi en JS" /></a>
+							
+						</div>
+
+				</div>
+			</section>
+
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
