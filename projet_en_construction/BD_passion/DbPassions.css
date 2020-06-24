@@ -116,6 +116,9 @@ html {
   .position-absolute{
     z-index: 1000;
   }
+  .nav-link{
+    background-color: rgb(102, 207, 119);
+}
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
   .bloc{
@@ -135,6 +138,9 @@ html {
   .position-absolute{
     z-index: 1000;
   }
+  .nav-link{
+    background-color: rgb(102, 207, 119);
+}
 }
 @media screen and (max-width: 576px){
   .bloc{
@@ -146,4 +152,7 @@ html {
   .position-absolute{
     z-index: 1000;
   }
+  .nav-link{
+    background-color: rgb(102, 207, 119);
+}
 }

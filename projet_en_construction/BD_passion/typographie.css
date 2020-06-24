@@ -13,7 +13,14 @@
 .navbar-collapse{
     text-align: center;
 }
-
+.container{
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.fa.fa-bars{
+  color: white;
+}
 .active{
     color: rgb(160, 160, 160)!important;
     opacity: 1!important;
@@ -22,10 +29,17 @@
 .codeBarre{
     width: 8rem;
 }
+.row .jumbotron{
+  /* background-color: rgba(white, white, white, 0.25); */
+  margin-top: 8vh;
+}
 .hrJumbotron{
     background-color: white!important;
     width: 20em;
     margin-right: 15em;
+}
+.textColor{
+  color: white ;
 }
 .textTypo{
     font-size: 10vw;
@@ -34,6 +48,9 @@
 .typo{
     float: left;
     width: 20vw;
+}
+.modal-title{
+  margin-left: 15vw;
 }
 /* SCROLL TOP */
 html {
@@ -99,6 +116,9 @@ html {
       width: 930px;
     height: 612px;
     } 
+    .textColor{
+      color: white ;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 992px){
     .position-absolute{
@@ -108,6 +128,12 @@ html {
       width: 690px;
     height: 612px;
     } 
+    .nav-link{
+      background-color: rgb(126, 126, 126);
+    }
+    .textColor{
+      color: white ;
+    }
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
     .position-absolute{
@@ -117,6 +143,12 @@ html {
       width: 510px;
     height: 612px;
     } 
+    .nav-link{
+      background-color: rgb(126, 126, 126);
+    }
+    .textColor{
+      color: white ;
+    }
 }
 @media screen and (max-width: 576px){
     .position-absolute{
@@ -126,4 +158,19 @@ html {
       width: 407px;
     height: 612px;
     } 
+    .nav-link{
+      background-color: rgb(126, 126, 126);
+    }
+    .bg-transparent{
+      background-color: none;
+    }
+    .bgMediaQueries{
+      background-color: none;
+    }
+    .textColor{
+      color: yellow ;
+    }
+    .jumbotron{
+      margin-left: 10px;
+    }
 }
