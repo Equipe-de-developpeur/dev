@@ -3,6 +3,45 @@ body, html
 	margin:0;
 	padding:0;
 }
+.mobile_slide
+{
+	width:60vw; 
+	text-align:center; 
+	margin:auto; 
+	display:flex; 
+	overflow:auto;
+}
+.mobile_slide2
+{ 
+	text-align:center; 
+	margin:auto; 
+	display:flex; 
+	overflow:auto;
+}
+@-moz-document url-prefix() {
+  .mobile_slide
+{
+	width:60vw; 
+	text-align:center; 
+	margin:auto; 
+	display:block ruby; 
+	overflow:auto;
+}
+  .mobile_slide2
+{
+	text-align:center; 
+	margin:auto; 
+	display:block ruby; 
+	overflow:auto;
+}
+}
+.modal-open {
+    overflow: scroll;
+}
+.modal_.show
+{
+	display:flex!important;
+}
 *
 {
 	box-sizing:border-box;
@@ -19,6 +58,7 @@ body, html
 	height:100%;
 	background: rgba(255,255,255,0.8);
 	animation: fadeIn 4s both;
+	z-index: 5;
 }
 .exit
 {

@@ -39,16 +39,34 @@
     .row .jumbotron{
         height: 70%;
     }
+    .navbar{
+        z-index: 1;
+    }
+    .nav-link{
+        background-color: rgb(255, 255, 255);
+    }
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
     .row .jumbotron{
         height: 72%;
         width: 60%;
     }
+    .navbar{
+        z-index: 1;
+    }
+    .nav-link{
+        background-color: rgb(255, 255, 255);
+    }
 }
 @media screen and (max-width: 576px){
     .row .jumbotron{
         height: 73%;
         width: 65%;
+    }
+    .navbar{
+        z-index: 1;
+    }
+    .nav-link{
+        background-color: rgb(255, 255, 255);
     }
 }
