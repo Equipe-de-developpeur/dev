@@ -12,7 +12,7 @@ window.onload = function()
         if ( I < message.length ) setTimeout(extraire, 100);
     }
     I = 0 ;
-    message = "Développeur web full-stack";
+    message = "J'aime cuisiner pour ma Famille et mes Amis...";
     extraire();
 }
 
