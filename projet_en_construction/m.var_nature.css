@@ -294,6 +294,7 @@ nav ul li a {
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
         display: flex;
+		display: -webkit-flex;
         justify-content: center;
     }
     .TxtIntro{
@@ -425,6 +426,7 @@ nav ul li a {
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
         display: flex;
+		display: -webkit-flex;
         justify-content: center;
     }
     .btnDecouvrir{
