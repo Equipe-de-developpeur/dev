@@ -13,8 +13,9 @@
     <script>
         $(document).ready(function () {
 
-            var next = 1, previous = 1, nb_diapo = 3, list_titre_1 = ["L'environnement Naturel", "Les inégalités", "Les violences"], nb_diapo_ligne1 = 3, list_img_diapo_ligne1 = ['Ressource_image/deforestation-405749_1920.jpg', 'Ressource_image/rhino-lying-on-ground-near-tree-1145513.jpg', 'Ressource_image/décharge.jpeg'], list_img_diapo_ligne2 = ['Ressource_image/inegalité_eau_potable.jpg', 'Ressource_image/homeless-845752_1920.jpg', 'Ressource_image/ecrase.jpg'], list_img_diapo_ligne3 = ['Ressource_image/animal-mutile.jpg', 'Ressource_image/sebrenis_memorial.jpg','Ressource_image/esclavage.jpg'];
+            var next = 1, previous = 1, nb_diapo = 3, list_titre_1 = ["L'environnement Naturel", "Les inégalités", "Les violences"], nb_diapo_ligne1 = 3, list_img_diapo_ligne1 = ['Ressource_image/deforestation-405749_1920.jpg', 'Ressource_image/rhino-lying-on-ground-near-tree-1145513.jpg', 'Ressource_image/décharge.jpeg'], list_img_diapo_ligne2 = ['Ressource_image/inegalité_eau_potable.jpg', 'Ressource_image/homeless-845752_1920.jpg', 'Ressource_image/ecrase.jpg'], list_img_diapo_ligne3 = ['Ressource_image/animal-mutile.jpg', 'Ressource_image/sebrenis_memorial.jpg', 'Ressource_image/esclavage.jpg'];
             $("#toggler").click(function () {
+                $("#aside").hide();
                 $("#ou").fadeToggle("slow");
                 $("#last_phrase").hide();
                 if ($(this).text() == "Cacher") {
@@ -23,7 +24,7 @@
                     $(this).text("Cacher");
                 }
 
-                // $("#last_phrase").hide();
+                $("#toggler").hide();
                 $("#diapositive-ligne1-1").animate({
                     height: "75%",
                     width: "75%",
@@ -35,6 +36,21 @@
 
 
             });
+            var a= 0
+            $("#home").click(function(){
+                $("#aside").slideToggle();
+                
+                if (a == 0){
+                    $("#home").html('<span class="oi oi-minus"></span>');
+                    a = 1
+                }else{
+                    $("#home").html('<span class="oi oi-home"></span>');
+                    a = 0
+                }
+               
+                
+                })
+            
             $(".ligne_diapositive").on({
                 mouseenter: function () {
                     $(this).animate({
@@ -100,7 +116,7 @@
                     // $("#img-fond-ligne1").css("opacity", "0")
                     // $("#diapositive-ligne1-1").css("opacity", "0");
                     $("#img-fond-ligne2").attr("src", list_img_diapo_ligne2[i2]);
-                    $("#diapositive-ligne2-1").css("backgroundImage", "url(" + list_img_diapo_ligne2[i2] + ")");
+                    $("#diapositive-ligne2-2").css("backgroundImage", "url(" + list_img_diapo_ligne2[i2] + ")");
                     // $("#img-fond-ligne1").animate({
                     //     opacity : '1'
                     // }, 1000)
@@ -112,7 +128,7 @@
                 } else {
                     i2 = 0;
                     $("#img-fond-ligne2").attr("src", list_img_diapo_ligne2[i2]);
-                    $("#diapositive-ligne2-1").css("backgroundImage", "url(" + list_img_diapo_ligne2[i2] + ")");
+                    $("#diapositive-ligne2-2").css("backgroundImage", "url(" + list_img_diapo_ligne2[i2] + ")");
                 }
 
             });
@@ -122,11 +138,11 @@
                 if (i2 > 0) {
                     i2 = i2 - 1;
                     $("#img-fond-ligne2").attr("src", list_img_diapo_ligne2[i2]);
-                    $("#diapositive-ligne2-1").css("backgroundImage", "url(" + list_img_diapo_ligne2[i2] + ")");
+                    $("#diapositive-ligne2-2").css("backgroundImage", "url(" + list_img_diapo_ligne2[i2] + ")");
                 } else {
                     i2 = (list_img_diapo_ligne2.length - 1)
                     $("#img-fond-ligne2").attr("src", list_img_diapo_ligne2[i2]);
-                    $("#diapositive-ligne2-1").css("backgroundImage", "url(" + list_img_diapo_ligne2[i2] + ")");
+                    $("#diapositive-ligne2-2").css("backgroundImage", "url(" + list_img_diapo_ligne2[i2] + ")");
                 }
 
 
@@ -217,11 +233,11 @@
     <button type="button" onclick="increment('nombre_tonne_co2',1.24)">Ajouter</button> -->
     <div class="container-fluid">
         <div class="row justify-content-center" style="height:100vh;">
-            <div class="col-lg-3 border" style="max-height: 100vh;padding:0;">
+            <div id="aside" class="col-lg-3 border" style="max-height: 100vh;padding:0;">
                 <div class="speech_container">
                     <h2 class="main_title ">D'ou est ce qu'on part ?</h2>
                     <div id="intro">
-                        <h1>Le monde est il parfait ?</h1>
+                        <h1>LE MONDE EST IL PARFAIT ?</h1>
                         <p> Pour avancer il faut passer par la pleine <strong>acceptation et
                                 constation de la réalité .</strong><br><br><span
                                 style="font-style: italic;font-size: larger;">Puis</span></p>
@@ -249,17 +265,17 @@
 
             </div> <!-- FIN COLONNE GAUCHE -->
 
-            <div id="ou" class="col-lg-9 h-100 " style="overflow-y: scroll;padding: 0;">
+            <div id="ou" class="col-lg h-100 " style="overflow-y: scroll;padding: 0;">
                 <!-- BARRE DE TITRE  -->
                 <div class="main_title header_diapo sticky-top">
                     <div class="control_panel">
-
+                        <button class="btn control-button" id="home" style="padding: 3px;"><span class="oi oi-home"></span></button>
 
                         <a href="#ligne1" id="btn-left"><button class="btn control-button"><span
-                                    class="oi oi-arrow-thick-top"></span>Précedent</button></a>
+                                    class="oi oi-arrow-thick-top"></span><div class="d-none d-md-block">Précedent</div></button></a>
 
                         <a href="#ligne2" id="btn-right"><button class="btn control-button"><span
-                                    class="oi oi-arrow-thick-bottom"></span>Suivant</button></a>
+                                    class="oi oi-arrow-thick-bottom"></span><div class="d-none d-md-block">Suivant</div></button></a>
 
                     </div>
                     <div class="title_panel">
@@ -307,9 +323,7 @@
 
                                                 <h5>La cause principale est la destruction des écosystèmes et des
                                                     habitats des espèces animales.</h5>
-                                                <h5> La plate-forme intergouvernementale
-                                                    scientifique et politique sur la biodiversité et les services
-                                                    écosystémiques (IPBES)
+                                                <h5> La plate-forme intergouvernementale (IPBES)
                                                     a tiré la sonnette d'alarme le 6 mai 2019 . Elle estime à un
                                                     million (1 sur 8) le nombre d'espèces qui risquent de disparaître
                                                     sous peu. </h5>
@@ -326,22 +340,19 @@
                                                 tonnes de déchet par an</h1>
                                             <div class="carousel-caption d-none d-md-block">
 
-                                                <h5><br><br><span style="text-decoration: underline;"> 33% ne seraient
-                                                        pas traités correctement.</span><br><br>
+                                                <h5><br><br><span style="text-decoration: underline;font-weight: bold;"> 33% ne seraient
+                                                        pas traités correctement.</span><br><br></h5>
+                                                <h5>
                                                     Un chiffre qui va aller
                                                     en grandissant dans les années qui viennent, à cause de
                                                     l’augmentation de la population et de l’occidentalisation de nos
                                                     modes de vie.
-
-                                                    Des montagnes de déchets, qui posent des problèmes en termes
-                                                    environnementaux (pollution des sols, des eaux, menaces pour la
-                                                    biodiversité…) mais aussi sociaux, surtout dans les pays du Sud :
-                                                    émanations toxiques des déchets brûlés, effondrement de décharges
-                                                    sauvages…</h5>
-                                                <p>le monde a produit en 2016, 242 millions de tonnes de déchets
+                                                </h5>
+                                       
+                                                <h5>le monde a produit en 2016, 242 millions de tonnes de déchets
                                                     plastique !On estime que seuls 9 % du plastique produit est recyclé
                                                     dans le monde
-                                                </p>
+                                                </h5>
                                                 <a href="https://www.consoglobe.com/recyclage-dans-le-monde-cg#source1">Source
                                                     : </a>
                                             </div>
@@ -373,7 +384,7 @@
 
                 <div class="ligne" id="ligne2">
                     <img id="img-fond-ligne2" src="Ressource_image/inegalité_eau_potable.jpg">
-                    <div id="diapositive-ligne2-1" class="ligne_diapositive shrink-content">
+                    <div id="diapositive-ligne2-2" class="ligne_diapositive shrink-content">
                         <div class="carousel-container">
 
 
@@ -390,11 +401,13 @@
                                             <h1 id="title" style="color:white;">11 % de la population mondiale n’a pas
                                                 accès à l’eau potable</h1>
                                             <h5>Soit près d'un milliard de personnes</h5>
-                                            <h5>ceux qui n’y ont pas accès sur place sont forcés de consacrer une grande
+                                            <h5 class="d-none d-md-block">ceux qui n’y ont pas accès sur place sont
+                                                forcés de consacrer une grande
                                                 part de leur temps et de leur énergie à s’approvisionner, en se
                                                 déplaçant vers des sources aléatoires et dont la qualité est mal
                                                 contrôlée</h5>
-                                            <h5>l’eau souillée est l’un des vecteurs majeurs des maladies qui font le
+                                            <h5 class="d-none d-md-block">l’eau souillée est l’un des vecteurs majeurs
+                                                des maladies qui font le
                                                 plus de morts sur la planète,
                                             </h5>
                                             <a href="https://www.inegalites.fr/L-acces-a-l-eau-potable-dans-le-monde">source
@@ -538,8 +551,10 @@
                                                 à 14 millions le nombre d'Africains réduits en esclavage dans le cadre
                                                 de la traite intra-africaine.</h5>
 
-                                         
-                                            <a href="https://www.leparisien.fr/international/esclavage-moderne-40-millions-de-cas-dans-le-monde-24-11-2017-7413477.php">source :
+
+                                            <a
+                                                href="https://www.leparisien.fr/international/esclavage-moderne-40-millions-de-cas-dans-le-monde-24-11-2017-7413477.php">source
+                                                :
                                             </a>
 
                                         </div>

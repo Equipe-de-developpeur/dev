@@ -1,3 +1,30 @@
+@media only screen and (max-width: 550px) {
+    
+    #titre_ligne{
+    font-size: 0.7em;
+    
+    }
+
+    .speech_container *{
+        font-size: 1em    
+    }
+
+    .main_title{
+        font-size: 1.5em;
+    }
+
+    .diapo h1{
+        font-size: 1.7em;
+    }
+    .diapo h5{
+        font-size: 1.2em;
+    }
+}
+
+a{
+    color: black;
+}
+
 *{
     scroll-behavior: smooth !important;
     padding: 0;
@@ -29,12 +56,12 @@ a:hover{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    height: 100%;
     text-align: center;
     font-family:'Times New Roman', Times, serif;
     box-shadow: rgb(0, 0, 0) 0 0 10px;
     width: 100%;
     max-height: 100vh;
+    overflow-y: scroll;
 }
 
 
@@ -57,14 +84,13 @@ a:hover{
 }
 
 #intro{
-    overflow: hidden;
+
     background: rgb(255,255,255);
     background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 23%, rgba(232,239,255,1) 86%, rgba(214,232,247,1) 100%);
     background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 23%, rgba(232,239,255,1) 86%, rgba(214,232,247,1) 100%);
     background: linear-gradient(180deg, rgba(255,255,255,1) 23%, rgba(232,239,255,1) 86%, rgba(214,232,247,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#d6e8f7",GradientType=1); 
-    margin:0;
- padding:0.2em;
+
     box-shadow: black 0 10px 10px -5px;
 }
 
@@ -72,11 +98,12 @@ a:hover{
     color:black;
     text-shadow: rgb(255, 255, 255) 0px 0px 5px;
     font-weight: bold;
+    font-size: 1.2em;
 }
 
 .speech_container ul{
 
-box-shadow: rgb(255, 255, 255) inset 0px 5px 15px -10px;
+    box-shadow: rgb(255, 255, 255) inset 0px 5px 15px -10px;
 }
 .control-button{
     background: rgb(255,255,255);
@@ -140,7 +167,9 @@ box-shadow: rgb(255, 255, 255) inset 0px 5px 15px -10px;
     display: none;
   
 }
-
+#titre_ligne{
+    text-align: center;
+}
 .header_diapo{
     display: flex;
     height:70px;
@@ -152,7 +181,7 @@ display: flex;
 }
 
 .title_panel{
-
+    padding: 0.2em;
 }
 
 
@@ -205,6 +234,14 @@ display: flex;
     align-items:center;
 }
 
+.diapo a{
+    color:rgb(37, 95, 255);
+}
+
+.diapo h1{
+    font-size: 2em;
+}
+
 .diapo h5,h1 {
 font-weight: 6vw;
 color:white;
@@ -217,13 +254,16 @@ color:white;
 
 #diapositive-ligne1-1{
     background-image: url('Ressource_image/deforestation-405749_1920.jpg');background-size: 150%;
+    background-size: cover;
 }
 #diapositive-ligne2-2{
-    background-image: url('Ressource_image/inegalité eau potable.jpg');background-size: 150%;
+    background-image: url("Ressource_image/inegalité_eau_potable.jpg");background-size: 150%;
+    background-size: cover;
 }
 
 #diapositive-ligne3-3{
     background-image: url('Ressource_image/animal-mutile.jpg');
+    background-size: cover;
 }
 
 #diapo1_1 *{
@@ -236,8 +276,9 @@ color:white;
 }
 
 .carousel-container{
-    width: 75%;
-    height: 75%;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
 }
 
 .carousel-container .carousel-item{
