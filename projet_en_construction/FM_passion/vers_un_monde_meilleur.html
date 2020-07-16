@@ -260,7 +260,7 @@
                   </li>
                 </ul>
               </div>
-              <span id="sommaire_spoiler1" style="" class="oi oi-arrow-circle-bottom sommaire_spoiler">Voir
+              <span id="sommaire_spoiler1" style="" class="oi oi-arrow-circle-bottom sommaire_spoiler"> Voir
                 plus</span>
             </div>
 
@@ -321,7 +321,7 @@
                   </li>
                 </ul>
               </div>
-              <span id="sommaire_spoiler2" style="" class="oi oi-arrow-circle-bottom sommaire_spoiler">Voir plus</span>
+              <span id="sommaire_spoiler2" style="" class="oi oi-arrow-circle-bottom sommaire_spoiler"> Voir plus</span>
             </div>
           </div><!-- le pourquoi fin-->
 
@@ -365,7 +365,7 @@
               </div>
 
               <img id="img3" class="img">
-              <span id="sommaire_spoiler3" style="" class="oi oi-arrow-circle-bottom sommaire_spoiler">Voir plus</span>
+              
               <div id="sommaire_text3" class="sommaire_text">
                 <ul>
                   <li>
@@ -379,6 +379,7 @@
                   </li>
                 </ul>
               </div>
+              <span id="sommaire_spoiler3" style="" class="oi oi-arrow-circle-bottom sommaire_spoiler"> Voir plus</span>
             </div>
           </div>
           <!--Le but fin-->
@@ -420,7 +421,7 @@
 
               </div>
               <div id="img4" class="img">
-                <span id="sommaire_spoiler4" class="oi oi-arrow-circle-bottom sommaire_spoiler">Voir plus</span>
+                
                 <div class="sommaire_text" id="sommaire_text4">
                   <ul>
                     <li>
@@ -432,7 +433,7 @@
                     </li>
                   </ul>
                 </div>
-
+                <span id="sommaire_spoiler4" style="" class="oi oi-arrow-circle-bottom sommaire_spoiler"> Voir plus</span>
               </div>
             </div><!-- Agir fin -->
             <!-- </button> -->
@@ -495,7 +496,7 @@
           <img src="Ressource_image/player on.png" style="cursor: pointer;" alt="" data-toggle="modal"
             data-target="#modal_demarche_global" />
         </div>
-        <div id="la_demarche_global" class="row rubrique text-center">
+        <div id="la_demarche_global" class="row rubrique d-none d-md-flex text-center">
 
           <div class="col-lg-9">
             <div class="row h-100">
@@ -577,7 +578,7 @@
             data-target="#modal_demarche_global" />
         </div>
 
-        <div id="le_pourquoi" class="row rubrique text-center">
+        <div id="le_pourquoi" class="row rubrique d-none d-md-flex text-center">
 
           <div id="rubrique2_photo" class="col-lg-3"></div>
           <div class="col-lg-9 h-100">
@@ -662,7 +663,7 @@
             data-target="#modal_demarche_global" />
         </div>
 
-        <div id="le_pourquoi" class="row rubrique text-center">
+        <div id="le_pourquoi" class="row rubrique d-none d-md-flex text-center">
 
           <div id="rubrique3_photo" class="col-lg-3"></div>
           <div class="col-lg-9 h-100">
@@ -740,7 +741,7 @@
             data-target="#modal_demarche_global" />
         </div>
 
-        <div id="le_pourquoi" class="row rubrique text-center">
+        <div id="le_pourquoi" class="row rubrique d-none d-md-flex text-center">
 
           <div id="rubrique4_photo" class="col-lg-3"></div>
           <div class="col-lg-9 h-100">
@@ -884,15 +885,23 @@
       <script> // JQUERY
         $('#sommaire_spoiler1').click(function () {
           $("#sommaire_text1").slideToggle();
+          $(this).toggleClass('oi-arrow-circle-bottom');
+          $(this).toggleClass('oi-arrow-circle-top');
         })
         $('#sommaire_spoiler2').click(function () {
           $("#sommaire_text2").slideToggle();
+          $(this).toggleClass('oi-arrow-circle-bottom');
+          $(this).toggleClass('oi-arrow-circle-top');
         })
         $('#sommaire_spoiler3').click(function () {
           $("#sommaire_text3").slideToggle();
+          $(this).toggleClass('oi-arrow-circle-bottom');
+          $(this).toggleClass('oi-arrow-circle-top');
         })
         $('#sommaire_spoiler4').click(function () {
           $("#sommaire_text4").slideToggle();
+          $(this).toggleClass('oi-arrow-circle-bottom');
+          $(this).toggleClass('oi-arrow-circle-top');
         })
 
 
