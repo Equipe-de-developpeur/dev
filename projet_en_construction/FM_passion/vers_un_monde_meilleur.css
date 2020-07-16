@@ -189,6 +189,7 @@ html{
     justify-content: center;
     align-items: flex-start;
     box-shadow: black 0 0 10px;
+
 }
 
 
@@ -202,7 +203,6 @@ html{
     text-align: center;
     margin:0;
     height:30px;
-
     position: relative;
     z-index: 1;
     
@@ -237,6 +237,7 @@ html{
     border-radius: 1em;
     margin: 20px;
     transition: all 1s;
+    
 }
 
 .sommaire_index-container:hover{
@@ -244,14 +245,6 @@ html{
 }
 
 
-.img{
-    
-    background-size: cover;
-box-shadow: 0 0 5px;
-border-radius: 50%;
-height:150px;
-width: 150px;
-}
 
 #img1{
     background-image: url('Ressource_image/index.pourquoi_640.jpeg');
@@ -265,20 +258,41 @@ width: 150px;
     background-image: url('Ressource_image/business_640.jpg');
 }
 
-#img4{
-    background-image: url('Ressource_image/human_640.jpg');
-}
+
 
 .carousel_index {
 }
 
+.sommaire_spoiler{
+    margin: 10px;
+    cursor: pointer;
+}
 
+.sommaire_text{
+    display:none
+   
+}
+
+#sommaire_text1{
+    
+   
+}
+
+.sommaire_text_bottom{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+   height: 200px;
+   justify-content: center;
+   align-items: center;
+}
 .sommaire_index-container li{
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     padding: 0.2em;
     margin:0.5em;
     list-style-image: url("Ressource_icone/open-iconic-master/open-iconic-master/png/arrow-right-2x.png");
+    text-overflow: ellipsis;
 }
 
 
@@ -315,12 +329,9 @@ width: 150px;
 }
 
 .carousel-container .carousel-item{
-    height:70px;
+    height:100px;
 }
 
-#index4{
-    min-height: 100%;
-}
 
 #resume{
     padding:3em;
