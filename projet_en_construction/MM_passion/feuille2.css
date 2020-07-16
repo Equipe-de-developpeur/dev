@@ -103,6 +103,18 @@ h2
   
 }
 
+@-moz-document url-prefix()
+{
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 102%!important;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+
+}
 
 .flip-box 
 {
@@ -147,6 +159,13 @@ h2
   transform: rotateY(180deg);
 }
 
+@-moz-document url-prefix'()
+{
+
+  
+}
+
+/* page motorhome*/
 
 .carEtage
 {
