@@ -40,7 +40,7 @@ header img {
 
 @media screen and (max-width: 780px) {
   #OGAME {
-    box-shadow: 30px 30px 30px white;
+    box-shadow: 0px 0px 60px white;
   }
 }
 
