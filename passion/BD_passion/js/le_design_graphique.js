@@ -9,7 +9,7 @@
 //     })
 
 // const changeBg = document.querySelector('.eventFlash'),
-//         bg = [location.href='accueil/appareilPhoto.jpg', location.href='accueil/bgJumbotron3.jpg'];
+//         bg = [location.href='img/accueil/appareilPhoto.jpg', location.href='img/accueil/bgJumbotron3.jpg'];
 // let bgIndex = 0;
 
 // changeBg.addEventListener('click', () => {
@@ -19,21 +19,21 @@
 
 //Ca fonctionne
 document.querySelector(".eventFlash").addEventListener("click", function (){
-    document.querySelector(".jumbotron").style.backgroundImage = "url('accueil/appareilPhoto.jpg')";
+    document.querySelector(".jumbotron").style.backgroundImage = "url('img/accueil/appareilPhoto.jpg')";
 });
 document.querySelector(".eventFlash2").addEventListener("click", function (){
-    document.querySelector(".jumbotron").style.backgroundImage = "url('accueil/bgJumbotron3.jpg')";
+    document.querySelector(".jumbotron").style.backgroundImage = "url('img/accueil/bgJumbotron3.jpg')";
 });
 
 
 
 // document.querySelector(".eventFlash").addEventListener("click", function (){
-//         document.querySelector(".jumbotron").style.backgroundImage = "url('accueil/appareilPhoto.jpg')";
-//         this.document.querySelector(".jumbotron").style.backgroundImage = "url('accueil/bgJumbotron3.jpg')";
+//         document.querySelector(".jumbotron").style.backgroundImage = "url('img/accueil/appareilPhoto.jpg')";
+//         this.document.querySelector(".jumbotron").style.backgroundImage = "url('img/accueil/bgJumbotron3.jpg')";
 
 // });
 
-// var image = ["url('accueil/bgJumbotron3.jpg')", "url('accueil/appareilPhoto.jpg')"];
+// var image = ["url('img/accueil/bgJumbotron3.jpg')", "url('img/accueil/appareilPhoto.jpg')"];
 // var index = 0;
 // var button = document.querySelector(".jumbotron");
 
@@ -47,7 +47,7 @@ document.querySelector(".eventFlash2").addEventListener("click", function (){
 //     }
 // }
 
-// var lights= ["url('accueil/bgJumbotron3.jpg')", "url('accueil/appareilPhoto.jpg')"]
+// var lights= ["url('img/accueil/bgJumbotron3.jpg')", "url('img/accueil/appareilPhoto.jpg')"]
 // var index = 0;
 // var image = document.querySelector(".jumbotron");
 
