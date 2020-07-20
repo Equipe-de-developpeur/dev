@@ -241,8 +241,6 @@ window.addEventListener("keyup", function (event) {
 function changing_section(a) {
 
 
-
-
     if (a == 0) {
         scrolling_2.style.transform = translate[a]; 
         point_two.style.background = "grey";

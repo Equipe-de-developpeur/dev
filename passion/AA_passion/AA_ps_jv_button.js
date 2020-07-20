@@ -41,7 +41,7 @@ var button_nav_3 = document.getElementById('nav_3');
                                
                         setTimeout(function(){
                                      
-                                     window.location= "index.html";                                     
+                                     window.location= "AA_ps_index.html";                                     
                                          
                                         },1000);
                 
@@ -81,7 +81,7 @@ var button_nav_3 = document.getElementById('nav_3');
                    setTimeout(function(){
                        
                                      
-                                     window.location= "intelligence_artificielle.html";                                     
+                                     window.location= "AA_ps_intelligence_artificielle.html";                                     
                                          
                                         },1000);
                  
@@ -116,7 +116,7 @@ var button_nav_3 = document.getElementById('nav_3');
                  
                    setTimeout(function(){
                                      
-                                     window.location= "blockchain.html";                                     
+                                     window.location= "AA_ps_blockchain.html";                                     
                                          
                                         },1000);
                 
@@ -126,6 +126,6 @@ var button_nav_3 = document.getElementById('nav_3');
 
 
  bouton_3.addEventListener("click", function(){
-                     window.location="jeux_video.html";
+                     window.location="AA_ps_jeux_video.html";
                  });
                            
