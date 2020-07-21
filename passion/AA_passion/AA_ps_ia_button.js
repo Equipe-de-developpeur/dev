@@ -50,7 +50,7 @@ var transition_3 = document.getElementById('transition_page_2');
                                
                         setTimeout(function(){
                                      
-                                     window.location= "index.html";                                     
+                                     window.location= "AA_ps_index.html";                                     
                                          
                                         },1000);
                 
@@ -90,7 +90,7 @@ var transition_3 = document.getElementById('transition_page_2');
                    setTimeout(function(){
                        
                                      
-                                     window.location= "jeux_video.html";                                     
+                                     window.location= "AA_ps_jeux_video.html";                                     
                                          
                                         },1000);
                  
@@ -125,7 +125,7 @@ var transition_3 = document.getElementById('transition_page_2');
                  
                    setTimeout(function(){
                                      
-                                     window.location= "blockchain.html";                                     
+                                     window.location= "AA_ps_blockchain.html";                                     
                                          
                                         },1000);
              
