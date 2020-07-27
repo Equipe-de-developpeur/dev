@@ -126,6 +126,24 @@ header a {
     }
 }
 
+@media screen and (max-width: 360px) {
+    #La-création .arbre {
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #La-création .arbre {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 260px) {
+    #La-création .arbre {
+        margin-top: 200px;
+    }
+}
+
 #La-création .padding {
     padding: 2%;
 }
