@@ -26,6 +26,12 @@ h1 {
     }
 }
 
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 500% !important;
+    }
+}
+
 h2 {
     font-family: "papyrus";
     font-size: 300% !important;
