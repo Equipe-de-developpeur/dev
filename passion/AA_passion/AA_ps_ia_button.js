@@ -125,7 +125,7 @@ var transition_3 = document.getElementById('transition_page_2');
                  
                    setTimeout(function(){
                                      
-                                     window.location= "AA_ps_intelligence_artificielle.html";                                     
+                                     window.location= "AA_ps_blockchain.html";                                     
                                          
                                         },1000);
              
