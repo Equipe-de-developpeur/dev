@@ -1,0 +1,12 @@
+@media screen and (max-width:778px) {
+    .IntroductionMer .Contenue {
+        flex-direction: column;
+        margin: auto;
+        width: 80%;
+    }
+    .IntroductionMer .Partager {
+        margin: auto;
+        width: 50%;
+        margin-bottom: 5%;
+    }
+}
