@@ -1,5 +1,5 @@
 <div class="IntroductionMer">
-    <h2 style="background-image: url(img/fond-eau-plan);">
+    <h2>
       Introduction
     </h2>
     <div class="Contenue">

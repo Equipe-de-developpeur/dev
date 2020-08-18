@@ -10,6 +10,9 @@
     color: #0a5957;
     font-size: 5vw;
     margin-bottom: -2vw;
+    text-align: right;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .IntroductionMer .Contenue {
