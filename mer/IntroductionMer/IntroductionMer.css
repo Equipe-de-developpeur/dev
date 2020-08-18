@@ -1,44 +1,41 @@
-       .IntroductionMer {
-           width: 75%;
-           background-color: rgba(255, 255, 255, 0.75);
-           margin: auto;
-           text-align: center;
-           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-           padding: 1%;
-           font-family: Fira Sans Extra Condensed;
-       }
-       
-       .IntroductionMer h2 {
-           color: #3B5773;
-           font-size: 36px;
-       }
-       
-       .IntroductionMer .Contenue {
-           display: flex;
-       }
-       
-       .IntroductionMer .Texte {
-           margin-right: 5%;
-           margin-left: 5%;
-           text-align: justify;
-           font-size: 18px;
-       }
-       
-       .IntroductionMer .Partager {
-           width: 60%;
-           line-height: 60px;
-           background-color: #0f8581;
-           border-radius: 45px;
-           font-size: 36px;
-           margin: auto;
-           text-align: center;
-           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-           padding-left: 15px;
-           padding-right: 15px;
-           margin-right: 5%;
-       }
-       
-       .IntroductionMer .Partager a {
-           text-decoration: none;
-           color: white;
-       }
+.IntroductionMer {
+    width: 65%;
+    margin-left: 25%;
+    margin-right: 5%;
+    padding: 1%;
+    font-family: Fira Sans Extra Condensed;
+}
+
+.IntroductionMer h2 {
+    color: #0a5957;
+    font-size: 5vw;
+    margin-bottom: -2vw;
+}
+
+.IntroductionMer .Contenue {
+    text-align: right;
+}
+
+.IntroductionMer .Texte {
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 2.5vw;
+}
+
+.IntroductionMer .Partager {
+    width: 18%;
+    line-height: 150%;
+    background-color: #0a5957;
+    border: 0.7vw solid white;
+    font-size: 3vw;
+    margin: auto;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 5%;
+}
+
+.IntroductionMer .Partager a {
+    text-decoration: none;
+    color: white;
+}
