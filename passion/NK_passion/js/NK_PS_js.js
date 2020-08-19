@@ -20,6 +20,7 @@ window.onload = function()
         document.getElementById("progress01").style.width = barre+"px"
     })
 	
+
 	
 	//N02
 	 // Ecouteur d'évènement sur scroll
@@ -59,17 +60,22 @@ window.onload = function()
         document.getElementById("progress03").style.width = barre+"px"
     })
 
+
+
+
 	//Get the button
 	var mybutton = document.getElementById("myBtn");
 
-	// When the user scrolls down 20px from the top of the document, show the button
+	// Quand l'utilisateur scroll 1800px , le bouton apparait : 
+
 	window.onscroll = function() {scrollFunction()};
 
 	function scrollFunction() {
-		if (document.body.scrollTop > 2700 || document.documentElement.scrollTop > 2700) {
+		if (document.body.scrollTop > 1800 || document.documentElement.scrollTop > 1800) {
 		mybutton.style.display = "block";
 		} else {
 		mybutton.style.display = "none";
+		
 		}
 	}
 	
@@ -80,6 +86,12 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+
+// Jquery 
+
+ 
 
 $(document).ready(function(){
     $(window).on('scroll', function () {
