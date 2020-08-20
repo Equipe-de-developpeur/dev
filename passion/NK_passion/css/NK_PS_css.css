@@ -55,7 +55,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 2rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Titillium Web', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -82,17 +82,6 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
-}
-
-abbr[title],
-abbr[data-original-title] {
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
-  cursor: help;
-  border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
 }
 
 address {
@@ -195,7 +184,8 @@ figure {
 
 img {
   vertical-align: middle;
-  border-style: none;
+  border-radius: 4px;
+  
 }
 
 svg {
@@ -1111,11 +1101,8 @@ pre code {
     flex: 0 0 25%;
     max-width: 25%;
   }
-  .row-cols-md-5 > * {
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
+  
+  
   .row-cols-md-6 > * {
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
@@ -4288,7 +4275,8 @@ input[type="button"].btn-block {
   top:100%;
   left:0%;
   width:0;
-  height:2px;
+  height:4px;
+  border-radius: 4px;
   background: #FF3737;
   display:block;
   content:'';
@@ -4300,7 +4288,8 @@ input[type="button"].btn-block {
   top:100%;
   left:0%;
   width:0;
-  height:2px;
+  height:4px;
+  border-radius: 4px;
   background: lightgreen;
   display:block;
   content:'';
@@ -4312,8 +4301,9 @@ input[type="button"].btn-block {
   top:100%;
   left:0%;
   width:0;
-  height:2px;
-  background: purple;
+  height:4px;
+  border-radius: 4px;
+  background-color: #BB55B7;
   display:block;
   content:'';
   transition: width 0.5s ease-in-out;
@@ -4371,34 +4361,38 @@ input[type="button"].btn-block {
 
 #progress01{
 	background-color: #FF3737;
-	height: 3px;
+	height: 5px;
 	width: 0;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
+	border-radius: 4px;
 }
 
 #progress02{
 	background-color: lightgreen;
-	height: 3px;
+	height: 5px;
 	width: 0;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
+	border-radius: 4px;
 }
 
 #progress03{
-	background-color: purple;
-	height: 3px;
+	background-color: #BB55B7;
+	height: 5px;
 	width: 0;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 9999; /* Peut être important si vous avez un menu en position fixe */
+	border-radius: 4px;
 }
 
+/*bouton back top top */
 #myBtn {
   display: none;
   position: fixed;
@@ -4499,6 +4493,9 @@ input[type="button"].btn-block {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .navbar .container,
@@ -10443,12 +10440,23 @@ a.text-dark:hover, a.text-dark:focus {
     transform: translate(-50px,-30px);
 }
 
+#buttonsignature01{
+	background-color: #FF3030;
+}
+
+#buttonsignature02{
+	background-color: #4EC247;
+}
+
+#buttonsignature03{
+	background-color: #A3489F;
+}
+
 .shake{
 	display : inline-block;
 	margin: 2.5em 2.5em 2.5em 2.5em;
 	width: 15.625em;
 	border-radius: 4px;
-	background-color: #FF3030;
 	border: none;
 	outline: none;
 	padding: 15px;
@@ -10490,8 +10498,16 @@ a.text-dark:hover, a.text-dark:focus {
 	color: white;
 }
 
-.shake:hover{
+#buttonsignature01:hover{
 	background-color: #A02222;
+}
+
+#buttonsignature02:hover{
+	background-color: #4AB044;
+}
+
+#buttonsignature03:hover{
+	background-color: #90408D;
 }
 
 .wobble {
@@ -10543,3 +10559,4 @@ a.text-dark:hover, a.text-dark:focus {
     transform: translateY(0);
   }
 }
+

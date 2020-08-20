@@ -1,5 +1,18 @@
+body {
+    background: url(../../img/fond_eau_plan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-position: right;
+    }
+}
+
 .IntroductionMer {
     width: 65%;
+    margin-top: 5vw;
     margin-left: 25%;
     margin-right: 5%;
     padding: 1%;
@@ -9,7 +22,6 @@
 .IntroductionMer h2 {
     color: #0a5957;
     font-size: 5vw;
-    margin-bottom: -2vw;
     text-align: right;
     margin-right: 5%;
     margin-left: 5%;
@@ -22,7 +34,14 @@
 .IntroductionMer .Texte {
     margin-right: 5%;
     margin-left: 5%;
-    font-size: 2.5vw;
+    font-size: 2vw;
+}
+
+.IntroductionMer .Source {
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 1.3vw;
+    font-style: italic;
 }
 
 .IntroductionMer .Partager {

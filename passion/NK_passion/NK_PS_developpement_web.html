@@ -11,11 +11,15 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-		<script src="js/effets.js" type="text/javascript"></script>
-		<link href="bootstrap-4.5.0-examples/assets/dist/css/bootstrap.css" rel="stylesheet">
-		<link href="passion.css" rel="stylesheet">
+		<script src="js/NK_PS_js.js" type="text/javascript"></script>
+		<link href="css/NK_PS_css.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
 	</head>
 	<body>
+		<button style="background-color: #4EC247;" class="wobble" onclick="topFunction()" id="myBtn" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+		width="26" height="26"
+		viewBox="0 0 172 172"
+		style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M99.07572,154.01442l6.61538,-87.86058h20.82812c2.17067,0 3.79868,-1.05949 5.42669,-3.17849c0.54267,-2.11899 0.54267,-4.23798 -0.54267,-5.8143c-15.19471,-21.70673 -40.64844,-42.35397 -41.73377,-42.87079c-1.03365,-0.51683 -2.58413,-1.00781 -3.66947,-1.03365c-0.02584,0 -0.07753,-0.02584 -0.10337,-0.02584c-1.08533,0 -2.71334,0.51683 -3.25601,1.05949c-1.08534,0.51683 -26.61659,20.64724 -41.8113,42.87079c-1.08533,2.11899 -1.62801,4.23798 -0.54267,5.8143c1.08533,2.11899 2.71334,3.17849 4.88401,3.17849h20.82813l6.61538,87.86058c2.11899,2.63582 7.44231,4.75481 13.28245,4.75481c5.27163,0 11.0601,-1.57632 13.17909,-4.75481z"></path></g></g></svg></button>
 		<div class="fixed-top">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="#intro"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -61,7 +65,7 @@
 			<div class="row featurette" style="margin-top: 5rem;">
 				<div class="col-md-7">
 					<h2 class="featurette-heading">Laissez moi vous parlez du développement web plus en détails...</h2>
-					<p class="lead">Le domaine du développement web est apparu avec internet, il fait référence au processus d’écriture d’un site ou d’une page web dans un langage technique. Il s’agit d’une étape incontournable pour qu’un contenu soit mis en ligne et atteigne ses lecteurs. Tout cela repose sur l’utilisation de langages comme HTML/CSS, JavaScript, PHP, et bien d'autres, pour écrire des programmes qui sont ensuite exécutés par des ordinateurs. Les instructions sont mises en place sur Internet et sont effectuées sur des serveurs. En fonction des besoins des propriétaires du site ou des pages web, ces dernières peuvent être constituées uniquement de textes et d’éléments graphiques ressemblant à un document ou être interactives en affichant des informations qui évoluent comme des panier d’achat, par exemple. Le métier de développeur web consiste à la réalisation de l’ensemble des fonctionnalités techniques d’un site Internet ou d’une application web. En fonction des exigences présentées dans un cahier des charges précis, l'analyse des besoins et la définition d'une solution technique adaptée. Cela consiste ensuite aux développement des fonctionnalités du site ou de l’application web en rédigeant des lignes de code. Cela incluent également le diagnostic et la résolution de problèmes détectés sur un site déjà en ligne. Et il réalisera généralement tous ces objectifs en équipe.</p>
+					<p class="lead text-justify">Le domaine du développement web est apparu avec internet, il fait référence au processus d’écriture d’un site ou d’une page web dans un langage technique. Il s’agit d’une étape incontournable pour qu’un contenu soit mis en ligne et atteigne ses lecteurs. Tout cela repose sur l’utilisation de langages comme HTML/CSS, JavaScript, PHP, et bien d'autres, pour écrire des programmes qui sont ensuite exécutés par des ordinateurs. Les instructions sont mises en place sur Internet et sont effectuées sur des serveurs. En fonction des besoins des propriétaires du site ou des pages web, ces dernières peuvent être constituées uniquement de textes et d’éléments graphiques ressemblant à un document ou être interactives en affichant des informations qui évoluent comme des panier d’achat, par exemple. Le métier de développeur web consiste à la réalisation de l’ensemble des fonctionnalités techniques d’un site Internet ou d’une application web. En fonction des exigences présentées dans un cahier des charges précis, l'analyse des besoins et la définition d'une solution technique adaptée. Cela consiste ensuite aux développement des fonctionnalités du site ou de l’application web en rédigeant des lignes de code. Cela incluent également le diagnostic et la résolution de problèmes détectés sur un site déjà en ligne. Et il réalisera généralement tous ces objectifs en équipe.</p>
 				</div>
 				<div class="col-md-5">
 					<img class="img-fluid" src="img/intro_devweb.png">
@@ -77,7 +81,7 @@
 				<div class="row featurette">
 					<div class="col-md-7 order-md-2">
 						<h2 class="featurette-heading">Ma reconvertion dans ce domaine...</h2>
-						<p class="lead">Mon intéret pour le développement web est récent, je n'ai pas tout de suite su que je voulais travailler dans ce domaine la. C'est après avoir passé un BAC général et avoir fait 3 ans en faculté d'économie et gestion que je me suis rendu compte que la voie dans laquelle mes études m'amenaient n'était celle qui me correspondait. Et c'est la que je me suis découvert un intéret grandissant pour le développement web. C'est à partir de ce moment la que j'ai décidé de m'autoformer afin d'apprendre les bases dans ce domaine. J'ai réussi à acquérir certaines bases, et j'ai voulu intégrer une formation diplomante et professionnalisante. J'ai donc intégrer une formation au sein de l'organisme MODE83 qui correspondait exactement à ce que je recherchais.</p>
+						<p class="lead text-justify">Mon intéret pour le développement web est récent, je n'ai pas tout de suite su que je voulais travailler dans ce domaine la. C'est après avoir passé un BAC général et avoir fait 3 ans en faculté d'économie et gestion que je me suis rendu compte que la voie dans laquelle mes études m'amenaient n'était celle qui me correspondait. Et c'est la que je me suis découvert un intéret grandissant pour le développement web. C'est à partir de ce moment la que j'ai décidé de m'autoformer afin d'apprendre les bases dans ce domaine. J'ai réussi à acquérir certaines bases, et j'ai voulu intégrer une formation diplomante et professionnalisante. J'ai donc intégrer une formation au sein de l'organisme MODE83 qui correspondait exactement à ce que je recherchais.</p>
 					</div>
 					<div class="col-md-5 order-md-1">
 						<img class="img-fluid" src="img/reconvertion_devweb.png">
@@ -94,7 +98,7 @@
 				<div class="row featurette">
 					<div class="col-md-7">
 						<h2 class="featurette-heading">Un métier dans l'air du temps...</h2>
-						<p class="lead">Le métier de développeur web est bien en accord avec notre époque. Il faut se dire que l'apparition d'internet est assez récente, car internet a vu officiellement le jour le 7 avril 1969 et cela à boulversé le monde entier. Une révolution du numérique s'est mise en place, et à partir de la de nouvelles technologies n'ont cesser de faire leurs apparition, je parle par exemple des premiers ordinateur portables ou encore des smartphone. Le développement web à ensuite évolué au fur et à mesure de la création de ces nouvelles technologies. De nous jours, internet est omniprésent dans nos vies, nous sommes entourés par des sites, des boutiques en lignes, des applications mobiles, etc...<br>
+						<p class="lead text-justify">Le métier de développeur web est bien en accord avec notre époque. Il faut se dire que l'apparition d'internet est assez récente, car internet a vu officiellement le jour le 7 avril 1969 et cela à boulversé le monde entier. Une révolution du numérique s'est mise en place, et à partir de la de nouvelles technologies n'ont cesser de faire leurs apparition, je parle par exemple des premiers ordinateur portables ou encore des smartphone. Le développement web à ensuite évolué au fur et à mesure de la création de ces nouvelles technologies. De nous jours, internet est omniprésent dans nos vies, nous sommes entourés par des sites, des boutiques en lignes, des applications mobiles, etc...<br>
 						C'est pour cela que le domaine du développement est en accord avec son temps, et que j'ai décidé d'en faire mon travail.</p>
 					</div>
 					<div class="col-md-5">
@@ -112,7 +116,7 @@
 				<div class="row featurette">
 					<div class="col-md-7 order-md-2">
 						<h2 class="featurette-heading">Un métier recherché...</h2>
-						<p class="lead">Oui, développeur web est l'un des métier les plus recherché au monde. Rien qu'en France on recherche entre 60 000 et 100 000 développeurs. Et cette demande est en pleine expansion, un bon développeur trouvera par conséquent toujours du travail.</p>
+						<p class="lead text-justify">Oui, développeur web est l'un des métier les plus recherché au monde. Rien qu'en France on recherche entre 60 000 et 100 000 développeurs. Et cette demande est en pleine expansion, un bon développeur trouvera par conséquent toujours du travail.</p>
 					</div>
 					<div class="col-md-5 order-md-1">
 						<img class="img-fluid" src="img/metierrecherche_devweb.jpg">
@@ -129,7 +133,7 @@
 				<div class="row featurette">
 					<div class="col-md-7">
 						<h2 class="featurette-heading">La mobilité d'un développeur web...</h2>
-						<p class="lead">Quand on travail dans ce domaine la on dispose d'une grande mobilité car les entreprises de tout secteur recrutent des développeurs, mais ce n'est pas tout car ceci est aussi valable à l'internationnal car les languages informatiques utilisés y sont généralement les mêmes. Ayant une envie grandissante de voyager à l'international, cet aspect du métier m'a tout de suite attiré.</p>
+						<p class="lead text-justify">Quand on travail dans ce domaine la on dispose d'une grande mobilité car les entreprises de tout secteur recrutent des développeurs, mais ce n'est pas tout car ceci est aussi valable à l'internationnal car les languages informatiques utilisés y sont généralement les mêmes. Ayant une envie grandissante de voyager à l'international, cet aspect du métier m'a tout de suite attiré.</p>
 					</div>
 					<div class="col-md-5">
 						<img class="img-fluid" src="img/mobilite_devweb.jpg">
@@ -146,7 +150,7 @@
 				<div class="row featurette">
 					<div class="col-md-7 order-md-2">
 						<h2 class="featurette-heading">Pour conclure...</h2>
-						<p class="lead">Le domaine du développement web est un secteur d'innovations, d'opportunités, d'avenir. On peut dire que le cliché de "l'informaticien" enfermé dans son bureau à bien changé. Je suis enthousiaste quand à l'avenir, et je continue de m'investir et de m'épanouir dans cette nouvelle passion...</p>
+						<p class="lead text-justify">Le domaine du développement web est un secteur d'innovations, d'opportunités, d'avenir. On peut dire que le cliché de "l'informaticien" enfermé dans son bureau à bien changé. Je suis enthousiaste quand à l'avenir, et je continue de m'investir et de m'épanouir dans cette nouvelle passion...</p>
 					</div>
 					<div class="col-md-5 order-md-1">
 						<img class="img-fluid" src="img/conclusion_devweb.jpg">
@@ -155,13 +159,12 @@
 			</div>
 		</div>
 	
-			<hr class="featurette-divider" style="visibility: hidden;">
-			<hr class="featurette-divider" style="visibility: hidden;">
-			<hr class="featurette-divider" style="visibility: hidden;">
+		<hr class="featurette-divider" style="visibility: hidden;">
+		<hr class="featurette-divider" style="visibility: hidden;">
+		<hr class="featurette-divider" style="visibility: hidden;">
 	
-		<footer class="container">
-			<p class="float-right"><a href="#">Haut de page</a></p>
-			<p><a href="http://kenji-nguyen.pro/cv/" target="_blank">© 2020 Kenji Nguyen</a></p>
+		<footer id="pieddepage">
+				<button id="buttonsignature02" class="shake"><a id="signature" href="http://kenji-nguyen.pro/cv/" target="_blank">© 2020 Kenji Nguyen</a></button>
 		</footer>
 	</body>
 </html>
