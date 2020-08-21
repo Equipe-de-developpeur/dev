@@ -1,0 +1,1004 @@
+body{
+
+margin-top: 0;
+margin-left: 0;
+overflow-x: hidden;
+max-width: 100vw;
+max-height: 100vh;
+
+
+
+}
+
+h1{
+    color: rgb(161, 0, 0);
+}
+
+header{
+
+height: 750px;
+background-image: url(image/randonnée.jpg);
+background-size: cover;
+font-family:'Fira Sans Condensed', sans-serif;
+overflow-y: hidden;
+    
+}
+
+#logo{
+
+position: absolute;
+transform: scale(0.12);
+top: -26em;
+right: -22em;
+
+}
+
+#navbar{
+  position: absolute;
+  margin-left: -25px;
+  height: 60px;
+  width:35em;
+  background:#424242;
+  top: 5%;
+ 
+}
+
+
+ #nav_mobile{
+     visibility: hidden;
+    z-index: -10;
+    position: fixed;
+    top: 2%;
+    width: 70px;
+    height: 50px;
+    max-height: 100%;
+    cursor: pointer;
+    
+}
+
+
+#nav_mobile span{
+    position: absolute;
+    left: 5%;
+    width: 40px;
+    height: 6px;
+    background: black;
+    z-index: 50;
+    
+    
+}
+
+#nav_mobile span:nth-child(1){
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 40px;
+    height: 6px;
+    background: black;
+    z-index: 50;
+    
+    
+}
+
+#nav_mobile span:nth-child(2){
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 40px;
+    height: 6px;
+    background: black;
+    z-index: 50;
+    
+    
+}
+
+ul{
+    
+    display: flex;
+    padding-left: 40px;
+    padding-top: 14px;
+   
+    
+}
+
+li{
+
+ font-size: 20px;   
+ color: white;
+ align-items: center;
+ margin-right: 15px;
+ margin-left: 15px; 
+ list-style: none;  
+ cursor: pointer;
+
+}
+
+#intro{
+
+    position: relative; 
+    padding:25px;
+    background-color: rgba(236, 236, 236, 0.425);
+    align-items: center;
+    top: 20%;
+    display: flex;
+    height: 19em;
+}
+#intro h2{
+    
+    position: absolute;
+    top: 5%;
+    right: 20%;
+
+}
+
+#intro p{
+
+    font-weight: bold;
+}
+#intro button{
+    font-size: 14px;
+  position: absolute;
+  background: transparent;
+    width: 150px;
+    height: 35px;
+    bottom: 10%;
+    right: 10%;
+}
+
+Header h5{
+
+    position: relative;
+    bottom: -355px;
+    font-size: 600%;
+    font-weight: bold;
+    color: white;
+    letter-spacing: .07em;
+}
+
+#main-content{
+    height: 2250px;
+    background-image: url(image/sea.jpg);
+    padding: 60px 20px 50px 20px;
+    font-family:'Fira Sans Condensed', sans-serif;
+    font-size: 18px;
+  
+
+}
+/********* section 1 **************/
+#section1{
+
+height: 600px;
+margin-bottom: 20px;
+padding: 40px 10px 20px 80px;
+display: flex;
+margin-bottom: 100px;
+overflow: hidden;
+}
+
+ #main-content img{
+    
+    width: 45%;
+    height: 85%;
+    
+}
+
+#titre-section{
+position: relative;
+top: 3%;
+left: -2%;
+height: 70PX;
+width: 35em;
+background-color: rgba(255, 255, 255, 0.425);
+padding: 5px;
+border: 1px solid black;
+
+}
+
+#titre-section  p{
+    text-align: right;
+    margin: 0;
+}
+#titre-section h1{
+    font-size: 25px;
+    
+   
+}
+
+#text {
+    position: relative;
+    top: 35%;
+    left: -10%;
+
+}
+
+#section1 button{
+
+    position: relative;
+    height: 40px;
+    width: 350px;
+    left:-44%;
+    top: 75%;
+}
+/********* section 2 **************/
+#section2{
+
+    
+    height: 600px;
+    margin-bottom: 20px;
+    padding: 40px 80px 20px 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+
+#titre-section2{
+    position: relative;
+    top: 3%;
+    right: -2%;
+    height: 70px;
+    width: 45em;
+    background-color: rgba(255, 255, 255, 0.459);
+    padding: 5px;
+    border: 1px solid black;
+    
+    }
+    
+    #titre-section2  p{
+        text-align: left;
+        margin: 0;
+    }
+    #titre-section2 h1{
+        font-size: 24px;
+        
+       
+    }
+    
+    #text2 {
+        position: relative;
+        top: 40%;
+        left: 10%;
+      
+    
+    }
+    
+    #section2 button{
+    
+        position: relative;
+        height: 40px;
+        width: 350px;       
+         left:44%;
+        top: 75%;
+    }
+
+    /********** section 3 ************/
+#section3{
+
+        height: 600px;
+        margin-bottom: 20px;
+        padding: 40px 10px 20px 80px;
+        display: flex;
+        margin-bottom: 100px;
+        overflow: hidden;
+        }
+        
+        
+        #titre-section3{
+        position: relative;
+        top: 3%;
+        left: -2%;
+        height: 70px;
+        width: 35em;
+        background-color: rgba(255, 255, 255, 0.438);
+        padding: 5px;
+        border: 1px solid black;
+        
+        }
+        
+        #titre-section3  p{
+            text-align: right;
+            margin: 0;
+        }
+        #titre-section3 h1{
+            font-size: 23px;
+            
+           
+        }
+        
+        #text3 {
+            position: relative;
+            top: 35%;
+            left: -10%;
+        
+        }
+        
+        #section3 button{
+        
+            position: relative;
+            height: 40px;
+            width: 20%;
+            left:-44%;
+            top: 75%;
+        }
+
+    @media all and (min-width:1400px) and (max-width:1680px){
+
+        #titre-section{
+           
+            width: 55em;
+            
+            }
+
+            #titre-section2{
+               
+                width: 70em;
+                
+                
+                }
+
+                #titre-section3{
+                    
+                    width: 55em;
+                   
+                    
+                    }
+
+                    #main-content img{
+    
+                        width:550px;
+                        height: 450px;
+                        
+                    }
+    }
+    
+    @media all and (min-width:1260px) and (max-width:1400px){
+
+        #titre-section{
+           
+            width: 55em;
+            
+            }
+
+            #titre-section2{
+               
+                height: 145px;
+                width: 1500px;
+                }
+
+                #titre-section3{
+                    
+                    width: 55em;
+                    
+                    
+                    }
+
+                    #main-content img{
+    
+                        width:550px;
+                        height: 450px;
+                        
+                    }
+
+                    #section1 button{
+    
+                           
+                         left:-35%;
+                       
+                    }
+
+                    #section2 button{
+    
+                             
+                         left:30%;
+                       
+                    }
+                     #text2{
+                        left:5%;
+                         height: 100px;
+                         
+                     }
+                    #text2 p{
+                      
+                        width: 300px;
+                        height: 50px;
+                        
+                    }
+
+                    #section3 button{
+    
+                               
+                         left:-35%;
+                        
+                    }
+
+                    #logo{
+                          
+                        top:  -29.5;
+                        right: -20em;
+                    }
+     
+
+                    
+        
+    }
+    @media all and (min-width:1000px) and (max-width:1260px){
+
+
+        #logo{
+            top: -28.5;
+            right: -20em;
+        }
+         
+
+
+        #text{
+
+            left:-15%;
+
+        }
+        #text p{
+
+            width: 300px;
+            height: 50px;
+
+        }
+         
+        #text3{
+
+        left: -20%;
+
+        }
+
+        #text3 p{
+
+            width: 300px;
+            height: 50px;
+
+        }
+
+        #section1 button{
+    
+                           
+            left:-33%;
+          
+       }
+
+       #section2 button{
+
+                
+            left:35%;
+          
+       }
+        #text2{
+           left:20%;
+           top: 25%;
+            height: 100px;
+            
+        }
+
+      #section2{
+
+        padding: 40px 40px 20px 80px;
+
+      }
+
+
+       #text2 p{
+         
+           width: 250px;
+           height: 50px;
+           
+       }
+
+       #section3 button{
+
+                  
+            left:-33%;
+           
+       }
+
+       #main-content img{
+    
+        width:550px;
+        height: 450px;
+        
+    }
+
+    #titre-section p{
+        
+        width: 200px;
+        
+        }
+
+    #titre-section2 p{
+            width: 250px;
+           
+            
+            
+    }
+
+     #titre-section3 p{
+
+                width: 200px;
+               
+                
+                }
+
+
+    }
+
+    @media all and (min-width:400px) and (max-width:1000px){
+ 
+       header h5{
+           letter-spacing: 0;
+       }
+
+        li{
+            font-size: 18px;
+        }
+
+        #logo{
+
+            right: -23em;
+            z-index: 20;
+            transform: scale(0.055);
+            top: -28.5em;
+        }
+
+        #main-content{
+            height: 100px;
+           
+            padding: 0px 0px 0px 0px;
+            font-family:'Fira Sans Condensed', sans-serif;
+            font-size: 18px;
+           
+        
+        }
+
+        header {
+
+            height:750px ;
+            background-image: url(image/10046.jpg);
+        }
+           
+        header h5{
+
+            bottom:-345px;
+
+        }
+
+         #intro img{
+            visibility: hidden;
+         }
+        
+         #intro {
+
+           padding-right: 18%;
+           padding-bottom: 15%;
+         }
+
+         #intro button{
+             
+            left: 9em;
+            bottom: 1em;
+
+
+         }
+
+        #main-content img{
+            
+            width:100vw;
+            height: 600px;
+        }
+         #section1{
+            padding: 0;
+            display: block;
+            margin-bottom: 0;
+
+         }
+
+         #titre-section{
+            height: 145px;
+            width: 40vw;
+            left: 30%;  
+            top: -60%; 
+            transform: scale(1.30); 
+            display: grid;    
+            text-align: center;
+            align-content: center;
+            }
+
+            #titre-section p{
+                text-align: center;
+            }
+
+            #titre-section h1{
+                text-align: center;
+            }
+
+            #text{
+                
+                display: none;
+            }
+
+         #section2{
+            
+            padding: 0;
+            display: block;
+            margin-bottom: 0;
+
+         }
+
+         #titre-section2{
+            height: 155px;
+            width: 40vw;
+            left: 30%;  
+            top: -60%; 
+            transform: scale(1.30); 
+            display: grid;    
+            text-align: center;
+            align-content: center;
+            
+
+               
+            }
+
+            #titre-section2 p{
+                
+
+                text-align: center;
+                padding: 0px;
+
+            }
+
+            #titre-section2 h1{
+                text-align: center;
+            }
+
+            #text2{
+              
+                display: none;
+            }
+
+         #section3{
+            padding: 0px;
+            display: block;
+            margin-bottom: 0px;
+
+         }
+
+         #titre-section3{
+            height: 145px;
+            width: 40vw;
+            left: 30%;  
+            top: -60%; 
+            transform: scale(1.30);  
+            display: grid;    
+            text-align: center;
+            align-content: center;
+           
+            }
+
+            #titre-section3 p{
+                text-align: center;
+            }
+
+            #titre-section3 h1{
+                text-align: center;
+            }
+
+            #text3{
+    
+                display: none;
+            }
+
+            #section1 button{
+               position: absolute;
+                 top: 61.5em;
+                left: 36%;
+                width: 30vw;
+
+            }
+
+            #section2 button{
+                position: absolute;
+                 top: 95.5em;
+                left: 36%;
+                width: 30vw;
+                
+            }
+
+            #section3 button{
+                position: absolute;
+                top: 128.2em;
+               left: 36%;
+               width: 30vw;
+                
+            }
+
+            #navbar{
+                position: absolute;
+                top: 0%;
+                width: 103.4vw;
+            }
+
+           
+        }    
+
+        @media screen and (min-device-width:250px)and (max-device-width:700px) and (min-device-height:400px)and (max-device-height:900px){
+
+
+
+            Header{
+  
+              background-image: url(image/10046.jpg);
+            }
+  
+            Header img{
+                display: none;
+            }
+  
+          Header h5{
+              bottom: -395px;
+              font-size: 55px;
+              text-align: center;
+          }
+  
+          #intro p{
+              margin: -15px 40px 20px 40px;
+              text-align: center;
+              font-size: 13px;
+          }
+             
+          #intro button{
+              
+             
+              bottom: 5%;
+              left: 30%;
+          }
+  
+          #nav_mobile ul{
+              visibility: hidden;
+          }
+           li{
+               font-size: 16px;
+               margin-right: 9px;
+                margin-left: 9px; 
+           }
+   
+           #logo{
+   
+               right: 20%;
+               z-index: 100;
+               transform: scale(0.25);
+               top: 50%;
+           }
+   
+           #main-content{
+  
+               height: 100px;
+               padding: 0px 0px 0px 0px;
+               font-family:'Fira Sans Condensed', sans-serif;
+               font-size: 18px;
+              
+           
+           }
+   
+            #main-content h1{
+                font-weight: 700;
+            }
+   
+           #main-content img{
+               
+               width:100%;
+               height: 600px;
+           }
+            #section1{
+               padding: 0;
+               display: block;
+               margin-bottom: 0;
+   
+            }
+   
+            #titre-section{
+               height: 135px;
+               width: 45vw;
+               left: 30%;  
+               top: -70%; 
+               transform: scale(1.30); 
+               display: grid;    
+               text-align: center;
+              
+               border: none;
+               
+               }
+   
+               #titre-section p{
+                   text-align: center;
+               }
+   
+               #titre-section h1{
+                   padding-bottom: 30px;
+                   text-align: center;
+               }
+   
+               #text{
+                   
+                   display: none;
+               }
+   
+            #section2{
+               padding: 0;
+               display: block;
+               margin-bottom: 0;
+   
+            }
+   
+            #titre-section2{
+              height: 155px;
+               width: 45vw;
+               left: 30%;  
+               top: -70%; 
+               transform: scale(1.30); 
+               display: grid;    
+               text-align: center;
+              
+               border: none;
+   
+                  
+               }
+   
+               #titre-section2 p{
+                   text-align: center;
+               }
+   
+               #titre-section2 h1{
+                   padding-bottom: 30px;
+                   text-align: center;
+                   font-weight: 700;
+               }
+   
+               #text2{
+                 
+                   display: none;
+               }
+   
+            #section3{
+             
+               padding: 0px;
+               display: block;
+               margin-bottom: 0px;
+   
+            }
+   
+            #titre-section3{
+               height: 135px;
+               width: 45vw;
+               left: 30%;  
+               top: -70%; 
+               transform: scale(1.30);  
+               display: grid;    
+               text-align: center;
+               
+               border: none;
+              
+               }
+   
+               #titre-section3 p{
+                   text-align: center;
+               }
+   
+               #titre-section3 h1{
+                  padding-bottom: 30px;
+                   text-align: center;
+               }
+   
+               #text3{
+       
+                   display: none;
+               }
+                
+              #main-content button{
+                  background:#292319;
+                  color: white;
+                  font-size: 15px;
+                
+              }
+  
+               #section1 button{
+                  position: absolute;
+                    top: 64.2em;
+                   left: 38%;
+                   width: 30vw;
+                 
+   
+               }
+   
+               #section2 button{
+                   position: absolute;
+                    top: 89em;
+                   left: 38%;
+                   width: 30vw;
+                   
+               }
+   
+               #section3 button{
+                   position: absolute;
+                   top: 111em;
+                  left: 38%;
+                  width: 30vw;
+                   
+               }
+   
+               #navbar{
+                   display: none;
+               }
+                
+               #nav_mobile{
+  
+               visibility: visible;
+               z-index: 50;
+               }
+  
+               #main-content{
+                height: 950px;
+               }
+  
+               #section1 img {
+                  
+                  height: 350px;
+               }
+  
+               #section2 img {
+                  
+                  height: 350px;
+               }
+  
+               #section3 img {
+                  
+                  height: 350px;
+               }
+  
+               #section1{
+                  height: 350px;
+               }
+  
+               #section2{
+                  height: 350px;
+               }
+  
+               #section3{
+                  height: 350px;
+               }
+              }
+  
+               @media screen and (min-device-width:750px)and (max-device-width:1000px) and (min-device-height:300px)and (max-device-height:1350px){
+                 
+              
+               #navbar{
+                   width:103.3vw;
+               }
+  
+              #section1 img{
+  
+                width: 110vw;
+                overflow: hidden;
+  
+               }
+  
+              #section2 img{
+                  width: 110vw;
+                  overflow: hidden;
+                   
+              }
+  
+              #section3 img{
+                  width: 110vw;
+                  overflow: hidden;
+                   
+              }
+  
+       }
+
+
+  
