@@ -827,6 +827,8 @@ mark {
 		.image img {
 			display: block;
 			width: 100%;
+			margin-left: -16px;
+			text-indent: 16px;
 		}
 
 		.image.featured {
@@ -1134,6 +1136,7 @@ mark {
 		width: 45em;
 		max-width: 100%;
 		margin: 0 auto 2em auto;
+		overflow:hidden;
 	}
 
 		.gallery article {
