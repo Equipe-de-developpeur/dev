@@ -58,7 +58,7 @@ En admettant qu'il faille 1 seconde pour déplacer un disque, ce qui fait 86 400
 					<header>
 						<h2>Jeu</h2>
 					</header>
-					<p>Le but de la Tour de Hanoï, en tant que jeu, est de déplacer les pièces de l’axe vertical gauche vers l’axe vertical droit, à raison d'une par une. Les pièces peuvent être déplacées d’un axe à un autre si l’axe de destination ne contient aucune pièce plus petite que celle que vous souhaitez déplacée</p>
+					<p>Le but de la Tour de Hanoï, en tant que jeu, est de déplacer les pièces de l’axe vertical gauche vers l’axe vertical droit, à raison d'une par une. Les pièces peuvent être déplacées d’un axe à un autre si l’axe de destination ne contient aucune pièce plus petite que celle que vous souhaitez déplacer</p>
 				<a href="WD_ps_jeu_hanoi.html" target="_blank" style="color:red;">Tester Ce Jeu </a>
 				</div>
 				<a href="#work" class="button style2 down anchored">Next</a>
@@ -74,22 +74,22 @@ En admettant qu'il faille 1 seconde pour déplacer un disque, ce qui fait 86 400
 							à la réussite de ce défi.
 						</p>
 						<p style="font-style: italic;">
-							Petite Astuce : Si le nombre de Disques de Départ est impair, le premier déplacement se fait sur la troisième Tige
+							Petite Astuce : si le nombre de Disques de Départ est impair, le premier déplacement se fait sur la troisième Tige.
 						</p>
 						<p style="font-style: italic;">
 							Voici l'algorithme permettant de construire cette solution :
 						</p>
 <pre style="font-weight:bold; text-align:left;">
-	procedure Hanoi (nombre_de_disques, Debut, Milieu, Fin )
-		si nombre_de_disques egal à 1
-			Ecrire "Deplacer le Disque 1 de la tige 'Debut' à la tige 'Fin'"
+	procédure Hanoi (nombre_de_disques, Début, Milieu, Fin)
+		si nombre_de_disques égal à 1
+			Écrire "Déplacer le Disque 1 de la tige 'Début' à la tige 'Fin'"
 		Fin-si
 		sinon
-			Hanoi (nombre_de_disques - 1, Debut, Fin, Milieu )
-			Ecrire "Deplacer le Disque 'nombre_de_disques' de la tige 'Debut' à la tige 'Fin'"
-			Hanoi (nombre_de_disques - 1, Milieu, Debut, Fin)
+			Hanoi (nombre_de_disques - 1, Début, Fin, Milieu)
+			Écrire "Déplacer le Disque 'nombre_de_disques' de la tige 'Début' à la tige 'Fin'"
+			Hanoi (nombre_de_disques - 1, Milieu, Début, Fin)
 		Fin-sinon
-	Fin-procedure
+	Fin-procédure
 </pre>
 					</header>
 

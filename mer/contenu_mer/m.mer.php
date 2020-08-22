@@ -11,7 +11,7 @@
 		<script src="js/bootstrap.js"></script>
 	</head>
 	<body>
-	<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+	<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-interval="false">
 	<!-- Indicateur Carrousel -->
   <!--<ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
