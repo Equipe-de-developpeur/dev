@@ -52,10 +52,14 @@
 .modal-title{
   margin-left: 15vw;
 }
+/*Scroll quand modal ouvert*/
+.modal-open{
+  overflow-y: auto!important;
+}
 /* SCROLL TOP */
 html {
     scroll-behavior: smooth;
-    transition-duration: 2s;
+    transition-duration: 0.5s;
   }
 .scroll{
     color: rgb(51, 51, 51);
@@ -173,4 +177,36 @@ html {
     .jumbotron{
       margin-left: 10px;
     }
+}
+@media screen and (max-width: 375px){
+  .jumbotron > p {
+    padding: 5px;
+    /* margin-top: -4.2vh; */
+    width: 135%;
+    color: black;
+  }
+  .titreTypographie{
+    margin-top: -4.2vh!important;
+    /* text-align: center; */
+    width: 135%;
+    font-size: 2.5em!important;
+    color: black;
+    font-weight: bold!important;
+  }
+  .hrJumbotron{
+    display: none;
+  }
+  .fondBlancResponsive{
+    margin-top: 5vh;
+    position: absolute;
+    background-color: white;
+    opacity: 0.5;
+    height: 70vh;
+    width: 85vw;
+    z-index: 1!important;
+    margin-left: 7vw;
+  }
+  .jumbotron{
+    z-index: 100;
+  }
 }

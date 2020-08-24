@@ -1,0 +1,118 @@
+body {
+    background: url(../../img/fond_eau_plan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-position: right;
+    }
+}
+
+.IntroductionMer {
+    width: 65%;
+    margin-top: 5vw;
+    margin-left: 25%;
+    margin-right: 5%;
+    padding: 1%;
+    font-family: Fira Sans Extra Condensed;
+}
+
+.IntroductionMer h2 {
+    color: #0a5957;
+    text-align: right;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.IntroductionMer .Contenue {
+    text-align: right;
+}
+
+.IntroductionMer .Texte {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.IntroductionMer .Source {
+    margin-right: 5%;
+    margin-left: 5%;
+    font-style: italic;
+}
+
+.IntroductionMer .Partager {
+    line-height: 150%;
+    background-color: #0a5957;
+    border: 0.7vw solid white;
+    margin: auto;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 5%;
+}
+
+.IntroductionMer .Partager a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 500px){
+
+    .IntroductionMer h2{
+        font-size: 25px;
+    }
+
+    .IntroductionMer .Texte {
+        font-size: 10px;
+    }
+
+    .IntroductionMer .Source {
+        font-size: 6.5px;
+    }
+
+    .IntroductionMer .Partager {
+        font-size: 15px;
+        width: 56.625px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 950px){
+
+    .IntroductionMer h2{
+        font-size: 5vw;
+    }
+
+    .IntroductionMer .Texte {
+        font-size: 2vw;
+    }
+
+    .IntroductionMer .Source {
+        font-size: 1.3vw;
+    }
+
+    .IntroductionMer .Partager {
+        font-size: 3vw;
+        width: 18%;
+    }
+}
+
+@media screen and (min-width: 950px){
+
+    .IntroductionMer h2{
+        font-size: 48.76px;
+    }
+
+    .IntroductionMer .Texte {
+        font-size: 19.504px;
+    }
+
+    .IntroductionMer .Source {
+        font-size: 12.6776px;
+    }
+
+    .IntroductionMer .Partager {
+        font-size: 29.256px;
+        width: 109.312px;
+    }
+}

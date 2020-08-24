@@ -5,3 +5,7 @@
 .carousel-item img {
 	margin: auto;
 }
+
+.carousel-inner {
+	max-height: 400px;
+}
