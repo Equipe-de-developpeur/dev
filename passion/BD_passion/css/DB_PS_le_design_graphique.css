@@ -30,7 +30,7 @@
     z-index: 999;
 }
 .row .jumbotron{
-    background-image: url(img/accueil/bgJumbotron3.jpg);
+    background-image: url(../img/accueil/bgJumbotron3.jpg);
     background-size: 100% 100%; 
     height: 56%;
     width: 50%;
@@ -68,5 +68,11 @@
     }
     .nav-link{
         background-color: rgb(255, 255, 255);
+    }
+}
+@media screen and (max-width: 375px){
+    .row .jumbotron{
+        height: 80%;
+        width: 75%;
     }
 }

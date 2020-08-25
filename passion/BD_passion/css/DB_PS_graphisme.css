@@ -77,10 +77,13 @@
 .modal-content{
     width: 100vw;
 }
+.modal-open{
+    overflow-y: auto!important;
+}
 /* SCROLL TOP */
 html {
     scroll-behavior: smooth;
-    transition-duration: 2s;
+    transition-duration: 0.5s;
   }
 .scroll{
     color: rgb(51, 51, 51);
@@ -200,4 +203,65 @@ html {
         color: white;
     } */
     
+}
+@media screen and (max-width: 375px){
+    .bg-blanc{
+        height: 6650px;
+    }
+    .bbc2{
+        margin-top: 3vh;
+    }
+    .bbc3{
+        margin-top: 3vh;
+    }
+    .arles{
+        margin-top: 3vh;
+    }
+    .tousDk{
+        margin-top: 3vh;
+    }
+    .pyramyd{
+        margin-top: 3vh;
+    }
+    .digital{
+        margin-top: 3vh;
+    }
+    .creative{
+        margin-top: 3vh;
+    }
+    .species{
+        margin-top: 3vh;
+    }
+    .NBstudio{
+        margin-top: 3vh;
+    }
+    .beauvoir1{
+        margin-top: 3vh;
+    }
+    .beauvoir2{
+        margin-top: 3vh;
+    }
+    .fruite{
+        margin-top: 3vh;
+    }
+    .conso{
+        margin-top: 3vh;
+    }
+    .bauhaus{
+        margin-top: 3vh;
+    }
+    .titreBorder{
+        padding: 20px;
+    }
+    .txtAffiches{
+        font-size: 1.5em;
+        padding-left: 15px;
+    }
+    .txtTV{
+        font-size: 1.50em;
+    }
+    .txtWebDesign{
+        font-size: 1.55em;
+        padding-right: 15px;
+    }
 }
