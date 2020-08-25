@@ -15,7 +15,7 @@
         Dans ce site, nous recensons toutes les actions prissent dans le département pour la protection de notre mer, et mettons à votre disposition un espace de discussion pour que vous puissiez partager vos opinions et vos idées à ce sujet.
       </p>
       <p class="Source">
-        Source : <a href="https://www.lelavandou.eu/plages/proprete.htm">lelavandou.eu</a>
+        Source : <a href="https://www.lelavandou.eu/plages/proprete.htm" target="_blank">lelavandou.eu</a>
       </p>
     <div class="Partager">
       <a href="http://(direction vers les articles)" target="_blank" rel="noopener noreferrer">Partager

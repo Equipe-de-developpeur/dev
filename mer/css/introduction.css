@@ -2,23 +2,27 @@
     background-image: url("../img/fond_eau_plan.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+	background-position: right;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        background-position: right;
-    }
-}
+
 
 .IntroductionMer {
     width: 65%;
-    margin-top: 5vw;
+    margin-top: 15vw;
     margin-left: 25%;
     margin-right: 5%;
     padding: 1%;
     font-family: Fira Sans Extra Condensed;
 }
-
+@media screen and (max-width: 767px) {
+    .IntroductionMer
+	{
+		width:90%;
+		margin-top:17vw!important;
+		margin:auto;
+	}
+}
 .IntroductionMer h2 {
     color: #0a5957;
     text-align: right;
@@ -68,7 +72,7 @@
     }
 
     .IntroductionMer .Source {
-        font-size: 6.5px;
+        font-size: 3vw;
     }
 
     .IntroductionMer .Partager {

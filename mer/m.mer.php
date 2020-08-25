@@ -14,6 +14,7 @@
 	</head>
 	<body>
 	<?php
+	include "header.php";
 	include "introduction.php";
 	?>
 	<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-interval="false">
@@ -36,11 +37,9 @@
 					<header class="header_mer_mobile">
 					PLAGE
 					</header>
-					<p>
 					<?php 
 					include "contenu_plage.php";
 					?>
-					</p>
 					<button class="bouton_mer_mobile">DÉCOUVRIR</button>
 					</footer>
 				</div>

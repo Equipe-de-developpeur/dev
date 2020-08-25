@@ -13,6 +13,7 @@
 	</head>
 	<body>
 	<?php
+	include "header.php";
 	include "introduction.php";
 	?>
 	<div class="blue">
