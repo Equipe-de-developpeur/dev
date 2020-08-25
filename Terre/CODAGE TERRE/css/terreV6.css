@@ -13,15 +13,7 @@ html, body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-	padding-top:15vw;
-	margin-top:0;
-}
-@media screen and (max-width:1024px)
-{
-	.bgHeader
-	{
-		padding-top:24vw;
-	}
+    height: 950px;
 }
 .logo{
     width: 6vw;
