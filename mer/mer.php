@@ -7,9 +7,14 @@
 		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link rel="stylesheet" href="css/mer_theme.css" />
+		
+  <link rel="stylesheet" style="text/css" href="css/introduction.css">
 		<script src="js/redirection.js"></script>
 	</head>
 	<body>
+	<?php
+	include "introduction.php";
+	?>
 	<div class="blue">
 		<div id="theme" class="row-flex">
 			
