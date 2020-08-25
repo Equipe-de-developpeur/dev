@@ -15,7 +15,7 @@
 	}
 	#header img
 	{
-		height: 7vw;
+		height: 8vw;
 		position: absolute;
 		right: 5vw;
 		top: -5.8vw;
@@ -24,11 +24,11 @@
 
 		#header nav {
 			position: absolute;
-			top: 1.5vw;
+			top: 2.3vw;
 			height: 5vw;
 			line-height: 3vw;
 			width:50%;
-			background: rgba(0, 0, 0, 0.5);
+			background: rgba(0, 0, 0, 0.7);
 		}
 
 			#header nav ul {
@@ -43,7 +43,10 @@
 					font-family: fira sans extra condensed;
 					font-weight: bold;
 				}
-
+				#header nav ul li:hover
+				{
+					color:#0a5957;
+				}
 					#header nav ul li a {
 						display: block;
 						color: inherit;
@@ -54,12 +57,31 @@
 						outline: 0;
 					}
 
-		@media screen and (max-width: 736px) {
-
-			#header {
-				height: 2.5em;
-				line-height: 2.5em;
+		@media screen and (max-width: 1024px)
+		{
+			#header nav {
+				width:100%;
+				top:0;
+				height:9vw;
 			}
+			#header
+			{
+				top:0;
+			}
+			#header img
+			{
+				top:11vw;
+				height:10vw;
+			}
+			#header nav ul
+			{
+				text-align:center;
+			}
+			#header nav ul li
+			{
+				font-size:3vw;
+			}
+		}
 
 				
 				}

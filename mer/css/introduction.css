@@ -15,11 +15,11 @@
     padding: 1%;
     font-family: Fira Sans Extra Condensed;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
     .IntroductionMer
 	{
 		width:90%;
-		margin-top:17vw!important;
+		margin-top:24vw!important;
 		margin:auto;
 	}
 }
