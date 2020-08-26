@@ -1,5 +1,15 @@
 <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
 <script>
+$(document).ready(function() {
+			$('#menu_vertical_bouton').attr('disabled', 'disabled');
+  			$("#menu_vertical").show(500);
+			$("#menu_vertical_bouton").addClass('menu1');
+			setTimeout(function() { 
+			$("#menu_vertical").hide(500);
+		  $("#menu_vertical_bouton").removeClass('menu1');
+		  $('#menu_vertical_bouton').removeAttr('disabled', 'disabled');
+    }, 2000);
+});
 var menuEnabled = false; 
 $(document).ready(function() {
         $("#menu_vertical_bouton").on("click", switchmenu);
@@ -9,18 +19,25 @@ $(document).ready(function() {
       function switchmenu(){
         menuEnabled = !menuEnabled;
         if(menuEnabled){
-			$("#menu_vertical").show(1000);
+			$('#menu_vertical_bouton').attr('disabled', 'disabled');
+			$("#menu_vertical").show(500);
+			$("#menu_vertical_bouton").addClass('menu1');
 		  
         } else {
-		  $("#menu_vertical").hide(1000);
+			$('#menu_vertical_bouton').attr('disabled', 'disabled');
+			$("#menu_vertical").hide(500);
+			$("#menu_vertical_bouton").removeClass('menu1');
         }
+		setTimeout(function() {
+		$('#menu_vertical_bouton').removeAttr('disabled', 'disabled');
+		}, 1200);
       };
 	  
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     if(scroll > 200){
 			$("#menu_vertical").css({
-        position:'fixed'
+        position:'fixed', top:'7.5vw'
     });  
 	$("#header nav").css({
         position:'fixed'
@@ -29,7 +46,7 @@ $(window).scroll(function (event) {
 	else
 	{
 					$("#menu_vertical").css({
-        position:'absolute'
+        position:'absolute', top:'13.5vw'
     });  
 	$("#header nav").css({
         position:'absolute'
@@ -39,12 +56,18 @@ $(window).scroll(function (event) {
 });	  
 </script>
 <style>
+		.menu1
+		{
+			background-color:white!important;
+			border:4px solid blueviolet!important;
+			color:blue!important;
+		}
 		#menu_vertical {
 			position: absolute;
 		z-index: 10000;
-		right:0;
+		left:0;
 		display:none;
-		top: 13.2vw;
+		top: 13.5vw;
 		max-width:25%;
 		background: rgba(0, 0, 0, 0.7);
 		max-height: 30vw;
@@ -69,7 +92,7 @@ $(window).scroll(function (event) {
 				}
 				#menu_vertical ul li:hover
 				{
-					color:#0a5957;
+					color:burlywood;
 				}
 					#menu_vertical ul li a {
 						display: block;
@@ -83,7 +106,11 @@ $(window).scroll(function (event) {
 #menu_vertical_bouton
 {
 	background-color: transparent;
-	border: 1px solid transparent;
+	border: 2px solid white;
+	font-size: 1.6vw;
+	font-family: fira sans extra condensed;
+	font-weight: bold;
+	color:burlywood;
 }
 
 	.navbar-toggler-icon {
@@ -120,6 +147,8 @@ $(window).scroll(function (event) {
 			width:50%;
 			background: rgba(0, 0, 0, 0.7);
 			display:inline-flex;
+			border:1px solid black;
+			
 		}
 
 			#header nav ul {
@@ -137,7 +166,7 @@ $(window).scroll(function (event) {
 				}
 				#header nav ul li:hover
 				{
-					color:#0a5957;
+					color:burlywood;
 				}
 					#header nav ul li a {
 						display: block;
@@ -151,6 +180,12 @@ $(window).scroll(function (event) {
 
 		@media screen and (max-width: 1024px)
 		{
+			
+			
+			#menu_vertical_bouton
+			{
+				font-size:3vw;
+			}
 			.navbar-toggler-icon {
 				
 				height:4vw!important;
@@ -185,6 +220,7 @@ $(window).scroll(function (event) {
 			
 			#menu_vertical{
 				left:0;
+				max-width:45%;
 			}
 			
 			#menu_vertical ul li
@@ -204,7 +240,7 @@ $(window).scroll(function (event) {
 
 <header id="header">
 				<nav>
-				<button id="menu_vertical_bouton" ><span class="navbar-toggler-icon"></span></button>
+				<button id="menu_vertical_bouton" ><?php echo ucwords(str_replace('_',' ',$bouton)); ?></button>
 					<ul>
 						<li><a href="index.html">Accueil</a></li>
 						<li><a href="<?php echo $menu1;?>.php"><?php echo ucfirst($menu1);?></a></li>
@@ -218,9 +254,9 @@ $(window).scroll(function (event) {
 			 
 					<nav class="vertical" id="menu_vertical">
 						<ul>
-							<li><a href="#<?php echo $menu4;?>"><?php echo ucfirst($menu4);?></a></li>
-							<li><a href="#<?php echo $menu5;?>"><?php echo ucfirst($menu5);?></a></li>
-							<li><a href="#<?php echo $menu6;?>"><?php echo ucfirst($menu6);?></a></li>
+							<li><a href="<?php echo $menu4;?>.php"><?php echo ucwords(str_replace('_',' ',$menu4));?></a></li>
+							<li><a href="<?php echo $menu5;?>.php"><?php echo ucwords(str_replace('_',' ',$menu5));?></a></li>
+							<li><a href="<?php echo $menu6;?>.php"><?php echo ucwords(str_replace('_',' ',$menu6));?></a></li>
 						</ul>
 					</nav>
 				
