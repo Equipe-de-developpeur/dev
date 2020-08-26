@@ -37,7 +37,7 @@ $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     if(scroll > 200){
 			$("#menu_vertical").css({
-        position:'fixed', top:'7.5vw'
+        position:'fixed', top:'13.5vw'
     });  
 	$("#header nav").css({
         position:'fixed'

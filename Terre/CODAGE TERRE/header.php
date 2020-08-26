@@ -1,5 +1,4 @@
 <?php $url = basename($_SERVER['PHP_SELF']) ;
-var_dump($url);
 if((stristr($url, 'terre') && !stristr($url, 'montagne')) || stristr($url, 'nature') || stristr($url, 'terroir') || stristr($url, 'urbanisme'))
 {
 	if(stristr($url, 'nature'))
