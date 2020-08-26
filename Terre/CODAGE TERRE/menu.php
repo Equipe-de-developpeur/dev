@@ -87,9 +87,9 @@ $(window).scroll(function (event) {
 }
 
 	.navbar-toggler-icon {
-		background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=00FBD8');
-		width: 2vw;
-		height: 2vw;
+		background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=00FBD8')!important;
+		width: 2vw!important;
+		height: 2vw!important;
 	}
 	#header {
 		position: absolute;
@@ -153,8 +153,8 @@ $(window).scroll(function (event) {
 		{
 			.navbar-toggler-icon {
 				
-				height:4vw;
-				width:4vw;
+				height:4vw!important;
+				width:4vw!important;
 			}
 			
 			
