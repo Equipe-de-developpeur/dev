@@ -11,20 +11,10 @@
 
 </head>
 <body>
-    
-    <header>
+    <?php
+    include "header.php";
+    ?>
         <div class="bgHeader">
-            <img src="img/logo.png" alt="logo var nature" class="logo  offset-xl-10 col-xl-1 offset-lg-10 col-lg-2 offset-md-10 col-md-2">
-            <div class="col-xl-6 col-lg-12 barreMenu"><!--col-xl-6 pour la barre de menu-->
-                <div class="d-flex titresMenu offset-xl-3 col-xl-5 offset-lg-3 col-lg-5">
-                    <a href="#" class="titres"><p class="mr-5 mt-4">Accueil</p></a>
-                    <a href="#" class="titres"><p class="mr-5 mt-4">Mer</p></a>
-                    <a href="#" class="titres"><p class="mr-5 mt-4">Activités</p></a>
-                    <a href="#" class="titres"><p class="mr-5 mt-4">Hébergement</p></a>
-                </div>
-            </div>
-            <!--LOGO caché dans la version desktop-->
-            <img src="img/logo.png" alt="logo var nature" class="logoDesktopCacher  offset-xl-10 col-xl-1 offset-lg-9 col-lg-2 offset-md-10 col-md-2  offset-sm-9 col-sm-2 offset-8 col-4">
             
             <div class="offset-xl-1 col-xl-10 rectangleBlancHeader">
                 <!-- <div class="rectangleBlancHeader"> -->
@@ -44,7 +34,6 @@
                 <p class="titrePrincipalTerre offset-xl-1 offset-lg-1 offset-md-1">TERRE</p>
             </div>
         </div>
-    </header>
     <!--------BODY DE LA PAGE------------>
     <!--FORET-->
     <section class="responsiveImage575px">
