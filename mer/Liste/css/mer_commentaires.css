@@ -1,0 +1,70 @@
+/* Commentaires Mer */
+
+#CommentairesMer {
+    background-color: #0F8581;
+    height: 300px;
+    text-align: center;
+}
+
+.TitreCommentairesMer {
+    background-color: #3795E2;
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+
+.SectionCommentairesMer {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+}
+
+.BaseCommentairesMer {
+    background-color: #3B5773;
+    width: 80%;
+    margin: auto;
+    padding: 1%;
+    margin: 2%;
+}
+
+.DebutCommentairesMer {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    color: #3795E2;
+    padding: 1%;
+    margin: 2%;
+}
+
+.ReponseCommentairesMer {
+    background-color: white;
+    width: 75%;
+    color: #3795E2;
+    padding: 1%;
+    margin: 2%;
+}
+
+.RechercheCommentairesMer {
+    background-color: #0A5957;
+    width: 15%;
+    margin-left: 5%;
+    margin: auto;
+    color: white;
+    padding: 1%;
+    margin: 2%;
+}
+
+.RechercheCommentairesMer a {
+    text-decoration: none;
+    color: white;
+}
+
+.ChampDeRechercheCommentairesMer input {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    color: #0A5957;
+    margin-top: 20%;
+    padding: 2%;
+}

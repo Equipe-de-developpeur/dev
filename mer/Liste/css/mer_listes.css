@@ -1,0 +1,54 @@
+/* Listes Mer */
+
+#ListesMer {
+    background-color: #0F8581;
+    height: 300px;
+    text-align: center;
+}
+
+.TitreListesMer {
+    background-color: #3795E2;
+    width: 80%;
+    margin: auto;
+}
+
+.RechercheListesMer {
+    background-color: #0A5957;
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+
+.TableauListesMer {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    color: #3795E2;
+    margin-top: 2%;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid #3795E2;
+    width: 100%;
+}
+
+thead tr,
+thead tr th {
+    background-color: #3B5773;
+    padding: 0.5%;
+}
+
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+img {
+    width: 10%;
+}
