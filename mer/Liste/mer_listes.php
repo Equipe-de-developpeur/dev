@@ -82,7 +82,7 @@
 
       <!--Bonton RECHERCHE-->
 
-      <div class="champ">
+      <div class="ChampRechercheListesMer">
         <input type="submit" value="RECHERCHE">
       </div>
 

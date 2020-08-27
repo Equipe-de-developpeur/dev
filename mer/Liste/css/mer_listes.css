@@ -16,7 +16,7 @@
 
 .RechercheListesMer {
     background-color: #0A5957;
-    width: 79%;
+    width: 78%;
     margin: auto;
     color: white;
 }
@@ -27,12 +27,20 @@
     color: white;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 1%;
 }
 
 .RechercheListesMer .champ,
 .RechercheListesMer select {
-    margin-right: 1.5%;
+    margin-right: 1%;
+}
+
+.ChampRechercheListesMer input {
+    background-color: #0A5957;
+    margin: auto;
+    color: white;
+    padding: 5%;
 }
 
 
