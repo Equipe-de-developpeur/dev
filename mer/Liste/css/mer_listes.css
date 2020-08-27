@@ -2,7 +2,6 @@
 
 #ListesMer {
     background-color: #0F8581;
-    height: 300px;
     text-align: center;
 }
 
@@ -12,12 +11,32 @@
     margin: auto;
 }
 
+
+/* Recherche */
+
 .RechercheListesMer {
     background-color: #0A5957;
-    width: 80%;
+    width: 79%;
     margin: auto;
     color: white;
 }
+
+.RechercheListesMer form {
+    background-color: #0A5957;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+}
+
+.RechercheListesMer .champ,
+.RechercheListesMer select {
+    margin-right: 1.5%;
+}
+
+
+/* Résultat de la recherche (tableau) */
 
 .TableauListesMer {
     background-color: white;
