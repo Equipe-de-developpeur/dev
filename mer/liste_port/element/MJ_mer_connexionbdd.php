@@ -18,7 +18,8 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //Création de la table JM_mer_liste_port si non existante
     $table = "CREATE TABLE IF NOT EXISTS JM_mer_liste_port (
-        lieu VARCHAR(100) PRIMARY KEY NOT NULL,
+        lieu_id INT PRIMARY KEY AUTO_INCREMENT,
+        lieu VARCHAR(100) UNIQUE NOT NULL,
         lien VARCHAR(255),
         label_pp TINYINT(2) NOT NULL,
         label_aeb TINYINT(2) NOT NULL,
