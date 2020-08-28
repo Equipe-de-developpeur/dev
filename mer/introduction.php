@@ -1,4 +1,5 @@
-<div class="row intro">
+<div class="intro">
+<div class="row">
 <div class="IntroductionMer">
   <h2>Le littoral varois en danger&nbsp;!</h2>
   <div class="Contenue">
@@ -23,4 +24,8 @@
     </div>
   </div>
 </div>
+</div>
+<div>
+                <p class="titrePrincipalMer">MER</p>
+            </div>
 </div>
