@@ -9,6 +9,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="CM_PS_style.css">
   <link href="sticky-footer-navbar.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -26,218 +27,6 @@
   <title> Mon Art </title>
 
   <style>
-    header {
-      position: static;
-      height: auto;
-      width: 100%;
-      min-height: 55px;
-      display: block;
-    }
-  
-    body {
-      background-image: url(https://i.pinimg.com/564x/ae/b8/b2/aeb8b27f0f6f91b13440ce6b82230513.jpg);
-      display: block;
-      width: 100%;
-      margin: 0 15 0 15px;
-    }
-
-    h1 {
-      text-align: center;
-      color: whitesmoke;
-      background-image: url("https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014619_960_720.jpg");
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      text-align: center;
-      font-family: "moalang";
-      text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
-    }
-
-    .div1 {
-      text-align: center;
-      color: whitesmoke;
-      background-image: url("https://cdn.pixabay.com/photo/2015/09/09/20/18/sushi-933065_960_720.jpg");
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      text-align: center;
-      font-family: "moalang";
-      display: block;
-      text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
-    }
-
-    .gallery {
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      border: 1px solid rgb(255, 255, 255);
-      margin-left: 240px;
-      vertical-align: middle;
-      align-content: center;
-      text-align: center;
-      width: 50%;
-      height: auto;
-      background-color: tomato;
-    }
-
-    div.gallery img {
-      width: 50%;
-      height: auto;
-      margin: auto;
-      align-content: center;
-      vertical-align: middle;
-      background-position: center;
-    }
-
-    .gallery:hover {
-      vertical-align: middle;
-      border: 1px solid rgb(99, 12, 238);
-      max-width: 50%;
-      height: auto;
-      align-content: center;
-    }
-
-    h3 {
-      text-align: center;
-      color: rgb(238, 12, 12);
-      font-family: fantasy;
-      text-transform: uppercase;
-    }
-
-    p {
-      text-align: center;
-      color: rgb(0, 0, 0);
-      background-color: rgba(255, 255, 255, 0.911);
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .footer {
-      text-align: center;
-      align-content: center;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .container {
-      text-align: center;
-      align-content: center;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-      @media only screen and (max-width: 600px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      @media only screen and (max-width: 600px) {
-     body {
-      background-image: url(https://i.pinimg.com/564x/ae/b8/b2/aeb8b27f0f6f91b13440ce6b82230513.jpg), url(img/background.jpg);
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: auto;
-     }
-      
-      .gallery {
-      max-width: 100%;
-      height: auto;
-      float: none;
-      margin: auto;
-      align-content: center;
-      vertical-align: middle;
-      background-position: center;
-      font-weight: bold;
-      }
-
-      div.gallery img {
-      width: 100%;
-      height: auto;
-      margin: auto;
-      align-content: center;
-      vertical-align: middle;
-      background-position: center;
-      }
-
-      div.gallery desc {
-        font-weight: bold;
-        align-content: center;
-      }
-
-      .gallery:hover {
-      vertical-align: middle;
-      border: 1px solid rgb(99, 12, 238);
-      width: 100%;
-      height: auto;
-      align-content: center;
-      font-weight: bold;
-    }
-
-    
-    }
-
-    ul.icons li {
-      list-style-type: none;
-      width: 30px;
-      height: auto;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      float: left;
-      align-content: center;
-      text-align: center;
-    }
-
-    element.style {
-      background-position: left top, center top;
-    }
-
-    .navbar-brand, .nav-link {
-        font-family:Verdana, Geneva, Tahoma, sans-serif
-      }
-
-      .icones {
-        list-style-type: none;
-      width: 30px;
-      height: auto;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      align-content: center;
-      text-align: center;
-      
-      }
-      .jss135 {
-    display: inline-block;
-    margin-right: 8px;
-    margin-bottom: 8px;
-      }
-    .oc-body {
-    margin: 0;
-    color: #000;
-    }
-    .course {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-    }
 
     
   </style>
@@ -270,53 +59,64 @@
       </div>
       </nav>
 </header>
+<div class="bodyculturejap" id="culturejap">
   <!-----Texte----->
-  <h1>Culture Japonaise</h1>
+  <div class="container-fluid">
+    <article class="container article">
+  <div class="h1culturejap" id="h1culturejap">
+  <h1>CULTURE JAPONAISE</h1> </div>
   <p>La culture japonaise plonge ses racines dans les cultures continentale chinoise et coréenne, avant de connaître une
     longue période d'isolement sous le shogunat Tokugawa, jusqu’à l'arrivée des « bateaux noirs » et l'ère Meiji.
     <a href="https://fr.wikipedia.org/wiki/Culture_japonaise"> wikipedia </a> </p>
   <p>Pour vous donner un avant-goût de ce qu'il va suivre, je vais commencer par la nourriture.</p>
+</article>
+</div>
   </br>
+  <div class="container-fluid">
+    <article class="container article">
   <div class="div1">
-    <h2>La Gastronomie Japonaise </h2>
+    <h2>LA GASTRONOMIE JAPONAISE </h2>
   </div>
-
   <p>
     Le régime alimentaire des japonais est considéré comme l'un des plus sains au monde, lié à un taux de longévité
     élevé.
-    Les japonais ont en effet développés au fil des siècles une cuisine fine et raffinée,
+    Les japonais ont en effet développé au fil des siècles une cuisine fine et raffinée,
     basée principalement sur les aliments comme le riz, le poisson et les légumes.
     La cuisine japonaise est de nos jours à la mode un peu partout dans le monde et
     personne ne peut ignorer des célébrités locales telles que les sushis, makis ou tempuras.
     </br>
-    Il y a diverses plats selon les régions, et au fil des siècles, le Japon a réussi
-    à s'imposer dans le monde du cinq étoiles. L'art culinaire japonais assez réputée pour sa finesse et son élégance,
+    Il y a divers plats selon les régions, et au fil des siècles, le Japon a réussi
+    à s'imposer dans le monde des cinq étoiles. L'art culinaire japonais assez réputée pour sa finesse et son élégance,
     fait venir des adeptes du monde entier pour goûter ses riches saveurs asiatiques. La cuisine japonaise est
     aujourd'hui, un art culinaire incontesté.
   </p>
-
   <p>Voici quelques plats :</p>
-
+  <div class="h3culturejap" id="h3culturejap">
   <h3>LES NOUILLES</h3>
+  </div>
   <!-----Gallery------>
   <div class="gallery">
     <a target="_blank" href="img/culturejaponaise/ramen.jpg">
       <img src="img/culturejaponaise/ramen.jpg" alt="ramen" width=auto height=auto></a>
-    <div class="desc">Les variétés sont nombreuses et il y a plusieurs types de nouilles à choisir.
+    <div class="desc">"Les variétés sont nombreuses et il y a plusieurs types de nouilles à choisir.
       Les principales sont les « Ramen », les « Udon », les « Soba » et les « Somen »."</div>
   </div>
   </br>
+  <div class="h3culturejap" id="h3culturejap">
   <h3>LES SUSHIS</h3>
+</div>
   <div class="gallery">
     <a target="_blank" href="img/culturejaponaise/sushi.jpg">
       <img src="img/culturejaponaise/sushi.jpg" alt="sushi" width=auto height=auto></a>
     <div class="desc">"C'est la première chose qui nous vient en tête quand on pense
       gastronomie japonaise. Assez réputé en Occident, je ne vous le présente plus.
-      Mais il faut le savoir au Japon ce n'est pas le plat le plus populaire.
-      On dirait bien les Japonais n'ont pas les mêmes goûts que nous."</div>
+      Mais il faut le savoir, au Japon, ce n'est pas le plat le plus populaire.
+      On dirait bien que les Japonais n'ont pas les mêmes goûts que nous."</div>
   </div>
   </br>
+  <div class="h3culturejap" id="h3culturejap">
   <h3>LE KAISEKI</h3>
+</div>
   <div class="gallery">
     <a target="_blank" href="img/culturejaponaise/kaiseki.jpg">
       <img src="img/culturejaponaise/kaiseki.jpg" alt="kaiseki" width=auto height=auto></a>
@@ -326,16 +126,20 @@
       Les plats individuels sont souvent petits et harmonieux."</div>
   </div>
   </br>
+  <div class="h3culturejap" id="h3culturejap">
   <h3>DONBURI</h3>
+  </div>
   <div class="gallery">
     <a target="_blank" href="img/culturejaponaise/donburi.jpg">
       <img src="img/culturejaponaise/donburi.jpg" alt="donburi" width=auto height=auto></a>
     <div class="desc">"Le donburi est un plat traditionnel de la cuisine japonaise composé
-      d'un grand bol de riz sur lequel on dispose toutes sortes de garnitures tel que
+      d'un grand bol de riz sur lequel on dispose toutes sortes de garnitures telles que
       des lamelles de boeuf ou de poulet ou encore des anguilles grillées"</div>
   </div>
   </br>
+  <div class="h3culturejap" id="h3culturejap">
   <h3>Kushikatsu</h3>
+  </div>
   <div class="gallery">
     <a target="_blank" href="img/culturejaponaise/Kushikatsu.png">
       <img src="img/culturejaponaise/Kushikatsu.png" alt="Kushikatsu" width=auto height=auto></a>
@@ -344,23 +148,33 @@
       de farine, et de Panko (chapelure japonaise); et frites dans de l’huile végétale."</div>
   </div>
   </br>
+  <div class="h3culturejap" id="h3culturejap">
   <h3>Takoyaki</h3>
+  </div>
   <div class="gallery">
     <a target="_blank" href="img/culturejaponaise/Takoyaki.jpg">
       <img src="img/culturejaponaise/Takoyaki.jpg" alt="Takoyaki" width=auto height=auto>
     </a>
-    <div class="desc">"Et on finit cette dégustation avant de finir par baver sur
+    <div class="desc">"Et on finit cette dégustation avant de finir par baver, sur
       l'encas très populaire au Japon, le Takoyaki. C'est une "cuisine de rue"
       iconique de la région du Kansai.
       Ce sont des boulettes frites faites à base de patte de farine fourrée au poulpe.
       Elles sont ensuite servies avec de la sauce « okonomiyaki » ou à votre guise."</div>
   </div>
   </br>
+</article>
+</div>
 
+
+</br>
+<div class="container-fluid">
+  <article class="container article">
   <p>Je vous laisse découvrir
-    <button onclick="CM_ps_culturejaponaise2.html"="page2">La suite</button>
+    <input type=button onclick=window.location.href='CM_ps_culture_japonaise2.html'; value= "la suite">. 
   </p>
-
+  </article>
+  </div>
+</br>
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -376,38 +190,53 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
-
+  </div>
 </body>
+
 
 <!-- Footer -->
 <footer class="footer">
-  <div class="container">
-    <span class="text-muted"><div class="container">
-      <ul class="icons">
-        <li><a href="https://www.instagram.com/artdemani/" class="icones"> <img src="img/culturejaponaise/instagram.svg"
-              alt="Instagram"><span class="label"></span></a></li>
 
-        <li><a href="https://myaccount.google.com/" class="icones"><img src="img/culturejaponaise/gmail.svg" alt="gmail"></span></a></li>
-      </ul></span>
-  </div>
-</div>
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+  
 
-  <!----Copyright----->
-  <div class="copyright">&copy; Untitled. All rights reserved.</div>
-  </div>
-  <div class="jss135"><a href="https://www.instagram.com/artdemani" 
-    title="Instagram" target="_blank" rel="noopener noreferrer" class="jss138 jss136">
-    <svg class="" fill="currentColor" width="100%" height="100%" viewBox="0 0 16 16">
-      <path d="M2.055 0.001h11.892c1.128 0 2.053 0.924 2.053 2.055v11.889c0 1.131-0.
-      924 2.055-2.053 2.055h-11.892c-1.13 0-2.055-0.924-2.055-2.055v-11.889c0-1.131 
-      0.925-2.055 2.055-2.055zM11.657 1.777c-0.398 0-0.722 0.325-0.722 0.722v1.725c0 
-      0.395 0.324 0.719 0.722 0.719h1.807c0.398 0 0.72-0.325 0.72-0.719v-1.725c0-0.396
-      -0.322-0.722-0.72-0.722h-1.807zM14.191 6.767h-1.406c0.131 0.435 0.205 0.896 0.205
-       1.374 0 2.66-2.228 4.819-4.974 4.819s-4.974-2.159-4.974-4.819c0-0.479 0.071-0.939
-        0.206-1.374h-1.468v6.756c0 0.354 0.286 0.639 0.635 0.639h11.141c0.351 0 0.635-0
-        .285 0.635-0.639v-6.756zM8.015 4.853c-1.775 0-3.213 1.394-3.213 3.113s1.438 3.114
-         3.213 3.114 3.213-1.396 3.213-3.114c0.001-1.72-1.438-3.113-3.213-3.113z">
-        </path></svg></a></div>
+    <!-- Grid row -->
+    <div class="row">
+    
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+      
+      
+      <hr class="clearfix w-100 d-md-none pb-3">     
+      
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Suivez-moi</h5>
+        
+        <ul class="list-unstyled">
+          <span class="text-muted"> <div class="icones-footer">
+            <ul class="icones-footer">
+              <!--Instagram-->
+              <li><a href="https://www.instagram.com/artdemani/" class="icones"> <img src="img/mon_art/instagram.png"
+                alt="Instagram"><span class="label"></span></a></li>
+              <!--Gmail-->
+              <li><a href="https://myaccount.google.com/" class="icones"><img src="img/mon_art/email.png" alt="gmail"></span></a></li>
+           </span>
+        </ul>
+        </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 						
+
+  <!-- Copyright -->
+  <div class="footer-copyright">© 2020 Copyright
+</footer>
 
   <!----Script---->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
