@@ -1,6 +1,6 @@
 <!-- Connexion à la base de donnée -->
 
-<?php include 'DA_mer_plage_liste_bdd.php'?>
+<?php include "DA_mer_plage_liste_bdd.php";?>
 
 <!--Listes Mer-->
 
@@ -95,87 +95,68 @@
 
 <?php
 
-$req = $connexion->query('SELECT * FROM liste_plage WHERE 1 ');
+$req = $connexion->query("SELECT * FROM liste_plage WHERE 1");
 
 
 
+ /*Résultat(tableau)*/
+
+  echo ('<div class="TableauListesMer"><table><thead><tr>');
+
+  //execution de cette requette dans une boucle pour récupérer chaque ligne 
+
+  echo ('
+  <th>Plages</th>
+  <th>Villes</th>
+  <th>Liens</th>
+  <th>Distances</th>
+  <th>Actions</th>
+  <th>Note Moyenne</th>
+  <th>Votre Avis</th>
+</tr>
+</thead>
+<tbody>');
+
+while ($donnees = $req->fetch())
+
+{
+// Enregistrement des données sous forme de variables
+$liste_plage_id = $donnees['liste_plage_id'];
+$lieux = $donnees['lieux'];
+$villes = $donnees['villes'];
+$liens = $donnees['liens'];
+$distances = $donnees['distances'];
+$actions = $donnees['actions'];
+$note_moyenne = $donnees['note_moyenne'];
+$votre_avis = $donnees['votre_avis'];
 
 
-  <!--Résultat(tableau)-->
 
-  <div class="TableauListesMer">
-
-    <table>
-      <thead>
+      echo('
         <tr>
-          <th>Lieux</th>
-          <th>Villes</th>
-          <th>Liens</th>
-          <th>Distances</th>
-          <th>Actions</th>
-          <th>Note Moyenne</th>
-          <th>Votre Avis</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Base Nature</td>
-          <td>Fréjus</td>
-          <td><a href="http://" target="_blank" rel="noopener noreferrer">Cliquer</a></td>
-          <td>27 km</td>
-          <td>
-            <ul>
-              <li>Action n°1</li>
-              <li>Action n°2</li>
-            </ul>
-          </td>
+          <td>'.$lieux.'</td>
+          <td>'.$villes.'</td>
+          <td><a href="'.$liens.'" target="_blank" rel="noopener noreferrer">Cliquer</a></td>
+          <td>'.$distances.'</td>
+          <td>'.$actions.'</td>
           <td class="Moyenne">
-            <img src="img/DauphinBleu.png" alt="Dauphin Bleu;">
-            <img src="img/DauphinBleu.png" alt="Dauphin Bleu;">
-            <img src="img/DauphinBleu.png" alt="Dauphin Bleu">
+            <img src="'.$note_moyenne.'" alt="Dauphin Bleu">
+            <img src="'.$note_moyenne.'" alt="Dauphin Bleu">
+            <img src="'.$note_moyenne.'" alt="Dauphin Bleu">
           </td>
           <td class="Avis">
-            <img src="img/DauphinBleu.png" alt="Dauphin Bleu;">
-            <img src="img/DauphinBleu.png" alt="Dauphin Bleu;">
-            <img src="img/DauphinGris.png" alt="Dauphin Gris">
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+            <img src="'.$votre_avis.'" alt="Dauphin Gris">
+            <img src="'.$votre_avis.'" alt="Dauphin Gris">
+            <img src="'.$votre_avis.'" alt="Dauphin Gris">
+          </td>');
+echo('</tr>');
+          //Fermeture du tableau
+}
 
+echo('</tbody></table></div></section>');
+        
 
-
-  </div>
-</section>
-
-// Termine le traitement de la requête 
+//Termine le traitement de la requête 
 $req = null;
 
 ?>

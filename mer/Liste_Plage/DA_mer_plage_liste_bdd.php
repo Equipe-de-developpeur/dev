@@ -26,7 +26,7 @@
 
     $bdd = "CREATE DATABASE IF NOT EXISTS $labase CHARACTER SET utf8 COLLATE utf8_general_ci";
     $connexion->exec($bdd);
-    echo 'Vous étes sur la base de donnée ' . $labase . ' <br><br>';
+    
 
     // Connexion à la base
 
@@ -50,7 +50,7 @@
 
 
   $connexion->exec($table);
-  echo 'Création de la table ' . $nom_table . '<br><br>';
+
 
  include_once 'DA_mer_plage_liste_complete.php';
 

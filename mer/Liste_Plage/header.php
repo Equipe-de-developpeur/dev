@@ -11,10 +11,10 @@
 <body style="background-color: #0F8581;">
 
 <?php
-  include 'mer_listes.php';
+  include 'DA_mer_plage_liste_tableau.php';
 ?>
 <?php
-  include 'mer_commentaires.php';
+  include 'DA_mer_plage_liste_commentaires.php';
 ?>
 
 </body>
