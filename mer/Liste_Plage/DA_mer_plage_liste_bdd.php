@@ -42,24 +42,19 @@
       lieux VARCHAR(50) NOT NULL,
       villes VARCHAR(50) NOT NULL,
       liens VARCHAR(300),
-      distances SMALLINT(5),
+      distances VARCHAR(10),
       actions VARCHAR(500),
-      note_moyenne INT(5) NOT NULL,
-      votre_avis INT(5) NOT NULL
+      note_moyenne VARCHAR(50) NOT NULL,
+      votre_avis VARCHAR(50) NOT NULL
   )";
 
 
   $connexion->exec($table);
   echo 'Création de la table ' . $nom_table . '<br><br>';
 
-$insert ="INSERT INTO $nom_table(liste_plage_id,lieux,villes,liens,distances,actions,note_moyenne,votre_avis) 
-VALUES
-('','','','','','','',''),
-('','','','','','','',''),
-('','','','','','','','')
-"
+ include_once 'DA_mer_plage_liste_complete.php';
 
-$connexion->exec($insert);
+ $connexion->exec($insert);
 
   }
 

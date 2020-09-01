@@ -1,3 +1,7 @@
+<!-- Connexion à la base de donnée -->
+
+<?php include 'DA_mer_plage_liste_bdd.php'?>
+
 <!--Listes Mer-->
 
 <section id="ListesMer">
@@ -89,6 +93,14 @@
     </form>
   </div>
 
+<?php
+
+$req = $connexion->query('SELECT * FROM liste_plage WHERE 1 ');
+
+
+
+
+
   <!--Résultat(tableau)-->
 
   <div class="TableauListesMer">
@@ -162,3 +174,8 @@
 
   </div>
 </section>
+
+// Termine le traitement de la requête 
+$req = null;
+
+?>
