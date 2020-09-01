@@ -1,17 +1,7 @@
- <?php $url = $_SERVER['PHP_SELF'];
-
-    if (stristr($url, 'terre')) {
-        include "header_terre.php";
-    } else if (stristr($url, 'mer')) {
-        include "header_mer.php";
-    } else if (stristr($url, 'hebergement')) {
-        include "header_hebergement.php";
-    } else if (stristr($url, 'activite')) {
-        include "header_activite.php";
-    }
-
-    ?>
-
+ 
+<?php 
+ include 'header_hebergement.php';
+?>
  <div class="main container-fluid">
 
      <h2>Les Gîtes dans le var</h2>
