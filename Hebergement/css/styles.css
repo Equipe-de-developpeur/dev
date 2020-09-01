@@ -21,8 +21,9 @@ a {
 .header {
     max-width: 100%;
     height: auto;
-    background: no-repeat fixed url(img/background_page_accueil.jpg);
-    padding-bottom: 80px;
+    background: no-repeat fixed url(../img/background_page_accueil.jpg);
+    padding-bottom: 5vw;
+    padding-top: 10vw;
 }
 
 .logo_accueil {

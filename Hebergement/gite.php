@@ -55,23 +55,18 @@
                  <th>Notation</th>
              </thead>
 
-             <?php
-                //  Ouverture de la base de donnée 
-                try {
-                    // On se connecte à MySQL
-                    $bdd = new PDO('mysql:host=localhost;dbname=gites_hebergement;charset=utf8', 'root', '');
-                } catch (Exception $e) {
-                    // En cas d'erreur, on affiche un message et on arrête tout
-                    die('Erreur : ' . $e->getMessage());
-                }
+             
 
-                // Si tout va bien, on peut continuer
-
-
+                <?php
+                include 'config_bdd_gite.php';
                 // SELECTIONNE TOUT DANS LA BDD gites
-                $reponse = $bdd->query('SELECT * FROM gites');
-                // TANT QU'IL Y A DES DONNEES AFFICHE LES LIGNE PAR LIGNE
-                while ($donnees = $reponse->fetch()) {
+                $req = $bdd->query('SELECT * FROM gites');
+                // TANT QU'IL Y A DES DONNEES AFFICHE LES LIGNE PAR LIGNE DANS UN TABLEAU
+                while ($donnees = $req->fetch()) {
+                    // Enregistrement des données sous forme de variables
+                    
+                    $nom = $donnees['nom'];
+                    $localisation = $donnees['localisation'];
                 ?>
 
                  <tbody>
@@ -82,9 +77,9 @@
                             // Ceci est la petite feuille pour la notation 
                             $feuille = '<img src="img/mini_leaf.png" alt="Mini logo feuille">';
                             // MIX ENTRE HTML ET PHP, AFFICHE LES DONNEES DE LA CATEGORIE NOM
-                            echo '<td>' . $donnees['nom'] . '</td>';
+                            echo '<td>' . $nom . '</td>';
                             // MIX ENTRE HTML ET PHP, AFFICHE LES DONNEES DE LA CATEGORIE NOM
-                            echo '<td>' . $donnees['localisation'] . '</td>';
+                            echo '<td>' . $localisation . '</td>';
                             echo '<td>' ?> <?php
                                             //  BOUCLE PERMETTANT D'AFFICHER UNE PETITE FEUILLE POUR CHAQUE INDENTATION DE NOTE
                                             for ($i = 1; $i <= $note; $i++) {
@@ -92,6 +87,7 @@
                                             }
                                             '</td>';
                                         }
+                            
                                             ?>
                      </tr>
                  </tbody>
@@ -104,15 +100,9 @@
      <article class="article article_1 container">
          <h2>Ajoutez vos Ecogites de la région !</h2>
          <p>Tous les Ecogîtes du Var ne sont pas encore répertoriés, aidés nous à compléter notre base de donnée !</p>
-         <form action="insert.php" method="post">
-             <label for="name">Nom du Gîte</label>
-             <input type="text" name="nom">
-             <label for="Localisation">Localisation du gîte</label>
-             <input type="text"name="localisation">
-             <label for="note">Note/5</label>
-             <input type="number" name="note" min="1" max="5">
-             <button type="submit" name="save">Enregistrez vos données</button>
-         </form>
+         <?php 
+            include 'insert_gite.php';
+         ?>
                                         
          
      </article>

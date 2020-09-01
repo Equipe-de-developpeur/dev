@@ -1,21 +1,5 @@
-<?php $url = $_SERVER['PHP_SELF'] ;
-
-if(stristr($url, 'terre'))
-{
-	include "header_terre.php";
-}
-else if(stristr($url, 'mer'))
-{
-	include "header_mer.php";
-}
-else if(stristr($url, 'hebergement'))
-{
-	include "header_hebergement.php";
-}
-else if(stristr($url, 'activite'))
-{
-	include "header_activite.php";
-}
+<?php 
+include 'header_hebergement.php';
 
 ?>
 
@@ -34,7 +18,7 @@ else if(stristr($url, 'activite'))
             <h3>GÎTES</h3>
             
             <img src="img/gite.jpg">
-            <button type="button" class="btn btn-warning" > <a href="hebergement_gite.php">GÎTE</a> </button>
+            <button type="button" class="btn btn-warning" > <a href="gite.php">GÎTE</a> </button>
         </div>
 
 

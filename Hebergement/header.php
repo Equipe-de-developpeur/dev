@@ -74,7 +74,7 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 	$menu3="activités";
 	include"menu.php";
 }
-else if(stristr($url, 'hébergement') || stristr($url, 'gite') || stristr($url, 'camping') || stristr($url, 'insolite'))
+else if(stristr($url, 'hebergement') || stristr($url, 'gite') || stristr($url, 'camping') || stristr($url, 'insolite'))
 {
 	
 	if(stristr($url, 'gite'))
