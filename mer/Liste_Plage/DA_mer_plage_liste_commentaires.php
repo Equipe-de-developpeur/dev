@@ -12,10 +12,11 @@
 
     <div class="PartieGauche">
 
+    
 
       <!--Ecrire un Commentaire-->
 
-      <form method="post" action="header.php">
+      <form method="post" name="commentaires" action="DA_mer_plage_liste_commentaires.php">
 
         <!--Champ d'écriture du Commentaires-->
 
@@ -56,20 +57,39 @@
 
     <div class="BaseCommentairesMer">
 
-      <!--Début Commentaires-->
+    <?php
 
+$req2 = $connexion->query("SELECT * FROM commentaires_plage WHERE 1");
+
+while ($donnees = $req2->fetch())
+
+{
+// Enregistrement des données sous forme de variables
+$commentaires_plage_id = $donnees['commentaires_plage_id'];
+$textes = $donnees['textes'];
+$noms = $donnees['noms'];
+$dates = $donnees['dates'];
+$lieux = $donnees['lieux'];
+$réponses = $donnees['réponses'];
+
+
+      /*Début Commentaires*/
+echo ('
       <div class="DebutCommentairesMer">
         <div class="Entete">
-          <p class="NomAuteur">Nom</p>
-          <p class="DateEnvoi">24/08/2020 à 16h30</p>
+          <p class="NomAuteur">'.$noms.'</p>
+          <p class="DateEnvoi">'.$dates.'</p>
         </div>
         <div class="Contenu">
-          <p class="Texte">J'adore le département du Var !</p>
+          <p class="Texte">'.$textes.'</p>
         </div>
-      </div>
+      </div>');
 
-      <!--Réponse Commentaires-->
+}
 
+      /*Réponse Commentaires*/
+
+      /*echo ('
       <div class="ReponseCommentairesMer">
         <div class="Entete">
           <p class="NomAuteur">Nom</p>
@@ -78,9 +98,12 @@
         <div class="Contenu">
           <p class="Texte">Moi aussi !</p>
         </div>
-      </div>
-    </div>
+      </div>');*/
 
+    
 
-  </div>
-</section>
+    echo ('</div></div></section>');
+
+  
+
+?>

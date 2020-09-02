@@ -26,36 +26,17 @@
 
     $bdd = "CREATE DATABASE IF NOT EXISTS $labase CHARACTER SET utf8 COLLATE utf8_general_ci";
     $connexion->exec($bdd);
-    
+
 
     // Connexion à la base
 
     $connexion = new PDO('mysql:host=' . $serveur . ';dbname=' . $labase . ';charset=utf8', $loginsql, $passsql);
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Création de la table liste_plage dans la base var_nature
-
-    $nom_table = 'liste_plage';
-
-    $table = "CREATE TABLE IF NOT EXISTS $nom_table (
-      liste_plage_id INT PRIMARY KEY AUTO_INCREMENT,
-      lieux VARCHAR(50) NOT NULL,
-      villes VARCHAR(50) NOT NULL,
-      liens VARCHAR(300),
-      distances VARCHAR(10),
-      actions VARCHAR(500),
-      note_moyenne VARCHAR(50) NOT NULL,
-      votre_avis VARCHAR(50) NOT NULL
-  )";
+    include_once 'DA_mer_plage_liste_table.php';
 
 
-  $connexion->exec($table);
-
-
- include_once 'DA_mer_plage_liste_complete.php';
-
- $connexion->exec($insert);
-
+    include_once 'DA_mer_plage_liste_complete.php';
   }
 
   // Prise en charge des erreurs de connexion.
