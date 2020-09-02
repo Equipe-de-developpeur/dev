@@ -15,7 +15,7 @@
   // Construction des variables de connexion serveur Mysql
   $serveur = 'localhost';
   $loginsql = 'root';
-  $passsql = '';
+  $passsql = 'root';
   $labase = '';
 
   // Connexion au serveur 
