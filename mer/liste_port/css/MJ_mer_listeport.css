@@ -8,8 +8,6 @@ body {
 
 .lport {
     color: #3792E2 !important;
-    margin-left: 10%;
-    margin-right: 10%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -25,10 +23,15 @@ body {
 @media screen and (min-width: 768px) {
     .lport {
         width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .lport {
+        width: 100%;
+    }
     .body {
         font-size: 50vw !important;
     }

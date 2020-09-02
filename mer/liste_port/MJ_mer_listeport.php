@@ -11,7 +11,7 @@
         include_once 'element/MJ_mer_connexionbdd.php';
         ?>
         <div class="lport">
-            <div class="cadre_critere py-1">
+            <div class="cadre_critere py-1 px-1">
                 <form action="MJ_mer_listeport.php" method="post">
                     <label for="critere">Classez par :</label>
                     <select id="critere" name="critere">
@@ -37,7 +37,7 @@
             foreach ($liste as $i){ ?>
 
                 <!-- Affichage Nom du lieu-->
-                <div class="affichage"> 
+                <div class="affichage px-1"> 
                     <h5><a type="button" class="lien pt-1" data-toggle="modal" data-target="#Port<?php echo $i['lieu_id']; ?>">
                         <?php echo $i['lieu']; ?>
                     </a></h5>
