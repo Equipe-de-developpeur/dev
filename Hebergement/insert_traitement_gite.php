@@ -1,4 +1,5 @@
-<?php 
+<?php
+include 'header_hebergement.php';
 include 'config_bdd_gite.php';
 // Récupération des données du formulaire
 $nom = $_POST['nom'];
@@ -19,14 +20,26 @@ if ($req->execute(array(
     'nom' => $nom,
     'localisation' => $localisation,
     'note' => $note,
-))){
-    echo
-    '<div class="alert-succes" role="alert">
-        La news a bien été enregistrée<br>
-        </div>';
-    echo '<a href="gite.php">Retournez à la liste des tableaux</a>';
-    
-} else{
+))) {
+?>
+
+    <article class="article article_1 article_insert container">
+        <h2>Validation des données</h2>
+        <p>
+            <strong>Nom du gîte :</strong> <?php echo $nom ?><br>
+            <strong>Localisation :</strong> <?php echo $localisation ?><br>
+            <strong>Note :</strong> <?php echo $note ?>.</p>
+        <a href="gite.php"><button class="btn btn-success article_btn ">Retournez à la liste des tableaux</button></a>
+    </article>
+
+
+
+<?php
+
+
+
+
+} else {
     echo 'Problème d\'enregistrement';
 
     // prise en charge des messages d'erreurs
