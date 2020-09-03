@@ -2,8 +2,12 @@ body {
     background-color: #0f8581;
 }
 
-.cadre_critere {
+.cadre_critere, .esp_com {
     background-color: #3B5573 !important;
+}
+
+.modal-body {
+    padding: 0;
 }
 
 .lport {
@@ -12,8 +16,19 @@ body {
     margin-bottom: 5%;
 }
 
-.affichage {
+.affichage, .commentaire {
     background-color: #ffffff !important;
+}
+
+.commentaire {
+    margin-bottom: 2%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 100%;
+}
+
+.commentaire:first-child {
+    margin-top: 2%;
 }
 
 .lien {
@@ -22,17 +37,11 @@ body {
 
 @media screen and (min-width: 768px) {
     .lport {
-        width: 80%;
         margin-left: 10%;
         margin-right: 10%;
     }
-}
 
-@media screen and (max-width: 768px) {
     .lport {
-        width: 100%;
-    }
-    .body {
-        font-size: 50vw !important;
+        width: 80%;
     }
 }
