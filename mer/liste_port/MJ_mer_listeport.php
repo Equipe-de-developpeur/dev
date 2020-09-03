@@ -9,6 +9,7 @@
     <body>
         <?php
         include_once 'element/MJ_mer_connexionbdd.php';
+        include_once "element/MJ_mer_creationcom.php";
         ?>
         <div class="lport">
             <div class="cadre_critere py-1 px-1">
@@ -76,7 +77,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Emplacement Commentaire -->
+                                    <div>
+                                        <!-- <form action="MJ_mer_listeport.php" method="post">
+                                            <label for="username">Nom :</label>
+                                            <input type="text" id="username" name="username">
+                                        </form>-->
+                                    </div>
                                 </div>
                             </div>
                         </div>
