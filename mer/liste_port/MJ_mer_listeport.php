@@ -104,9 +104,9 @@
                                                         <input type="number" name="id" value="<?php echo $lieuID ?>" readonly>
                                                     </div>
                                                     <label for="username">Nom :</label>
-                                                    <input type="text" id="username" name="username"><br>
+                                                    <input type="text" id="username" name="username" size ="30" maxlenght="30" required><br>
                                                     <label for="commentaire">Commentaire :</label>
-                                                    <textarea id="commentaire" name="commentaire" rows="3" cols="60">
+                                                    <textarea id="commentaire" name="commentaire" rows="3" cols="60" size="500" maxlenght="500" required>
                                                     </textarea><br>
                                                     <input type="submit" value="Envoyer">
                                                 </fieldset>
