@@ -86,12 +86,6 @@ a {
     margin: auto;
     padding-bottom: 30px;
 }
-.article_insert p{
-    text-align: left;
-    width: 80%;
-    margin: auto;
-    padding-bottom: 30px;
-}
 
 .article_1 {
     background-color: white;
@@ -124,11 +118,6 @@ a {
 
 .table-gite thead th {
     text-align: center;
-}
- .article_btn {
-    margin: auto;
-    text-align: center;
-    
 }
 
 
