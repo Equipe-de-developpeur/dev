@@ -7,8 +7,6 @@
 		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link rel="stylesheet" href="css/mer_theme.css" />
-		<script src="js/jquery-3.5.1.js"></script>
-		<script src="js/bootstrap.js"></script>
 		
   <link rel="stylesheet" style="text/css" href="css/introduction.css">
 	</head>

@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link rel="stylesheet" href="css/mer_theme.css" />
 		
+		
   <link rel="stylesheet" style="text/css" href="css/introduction.css">
 		<script src="js/redirection.js"></script>
 	</head>
@@ -64,5 +65,6 @@
 			
 		</div>
 	</div>
+	<?php include "footer.php"; ?>
 	</body>
 </html>
