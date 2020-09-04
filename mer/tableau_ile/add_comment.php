@@ -23,7 +23,7 @@ if(empty($_POST["comment_content"]))
 }
 else
 {
- $comment_content = $_POST["comment_content"];
+ $comment_content = htmlspecialchars($_POST["comment_content"]);
 }
 
 if($error == '')
