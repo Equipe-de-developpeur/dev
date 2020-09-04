@@ -2,19 +2,19 @@
 
 <?php include "DA_mer_plage_liste_bdd.php";?>
 
-<!--Listes Mer-->
+<!--Listes Plage-->
 
-<section id="ListesMer">
+<section id="ListesPlage">
 
   <!--Titre-->
 
-  <div class="TitreListesMer">
-    <H2>LISTES DES PLAGES / PORTS / ILES ECO RESPONSABLE</H2>
+  <div class="TitreListesPlage">
+    <H2>LISTES DES PLAGES</H2>
   </div>
 
   <!--Recherche-->
 
-  <div class="RechercheListesMer">
+  <div class="RechercheListesPlage">
 
     <form method="post" action="header.php">
 
@@ -86,7 +86,7 @@
 
       <!--Bonton RECHERCHE-->
 
-      <div class="ChampRechercheListesMer">
+      <div class="ChampRechercheListesPlage">
         <input type="submit" value="RECHERCHE">
       </div>
 
@@ -101,7 +101,7 @@ $req = $connexion->query("SELECT * FROM liste_plage WHERE 1");
 
  /*Résultat(tableau)*/
 
-  echo ('<div class="TableauListesMer"><table><thead><tr>');
+  echo ('<div class="TableauListesPlage"><table><thead><tr>');
 
   //execution de cette requette dans une boucle pour récupérer chaque ligne 
 

@@ -1,16 +1,5 @@
 <!-- Page prenant en charge la connexion à la bdd -->
 
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liste Plage</title>
-</head>
-
-<body>
-
   <?php
   // Construction des variables de connexion serveur Mysql
   $serveur = 'localhost';
@@ -47,7 +36,3 @@
 
 
 
-
-</body>
-
-</html>

@@ -1,11 +1,11 @@
-/* Listes Mer */
+/* Listes plage */
 
-#ListesMer {
+#ListesPlage {
     background-color: #0F8581;
     text-align: center;
 }
 
-.TitreListesMer {
+.TitreListesPlage {
     background-color: #3795E2;
     width: 80%;
     margin: auto;
@@ -14,14 +14,14 @@
 
 /* Recherche */
 
-.RechercheListesMer {
+.RechercheListesPlage {
     background-color: #0A5957;
     width: 78%;
     margin: auto;
     color: white;
 }
 
-.RechercheListesMer form {
+.RechercheListesPlage form {
     background-color: #0A5957;
     width: 100%;
     color: white;
@@ -31,12 +31,12 @@
     padding: 1%;
 }
 
-.RechercheListesMer .champ,
-.RechercheListesMer select {
+.RechercheListesPlage .champ,
+.RechercheListesPlage select {
     margin-right: 1%;
 }
 
-.ChampRechercheListesMer input {
+.ChampRechercheListesPlage input {
     background-color: #0A5957;
     margin: auto;
     color: white;
@@ -46,7 +46,7 @@
 
 /* Résultat de la recherche (tableau) */
 
-.TableauListesMer {
+.TableauListesPlage {
     background-color: white;
     width: 80%;
     margin: auto;

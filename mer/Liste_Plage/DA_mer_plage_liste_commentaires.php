@@ -1,14 +1,18 @@
-<section id="CommentairesMer">
+<?php
+
+include("DA_mer_plage_liste_bdd.php");?>
+
+<section id="CommentairesPlage">
 
   <!--Titre-->
 
-  <div class="TitreCommentairesMer">
+  <div class="TitreCommentairesPlage">
     <h2>Commentaires :</h2>
   </div>
 
   <!--Section Commentaires-->
 
-  <div class="SectionCommentairesMer">
+  <div class="SectionCommentairesPlage">
 
     <div class="PartieGauche">
 
@@ -16,36 +20,36 @@
 
       <!--Ecrire un Commentaire-->
 
-      <form method="post" name="commentaires" action="DA_mer_plage_liste_commentaires.php">
+      <form method="post" name="commentaires" action="DA_mer_plage_liste_commentaires_envoie.php">
 
         <!--Champ d'écriture du Commentaires-->
 
-        <div class="ChampDeRechercheCommentairesMer">
+        <div class="ChampDeRechercheCommentairesPlage">
           <textarea name="NewCommentaires" id="NewCommentaires" rows="5" cols="30" minlength="3" maxlength="500" placeholder="Vous pouvez écrire votre commentaire ici. Penser a mentionner l'endroit dont vous parlez" required></textarea>
         </div>
 
         <!--Envoi du Commentaire-->
 
-        <div class="ChampEnvoiCommentairesMer">
+        <div class="ChampEnvoiCommentairesPlage">
           <input type="submit" value="ENVOYER">
         </div>
       </form>
 
       <!--Recherche Commentaires-->
 
-      <div class="RechercheCommentairesMer">
+      <div class="RechercheCommentairesPlage">
 
-        <form method="post" action="header.php">
+        <form method="post" action="DA_mer_plage_liste.commentaires_envoie.php">
 
           <!--Envoi de la Recherche Commentaires-->
 
-          <div class="ChampEnvoiCommentairesMer">
+          <div class="ChampEnvoiCommentairesPlage">
             <input type="submit" value="RECHERCHE">
           </div>
 
           <!--Champ Recherche Commentaires-->
 
-          <div class="ChampDeRechercheCommentairesMer">
+          <div class="ChampDeRechercheCommentairesPlage">
             <input type="text" id="commentaires" name="commentaires" maxlength="30" placeholder="Recherche" autocomplete="">
           </div>
         </form>
@@ -55,7 +59,9 @@
 
     <!--Base Commentaires-->
 
-    <div class="BaseCommentairesMer">
+    <div class="BaseCommentairesPlage">
+
+
 
     <?php
 
@@ -69,13 +75,13 @@ $commentaires_plage_id = $donnees['commentaires_plage_id'];
 $textes = $donnees['textes'];
 $noms = $donnees['noms'];
 $dates = $donnees['dates'];
-$lieux = $donnees['lieux'];
-$réponses = $donnees['réponses'];
+
+
 
 
       /*Début Commentaires*/
 echo ('
-      <div class="DebutCommentairesMer">
+      <div class="DebutCommentairesPlage" id="'.$commentaires_plage_id.'">
         <div class="Entete">
           <p class="NomAuteur">'.$noms.'</p>
           <p class="DateEnvoi">'.$dates.'</p>
@@ -90,7 +96,7 @@ echo ('
       /*Réponse Commentaires*/
 
       /*echo ('
-      <div class="ReponseCommentairesMer">
+      <div class="ReponseCommentairesPlage">
         <div class="Entete">
           <p class="NomAuteur">Nom</p>
           <p class="DateEnvoi">25/08/2020 à 17h40</p>
@@ -103,6 +109,7 @@ echo ('
     
 
     echo ('</div></div></section>');
+    
 
   
 

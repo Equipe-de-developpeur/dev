@@ -1,6 +1,6 @@
-/* Commentaires Mer */
+/* Commentaires Plage */
 
-#CommentairesMer {
+#CommentairesPlage {
     background-color: #0F8581;
     height: 300px;
     text-align: center;
@@ -9,7 +9,7 @@
 
 /* Titre */
 
-.TitreCommentairesMer {
+.TitreCommentairesPlage {
     background-color: #3795E2;
     width: 80%;
     margin: auto;
@@ -19,7 +19,7 @@
 
 /* Section */
 
-.SectionCommentairesMer {
+.SectionCommentairesPlage {
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -34,9 +34,9 @@
 }
 
 
-/* Recherche commentaires mer */
+/* Recherche commentaires plage */
 
-.RechercheCommentairesMer {
+.RechercheCommentairesPlage {
     background-color: #0A5957;
     width: 85%;
     margin-left: 5%;
@@ -46,7 +46,7 @@
     margin: 6%;
 }
 
-.ChampEnvoiCommentairesMer input {
+.ChampEnvoiCommentairesPlage input {
     background-color: #0A5957;
     width: 90%;
     margin: auto;
@@ -54,7 +54,7 @@
     padding: 2%;
 }
 
-.ChampDeRechercheCommentairesMer input {
+.ChampDeRechercheCommentairesPlage input {
     background-color: white;
     width: 90%;
     margin: auto;
@@ -64,14 +64,14 @@
     margin-bottom: 5%;
 }
 
-.RechercheCommentairesMer .ChampEnvoiCommentairesMer input {
+.RechercheCommentairesPlage .ChampEnvoiCommentairesPlage input {
     margin-top: 10%;
 }
 
 
 /* Base */
 
-.BaseCommentairesMer {
+.BaseCommentairesPlage {
     background-color: #3B5773;
     width: 80%;
     margin: auto;
@@ -80,9 +80,9 @@
 }
 
 
-/* Début commentaires mer */
+/* Début commentaires plage */
 
-.DebutCommentairesMer {
+.DebutCommentairesPlage {
     background-color: white;
     width: 90%;
     margin: auto;
@@ -93,9 +93,9 @@
 }
 
 
-/* Réponse commentaires mer */
+/* Réponse commentaires plage */
 
-.ReponseCommentairesMer {
+.ReponseCommentairesPlage {
     background-color: white;
     width: 75%;
     color: #3795E2;
