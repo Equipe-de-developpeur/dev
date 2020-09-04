@@ -1,0 +1,52 @@
+Documentation Liste_ile
+
+Langages utilisés : PHP, MySql, Ajax, Html, Css, Jquery
+
+mer_ile.sql
+
+		Base de donnée et Table à importer dans phpmyadmin pour tester
+
+
+
+Tableau.php
+	=> Requete traitée par traitement_tableau.php ( requete SQL )
+							|
+							-->include de connectPDO.php  meteo.php  calcul_distance.php
+	
+	
+	
+	Affichage de la liste des iles du var  => Nom de l'ile | Ville associée | Meteo locale sur 3 jours  ( via widget en lien sur meteo.php )
+			Liste deroulante pour selectionner sa ville du var
+					-> recuperation via base de donnée de la latitude et longitude de cette ville
+					->calcul de la distance ( via calcul_distance.php) avec la latitude et longitude de chaque ile
+					-> affichage d'une nouvelle colonne Distance et tri automatique par ile la plus proche.
+					-> Redirection intermediaire via  ville.php pour creation de variable $_SESSION adequate pour le traitement.
+			
+			Liste deroulante pour filtrer selon ville | distance | ile  en croissant ou decroissant   et Desactivation de filtre possible
+			
+	Lien Cliquable sur chaque ile ( avec un target_blank ) vers ile.php
+	
+	
+ile.php
+	page dynamique qui affichera pour chaque ile - une zone commentaire unique à chaque ile
+												 - une zone descriptive pour chaque ile 
+	
+	Chargement de cette page via une variable $_SESSION recuperée 
+	
+	Affichage commentaire sans rechargement de la page via Ajax 
+			->ajout du commentaire -> redirection vers add_comment.php
+										-> insertion dans la base de données
+			-> chargement des commentaires -> redirection vers fetch_comment.php
+												-> boucle pour créer le html de chaque commentaire
+												
+			-> bouton reply pour recuperer l'id du commentaire et l'injecter dans  parent_comment_id
+								-> curseur placé sur la zone d'ecriture du pseudo pour effectuer cette reponse de commentaire
+								-> une reponse de commentaire n'a pas de bouton reply.
+			
+			
+			
+connectPDO.php
+
+
+		Connection en PDO à la base de données
+													
