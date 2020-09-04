@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 04 sep. 2020 à 15:02
+-- Généré le : ven. 04 sep. 2020 à 16:55
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.4.7
 
@@ -24,16 +24,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_deux_frères_(rocher)`
+-- Structure de la table `commentaire_deux_frères_rocher`
 --
 
-CREATE TABLE `commentaire_deux_frères_(rocher)` (
+CREATE TABLE `commentaire_deux_frères_rocher` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
   `comment_nom_membre` varchar(100) NOT NULL,
   `date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `commentaire_deux_frères_rocher`
+--
+
+INSERT INTO `commentaire_deux_frères_rocher` (`comment_id`, `parent_comment_id`, `comment`, `comment_nom_membre`, `date`) VALUES
+(1, 0, 'test', 'David', '2020-09-04 16:52:21');
 
 -- --------------------------------------------------------
 
@@ -84,20 +91,6 @@ CREATE TABLE `commentaire_le_lion_de_terre` (
 --
 
 CREATE TABLE `commentaire_rocher_du_rascas` (
-  `comment_id` int(11) NOT NULL,
-  `parent_comment_id` int(11) NOT NULL,
-  `comment` varchar(255) NOT NULL,
-  `comment_nom_membre` varchar(100) NOT NULL,
-  `date` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `commentaire_île_d'or`
---
-
-CREATE TABLE `commentaire_île_d'or` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -188,16 +181,6 @@ CREATE TABLE `commentaire_île_de_porquerolles` (
   `comment_nom_membre` varchar(100) NOT NULL,
   `date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `commentaire_île_de_porquerolles`
---
-
-INSERT INTO `commentaire_île_de_porquerolles` (`comment_id`, `parent_comment_id`, `comment`, `comment_nom_membre`, `date`) VALUES
-(5, 0, 'test', 'david', '2020-09-03 14:59:26'),
-(6, 5, 'fefe', 'lol', '2020-09-03 14:59:35'),
-(7, 0, 'tente des trucs', 'Aurelien', '2020-09-03 15:06:57'),
-(8, 7, 'vas-y !', 'David', '2020-09-03 15:54:17');
 
 -- --------------------------------------------------------
 
@@ -323,6 +306,20 @@ CREATE TABLE `commentaire_île_du_petit_rouveau` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `commentaire_île_d_or`
+--
+
+CREATE TABLE `commentaire_île_d_or` (
+  `comment_id` int(11) NOT NULL,
+  `parent_comment_id` int(11) NOT NULL,
+  `comment` varchar(255) NOT NULL,
+  `comment_nom_membre` varchar(100) NOT NULL,
+  `date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `commentaire_île_rousse`
 --
 
@@ -394,7 +391,7 @@ INSERT INTO `liste_ile` (`liste_ile_id`, `liste_ile_nom`, `liste_ile_ville`, `li
 (13, 'Île du Petit Ribaud', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0234, 6.13842, 67.18, ''),
 (14, 'Île de la Redonne', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0426, 6.08949, 66.46, ''),
 (15, 'Île de Bendor', 'Bandol', NULL, 0, 0, 43.1277, 5.75019, 73.41, ''),
-(16, 'Deux Frères (rocher)', 'La Seyne sur Mer', NULL, 0, 0, 43.118, 5.77344, 72.91, ''),
+(16, 'Deux Frères (rocher)', 'La Seyne sur Mer', NULL, 0, 0, 43.118, 5.77344, 72.91, 'Les Deux Frères (ou les Freirets, ces deux formations rocheuses portaient le nom de Rochers des Freirets au XIXe siècle) sont deux rochers émergeant à la pointe du Cap Sicié (Var, France) et visibles depuis la plage des Sablettes à La Seyne-sur-Mer. C\'est un lieu qui accueille de nombreux plaisanciers ainsi que des clubs de plongée dont l\'objectif est la visite d\'une épave située à proximité immédiate.\r\n\r\nLa légende locale raconte que deux frères trouvèrent un soir une sirène blessée sur la plage. Ils la soignèrent et tombèrent éperdument amoureux et dans leur folie, ils s\'entretuèrent. La sirène, avant de regagner les flots, supplia Poséidon de leur laisser une forme apparente en souvenir de leur passion. Le dieu de la mer y dressa les deux rocs'),
 (17, 'Les Fourmigues', 'Hyeres Les Palmiers', NULL, 0, 0, 43.04, 6.06051, 67.6, ''),
 (18, 'Île Rousse', 'Bandol', NULL, 0, 0, 43.1331, 5.71958, 74.74, ''),
 (19, 'Le Lion de mer', 'Saint Raphael', NULL, 0, 0, 43.4069, 6.76543, 37.6, 'Le Lion de mer est un îlot rocheux, composé de rochers roux (porphyre), situé dans la baie de Saint-Raphaël.\r\n\r\nUne Vierge trône sur le sommet de l\'île et la pointe est occupée par des installations techniques.\r\n\r\nLe site est également un spot de plongée reconnu. On y trouve notamment une voûte tapissée de coraux en fleur. Deux statues agrémentent la sortie du passage de l\'arche : la Vierge et la Sirène.\r\nIl se situe à proximité d\'un autre îlot rocheux appelé le Lion de terre. '),
@@ -579,9 +576,9 @@ INSERT INTO `ville_proxi` (`ville_proxi_id`, `ville_proxi_nom`, `ville_proxi_lat
 --
 
 --
--- Index pour la table `commentaire_deux_frères_(rocher)`
+-- Index pour la table `commentaire_deux_frères_rocher`
 --
-ALTER TABLE `commentaire_deux_frères_(rocher)`
+ALTER TABLE `commentaire_deux_frères_rocher`
   ADD PRIMARY KEY (`comment_id`);
 
 --
@@ -606,12 +603,6 @@ ALTER TABLE `commentaire_le_lion_de_terre`
 -- Index pour la table `commentaire_rocher_du_rascas`
 --
 ALTER TABLE `commentaire_rocher_du_rascas`
-  ADD PRIMARY KEY (`comment_id`);
-
---
--- Index pour la table `commentaire_île_d'or`
---
-ALTER TABLE `commentaire_île_d'or`
   ADD PRIMARY KEY (`comment_id`);
 
 --
@@ -699,6 +690,12 @@ ALTER TABLE `commentaire_île_du_petit_rouveau`
   ADD PRIMARY KEY (`comment_id`);
 
 --
+-- Index pour la table `commentaire_île_d_or`
+--
+ALTER TABLE `commentaire_île_d_or`
+  ADD PRIMARY KEY (`comment_id`);
+
+--
 -- Index pour la table `commentaire_île_rousse`
 --
 ALTER TABLE `commentaire_île_rousse`
@@ -727,10 +724,10 @@ ALTER TABLE `ville_proxi`
 --
 
 --
--- AUTO_INCREMENT pour la table `commentaire_deux_frères_(rocher)`
+-- AUTO_INCREMENT pour la table `commentaire_deux_frères_rocher`
 --
-ALTER TABLE `commentaire_deux_frères_(rocher)`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `commentaire_deux_frères_rocher`
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `commentaire_les_fourmigues`
@@ -754,12 +751,6 @@ ALTER TABLE `commentaire_le_lion_de_terre`
 -- AUTO_INCREMENT pour la table `commentaire_rocher_du_rascas`
 --
 ALTER TABLE `commentaire_rocher_du_rascas`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `commentaire_île_d'or`
---
-ALTER TABLE `commentaire_île_d'or`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -796,7 +787,7 @@ ALTER TABLE `commentaire_île_de_la_redonne`
 -- AUTO_INCREMENT pour la table `commentaire_île_de_porquerolles`
 --
 ALTER TABLE `commentaire_île_de_porquerolles`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT pour la table `commentaire_île_de_port-cros`
@@ -844,6 +835,12 @@ ALTER TABLE `commentaire_île_du_petit_ribaud`
 -- AUTO_INCREMENT pour la table `commentaire_île_du_petit_rouveau`
 --
 ALTER TABLE `commentaire_île_du_petit_rouveau`
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `commentaire_île_d_or`
+--
+ALTER TABLE `commentaire_île_d_or`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

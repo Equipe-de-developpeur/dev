@@ -29,8 +29,20 @@ else
 if($error == '')
 {
  
+ $ile=str_replace(' ','_',$_SESSION['ile']);
+ 
+ if($ile=="Île_d'Or")
+	{
+		$ile="Île_d_Or";
+	}
+	if($ile=="Deux_Frères_(rocher)")
+	{
+		$ile="Deux_Frères_rocher";
+	}
+ 
+ 
 $sql = "
- INSERT INTO commentaire_".str_replace(' ','_',$_SESSION['ile'])." (parent_comment_id, comment, comment_nom_membre) VALUES (:parent_comment_id, :comment, :comment_nom_membre)"; 
+ INSERT INTO commentaire_".$ile." (parent_comment_id, comment, comment_nom_membre) VALUES (:parent_comment_id, :comment, :comment_nom_membre)"; 
 
  $vars[':parent_comment_id']=$_POST["comment_id"];
  $vars[':comment']=$comment_content;

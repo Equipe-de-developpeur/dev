@@ -6,9 +6,21 @@ include "connectPDO.php";
 include "function.php";
 if(isset($_SESSION['ile']) AND !empty($_SESSION['ile']))
 {
+
+ $ile=str_replace(' ','_',$_SESSION['ile']);
+ 
+ if($ile=="Île_d'Or")
+	{
+		$ile="Île_d_Or";
+	}
+	if($ile=="Deux_Frères_(rocher)")
+	{
+		$ile="Deux_Frères_rocher";
+	}
+
 	
 $sql = "
-SELECT * FROM commentaire_".str_replace(' ','_',$_SESSION['ile'])." WHERE parent_comment_id = '0' 
+SELECT * FROM commentaire_".$ile." WHERE parent_comment_id = '0' 
 ORDER BY comment_id DESC
 ";
 }
