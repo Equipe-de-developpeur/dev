@@ -1,3 +1,7 @@
+<?php
+include "connect_pdo.php";
+?>
+
 <?php $url = basename($_SERVER['PHP_SELF']) ;
 if((stristr($url, 'terre') && !stristr($url, 'montagne')) || stristr($url, 'nature') || stristr($url, 'terroir') || stristr($url, 'urbanisme'))
 {
@@ -37,7 +41,7 @@ if((stristr($url, 'terre') && !stristr($url, 'montagne')) || stristr($url, 'natu
 	
 	include"menu.php";
 }
-else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage') || stristr($url, 'port') || stristr($url, 'ile'))
+else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage') || stristr($url, 'port') || stristr($url, 'ile') || (stristr($url, 'description') || (stristr($url, 'liste_membres'))))
 {
 	if(stristr($url, 'plage'))
 	{
@@ -45,6 +49,7 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 		$menu4="mer";
 		$menu5="port";
 		$menu6="ile";
+		include "header_mer.php";
 	}
 	else if(stristr($url, 'port'))
 	{
@@ -52,6 +57,7 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 		$menu4="mer";
 		$menu5="plage";
 		$menu6="ile";
+		include "header_mer.php";
 	}
 	else if(stristr($url, 'ile'))
 	{
@@ -59,6 +65,25 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 		$menu4="mer";
 		$menu5="plage";
 		$menu6="port";
+		include "header_mer.php";
+	}
+	else if(stristr($url, 'description'))
+	{
+		$bouton="ile";
+		$menu4="mer";
+		$menu5="plage";
+		$menu6="port";
+		$menu7="ile";
+		include "header_mer.php";
+	}
+	else if(stristr($url, 'liste_membres'))
+	{
+		$bouton="Admin";
+		$menu4="mer";
+		$menu5="plage";
+		$menu6="port";
+		$menu7="ile";
+		include "header_mer.php";
 	}
 	else
 	{
@@ -72,6 +97,7 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 	$menu1="terre";
 	$menu2="hébergement";
 	$menu3="activités";
+	
 	include"menu.php";
 }
 else if(stristr($url, 'hébergement') || stristr($url, 'gite') || stristr($url, 'camping') || stristr($url, 'insolite'))
@@ -145,5 +171,5 @@ else if(stristr($url, 'activités') || stristr($url, 'montagne') || stristr($url
 	$menu3="hébergement";
 	include"menu.php";
 }
-
+include "menu_co.php";
 ?>

@@ -7,10 +7,10 @@
 		z-index: 10000;
 		left:0;
 		display:none;
-		top: 13.5vw;
+		top: 17.5vw;
 		max-width:25%;
 		background: rgba(0, 0, 0, 0.7);
-		max-height: 30vw;
+		max-height: 35vw;
 		line-height: 3em;
 		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
 		color:white;
@@ -62,9 +62,9 @@
 	}
 	#header {
 		position: absolute;
-		z-index: 10000;
+		z-index: 1000;
 		left: 0;
-		top: 6vw;
+		top: 10vw;
 		width: 100%;
 		background: rgba(0, 0, 0, 0);
 		height: 6vw;
@@ -123,7 +123,10 @@
 		@media screen and (max-width: 1024px)
 		{
 			
-			
+			#menu_vertical
+			{
+				top: calc(10.5vw + 56px)!important;
+			}
 			#menu_vertical_bouton
 			{
 				font-size:3vw;
@@ -142,12 +145,11 @@
 			}
 			#header
 			{
-				top:0;
+				top:69px;
 			}
 			#header img
 			{
-				top:11vw;
-				height:10vw;
+				display:none;
 			}
 			#header nav ul
 			{

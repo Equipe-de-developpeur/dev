@@ -37,7 +37,7 @@ $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
     if(scroll > 200){
 			$("#menu_vertical").css({
-        position:'fixed', top:'13.5vw'
+        position:'fixed', top:'7.5vw'
     });  
 	$("#header nav").css({
         position:'fixed'
@@ -46,7 +46,7 @@ $(window).scroll(function (event) {
 	else
 	{
 					$("#menu_vertical").css({
-        position:'absolute', top:'13.5vw'
+        position:'absolute', top:'17.5vw'
     });  
 	$("#header nav").css({
         position:'absolute'
@@ -76,6 +76,13 @@ $(window).scroll(function (event) {
 							<li><a href="<?php echo $menu4;?>.php"><?php echo ucwords(str_replace('_',' ',$menu4));?></a></li>
 							<li><a href="<?php echo $menu5;?>.php"><?php echo ucwords(str_replace('_',' ',$menu5));?></a></li>
 							<li><a href="<?php echo $menu6;?>.php"><?php echo ucwords(str_replace('_',' ',$menu6));?></a></li>
+							<?php if(isset($menu7))
+							{
+								?>
+								<li><a href="<?php echo $menu7;?>.php"><?php echo ucwords(str_replace('_',' ',$menu7));?></a></li>
+								<?php
+							}
+							?>
 						</ul>
 					</nav>
 				

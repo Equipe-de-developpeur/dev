@@ -19,7 +19,7 @@
 {
 	.titrePrincipalMer
 	{
-		font-size:23vw;
+		font-size:23vw!important;
 	}
 }
 .row
@@ -30,7 +30,7 @@
 
 .IntroductionMer {
     width: 65%;
-    margin-top: 15vw;
+    margin-top: 20vw;
     margin-left: 25%;
     margin-right: 5%;
     padding: 1%;
