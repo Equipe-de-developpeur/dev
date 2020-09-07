@@ -47,7 +47,7 @@ while ($donnees = $req->fetch()) {
 
 
 
-            <input type="submit" name="envoyer" value="Mettre à jour">
+            <button type="submit" name="envoyer" class="btn btn-primary"> Mettre à jour</button>
         </div>
 
 
