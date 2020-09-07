@@ -56,7 +56,7 @@
                  <th>Localisation</th>
                  <th>Notation</th>
                  <th>Maj</th>
-                 <th>Supp</th>
+                 <th>Supp</th> 
              </thead>
 
 

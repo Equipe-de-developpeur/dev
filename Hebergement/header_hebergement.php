@@ -15,6 +15,7 @@
 <body>
 <?php 
     include 'header.php';
+    include 'functions_gite.php';
 ?>
     <div class="header container-fluid">
         
