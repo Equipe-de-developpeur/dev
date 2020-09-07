@@ -1,0 +1,114 @@
+/* Commentaires Plage */
+
+#CommentairesPlage {
+    background-color: #0F8581;
+    height: 300px;
+    text-align: center;
+}
+
+
+/* Titre */
+
+.TitreCommentairesPlage {
+    background-color: #3795E2;
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+
+
+/* Section */
+
+.SectionCommentairesPlage {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+}
+
+
+/* Ecriture du Commentaire */
+
+.PartieGauche {
+    margin: 2%;
+}
+
+
+/* Recherche commentaires plage */
+
+.RechercheCommentairesPlage {
+    background-color: #0A5957;
+    width: 85%;
+    margin-left: 5%;
+    margin: auto;
+    color: white;
+    padding: 1%;
+    margin: 6%;
+}
+
+.ChampEnvoiCommentairesPlage input {
+    background-color: #0A5957;
+    width: 90%;
+    margin: auto;
+    color: white;
+    padding: 2%;
+}
+
+.ChampDeRechercheCommentairesPlage input {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    color: #0A5957;
+    margin-top: 20%;
+    padding: 2%;
+    margin-bottom: 5%;
+}
+
+.RechercheCommentairesPlage .ChampEnvoiCommentairesPlage input {
+    margin-top: 10%;
+}
+
+
+/* Base */
+
+.BaseCommentairesPlage {
+    background-color: #3B5773;
+    width: 80%;
+    margin: auto;
+    padding: 1%;
+    margin: 2%;
+}
+
+
+/* Début commentaires plage */
+
+.DebutCommentairesPlage {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    color: #3795E2;
+    padding: 1%;
+    margin: 2%;
+    margin-left: 5%;
+}
+
+
+/* Réponse commentaires plage */
+
+.ReponseCommentairesPlage {
+    background-color: white;
+    width: 75%;
+    color: #3795E2;
+    padding: 1%;
+    margin: 2%;
+    margin-left: 20%;
+}
+
+.Entete {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Contenu .Texte {
+    color: #0A5957;
+}

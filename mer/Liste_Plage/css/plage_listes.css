@@ -1,0 +1,81 @@
+/* Listes plage */
+
+#ListesPlage {
+    background-color: #0F8581;
+    text-align: center;
+}
+
+.TitreListesPlage {
+    background-color: #3795E2;
+    width: 80%;
+    margin: auto;
+}
+
+
+/* Recherche */
+
+.RechercheListesPlage {
+    background-color: #0A5957;
+    width: 78%;
+    margin: auto;
+    color: white;
+}
+
+.RechercheListesPlage form {
+    background-color: #0A5957;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+
+.RechercheListesPlage .champ,
+.RechercheListesPlage select {
+    margin-right: 1%;
+}
+
+.ChampRechercheListesPlage input {
+    background-color: #0A5957;
+    margin: auto;
+    color: white;
+    padding: 5%;
+}
+
+
+/* Résultat de la recherche (tableau) */
+
+.TableauListesPlage {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    color: #3795E2;
+    margin-top: 2%;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid #3795E2;
+    width: 100%;
+}
+
+thead tr,
+thead tr th {
+    background-color: #3B5773;
+    padding: 0.5%;
+}
+
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+img {
+    width: 10%;
+}
