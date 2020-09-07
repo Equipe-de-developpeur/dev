@@ -113,7 +113,7 @@ a:hover
 									<?php
 								}
 								?>
-	<a href="profil_inter.php" style="color:white;"><?php if(isset($_SESSION['utilisateur_pseudo'])) {echo $_SESSION['utilisateur_pseudo'];}  ?> (<?php if(isset($_SESSION['utilisateur_role'])) {echo $_SESSION['utilisateur_role'];}  ?>)</a>
+	<a href="profil_inter.php" style="color:white;"><?php if(isset($_SESSION['utilisateur_pseudo'])) {echo $_SESSION['utilisateur_pseudo'];}  ?> </a>
 	</div>
   <div style="margin:auto; text-align:center;">
   <?php if(isset($_SESSION['utilisateur_role']) AND ($_SESSION['utilisateur_role']== "Admin"))

@@ -17,7 +17,10 @@ if(isset($_SESSION['ile']) AND !empty($_SESSION['ile']))
 	{
 		$ile="Deux_Frères_rocher";
 	}
-
+if($ile=="Île_de_Port-Cros")
+	{
+		$ile="Île_de_Port_Cros";
+	}
 	
 $sql = "
 SELECT * FROM commentaire_".$ile." WHERE parent_comment_id = '0' 
