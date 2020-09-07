@@ -1,7 +1,6 @@
- 
-<?php 
- include 'header_hebergement.php';
-?>
+ <?php
+    include 'header_hebergement.php';
+    ?>
  <div class="main container-fluid">
 
      <h2>Les Gîtes dans le var</h2>
@@ -48,25 +47,31 @@
                  </tr>
              </tbody>
          </table>  -->
+         <?php
+
+            ?>
          <table class="table table-bordered table-gite">
              <thead class="thead-light">
                  <th>Nom du gîte</th>
                  <th>Localisation</th>
                  <th>Notation</th>
+                 <th>Maj</th>
+                 <th>Supp</th>
              </thead>
 
-             
 
-                <?php
+
+             <?php
                 include 'config_bdd_gite.php';
                 // SELECTIONNE TOUT DANS LA BDD gites
                 $req = $bdd->query('SELECT * FROM gites');
                 // TANT QU'IL Y A DES DONNEES AFFICHE LES LIGNE PAR LIGNE DANS UN TABLEAU
                 while ($donnees = $req->fetch()) {
                     // Enregistrement des données sous forme de variables
-                    
+
                     $nom = $donnees['nom'];
                     $localisation = $donnees['localisation'];
+                    $id_gite = $donnees['id'];
                 ?>
 
                  <tbody>
@@ -86,8 +91,19 @@
                                                 echo $feuille;
                                             }
                                             '</td>';
-                                        }
-                            
+                             echo '<td><form action="maj_gite.php" method="post">
+                                     <input name="id_maj" value="' . $id_gite . '"type="hidden"/>
+                                     <input type="submit" name="maj" value="maj" class="btn btn-primary text-center"/></form>
+         </td>';
+                            ?>
+                            <td>
+                                <form action="supp_gite.php"method="post">
+                                <input type="hidden" name="supp_gite" value="<?php echo $id_gite ?>">
+                                <input type="submit" name="supp_maj" value="supp" class="btn">
+                                </form>
+                            </td>
+                                  <?php      
+                                        } 
                                             ?>
                      </tr>
                  </tbody>
@@ -100,11 +116,11 @@
      <article class="article article_1 container">
          <h2>Ajoutez vos Ecogites de la région !</h2>
          <p>Tous les Ecogîtes du Var ne sont pas encore répertoriés, aidés nous à compléter notre base de donnée !</p>
-         <?php 
+         <?php
             include 'insert_gite.php';
-         ?>
-                                        
-         
+            ?>
+
+
      </article>
  </div>
 

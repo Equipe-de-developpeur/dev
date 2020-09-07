@@ -23,16 +23,18 @@
 		<br>
         <p>Un éco-hébergement ou hébergement écologique est un type d'hébergement touristique qui répond aux critères de respect de l'environnement garantis par un label environnemental. Face à une offre locative de plus en plus concurrentielle, à un essor du tourisme durable et une clientèle en recherche de dépaysement et de rupture avec le monde moderne, les porteurs de projets insolites ont le vent en poupe !</p>
     
-        <h2>Quelques hébergement insolites situés dans le var</h2>
+        <h2>Quelques hébergements insolites situés dans le var</h2>
 		<br>
 		
         <?php include 'config_bdd_insolite.php'; ?>
 		
-		<table class="table table-bordered table-gite">
+		<table class="table table-bordered table-responsive-sm">
             <thead class="thead-dark">
 				<th>Nom de l'hébergement</th>
                 <th>Situé à</th>
                 <th>Notation</th>
+                <th>Mettre à jour</th>
+                <th>Supprimer</th>
             </thead>
 			
 		<?php
@@ -41,32 +43,33 @@
         ?>
 		
             <tr>
-              <td><?php echo $donnees['nom'];?></td>
-              <td><?php echo $donnees['localisation'];?></td>
-              <td><?php echo $donnees['notation'];?></td>
+				<td><?php echo $donnees['nom'];?></td>
+				<td><?php echo $donnees['localisation'];?></td>
+				<td><?php $feuille = '<img src="img/plant.png" alt="logo feuille">'; 
+				for ($i = 1; $i <= $donnees['notation']; $i++) {
+                echo $feuille;} ?>
+				</td>
+				<td><form method="post" action="maj_insolite.php">
+				<input type="hidden" name="id_hebergement" value="<?php echo $donnees['id_hebergement'];?>">
+				<input class="btn btn-primary" type="submit" value="MAJ"style="background-color: #ea5a00;border-style: none;">
+				</form></td>
+				<td><form method="post" action="suppr_traitement_insolite.php">
+				<input type="hidden" name="id_hebergement" value="<?php echo $donnees['id_hebergement'];?>">
+				<input class="btn btn-primary" type="submit" value="SUPPR" style="background-color: #c82333;border-style: none;">
+				</form></td>
+				
             </tr>
+			
 			<?php
-			}
+			} 
 			?>
 		
 		</table>
 		<h2>Inscription Hébergement :</h2>
 		<br>
 		<br>
-		
-		<form method="post" action="insertion.php">
-		
-			<label>Nom de l'hébergement</label> 
-			<input class="form-control" id="formGroupExampleInput" type="text" name="nom" placeholder="Saisissez le nom de votre hébergement"> 
-			<br>
-			<label>Localisation</label> 
-			<input class="form-control" id="formGroupExampleInput" type="text" name="localisation" placeholder="Saisissez la ville où se situe (ou à proximité de) votre hébergement">
-			<br>
-			<label>Notation</label>
-			<input class="form-control" id="formGroupExampleInput" type="text" name="notation" placeholder="La note que vous attribuez à cet hébergement (notation de 1 à 5)">
-			<br>
-			<input class="btn btn-primary" type="submit" value="Valider" style="background-color: #ea5a00;border-style: none;">
-		</form>	
+		<?php include 'insert_insolite.php'; ?>
+			
     </article>
 	</div>
 

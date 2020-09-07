@@ -134,7 +134,18 @@ a {
 
 /* END ARTICLES */
 
+/* form */
 
+
+
+.maj_form{
+    margin: auto;
+    display: flex;
+    justify-content: center; 
+}
+.maj_form label{
+    font-weight: bold;
+}
 /* FOOTER  */
 
 .footer {
