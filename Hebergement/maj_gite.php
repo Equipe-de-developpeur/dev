@@ -20,8 +20,8 @@ while ($donnees = $req->fetch()) {
     <form action="maj_gite_traitement.php" class="form1" method="post">
         <div class="maj_form">
             <div class="input_form">
-                <label for="titre">Id du gite : </label>
-                <input type="text" name="id_gite" id="id_gite" readonly value="<?php echo $id_maj ?>"><br>
+                
+                <input type="hidden" name="id_gite" id="id_gite" readonly value="<?php echo $id_maj ?>"><br>
 
             </div>
 
