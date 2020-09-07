@@ -35,13 +35,18 @@ body {
     text-decoration: underline;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-device-width: 980px) {
     .lport {
         margin-left: 10%;
         margin-right: 10%;
-    }
-
-    .lport {
         width: 80%;
+    }
+}
+
+@media screen and (max-device-width: 979px) {
+    .lport {
+        margin-left: 0%;
+        margin-right: 0%;
+        width: 100%;
     }
 }

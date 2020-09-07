@@ -13,7 +13,7 @@
         include_once "element/MJ_mer_creationcom.php";
         include "element/MJ_mer_traitementcom.php";
         ?>
-        <div class="lport">
+        <div class="lport container-fluid">
             <div class="cadre_critere py-1 px-1">
                 <form action="MJ_mer_listeport.php" method="post">
                     <label for="critere">Classez par :</label>
