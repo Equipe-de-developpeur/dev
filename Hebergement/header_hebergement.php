@@ -40,7 +40,9 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
     <div class="connexion">
+        <!-- Si il y a session auth active -->
         <?php if(isset($_SESSION['auth'])): ?>
+            
             <a href="logout_gite.php">Se deconnecter</a>
         <?php else: ?>
         
@@ -48,7 +50,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <a href="register_gite.php">S'inscrire</a>
         <?php endif ?>
     </div>
-
+<!-- REGARDER LA VIDEO DE GRAFIKART TIME CODE : 51.38 -->
     <?php if (isset($_SESSION['flash'])) : ?>
         <?php foreach ($_SESSION['flash'] as $type => $message) : ?>
             <div class="alert alert-<?= $type; ?>">
