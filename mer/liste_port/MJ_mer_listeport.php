@@ -13,6 +13,7 @@
         include_once 'element/MJ_mer_connexionbdd.php';
         include_once "element/MJ_mer_creationcom.php";
         include "element/MJ_mer_traitementcom.php";
+        include "element/MJ_mer_envoiefichier.php";
         ?>
         <div class="lport container-fluid">
             <div class="cadre_critere py-1 px-1">
@@ -99,17 +100,18 @@
                                             }
                                             ?>
                                             <!-- Formulaire Commentaire -->
-                                            <form action="MJ_mer_listeport.php" method="post" class="commentaire p-1">
+                                            <form action="MJ_mer_listeport.php" method="post" class="commentaire p-1" enctype="multipart/form-data">
                                                 <fieldset>
                                                     <legend>Laissez un commentaire&nbsp:</legend>
-                                                    <div class="d-none">
-                                                        <input type="number" name="id" value="<?php echo $lieuID ?>" readonly>
-                                                    </div>
+                                                    <input type="hidden" name="id" value="<?php echo $lieuID ?>">
                                                     <label for="username">Nom :</label>
                                                     <input type="text" id="username" name="username" size ="30" maxlenght="30" required><br>
                                                     <label for="commentaire">Commentaire :</label>
                                                     <textarea id="commentaire" name="commentaire" rows="3" size="500" maxlenght="500" required>
                                                     </textarea><br>
+                                                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
+                                                    <label for="file">Pièce Jointe :</label>
+                                                    <input type="file" id="file" name="file"><br>
                                                     <input type="submit" value="Envoyer">
                                                 </fieldset>
                                             </form>
