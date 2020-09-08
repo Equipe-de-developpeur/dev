@@ -61,6 +61,17 @@ a {
     font-weight: bold;
     text-transform: uppercase;
 }
+.connexion{
+    display: flex;
+    justify-content: center;
+    
+}
+.connexion a {
+    margin: 1vw;
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+    font-weight: bold;
+}
 
 
 /* ARTICLES */
