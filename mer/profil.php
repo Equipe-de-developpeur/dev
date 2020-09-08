@@ -119,7 +119,16 @@ if(isset($_POST['submit']))
 								
 							<!--   *****************************************   -->
 							<br>
+							<span> Mon Adresse mail </span>
+							<div class=" container form-group">
+								<p><?php echo $_SESSION['utilisateur_email']; ?> </p>
+							</div>
+							<span> Mon role </span>
+							<div class=" container form-group">
+								<p><?php echo $_SESSION['utilisateur_role']; ?> </p>
+							</div>
 							<span> Modifier Mot de Passe </span>
+							
 								<div class=" container form-group">
                                 <input type="password" placeholder="Mot de passe" name="utilisateur_password" value="<?php if(isset($_COOKIE['mot_de_passe'])){echo "";} ?>" /> 
 								</div>

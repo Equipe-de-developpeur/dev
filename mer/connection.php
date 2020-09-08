@@ -41,6 +41,7 @@ else
 				$_SESSION['utilisateur_pseudo']=$userinfo->utilisateur_pseudo;
 				$_SESSION['utilisateur_image']=$userinfo->utilisateur_image;
 				$_SESSION['utilisateur_role']=$userinfo->utilisateur_role;
+				$_SESSION['utilisateur_email']=$userinfo->utilisateur_email;
 				header("Location: mer.php");
 			}
 			else

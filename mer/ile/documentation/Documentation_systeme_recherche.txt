@@ -1,0 +1,18 @@
+Langage Jquery PHP MySql
+
+
+Selection de la ville
+	-> Recuperation de la liste des villes du var de la base de donnée
+	-> Creation des options avec la boucle while
+	-> A la selection d'une ville, via script Jquery, redirection vers une page intermediaire, creation d'une variable S_SESSION['ville']
+		-> Rechargement de la page precedente avec changement de la requete SQL en fonction de la variable $_SESSION['ville']
+	-> Affichage de la distance à vol d'oiseau des iles par rapport à la ville selectionnée
+	
+	
+Systeme de filtrage
+	-> En fonction du nom de la ville à laquelle appartient l'ile
+		-> croissant et decroissant
+	-> Distance ( seulement si ville selectionnée )
+		-> croissant et decroissant
+	-> Nom de l'ile
+		-> croissant et decroissant

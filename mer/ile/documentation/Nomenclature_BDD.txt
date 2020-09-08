@@ -1,0 +1,25 @@
+Nomenclature BDD
+
+	Nom de la table coherente avec son contenue
+		-> ne pas utiliser les caracteres suivants : ' " ( ) , ; : ! < > - [ ] { } = # ^ \ / ? | ~ + * % $ 
+		-> eviter les espaces, remplacer ceux ci par des underscore  : _  
+		-> Ecrire ses initiales NOM PRENOM en prefixe suivit d'un underscore :  WD_
+		
+	Exemple :  pour créer la table repertoriant la liste des iles, je vais ecrire :  WD_liste_ile
+	
+	Nom des champs
+		-> Toujours réecrire les champs avec en préfixe le nom de la table sans le prefixe des initiales comme ceci :  nomdelatable_
+	
+	Exemple :  Reprenons le nom de la table   WD_liste_ile
+				son champ id s'ecrira :  liste_ile_id
+				son champ nom s'ecrira : liste_ile_nom
+		-> Comme ça, lors de leur utilisation, la comprehension et la facilité seront optima ( pluriel de optimum ^^ )
+		-> Facilité pour les jointures 
+
+
+Conclusion : 
+
+	WD_liste_ile
+		liste_ile_id
+		liste_ile_nom
+		....
