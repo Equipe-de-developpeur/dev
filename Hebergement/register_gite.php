@@ -1,6 +1,7 @@
 <?php
 include 'header_hebergement.php';
 include 'config_bdd_gite.php';
+include 'functions_gite.php';
 ?>
 
 <?php 
@@ -55,8 +56,6 @@ if(empty($errors)){
     header('Location:login.php');
     exit();
 
-    // Termine la requête par un message de confirmation de création de compte.
-    die('Votre compte a bien été créé.');
 }
    
 }
