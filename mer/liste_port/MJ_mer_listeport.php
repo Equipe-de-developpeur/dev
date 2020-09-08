@@ -4,6 +4,7 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="css/MJ_mer_listeport.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php header('Set-Cookie: cross-site-cookie=name; SameSite=None; Secure'); ?>
     </head>
 
@@ -24,12 +25,14 @@
                         <option value="aeb">Label Actifs en Biodiversité</option>
                         <option value="pb">Label Pavillon Bleu</option>
                     </select>
-                    <input type="submit" value="Classer">
+                    <input class="mt-1" type="submit" value="Classer">
                 </form>
                 <?php
                 include 'element/MJ_mer_classement.php';
                 ?>
             </div>
+
+            <div class="affichage px-1">
 
             <?php
             //Collecte des données
@@ -43,8 +46,7 @@
 
             ?>
 
-                <!-- Affichage Nom du lieu-->
-                <div class="affichage px-1"> 
+                <!-- Affichage Nom du lieu--> 
                     <h5><a type="button" class="lien pt-1" data-toggle="modal" data-target="#Port<?php echo $lieuID; ?>">
                         <?php echo $i['lieu']; ?>
                     </a></h5>
@@ -68,7 +70,7 @@
                                 </div>
                                 <!-- Contenu de la modal-->
                                 <div class="modal-body">
-                                    <div class="container">
+                                    <div class="container-fluid">
                                         <div class="row">
                                             <div class="col-md">
                                                 <p>
@@ -79,7 +81,7 @@
                                                 </p>
                                             </div>
                                             <div class="col-md">
-                                                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $i['carte']?>" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=43.17920&amp;mlon=5.68141#map=17/43.17920/5.68141" target="_blank">Afficher une carte plus grande</a></small>
+                                                <iframe class="responsive-iframe" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $i['carte']?>" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=43.17920&amp;mlon=5.68141#map=17/43.17920/5.68141" target="_blank">Afficher une carte plus grande</a></small>
                                             </div>
                                         </div>
                                     <!-- Commentaire -->
@@ -99,14 +101,14 @@
                                             <!-- Formulaire Commentaire -->
                                             <form action="MJ_mer_listeport.php" method="post" class="commentaire p-1">
                                                 <fieldset>
-                                                    <legend>Laissez un commentaire :</legend>
+                                                    <legend>Laissez un commentaire&nbsp:</legend>
                                                     <div class="d-none">
                                                         <input type="number" name="id" value="<?php echo $lieuID ?>" readonly>
                                                     </div>
                                                     <label for="username">Nom :</label>
                                                     <input type="text" id="username" name="username" size ="30" maxlenght="30" required><br>
                                                     <label for="commentaire">Commentaire :</label>
-                                                    <textarea id="commentaire" name="commentaire" rows="3" cols="60" size="500" maxlenght="500" required>
+                                                    <textarea id="commentaire" name="commentaire" rows="3" size="500" maxlenght="500" required>
                                                     </textarea><br>
                                                     <input type="submit" value="Envoyer">
                                                 </fieldset>
@@ -117,10 +119,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
             <?php
             }
             ?>
+            </div>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
