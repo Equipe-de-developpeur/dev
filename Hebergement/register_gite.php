@@ -5,6 +5,7 @@ include 'functions_gite.php';
 ?>
 
 <?php 
+session_start();
 // Si $_POST n'est pas vide :
 if(!empty($_POST)){
     $errors = array();
@@ -53,7 +54,8 @@ if(empty($errors)){
     $req->execute([$_POST['username'], $_POST['email'], $password, $token]);
     $user_id= $bdd->lastInsertId();
     mail($_POST['email'], 'Confirmation de votre compte', "Veuillez cliquer sur ce lien pour confirmer votre compte\n\nhttp://localhost/developpementfilrouge/dev/hebergement/confirm_gite.php?id=$user_id&token=$token");
-    header('Location:login.php');
+    $_SESSION['flash']['success'] = 'Un email de confirmation vous a été envoyé afin de valider votre compte';
+    header('Location: login_gite.php');
     exit();
 
 }
@@ -72,10 +74,7 @@ if(empty($errors)){
 
 
 
-<div class="connexion">
-    <a href="">Connexion</a>
-    <a href="register_gite.php">S'inscrire</a>
-</div>
+
 
 <div class="article article_1 container">
     <h2>Inscription </h2>
