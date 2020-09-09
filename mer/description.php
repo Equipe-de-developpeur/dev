@@ -1,6 +1,5 @@
 <?php
 include "header.php";
-include "ile/function.php";
 
 if(isset($_SESSION['ile']) AND !empty($_SESSION['ile']))
 {

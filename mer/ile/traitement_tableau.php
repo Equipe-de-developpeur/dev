@@ -1,7 +1,6 @@
 <?php
 include "meteo.php";
 include "calcul_distance.php";
-include "ile/function.php"; 
 if(isset($_REQUEST['ile']) AND !empty($_REQUEST['ile']))
 {
 	

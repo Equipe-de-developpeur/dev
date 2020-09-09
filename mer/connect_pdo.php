@@ -1,4 +1,5 @@
 <?php
+require "function.php";
 $server = "localhost"; // localisation du serveur MSSQL
 $name = "root"; // Login de l'utilisateur
 $password = ""; // Password de l'utilisateur

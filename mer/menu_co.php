@@ -1,10 +1,12 @@
 <?php
-//testSession();
+include "formulaire_co.php";
 ?>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/formulaire_co.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <script src="js/bootstrap.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap.bundle.js"></script>
@@ -113,7 +115,7 @@ a:hover
 									<?php
 								}
 								?>
-	<a href="profil_inter.php" style="color:white;"><?php if(isset($_SESSION['utilisateur_pseudo'])) {echo $_SESSION['utilisateur_pseudo'];}  ?> </a>
+	<a href="profil.php" style="color:white;"><?php if(isset($_SESSION['utilisateur_pseudo'])) {echo $_SESSION['utilisateur_pseudo'];}  ?> </a>
 	</div>
   <div style="margin:auto; text-align:center;">
   <?php if(isset($_SESSION['utilisateur_role']) AND ($_SESSION['utilisateur_role']== "Admin"))
@@ -137,7 +139,7 @@ a:hover
   else
   {
 	 ?>
-		<a href="connection.php" style="color:white; text-decoration:none;">S'inscrire / Se connecter</a>
+		<a href=""  data-toggle="modal" data-target="#modalLRForm" style="color: white !important;">S'inscrire / Se connecter</a>
 	<?php
   }
 	?>

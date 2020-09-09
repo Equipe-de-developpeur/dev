@@ -1,7 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 include "header.php";
-require "function.php";
 testSession_admin();
 ?>
 <html>

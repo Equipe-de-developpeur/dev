@@ -97,4 +97,6 @@ while($resultat=fetch_object($exe))
 }
 ?>
 </table>
-
+<?php include "footer.php"; ?>
+</body>
+</html>

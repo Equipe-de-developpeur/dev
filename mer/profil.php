@@ -2,7 +2,6 @@
 
 header('Content-Type: text/html; charset=utf-8');
 require "connect_pdo.php";
-require "function.php";
 require "menu_co.php";
 include "update_image.php";
 testSession();
@@ -63,9 +62,8 @@ if(isset($_POST['submit']))
 <form method="post" action="" enctype="multipart/form-data">
 								<div class="row h-100 justify-content-center align-items-center" style="padding-top:7vw;">
 								<img class="fond" src="img/ocean.jpg" />
-								<div class="container bordure rounded-lg fond2">
-								
-								<legend class="legend"><?php if(isset($_SESSION['utilisateur_pseudo'])) {echo $_SESSION['utilisateur_pseudo'];}  ?></legend>
+								<div class="container bordure_ rounded-lg fond2">
+								<legend class="legend contenue_legend"><?php if(isset($_SESSION['utilisateur_pseudo'])) {echo $_SESSION['utilisateur_pseudo'];}  ?></legend>
 								<br>
 								<?php if(isset($_SESSION['utilisateur_image']) AND !empty($_SESSION['utilisateur_image']))
 								{
@@ -80,7 +78,7 @@ if(isset($_POST['submit']))
 									<?php echo $msg; ?>
 									</div>
 								<?php endif; ?>
-											<button style="font-weight:bold" type="button" class="bouton1" data-toggle="modal" data-target="#openfile2">Update Photo Profil</button>
+											<button style="font-weight:bold" type="button" class="bouton1 contenue_label" data-toggle="modal" data-target="#openfile2">Update Photo Profil</button>
 	<div class="modal fade" id="openfile2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content ouvrir">
@@ -119,39 +117,41 @@ if(isset($_POST['submit']))
 								
 							<!--   *****************************************   -->
 							<br>
-							<span> Mon Adresse mail </span>
-							<div class=" container form-group">
-								<p><?php echo $_SESSION['utilisateur_email']; ?> </p>
+							<br>
+							<br>
+							<span class="contenue" style="font-weight:bold;"> Mon Adresse mail </span>
+							<div class=" container form-group contenue">
+								<input class="contenue_label" type="text" value="<?php echo $_SESSION['utilisateur_email']; ?>" style="text-align:center;" disabled=disabled />
 							</div>
-							<span> Mon role </span>
+							<span class="contenue" style="font-weight:bold;"> Mon role </span>
 							<div class=" container form-group">
-								<p><?php echo $_SESSION['utilisateur_role']; ?> </p>
+								<input class="contenue_label" type="text" value="<?php echo $_SESSION['utilisateur_role']; ?>" style="text-align:center;" disabled=disabled />
 							</div>
-							<span> Modifier Mot de Passe </span>
+							<span class="contenue_label" style="font-weight:bold;"> Modifier Mot de Passe </span>
 							
 								<div class=" container form-group">
-                                <input type="password" placeholder="Mot de passe" name="utilisateur_password" value="<?php if(isset($_COOKIE['mot_de_passe'])){echo "";} ?>" /> 
+                                <input class="contenue" type="password" placeholder="Mot de passe" name="utilisateur_password" value="<?php if(isset($_COOKIE['mot_de_passe'])){echo "";} ?>" /> 
 								</div>
 								<div class=" container form-group">
-                                <input type="password" placeholder="Confirmation MDP" name="utilisateur_password2" value="<?php if(isset($_COOKIE['mot_de_passe'])){echo "";} ?>" /> 
+                                <input class="contenue" type="password" placeholder="Confirmation MDP" name="utilisateur_password2" value="<?php if(isset($_COOKIE['mot_de_passe'])){echo "";} ?>" /> 
 								</div>
 								<br/>
-								<button  class="btn btn-outline-info my-2 my-sm-0" style="color:black;"><a href="<?php echo $_SESSION['retour_profil']; ?>"style="color:black; text-decoration:none;">Retour</a>
+								<button  class="btn btn-outline-info my-2 my-sm-0" ><a href="<?php echo $_SERVER['HTTP_REFERER']; ?>"style="color:white !important; text-decoration:none;">Retour</a>
 								</button>
-								<button type="submit" name="submit"  class="btn btn-outline-info my-2 my-sm-0" style="color:black;">Valider
+								<button type="submit" name="submit"  class="btn btn-outline-info my-2 my-sm-0" style="color:white !important;" >Valider
 								</button>
 								<br/>
 								
 								<?php
 								if(isset($erreur))
 								{
-									echo ' <p style="color:red">⛔ '.$erreur.'</p>';
+									echo ' <p class="contenue_label" style="color:red">⛔ '.$erreur.'</p>';
 								}
 								?>
 								<?php
 								if(isset($message))
 								{
-									echo ' <p style="color:green">'.$message.'</p>';
+									echo ' <p class="contenue_label" style="color:green">'.$message.'</p>';
 								}
 								?>
 								</div>

@@ -1,11 +1,202 @@
 
 
 <?php
+
+/*  CLASS PHP POO */
+
+/* Class pour connexion de l'utilisateur */
+
+class Utilisateur_connection
+{
+	protected $utilisateur_pseudo;
+	protected $utilisateur_password;
+	protected $utilisateur_password2;
+	protected $utilisateur_erreur;
+	
+	public function __construct($n, $p)
+	{
+        $this->utilisateur_pseudo = htmlspecialchars($n);
+        $this->utilisateur_password = htmlspecialchars($p);
+		$this->utilisateur_password2 = htmlspecialchars($p);
+		$vars[':utilisateur_pseudo']=$this->utilisateur_pseudo;
+		if(!empty($this->utilisateur_pseudo) && !empty($this->utilisateur_password))
+		{
+			$this->utilisateur_password=sha1($this->utilisateur_password);
+			$vars[':utilisateur_password']=$this->utilisateur_password;
+			$sql="SELECT * FROM utilisateur WHERE utilisateur_pseudo =:utilisateur_pseudo AND utilisateur_password =:utilisateur_password";
+			$requser=query($sql,$vars);
+			$userexist = $requser->rowCount();
+			if($userexist == 1)
+			{
+				if(!isset($_COOKIE['pseudo']) AND !isset($_COOKIE['mot_de_passe']) )
+				{
+					setcookie('pseudo', $this->utilisateur_pseudo, time() + 365*24*3600, null, null, false, true);
+					setcookie('mot_de_passe', $this->utilisateur_password2, time() + 365*24*3600, null, null, false, true);
+				}
+				$userinfo = fetch_object($requser);
+				$_SESSION['utilisateur_id'] = $userinfo->utilisateur_id;
+				$_SESSION['utilisateur_pseudo']=$userinfo->utilisateur_pseudo;
+				$_SESSION['utilisateur_image']=$userinfo->utilisateur_image;
+				$_SESSION['utilisateur_role']=$userinfo->utilisateur_role;
+				$_SESSION['utilisateur_email']=$userinfo->utilisateur_email;
+			}
+			else
+			{
+				 $this->utilisateur_erreur = " Nom d'utilisateur ou Mot de passe invalide";
+				echo '<script language="javascript">';
+				echo 'alert("'.$this->utilisateur_erreur.'")';
+				echo '</script>';
+			}
+		}
+		else
+		{
+			 $this->utilisateur_erreur = " Veuillez remplir tous les champs";
+			 echo '<script language="javascript">';
+			 echo 'alert("'.$this->utilisateur_erreur.'")';
+			 echo '</script>';
+		}
+    }
+	
+	public function setPseudo($new_utilisateur_pseudo)
+	{
+		$this->utilisateur_pseudo=$new_utilisateur_pseudo;
+	}
+	public function setPassword($new_utilisateur_password)
+	{
+		$this->utilisateur_password=$new_utilisateur_password;
+	}
+	public function setPassword2($new_utilisateur_password2)
+	{
+		$this->utilisateur_password2=$new_utilisateur_password2;
+	}
+	public function setCookies($new_utilisateur_cookie)
+	{
+		$this->utilisateur_cookie=$new_utilisateur_cookie;
+	}
+	public function setErreur($new_utilisateur_erreur)
+	{
+		$this->utilisateur_erreur=$new_utilisateur_erreur;
+	}
+	public function getErreur()
+	{
+		echo ' <p> ⛔'.$this->utilisateur_erreur.'</p>';
+	}
+}
+
+
+/* Class INSCRIPTION */
+
+
+class Utilisateur_inscription
+{
+	protected $utilisateur_pseudo;
+	protected $utilisateur_password;
+	protected $utilisateur_password2;
+	protected $utilisateur_erreur;
+	protected $utilisateur_email;
+	
+	public function __construct($n, $p, $q, $r)
+	{
+        $this->utilisateur_pseudo = htmlspecialchars(ucfirst(strtolower($n)));
+        $this->utilisateur_password = htmlspecialchars($p);
+		$this->utilisateur_password2 = htmlspecialchars($q);
+		$this->utilisateur_email = $r;
+		if(filter_var($this->utilisateur_email, FILTER_VALIDATE_EMAIL))
+				{
+					$vars[':utilisateur_email']=$this->utilisateur_email;
+					$sql="SELECT * FROM utilisateur WHERE utilisateur_email =:utilisateur_email";
+					$reqemail=query($sql,$vars);
+					$emailexist = $reqemail->rowCount();
+					if($emailexist == 0)
+					{
+						$vars2[':utilisateur_pseudo']=$this->utilisateur_pseudo;
+						$sql="SELECT * FROM utilisateur WHERE utilisateur_pseudo =:utilisateur_pseudo";
+						$reqpseudo=query($sql,$vars2);
+						$pseudoexist = $reqpseudo->rowCount();
+						if($pseudoexist == 0)
+						{
+							if($this->utilisateur_password == $this->utilisateur_password2)
+							{
+								$message="Votre pseudo : $this->utilisateur_pseudo";
+							$message.="<br>";
+							$message.="Voici votre mot de passe : $this->utilisateur_password ";
+							$entete = "Content-type: text/html; charset= utf8\n";
+							mail($this->utilisateur_email,'inscription',$message,$entete);
+							
+								$this->utilisateur_password=sha1($this->utilisateur_password);
+								$vars3[':utilisateur_pseudo']=$this->utilisateur_pseudo;
+								$vars3[':utilisateur_email']=$this->utilisateur_email;
+								$vars3[':utilisateur_password']=$this->utilisateur_password;
+								$sql="INSERT INTO utilisateur (utilisateur_pseudo,utilisateur_email,utilisateur_password) VALUES (:utilisateur_pseudo,:utilisateur_email,:utilisateur_password)";
+								query($sql,$vars3);
+								$erreur = "Votre Compte a été créé, un Email avec votre mot de passe a été envoyé ";
+							}
+							
+							else
+							{
+								$this->utilisateur_erreur = "Votre password est different ";
+								echo '<script language="javascript">';
+								echo 'alert("'.$this->utilisateur_erreur.'")';
+								echo '</script>';
+							}
+							
+							
+							
+							
+						}
+						else
+						{
+							$this->utilisateur_erreur = "Votre pseudo est dejà utilisé ";
+							echo '<script language="javascript">';
+							echo 'alert("'.$this->utilisateur_erreur.'")';
+							echo '</script>';
+						}
+						
+					}
+					else
+					{
+						$this->utilisateur_erreur = " Adresse mail déjà utilisée";
+						echo '<script language="javascript">';
+						echo 'alert("'.$this->utilisateur_erreur.'")';
+						echo '</script>';
+					}
+				}
+				else
+				{
+					$this->utilisateur_erreur = " Votre adresse mail n'est pas valide";
+					echo '<script language="javascript">';
+					echo 'alert("'.$this->utilisateur_erreur.'")';
+					echo '</script>';
+				}
+    }
+	
+	public function setPseudo($new_utilisateur_pseudo)
+	{
+		$this->utilisateur_pseudo=$new_utilisateur_pseudo;
+	}
+	
+	public function setErreur($new_utilisateur_erreur)
+	{
+		$this->utilisateur_erreur=$new_utilisateur_erreur;
+	}
+	public function getErreur()
+	{
+		echo ' <p> ⛔'.$this->utilisateur_erreur.'</p>';
+	}
+}
+
+
+
+/* Fonction Procedurale */
+
+
+
+
 function testSession(){
 	if(!isset($_SESSION['utilisateur_id']))
 	{
-		header('Location: connection.php');
-		exit;
+		?><script> location.replace("ile.php"); </script><?php
+			exit;
 	}
 }
 function passgenerator($nb){
