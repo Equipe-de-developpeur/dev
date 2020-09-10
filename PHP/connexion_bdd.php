@@ -4,17 +4,21 @@
 $serveur = "localhost";
 $logsql = "root";
 $mdpsql = "";
-$bdd = "formation";
+$bdd = "formationphp";
 
 try {
+    
     //Première tentative de connexion au serveur
-    $connexion = new PDO('mysql:host=' . $serveur . ';dbname=' . $bdd . ';charset=utf8', $logsql, $mdpsql);
+    $connexion = new PDO("mysql:host=localhost;charset=utf8", 'root', '');
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
     //Création de la base de donnée si non existante
     $base = "CREATE DATABASE IF NOT EXISTS $bdd CHARACTER SET utf8";
+
     $connexion->exec($base);
+    
     //Deuxième connexion au serveur et connexion à la base de donnée
-    $connexion = new PDO("mysql:host=$serveur;dbname=$bdd;charset=utf8", $logsql, $mdpsql);
+    $connexion = new PDO("mysql:host=localhost;dbname=$bdd;charset=utf8", 'root', '');
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     /* Création de la table `nature`*/
 
@@ -28,7 +32,7 @@ try {
     ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8";
  
         /*Déchargement des données de la table nature */
-    
+        $connexion->exec($table);
 
 
 }

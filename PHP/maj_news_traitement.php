@@ -16,7 +16,9 @@ $req = $connexion->prepare('UPDATE nature SET nom_espece = :nom_espece,
             'dat' => $date_upd,
             'id'  => $id
         ))) {
-            echo "<strong>La plante à bien été mise à jour</strong><br/><br/>Nom de la plante : <strong>$nom_espece_upd<strong><br> Description : <strong><br>$nom_latin_upd<strong><br>$lieu_upd<strong><br>$date_upd<strong><br><br>";
+            echo "<strong>La plante à bien été mise à jour</strong><br/><br/>Nom de la plante : 
+            <strong>$nom_espece_upd<strong><br> Description : <strong><br>$nom_latin_upd<strong>
+            <br>$lieu_upd<strong><br>$date_upd<strong><br><br>";
             echo "<a href=index.php>Retour à la liste de plante protégées</a>";
         }   else {
             echo "Problème d'enregistrement : <br/>";
