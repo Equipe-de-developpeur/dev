@@ -1,0 +1,76 @@
+body {
+    background-color: #0f8581;
+}
+
+.cadre_critere, .esp_com {
+    background-color: #3B5573 !important;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.lport {
+    color: #3792E2 !important;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.affichage, .commentaire {
+    background-color: #ffffff !important;
+}
+
+.commentaire {
+    margin-bottom: 2%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 100%;
+}
+
+.commentaire:first-child {
+    margin-top: 2%;
+}
+
+.lien {
+    text-decoration: underline;
+}
+
+.responsive-iframe {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: 425px;
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 100%;
+}
+
+@media screen and (min-device-width: 980px) {
+    .lport {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
+}
+
+@media screen and (max-device-width: 979px) {
+    .lport {
+        margin-left: 0%;
+        margin-right: 0%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-device-width: 767px){
+    .responsive-iframe {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
