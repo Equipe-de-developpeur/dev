@@ -12,13 +12,21 @@
         <?php
         include_once 'element/MJ_mer_connexionbdd.php';
         include_once "element/MJ_mer_creationcom.php";
-        include "element/MJ_mer_traitementcom.php";
+
+        if (isset($_POST["username"])) {
+            $ID = $_POST["id"];
+        }
+
         include "element/MJ_mer_envoiefichier.php";
+        include "element/MJ_mer_traitementcom.php";
+        
         //Affichage message de réception
         if(isset($msg)){
             echo $msg;
         }
-        var_dump($_FILES['files']);
+        /*if(isset($_FILES['file'])) {
+            var_dump($_FILES['file']);
+        }*/
         ?>
         <div class="lport container-fluid">
             <div class="cadre_critere py-1 px-1">

@@ -1,13 +1,12 @@
 <?php
 
 //Si un fichier a été envoyé
-if(isset($_FILES['file']) && $_FILES['file']['tmp_name'] != 0) {
+if(isset($_FILES['file']) && $_FILES['file']['name'] != NULL) {
     //Déclaration des types de fichiers autorisés
     $extension = array('.png', '.gif', '.jpg', '.jpeg', '.pdf', '.txt', '.odt', '.doc', '.rtf', '.bmp');
     //Prélèvement du type du fichier envoyé
     $exfile = strrchr($_FILES['file']['name'], '.');
     //Si le fichier envoyé est bien d'un des types autorisés
-    echo "J'entre dans une boucle que je devrais pas";
     if(in_array($exfile, $extension)){
         //Déclaration de la taille maximal du fichier
         $taille_max = 10000000;
