@@ -42,6 +42,7 @@
         <div class="form-group">
             <label for="Password">Veuillez entrer votre mot de passe</label>
             <input type="password" name="password"class="form-control">
+            <a href="password_forget_gite.php">(Mot de passe oublié ?)</a>
         </div>
         <button class="btn btn-primary">Se connecter</button>
         </form>

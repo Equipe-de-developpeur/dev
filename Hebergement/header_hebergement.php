@@ -46,7 +46,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <a href="logout_gite.php">Se deconnecter</a>
         <?php else: ?>
         
-        <a href="">Connexion</a>
+        <a href="login_gite.php">Connexion</a>
         <a href="register_gite.php">S'inscrire</a>
         <?php endif ?>
     </div>

@@ -5,7 +5,6 @@ include 'functions_gite.php';
 ?>
 
 <?php 
-session_start();
 // Si $_POST n'est pas vide :
 if(!empty($_POST)){
     $errors = array();
