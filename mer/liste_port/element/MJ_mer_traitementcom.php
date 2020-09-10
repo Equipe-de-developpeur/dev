@@ -18,7 +18,7 @@ if (isset($_POST["username"])) {
 
     //Si le commentaire est envoyé avec un fichier
     if (isset($_FILES['file']) && $_FILES['file']['name'] != NULL) {
-        $insertcom = $pdo->prepare("INSERT INTO `jm_mer_commentaire_port`(`commentaire_port_lieu_id`, `commentaire_port_username`, `commentaire_port_commentaire`, `commentaire_port_fichier`) VALUES ('$ID', '$username', '$commentaire', '$dossier$fichier')");
+        $insertcom = $pdo->prepare("INSERT INTO `jm_mer_commentaire_port`(`commentaire_port_lieu_id`, `commentaire_port_username`, `commentaire_port_commentaire`, `commentaire_port_fichier`) VALUES ('$ID', '$username', '$commentaire', '$fichier')");
         $insertcom->execute();
     }
     //Si le commentaire n'est pas envoyé avec un fichier
