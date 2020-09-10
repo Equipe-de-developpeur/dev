@@ -9,7 +9,7 @@ $bdd = "formationphp";
 try {
     
     //Première tentative de connexion au serveur
-    $connexion = new PDO("mysql:host=localhost;charset=utf8", 'root', '');
+    $connexion = new PDO("mysql:host=localhost;charset=utf8", $logsql, $mdpsql);
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     //Création de la base de donnée si non existante
@@ -18,7 +18,7 @@ try {
     $connexion->exec($base);
     
     //Deuxième connexion au serveur et connexion à la base de donnée
-    $connexion = new PDO("mysql:host=localhost;dbname=$bdd;charset=utf8", 'root', '');
+    $connexion = new PDO("mysql:host=localhost;dbname=$bdd;charset=utf8", $logsql, $mdpsql);
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     /* Création de la table `nature`*/
 
