@@ -1,7 +1,7 @@
 <?php
 
 //Insertion des données ports dans la base de donnée
-$insert = "INSERT IGNORE INTO `jm_mer_liste_port`(`lieu`, `lien`, `label_pp`, `label_aeb`, `label_pb`, `localisation`, `carte`) VALUES
+$insert = "INSERT IGNORE INTO `jm_mer_liste_port`(`liste_port_lieu`, `liste_port_lien`, `liste_port_label_pp`, `liste_port_label_aeb`, `liste_port_label_pb`, `liste_port_localisation`, `liste_port_carte`) VALUES
 ('Port d\'Agay', 'http://portsdesaintraphael.com/le-port-dagay/', '1', '0', '0', 'Saint-Raphaël', 'https://www.openstreetmap.org/export/embed.html?bbox=6.8541061878204355%2C43.42939308372338%2C6.859127283096314%2C43.432155113761105&amp;layer=mapnik&amp;marker=43.43077411449814%2C6.856616735458374'), 
 ('Port de Boulouris', 'http://portsdesaintraphael.com/le-port-de-boulouris/', '1', '0', '0', 'Saint-Raphaël', 'https://www.openstreetmap.org/export/embed.html?bbox=6.80405080318451%2C43.41228828593954%2C6.809071898460389%2C43.41505109642596&amp;layer=mapnik&amp;marker=43.41367%2C6.80655999999999'),
 ('Port de Santa-Lucia', 'http://portsdesaintraphael.com/le-port-de-santa-lucia/', '1', '0', '1', 'Saint-Raphaël', 'https://www.openstreetmap.org/export/embed.html?bbox=6.770861148834229%2C43.4072611283335%2C6.790945529937745%2C43.41831253134228&amp;layer=mapnik&amp;marker=43.41278910002064%2C6.780903299999977'),

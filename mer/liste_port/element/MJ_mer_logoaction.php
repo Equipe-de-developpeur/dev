@@ -1,6 +1,6 @@
 <?php 
     //Condition pour l'affichage du logo port propre
-    switch($i['label_pp']) {
+    switch($i['liste_port_label_pp']) {
         case 1: 
         //Condition si le port est juste engagé
 ?>
@@ -16,7 +16,7 @@
     }
 
     //Condition pour l'affichage du logo actifs en biodiversité 
-    switch($i['label_aeb']) {
+    switch($i['liste_port_label_aeb']) {
         case 1: 
         //Condition si le port est juste engagé
 ?>
@@ -32,7 +32,7 @@
     }
 
     //Condition pour l'affichage du pavillon bleu
-    if($i['label_pb']){ 
+    if($i['liste_port_label_pb']){ 
 ?>
         <img src="img/pb.png" alt="Pavillon Bleu" height="30" data-toggle="tooltop" data-placement="bottom" title="Pavillon Bleu">
 <?php

@@ -14,6 +14,11 @@
         include_once "element/MJ_mer_creationcom.php";
         include "element/MJ_mer_traitementcom.php";
         include "element/MJ_mer_envoiefichier.php";
+        //Affichage message de réception
+        if(isset($msg)){
+            echo $msg;
+        }
+        var_dump($_FILES['files']);
         ?>
         <div class="lport container-fluid">
             <div class="cadre_critere py-1 px-1">
@@ -43,16 +48,16 @@
             foreach ($liste as $i){ 
 
                 //Récupération ID Lieu
-                $lieuID = $i['lieu_id'];
+                $lieuID = $i['liste_port_lieu_id'];
 
             ?>
 
                 <!-- Affichage Nom du lieu--> 
                     <h5><a type="button" class="lien pt-1" data-toggle="modal" data-target="#Port<?php echo $lieuID; ?>">
-                        <?php echo $i['lieu']; ?>
+                        <?php echo $i['liste_port_lieu']; ?>
                     </a></h5>
 
-                    <p class="mb-1">Emplacement : <?php echo $i['localisation'] ?></p>
+                    <p class="mb-1">Emplacement : <?php echo $i['liste_port_localisation'] ?></p>
 
                     <p class="mb-0 pb-1">
                         <?php include 'element/MJ_mer_logoaction.php' ?>
@@ -64,7 +69,7 @@
                             <div class="modal-content">
                                 <!-- Titre de la modal -->
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel"><?php echo $i['lieu']; ?></h5>
+                                    <h5 class="modal-title" id="exampleModalLabel"><?php echo $i['liste_port_lieu']; ?></h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -75,14 +80,14 @@
                                         <div class="row">
                                             <div class="col-md">
                                                 <p>
-                                                    <a class="lien" href="<?php echo $i['lien']?>" target="_blank">Site Officiel</a><br>
-                                                    Localisation : <?php echo $i['localisation'] ?> <br>
+                                                    <a class="lien" href="<?php echo $i['liste_port_lien']?>" target="_blank">Site Officiel</a><br>
+                                                    Localisation : <?php echo $i['liste_port_localisation'] ?> <br>
                                                     <?php include 'element/MJ_mer_logoaction.php' ?> <br>
                                                     <!-- Emplacement Vote -->
                                                 </p>
                                             </div>
                                             <div class="col-md">
-                                                <iframe class="responsive-iframe" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $i['carte']?>" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=43.17920&amp;mlon=5.68141#map=17/43.17920/5.68141" target="_blank">Afficher une carte plus grande</a></small>
+                                                <iframe class="responsive-iframe" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $i['liste_port_carte']?>" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=43.17920&amp;mlon=5.68141#map=17/43.17920/5.68141" target="_blank">Afficher une carte plus grande</a></small>
                                             </div>
                                         </div>
                                     <!-- Commentaire -->
@@ -90,7 +95,7 @@
                                             <!-- Affichage Commentaire -->
                                             <?php 
                                             //Collecte des commentaires
-                                            $sqlcom = $pdo->prepare("SELECT * FROM `jm_mer_commentaire_port` WHERE `lieu_id` = $lieuID");
+                                            $sqlcom = $pdo->prepare("SELECT * FROM `jm_mer_commentaire_port` WHERE `commentaire_port_lieu_id` = $lieuID");
                                             $sqlcom->execute();
                                             $listecom = $sqlcom->fetchALL(PDO::FETCH_ASSOC);
                                         
@@ -109,7 +114,6 @@
                                                     <label for="commentaire">Commentaire :</label>
                                                     <textarea id="commentaire" name="commentaire" rows="3" size="500" maxlenght="500" required>
                                                     </textarea><br>
-                                                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
                                                     <label for="file">Pièce Jointe :</label>
                                                     <input type="file" id="file" name="file"><br>
                                                     <input type="submit" value="Envoyer">

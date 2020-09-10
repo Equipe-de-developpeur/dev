@@ -18,14 +18,14 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //Création de la table JM_mer_liste_port si non existante
     $table = "CREATE TABLE IF NOT EXISTS JM_mer_liste_port (
-        lieu_id INT PRIMARY KEY AUTO_INCREMENT,
-        lieu VARCHAR(100) UNIQUE NOT NULL,
-        lien VARCHAR(255),
-        label_pp TINYINT(2) NOT NULL,
-        label_aeb TINYINT(2) NOT NULL,
-        label_pb TINYINT(1) NOT NULL,
-        localisation VARCHAR(100) NOT NULL,
-        carte VARCHAR(255) NOT NULL
+        liste_port_lieu_id INT PRIMARY KEY AUTO_INCREMENT,
+        liste_port_lieu VARCHAR(100) UNIQUE NOT NULL,
+        liste_port_lien VARCHAR(255),
+        liste_port_label_pp TINYINT(2) NOT NULL,
+        liste_port_label_aeb TINYINT(2) NOT NULL,
+        liste_port_label_pb TINYINT(1) NOT NULL,
+        liste_port_localisation VARCHAR(100) NOT NULL,
+        liste_port_carte VARCHAR(255) NOT NULL
     )";
     /*
     lieu -> nom du port
