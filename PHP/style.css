@@ -1,0 +1,14 @@
+.resultat {
+    width: 60%;
+    margin: auto;
+    background-color: greenyellow;
+    border-radius: 6px;
+    padding:20px;
+}
+#titre {
+    margin: auto;
+}
+
+.formulaire{
+    margin: auto;
+}
