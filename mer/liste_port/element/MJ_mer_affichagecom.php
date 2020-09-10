@@ -10,5 +10,19 @@
         </div>
     </div>
     <!-- Affichage du commentaire -->
-    <?php echo $j['commentaire_port_commentaire']; ?>
+    <div class="row">
+        <div class="col"><?php echo $j['commentaire_port_commentaire']; ?></div>
+    </div>
+    <!-- Affichage du fichier envoyé -->
+    <?php
+    if($j['commentaire_port_fichier'] != NULL) {
+        ?>
+        <div class="row">
+            <div class="col"><?php
+                
+            ?></div>
+        </div>
+        <?php
+    }
+    ?>
 </div>
