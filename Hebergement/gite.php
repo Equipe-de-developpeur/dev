@@ -1,6 +1,6 @@
  <?php
     include 'header_hebergement.php';
-    ?>
+    include 'functions_gite.php';    ?>
  <div class="main container-fluid">
 
      <h2>Les Gîtes dans le var</h2>
@@ -50,19 +50,30 @@
          <?php
 
             ?>
+         <?php
+            include 'config_bdd_gite.php';
+            $witch = $bdd->query("SELECT * FROM users");
+            $donnee = $witch->fetch();
+            $role = $donnee['role'];
+
+            ?>
          <table class="table table-bordered table-gite">
              <thead class="thead-light">
                  <th>Nom du gîte</th>
                  <th>Localisation</th>
-                 <th>Notation</th>
+                 <th>Notation moyenne</th>
+                 <th>Votre note</th>
+                 <?php if (isset($_SESSION['auth']) && $role == "admin") : ?>>
                  <th>Maj</th>
-                 <th>Supp</th> 
+                 <th>Supp</th>
+             <?php endif ?>
+
              </thead>
 
 
 
              <?php
-                include 'config_bdd_gite.php';
+
                 // SELECTIONNE TOUT DANS LA BDD gites
                 $req = $bdd->query('SELECT * FROM gites');
                 // TANT QU'IL Y A DES DONNEES AFFICHE LES LIGNE PAR LIGNE DANS UN TABLEAU
@@ -72,6 +83,8 @@
                     $nom = $donnees['nom'];
                     $localisation = $donnees['localisation'];
                     $id_gite = $donnees['id'];
+                    $note_moyenne = $donnees['note_moyenne'];
+
                 ?>
 
                  <tbody>
@@ -90,21 +103,58 @@
                                             for ($i = 1; $i <= $note; $i++) {
                                                 echo $feuille;
                                             }
-                                            '</td>';
-                             echo '<td><form action="maj_gite.php" method="post">
-                                     <input name="id_maj" value="' . $id_gite . '"type="hidden"/>
-                                     <input type="submit" name="maj" value="maj" class="btn btn-primary text-center"/></form>
-         </td>';
-                            ?>
-                            <td>
-                                <form action="supp_gite.php"method="post">
-                                <input type="hidden" name="supp_gite" value="<?php echo $id_gite ?>">
-                                <input type="submit" name="supp_maj" value="supp" class="btn">
-                                </form>
-                            </td>
-                                  <?php      
-                                        } 
-                                            ?>
+                                            '</td>' ?>
+                         <div class="interactive_notation">
+
+
+
+
+                             <td>
+                                 <form action="moyenne_gite.php"method="post">
+                                 <input type="image" class="stars"id="leaf"data_value="1"src="img/mini_leaf_black.png"alt="mini logo feuille" value=1>
+                                 <input type="image"class="stars"id="leaf"data_value="2" src="img/mini_leaf.png" alt="mini logo feuille" value=2>
+                                 <input type="image" class="stars"id="leaf"data_value="3"src="img/mini_leaf.png" alt="mini logo feuille" value=3>
+                                 <input type="image"class="stars"id="leaf"data_value="4" src="img/mini_leaf.png" alt="mini logo feuille" value=4>
+                                 <input type="image" class="stars"id="leaf"data_value="5"src="img/mini_leaf.png" alt="mini logo feuille" value=5>
+                                 </form>
+                                </td>
+                         </div>
+                         <!-- javascript notation -->
+                         <script>
+                             document.getElementById("leaf").addEventListener("mouseover", mouseOver);
+                             document.getElementById("leaf").addEventListener("mouseout", mouseOut);
+                             function mouseover(){
+                                document.getElementById("leaf").src="img/mini_leaf.png";
+                             }
+                             function mouseout(){
+                                document.getElementById("leaf").src="img/mini_leaf_black.png";
+                             }
+                                
+
+                             
+                             
+                         </script>
+
+
+                         <fieldset <?php if (isset($_SESSION['auth']) && $role == "admin") : ?>>
+                             <td>
+                                 <form action="maj_gite.php" method="post">
+                                     <input name="id_maj" value="<?= $id_gite ?> '" type="hidden" />
+                                     <input type="submit" name="maj" value="maj" class="btn btn-primary text-center" /></form>
+                             </td>
+
+                             <td>
+                                 <form action="supp_gite.php" method="post">
+                                     <input type="hidden" name="supp_gite" value="<?php echo $id_gite ?>">
+                                     <input type="submit" name="supp_maj" value="supp" class="btn">
+                                 </form>
+                             </td>
+                         <?php endif ?>
+                         </fieldset>
+                     <?php
+                    }
+
+                        ?>
                      </tr>
                  </tbody>
          </table>

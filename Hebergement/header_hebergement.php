@@ -42,12 +42,12 @@ if (session_status() == PHP_SESSION_NONE) {
     <div class="connexion">
         <!-- Si il y a session auth active -->
         <?php if(isset($_SESSION['auth'])): ?>
-            
+           
             <a href="logout_gite.php">Se deconnecter</a>
         <?php else: ?>
-        
-        <a href="login_gite.php">Connexion</a>
+
         <a href="register_gite.php">S'inscrire</a>
+        <?php include 'little_login_gite.php'; ?>
         <?php endif ?>
     </div>
 <!-- REGARDER LA VIDEO DE GRAFIKART TIME CODE : 51.38 -->
