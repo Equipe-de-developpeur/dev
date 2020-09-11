@@ -18,8 +18,8 @@
     if($j['commentaire_port_fichier'] != NULL) {
         ?>
         <div class="row">
-            <div class="col align-self-end">
-                <a class="fichier" href="fichier/<?php echo $lieuID . '/' . $j['commentaire_port_fichier']; ?>"><?php echo $j['commentaire_port_fichier']; ?></a>
+            <div class="col text-right">
+                <small><a href="fichier/<?php echo $lieuID . '/' . $j['commentaire_port_fichier']; ?>"><?php echo $j['commentaire_port_fichier']; ?></a></small>
             </div>
         </div>
         <?php
