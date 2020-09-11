@@ -14,13 +14,13 @@ exit();*/
 
 // procédure d'enregistrement de la news dans la table
 
-$req2 = $connexion->prepare("INSERT INTO commentaires_plage (textes) VALUES(:NewCommentaires)");
+$req2 = $connexion->prepare("INSERT INTO da_commentaires_plage (commentaires_plage_textes) VALUES(:NewCommentaires)");
 
 if ($req2->execute(array(
   'NewCommentaires' => $NewCommentaires,
   )) )
 {
-  $id_comm=$connexion->lastInsertId('commentaires_plage');
+  $id_comm=$connexion->lastInsertId('da_commentaires_plage');
 echo "Le commentaire à bien été enregistrée<br/><br/>Commentaires : $NewCommentaires";
 echo "<br><a href=DA_mer_plage_liste.php>Retour à la liste des plages</a>";
 

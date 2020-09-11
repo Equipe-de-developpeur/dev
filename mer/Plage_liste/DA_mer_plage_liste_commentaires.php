@@ -65,16 +65,16 @@ include("DA_mer_plage_liste_bdd.php");?>
 
     <?php
 
-$req2 = $connexion->query("SELECT * FROM commentaires_plage WHERE 1");
+$req2 = $connexion->query("SELECT * FROM da_commentaires_plage WHERE 1");
 
 while ($donnees = $req2->fetch())
 
 {
 // Enregistrement des données sous forme de variables
 $commentaires_plage_id = $donnees['commentaires_plage_id'];
-$textes = $donnees['textes'];
-$noms = $donnees['noms'];
-$dates = $donnees['dates'];
+$textes = $donnees['commentaires_plage_textes'];
+$noms = $donnees['commentaires_plage_noms'];
+$dates = $donnees['commentaires_plage_dates'];
 
 
 

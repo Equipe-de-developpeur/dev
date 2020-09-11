@@ -1,6 +1,6 @@
 <?php
 
-$insert ="INSERT INTO $nom_table1(lieux,villes,liens,distances,actions,note_moyenne,votre_avis) 
+$insert ="INSERT INTO $nom_table1(liste_plage_lieux,liste_plage_villes,liste_plage_liens,liste_plage_distances,liste_plage_actions,liste_plage_note_moyenne,liste_plage_votre_avis) 
 VALUES
 ('Ayguade','Hyères','https://www.hyeres-tourisme.com/equipement-loisir/plage-de-layguade/','km','Pavillon bleu','img/DauphinBleu.png','img/DauphinGris.png'),
 ('Almanarre Nord','Hyères','https://www.hyeres-tourisme.com/equipement-loisir/plage-de-lalmanarre/','km','Pavillon bleu','img/DauphinBleu.png','img/DauphinGris.png'),
@@ -58,7 +58,7 @@ VALUES
 
 $connexion->exec($insert);
 
-/*$insert2 ="INSERT INTO $nom_table2(textes) 
+/*$insert2 ="INSERT INTO $nom_table2(commentaires_plage_textes) 
 VALUES
 ('commentaire avec un insert dans le code')
 ";

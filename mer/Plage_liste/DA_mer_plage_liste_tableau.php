@@ -9,7 +9,7 @@
   <!--Titre-->
 
   <div class="TitreListesPlage">
-    <H2>LISTES DES PLAGES</H2>
+    <H2>LISTE DES PLAGES</H2>
   </div>
 
   <!--Recherche-->
@@ -27,16 +27,6 @@
           <option value="l'Escalet">l'Escalet</option>
           <option value="la Verne">la Verne</option>
         </optgroup>
-        <optgroup label="Ports">
-          <option value="Oursinières">Oursinières</option>
-          <option value="Issambres">Issambres</option>
-          <option value="Brusc">Brusc</option>
-        </optgroup>
-        <optgroup label="Iles">
-          <option value="Notre-Dame">Notre-Dame</option>
-          <option value="d’Argent">d’Argent</option>
-          <option value="Noire du Langoustier">Noire du Langoustier</option>
-        </optgroup>
       </select>
 
       <!--input villes-->
@@ -47,16 +37,6 @@
           <option value="Fréjus">Fréjus</option>
           <option value="Saint Raphael">Saint Raphael</option>
           <option value="Agay">Agay</option>
-        </optgroup>
-        <optgroup label="Ports">
-          <option value="Fréjus">Fréjus</option>
-          <option value="Saint Raphael">Saint Raphael</option>
-          <option value="Agay">Agay</option>
-        </optgroup>
-        <optgroup label="Iles">
-          <option value="Port-cros">Port-Cros</option>
-          <option value="Porquerolles">Porquerolles</option>
-          <option value="Ile du Levant">île du Levant</option>
         </optgroup>
       </select>
 
@@ -95,7 +75,7 @@
 
 <?php
 
-$req = $connexion->query("SELECT * FROM liste_plage WHERE 1");
+$req = $connexion->query("SELECT * FROM da_liste_plage WHERE 1");
 
 
 
@@ -122,13 +102,13 @@ while ($donnees = $req->fetch())
 {
 // Enregistrement des données sous forme de variables
 $liste_plage_id = $donnees['liste_plage_id'];
-$lieux = $donnees['lieux'];
-$villes = $donnees['villes'];
-$liens = $donnees['liens'];
-$distances = $donnees['distances'];
-$actions = $donnees['actions'];
-$note_moyenne = $donnees['note_moyenne'];
-$votre_avis = $donnees['votre_avis'];
+$lieux = $donnees['liste_plage_lieux'];
+$villes = $donnees['liste_plage_villes'];
+$liens = $donnees['liste_plage_liens'];
+$distances = $donnees['liste_plage_distances'];
+$actions = $donnees['liste_plage_actions'];
+$note_moyenne = $donnees['liste_plage_note_moyenne'];
+$votre_avis = $donnees['liste_plage_votre_avis'];
 
 
 
