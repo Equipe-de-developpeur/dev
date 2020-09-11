@@ -1,13 +1,10 @@
-body {
+.bodyListePort {
     background-color: #0f8581;
+    font-family: Fira Sans Extra Condensed;
 }
 
 .cadre_critere, .esp_com {
     background-color: #3B5573 !important;
-}
-
-.modal-body {
-    padding: 0;
 }
 
 .lport {
@@ -16,11 +13,20 @@ body {
     margin-bottom: 5%;
 }
 
+.policeColor {
+    color: #A63F02 !important;
+}
+
+.demandeConnexion {
+    background-color: #A63F02 !important;
+    color: #ffffff !important;
+}
+
 .affichage, .commentaire {
     background-color: #ffffff !important;
 }
 
-.commentaire {
+.commentaire, .demandeConnexion {
     margin-bottom: 2%;
     margin-left: 1rem;
     margin-right: 1rem;

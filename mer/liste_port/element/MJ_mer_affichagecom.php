@@ -19,7 +19,7 @@
         ?>
         <div class="row">
             <div class="col text-right">
-                <small><a href="fichier/<?php echo $lieuID . '/' . $j['commentaire_port_fichier']; ?>"><?php echo $j['commentaire_port_fichier']; ?></a></small>
+                <small><a class="policeColor" href="fichier/<?php echo $lieuID . '/' . $j['commentaire_port_fichier']; ?>" target="_blank"><?php echo $j['commentaire_port_fichier']; ?></a></small>
             </div>
         </div>
         <?php

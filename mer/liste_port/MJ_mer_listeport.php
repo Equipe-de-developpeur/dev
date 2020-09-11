@@ -2,14 +2,14 @@
 <html lang="fr_fr">
 
     <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="css/MJ_mer_listeport.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php header('Set-Cookie: cross-site-cookie=name; SameSite=None; Secure'); ?>
     </head>
 
-    <body>
+    <body class="bodyListePort">
         <?php
+        include "../header.php";
         include_once 'element/MJ_mer_connexionbdd.php';
         include_once "element/MJ_mer_creationcom.php";
 
@@ -83,7 +83,7 @@
                                     </button>
                                 </div>
                                 <!-- Contenu de la modal-->
-                                <div class="modal-body">
+                                <div class="modal-body p-0">
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div class="col-md">
@@ -113,20 +113,7 @@
                                             }
                                             ?>
                                             <!-- Formulaire Commentaire -->
-                                            <form action="MJ_mer_listeport.php" method="post" class="commentaire p-1" enctype="multipart/form-data">
-                                                <fieldset>
-                                                    <legend>Laissez un commentaire&nbsp:</legend>
-                                                    <input type="hidden" name="id" value="<?php echo $lieuID ?>">
-                                                    <label for="username">Nom :</label>
-                                                    <input type="text" id="username" name="username" size ="30" maxlenght="30" required><br>
-                                                    <label for="commentaire">Commentaire :</label>
-                                                    <textarea id="commentaire" name="commentaire" rows="3" size="500" maxlenght="500" required>
-                                                    </textarea><br>
-                                                    <label for="file">Pièce Jointe :</label>
-                                                    <input type="file" id="file" name="file"><br>
-                                                    <input type="submit" value="Envoyer">
-                                                </fieldset>
-                                            </form>
+                                            <?php include "element/MJ_mer_formulairecom.php"; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -138,9 +125,5 @@
             ?>
             </div>
         </div>
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     </body>
 </html>
