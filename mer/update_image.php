@@ -22,10 +22,11 @@
       if(move_uploaded_file($_FILES["profileImage"]["tmp_name"], $target_file)) {
         
           $vars['utilisateur_image']=$_SESSION['utilisateur_id'].".".$extensionUpload;
-		if(updatedefault($_SESSION['utilisateur_id'],'utilisateur','utilisateur_id',$vars))
+		if(updatedefault($_SESSION['utilisateur_id'],'WD_utilisateur','utilisateur_id',$vars))
 		{
 			$msg = "Image uploaded and saved in the Database";
 			$msg_class = "alert-success";
+			$_SESSION['utilisateur_image']=$vars['utilisateur_image'];
 		}
         
       } else {

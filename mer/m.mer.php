@@ -1,3 +1,5 @@
+<?php include "header.php"; ?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -12,7 +14,7 @@
 	</head>
 	<body>
 	<?php
-	include "header.php";
+	
 	include "introduction.php";
 	?>
 	<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-interval="false">

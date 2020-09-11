@@ -35,20 +35,20 @@ if($error == '')
  
  
 $sql = "
- INSERT INTO commentaire_".$ile." (parent_comment_id, comment, comment_nom_membre) VALUES (:parent_comment_id, :comment, :comment_nom_membre)"; 
+ INSERT INTO WD_commentaire_".$ile." (parent_comment_id, comment, comment_nom_membre) VALUES (:parent_comment_id, :comment, :comment_nom_membre)"; 
 
  $vars[':parent_comment_id']=$_POST["comment_id"];
  $vars[':comment']=$comment_content;
  $vars[':comment_nom_membre']=$comment_name;
  if($statement=query($sql,$vars))
  {
-	$sql="SELECT utilisateur_nb_comm FROM utilisateur WHERE utilisateur_id=:utilisateur_id";
+	$sql="SELECT utilisateur_nb_comm FROM WD_utilisateur WHERE utilisateur_id=:utilisateur_id";
 	$vars2[':utilisateur_id']=$_SESSION['utilisateur_id'];
 	$exe=query($sql,$vars2);
 	$resultat=fetch_object($exe);
 	$nb_comm=$resultat->utilisateur_nb_comm;
 	$nb_comm++;
-	$sql="UPDATE utilisateur SET utilisateur_nb_comm=:utilisateur_nb_comm WHERE utilisateur_id=:utilisateur_id";
+	$sql="UPDATE WD_utilisateur SET utilisateur_nb_comm=:utilisateur_nb_comm WHERE utilisateur_id=:utilisateur_id";
 	$vars2[':utilisateur_nb_comm']=$nb_comm;
 	$exe=query($sql,$vars2);
  $error = '<label class="text-success">Comment Added</label>';

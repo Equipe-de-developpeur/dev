@@ -1,5 +1,6 @@
 <?php
 include "connect_pdo.php";
+include "menu_co.php";
 ?>
 
 <?php $url = basename($_SERVER['PHP_SELF']) ;
@@ -43,20 +44,22 @@ if((stristr($url, 'terre') && !stristr($url, 'montagne')) || stristr($url, 'natu
 }
 else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage') || stristr($url, 'port') || stristr($url, 'ile') || (stristr($url, 'description') || (stristr($url, 'liste_membres'))))
 {
-	if(stristr($url, 'plage'))
+	if(stristr($url, 'plage') && !stristr($url, 'mer'))
 	{
 		$bouton="plage";
 		$menu4="mer";
 		$menu5="port";
 		$menu6="ile";
+		$menu5_="liste_port/MJ_mer_listeport.php";
 		include "header_mer.php";
 	}
-	else if(stristr($url, 'port'))
+	else if(stristr($url, 'port') && !stristr($url, 'mer'))
 	{
 		$bouton="port";
 		$menu4="mer";
 		$menu5="plage";
 		$menu6="ile";
+		$menu5_="Plage_liste/DA_mer_plage_liste.php";
 		include "header_mer.php";
 	}
 	else if(stristr($url, 'ile'))
@@ -65,6 +68,8 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 		$menu4="mer";
 		$menu5="plage";
 		$menu6="port";
+		$menu5_="Plage_liste/DA_mer_plage_liste.php";
+		$menu6_="liste_port/MJ_mer_listeport.php";
 		include "header_mer.php";
 	}
 	else if(stristr($url, 'description'))
@@ -74,6 +79,8 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 		$menu5="plage";
 		$menu6="port";
 		$menu7="ile";
+		$menu5_="Plage_liste/DA_mer_plage_liste.php";
+		$menu6_="liste_port/MJ_mer_listeport.php";
 		include "header_mer.php";
 	}
 	else if(stristr($url, 'liste_membres'))
@@ -83,6 +90,8 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 		$menu5="plage";
 		$menu6="port";
 		$menu7="ile";
+		$menu5_="Plage_liste/DA_mer_plage_liste.php";
+		$menu6_="liste_port/MJ_mer_listeport.php";
 		include "header_mer.php";
 	}
 	else
@@ -91,6 +100,8 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 		$menu4="plage";
 		$menu5="port";
 		$menu6="ile";
+		$menu4_="Plage_liste/DA_mer_plage_liste.php";
+		$menu5_="liste_port/MJ_mer_listeport.php";
 	}
 	
 	
@@ -171,5 +182,5 @@ else if(stristr($url, 'activités') || stristr($url, 'montagne') || stristr($url
 	$menu3="hébergement";
 	include"menu.php";
 }
-include "menu_co.php";
+
 ?>

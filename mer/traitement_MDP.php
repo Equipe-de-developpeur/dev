@@ -1,57 +1,12 @@
 <?php
-session_start();
 header('Content-Type: text/html; charset=utf-8');
 require "connect_pdo.php";
-require "function.php";
 
 
 
 if(isset($_POST['submit']))
 {
-	if(isset($_REQUEST['code_recuperation']) && !empty($_REQUEST['code_recuperation']))
-	{
-		if(isset($_REQUEST['utilisateur_password']) && !empty($_REQUEST['utilisateur_password']))
-		{
-			if(isset($_REQUEST['utilisateur_password2']) && !empty($_REQUEST['utilisateur_password2']))
-			{
-				if($_REQUEST['utilisateur_password']== $_REQUEST['utilisateur_password2'])
-				{
-					$sql="SELECT * FROM recuperation WHERE code_recuperation=:code_recuperation";
-					$vars[':code_recuperation']=$_REQUEST['code_recuperation'];
-					$exe=query($sql,$vars);
-					$emailexist = $exe->rowCount();
-					if($emailexist==1)
-					{
-						$resultat=fetch_object($exe);
-						$utilisateur_email=$resultat->utilisateur_email;
-						$sql="UPDATE utilisateur SET  utilisateur_password=:utilisateur_password WHERE utilisateur_email=:utilisateur_email";
-						$utilisateur_password=sha1($_REQUEST['utilisateur_password']);
-						$vars2[':utilisateur_email']=$utilisateur_email;
-						$vars2['utilisateur_password']=$utilisateur_password;
-						$exe=query($sql,$vars2);
-						if($exe)
-						{
-							$message='<br> Vous avez bien changé votre Mot de Passe';
-							$entete = "Content-type: text/html; charset= utf8\n";
-							mail($utilisateur_email,'Changement MDP',$message,$entete);
-							$sql=" DELETE FROM `recuperation` WHERE `recuperation`.`utilisateur_email` = :utilisateur_email ";
-							$vars3[':utilisateur_email']=$utilisateur_email;
-							query($sql,$vars3);
-							header('Location: index.php');
-						}
-					}
-					else
-					{
-						$erreur="Code de Recuperation incorrect";
-					}
-				}
-				else
-				{
-					$erreur="Les Mots de passe sont differents";
-				}
-			}
-		}
-	}
+	$recuperation_mdp = new Recuperation_mdp($_REQUEST['code_recuperation'],$_REQUEST['utilisateur_password'],$_REQUEST['utilisateur_password2']);			
 }
 
 
@@ -80,9 +35,9 @@ if(isset($_POST['submit']))
 <form method="post" action="" >
 								<div class="row h-100 justify-content-center align-items-center">
 								<img class="fond" src="img/ocean.jpg" />
-								<div class="container bordure rounded-lg fond2">
+								<div class="container bordure rounded-lg" style="text-align:center;">
 								
-								<legend class="legend"> Changement MDP </legend>
+								<legend class="legend" style="font-size:5vw; font-weight:bold;"> Changement MDP </legend>
 								<br/>
 								<div class=" container form-group">
                                 <input type="text" placeholder="code_recuperation" required="required" name="code_recuperation"  value="<?php if(isset($_REQUEST['code']) && !empty($_REQUEST['code'])){echo $_REQUEST['code'];} ?>"/> 
@@ -97,13 +52,18 @@ if(isset($_POST['submit']))
 								<button type="submit" name="submit"  class="btn btn-outline-info my-2 my-sm-0">Valider
 								</button>
 								<br/>
-								
+								<br>
 								<?php
-								if(isset($erreur))
+								if(isset($recuperation_mdp))
 								{
-									echo ' <p style="color:red">⛔ '.$erreur.'</p>';
+									
+									if($recuperation_mdp->utilisateur_erreur)
+									{
+										echo $changement_mdp->getErreur();
+									}
 								}
 								?>
+								
 								</div>
 								</div>
                 </form>

@@ -4,7 +4,7 @@ include "function.php";
 if(isset($_REQUEST['role']) AND !empty($_REQUEST['role']))
 {
 	$role=explode('_',$_REQUEST['role']);
-	$sql="UPDATE `utilisateur` SET `utilisateur_role` =:utilisateur_role WHERE `utilisateur_id` =:utilisateur_id";
+	$sql="UPDATE `WD_utilisateur` SET `utilisateur_role` =:utilisateur_role WHERE `utilisateur_id` =:utilisateur_id";
 	$vars[':utilisateur_role']=$role[0];
 	$vars[':utilisateur_id']=$role[1];
 	$exe=query($sql,$vars);

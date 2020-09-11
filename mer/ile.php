@@ -1,3 +1,5 @@
+<?php include "header.php"; ?>
+<?php include "ile/traitement_tableau.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +25,7 @@
 </style>
 </head>
 <body style="background-color:burlywood;">
-<?php include "header.php"; ?>
-<?php include "ile/traitement_tableau.php"; ?>
+
 <div class="deroulant" >
 <select name="ville" id="liste_ville" >
 											<option value="1">Selectionner Votre Ville</option>

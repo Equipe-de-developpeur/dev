@@ -23,7 +23,7 @@ if($ile=="Île_de_Port-Cros")
 	}
 	
 $sql = "
-SELECT * FROM commentaire_".$ile." WHERE parent_comment_id = '0' 
+SELECT * FROM WD_commentaire_".$ile." WHERE parent_comment_id = '0' 
 ORDER BY comment_id DESC
 ";
 }
@@ -60,7 +60,7 @@ $ile=str_replace(' ','_',$_SESSION['ile']);
 		$ile="Deux_Frères_rocher";
 	}
  $query = "
- SELECT * FROM commentaire_".$ile." WHERE parent_comment_id = '".$parent_id."'
+ SELECT * FROM WD_commentaire_".$ile." WHERE parent_comment_id = '".$parent_id."'
  ";
  $output = '';
  $statement = $connect->prepare($query);

@@ -5,41 +5,16 @@ require "connect_pdo.php";
 require "menu_co.php";
 include "update_image.php";
 testSession();
-if(isset($_POST['submit']))
-	
+if(isset($_POST['submit']))	
 {
-
-		if(isset($_REQUEST['utilisateur_password']) && !empty($_REQUEST['utilisateur_password']))
-		{
-			if(isset($_REQUEST['utilisateur_password2']) && !empty($_REQUEST['utilisateur_password2']))
-			{
-				if($_REQUEST['utilisateur_password']== $_REQUEST['utilisateur_password2'])
-				{
-					
-						$utilisateur_password=sha1($_REQUEST['utilisateur_password']);
-						$vars2['utilisateur_password']=$utilisateur_password;
-						
-						if(updateDefault($_SESSION['utilisateur_id'],"utilisateur","utilisateur_id",$vars2))
-						{
-							$sql="SELECT utilisateur_email FROM utilisateur WHERE utilisateur_id=:utilisateur_id";
-							$vars[':utilisateur_id']=$_SESSION['utilisateur_id'];
-							$exe=query($sql,$vars);
-							$resultat=fetch_object($exe);
-							$utilisateur_email=$resultat->utilisateur_email;
-							$message='<br> Vous avez bien changé votre Mot de Passe';
-							$entete = "Content-type: text/html; charset= utf8\n";
-							mail($utilisateur_email,'Changement MDP',$message,$entete);
-						}
-						
-					
-				}
-				else
-				{
-					$erreur="Les Mots de passe sont differents";
-				}
-			}
-		}
-	
+	if(isset($_REQUEST['utilisateur_password'] ) AND !empty($_REQUEST['utilisateur_password']) AND isset($_REQUEST['utilisateur_password2'] ) AND !empty($_REQUEST['utilisateur_password2']))
+	{	
+		$changement_mdp= new Changement_mdp($_SESSION['utilisateur_id'],$_REQUEST['utilisateur_password'],$_REQUEST['utilisateur_password2']);
+	}
+	else
+	{
+		$error="Veuillez remplir tous les champs ! ";
+	}
 }
 
 
@@ -74,7 +49,7 @@ if(isset($_POST['submit']))
 								?>
 								<!-- Ajouter une image -->
 								<?php if (!empty($msg)): ?>
-									<div class="alert <?php echo $msg_class ?>" role="alert">
+									<div class="alert <?php echo $msg_class ?>" role="alert" style="width:70%; margin: 1vw auto;">
 									<?php echo $msg; ?>
 									</div>
 								<?php endif; ?>
@@ -127,6 +102,23 @@ if(isset($_POST['submit']))
 							<div class=" container form-group">
 								<input class="contenue_label" type="text" value="<?php echo $_SESSION['utilisateur_role']; ?>" style="text-align:center;" disabled=disabled />
 							</div>
+							<?php
+								if(isset($changement_mdp))
+								{
+									if($changement_mdp->utilisateur_message)
+									{
+										echo $changement_mdp->getMessage();
+									}
+									if($changement_mdp->utilisateur_erreur)
+									{
+										echo $changement_mdp->getErreur();
+									}
+								}
+								if(isset($error))
+								{
+									echo '<div class="alert alert-danger" role="alert" style="margin:auto; width:50%; margin-top:1vw;"> '.$error.'</div>';
+								}
+								?>
 							<span class="contenue_label" style="font-weight:bold;"> Modifier Mot de Passe </span>
 							
 								<div class=" container form-group">
@@ -142,18 +134,8 @@ if(isset($_POST['submit']))
 								</button>
 								<br/>
 								
-								<?php
-								if(isset($erreur))
-								{
-									echo ' <p class="contenue_label" style="color:red">⛔ '.$erreur.'</p>';
-								}
-								?>
-								<?php
-								if(isset($message))
-								{
-									echo ' <p class="contenue_label" style="color:green">'.$message.'</p>';
-								}
-								?>
+								
+								
 								</div>
 								</div>
                 </form>

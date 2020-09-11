@@ -118,7 +118,7 @@ if(isset($_REQUEST['submit_sign']))
             </div>
             <!--Footer-->
             <div class="modal-footer">
-              
+              <a href="mdp_oublie.php" style="color:blue!important;">Mot de passe Oublié </a>
               <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
             </div>
 </form>

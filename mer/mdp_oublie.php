@@ -1,29 +1,11 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 require "connect_pdo.php";
-require "function.php";
-if(isset($_REQUEST['erreur']) && !empty($_REQUEST['erreur']))
-{
-	$erreur=$_REQUEST['erreur'];
-}
+
+
 if(isset($_POST['submitre']))
 {
-	if(isset($_POST['utilisateur_email']) && !empty($_POST['utilisateur_email']))
-	{
-		$utilisateur_email=$_POST['utilisateur_email'];
-		$sql="SELECT * FROM utilisateur WHERE utilisateur_email=:utilisateur_email";
-		$vars[':utilisateur_email']=$utilisateur_email;
-		$exe=query($sql,$vars);
-		$emailexist = $exe->rowCount();
-		if($emailexist==1)
-		{
-			header('Location: traitement_recuperation.php?email='.$utilisateur_email);
-		}
-		else
-		{
-			$erreur="Email Incorrect";
-		}
-	}
+	$recuperation_code = new Recuperation_code($_REQUEST['utilisateur_email']);
 }
 
 
@@ -46,9 +28,9 @@ if(isset($_POST['submitre']))
 	<form method="post" action="" >
 									<div class="row h-100 justify-content-center align-items-center">
 									<img class="fond" src="img/ocean.jpg" />
-									<div class="container bordure rounded-lg fond2">
+									<div class="container bordure rounded-lg" style="text-align:center;">
 									
-									<legend class="legend"> Recuperation de Mot de passe </legend>
+									<legend class="legend" style="font-size:4.5vw; font-weight:bold;"> Recuperation de Mot de passe </legend>
 									<br/>
 									<div class=" container form-group">
 									<input type="email"  placeholder="Email" required="required" name="utilisateur_email"  />
@@ -58,12 +40,16 @@ if(isset($_POST['submitre']))
 									<button type="submit" name="submitre" class="btn btn-outline-info my-2 my-sm-0" > Récupérer
 									</button>
 									
-									
+									<br>
 									
 									<?php
-									if(isset($erreur))
+									if(isset($recuperation_code))
 									{
-										echo ' <p> ⛔'.$erreur.'</p>';
+										if($recuperation_code->utilisateur_erreur)
+										{
+											echo $recuperation_code->getErreur();
+										}
+										
 									}
 									?>
 									</div>

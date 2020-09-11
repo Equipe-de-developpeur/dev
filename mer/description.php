@@ -1,10 +1,11 @@
 <?php
 include "header.php";
 
+
 if(isset($_SESSION['ile']) AND !empty($_SESSION['ile']))
 {
 	$vars[':liste_ile_nom']=$_SESSION['ile'];
-	$sql_recup="SELECT liste_ile_nom, liste_ile_ville, liste_ile_data FROM liste_ile WHERE liste_ile_nom=:liste_ile_nom";
+	$sql_recup="SELECT liste_ile_nom, liste_ile_ville, liste_ile_data FROM WD_liste_ile WHERE liste_ile_nom=:liste_ile_nom";
 	$exe_recup=query($sql_recup,$vars);
 	$resultat_ile=fetch_object($exe_recup);
 }

@@ -1,15 +1,20 @@
 <!-- https://www.my-meteo.com/meteo-webmaster.html -->
 
-
+<style>
+.widget
+{
+	margin:auto!important;
+}
+</style>
 
 <!-- widget meteo Hyeres -->
 <?php
-$hyeres='<div id="widget_859563fa347ef3d2dc0ebd0be15834be">
-<span id="l_859563fa347ef3d2dc0ebd0be15834be"><a href="http://www.mymeteo.info/r/hyeres_Q">Hyeres</a></span>
+$hyeres='<div id="widget_bd49b7b81c917c29035e1ecff5d26192" class="widget">
+<span id="l_bd49b7b81c917c29035e1ecff5d26192"><a href="http://www.mymeteo.info/r/hyeres_Q">Hyeres</a></span>
 <script type="text/javascript">
 (function() {
 	var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
-	my.src = "https://services.my-meteo.com/widget/js_design?ville=31460&format=petit-horizontal&nb_jours=3&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=2&fond=1&masque=3&x=476&y=80&d=0&id=859563fa347ef3d2dc0ebd0be15834be";
+	my.src = "https://services.my-meteo.com/widget/js_design?ville=31460&format=vertical&nb_jours=3&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=5&fond=1&masque=3&x=160&y=442&d=0&id=bd49b7b81c917c29035e1ecff5d26192";
 	var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
 })();
 </script>
@@ -21,12 +26,12 @@ $hyeres='<div id="widget_859563fa347ef3d2dc0ebd0be15834be">
 
 <!-- widget meteo  Bandol -->
 <?php
-$bandol='<div id="widget_cefc72b417156a0f54a1c0d1cdddf663">
-<span id="l_cefc72b417156a0f54a1c0d1cdddf663"><a href="http://www.mymeteo.info/r/bandol_g">Bandol</a></span>
+$bandol='<div id="widget_28318cd71a0e8c126345f94e15bf3cc3" class="widget">
+<span id="l_28318cd71a0e8c126345f94e15bf3cc3"><a href="http://www.mymeteo.info/r/bandol_g">Bandol</a></span>
 <script type="text/javascript">
 (function() {
 	var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
-	my.src = "https://services.my-meteo.com/widget/js_design?ville=31410&format=petit-horizontal&nb_jours=3&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=2&fond=1&masque=3&x=476&y=80&d=0&id=cefc72b417156a0f54a1c0d1cdddf663";
+	my.src = "https://services.my-meteo.com/widget/js_design?ville=31410&format=vertical&nb_jours=3&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=5&fond=1&masque=3&x=160&y=442&d=0&id=28318cd71a0e8c126345f94e15bf3cc3";
 	var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
 })();
 </script>
@@ -37,12 +42,12 @@ $bandol='<div id="widget_cefc72b417156a0f54a1c0d1cdddf663">
 
 <!-- widget meteo  Six Fours les Plages -->
 <?php
-$six_fours='<div id="widget_1ff849af2c50745830cfc85b5ac60c59">
-<span id="l_1ff849af2c50745830cfc85b5ac60c59"><a href="http://www.mymeteo.info/r/six-fours-les-plages_z">Six Fours</a></span>
+$six_fours='<div id="widget_b3859d1d34bf7a587959a1784ff3438d" class="widget">
+<span id="l_b3859d1d34bf7a587959a1784ff3438d"><a href="http://www.mymeteo.info/r/six-fours-les-plages_z">Six-Fours</a></span>
 <script type="text/javascript">
 (function() {
 	var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
-	my.src = "https://services.my-meteo.com/widget/js_design?ville=35624&format=petit-horizontal&nb_jours=3&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=2&fond=1&masque=3&x=476&y=80&d=0&id=1ff849af2c50745830cfc85b5ac60c59";
+	my.src = "https://services.my-meteo.com/widget/js_design?ville=35624&format=vertical&nb_jours=3&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=5&fond=1&masque=3&x=160&y=442&d=0&id=b3859d1d34bf7a587959a1784ff3438d";
 	var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
 })();
 </script>
@@ -53,12 +58,12 @@ $six_fours='<div id="widget_1ff849af2c50745830cfc85b5ac60c59">
 
 <!-- widget meteo  Saint Raphael -->
 <?php
-$saint_raphael='<div id="widget_c3dcf90a53cebd84f83eeb0028f34190">
-<span id="l_c3dcf90a53cebd84f83eeb0028f34190"><a href="http://www.mymeteo.info/r/saint-raphael-83_n">Saint Raphael</a></span>
+$saint_raphael='<div id="widget_c4fddb38ee2aa47fc9582d621b8f21c5" class="widget">
+<span id="l_c4fddb38ee2aa47fc9582d621b8f21c5"><a href="http://www.mymeteo.info/r/saint-raphael-83_n">Saint Raphael</a></span>
 <script type="text/javascript">
 (function() {
 	var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
-	my.src = "https://services.my-meteo.com/widget/js_design?ville=9206&format=petit-horizontal&nb_jours=3&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=2&fond=1&masque=3&x=476&y=80&d=0&id=c3dcf90a53cebd84f83eeb0028f34190";
+	my.src = "https://services.my-meteo.com/widget/js_design?ville=9206&format=vertical&nb_jours=3&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=5&fond=1&masque=3&x=160&y=442&d=0&id=c4fddb38ee2aa47fc9582d621b8f21c5";
 	var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
 })();
 </script>
@@ -68,12 +73,12 @@ $saint_raphael='<div id="widget_c3dcf90a53cebd84f83eeb0028f34190">
 
 <!-- widget meteo  La Seyne sur Mer -->
 <?php
-$seyne_sur_mer='<div id="widget_d2f0941ad5fd3ce5dcd235ecd5f31d4b">
-<span id="l_d2f0941ad5fd3ce5dcd235ecd5f31d4b"><a href="http://www.mymeteo.info/r/la-seyne-sur-mer_n">La Seyne sur Mer</a></span>
+$seyne_sur_mer='<div id="widget_ad5ec486becbcfcdab50f00145817b37" class="widget">
+<span id="l_ad5ec486becbcfcdab50f00145817b37"><a href="http://www.mymeteo.info/r/la-seyne-sur-mer_n">La Seyne-sur-Mer</a></span>
 <script type="text/javascript">
 (function() {
 	var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
-	my.src = "https://services.my-meteo.com/widget/js_design?ville=31507&format=petit-horizontal&nb_jours=3&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=2&fond=1&masque=3&x=476&y=80&d=0&id=d2f0941ad5fd3ce5dcd235ecd5f31d4b";
+	my.src = "https://services.my-meteo.com/widget/js_design?ville=31507&format=vertical&nb_jours=3&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=5&fond=1&masque=3&x=160&y=442&d=0&id=ad5ec486becbcfcdab50f00145817b37";
 	var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
 })();
 </script>
