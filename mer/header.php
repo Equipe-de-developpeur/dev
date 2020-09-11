@@ -59,7 +59,7 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 		$menu4="mer";
 		$menu5="plage";
 		$menu6="ile";
-		$menu5_="Plage_liste/DA_mer_plage_liste.php";
+		$menu5_="Plage_liste/DA_mer_plage_liste";
 		include "header_mer.php";
 	}
 	else if(stristr($url, 'ile'))
@@ -68,8 +68,8 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 		$menu4="mer";
 		$menu5="plage";
 		$menu6="port";
-		$menu5_="Plage_liste/DA_mer_plage_liste.php";
-		$menu6_="liste_port/MJ_mer_listeport.php";
+		$menu5_="Plage_liste/DA_mer_plage_liste";
+		$menu6_="liste_port/MJ_mer_listeport";
 		include "header_mer.php";
 	}
 	else if(stristr($url, 'description'))
@@ -79,8 +79,8 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 		$menu5="plage";
 		$menu6="port";
 		$menu7="ile";
-		$menu5_="Plage_liste/DA_mer_plage_liste.php";
-		$menu6_="liste_port/MJ_mer_listeport.php";
+		$menu5_="Plage_liste/DA_mer_plage_liste";
+		$menu6_="liste_port/MJ_mer_listeport";
 		include "header_mer.php";
 	}
 	else if(stristr($url, 'liste_membres'))
@@ -90,8 +90,8 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 		$menu5="plage";
 		$menu6="port";
 		$menu7="ile";
-		$menu5_="Plage_liste/DA_mer_plage_liste.php";
-		$menu6_="liste_port/MJ_mer_listeport.php";
+		$menu5_="Plage_liste/DA_mer_plage_liste";
+		$menu6_="liste_port/MJ_mer_listeport";
 		include "header_mer.php";
 	}
 	else
@@ -100,8 +100,8 @@ else if((stristr($url, 'mer') && !stristr($url, 'lac')) || stristr($url, 'plage'
 		$menu4="plage";
 		$menu5="port";
 		$menu6="ile";
-		$menu4_="Plage_liste/DA_mer_plage_liste.php";
-		$menu5_="liste_port/MJ_mer_listeport.php";
+		$menu4_="Plage_liste/DA_mer_plage_liste";
+		$menu5_="liste_port/MJ_mer_listeport";
 	}
 	
 	

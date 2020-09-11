@@ -1,5 +1,13 @@
 <?php include "header.php"; ?>
-<?php include "ile/traitement_tableau.php"; ?>
+<?php include "ile/meteo.php"; 
+$_SESSION['ville']="1";
+$_SESSION['tri']="1";
+$sql2="SELECT DISTINCT ville_proxi_nom FROM WD_ville_proxi WHERE 1 ORDER BY ville_proxi_nom ASC ";
+$exe2=query($sql2);
+$sql="SELECT * FROM WD_liste_ile WHERE 1 ORDER BY liste_ile_nom ASC";
+$exe=query($sql);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +35,7 @@
 <body style="background-color:burlywood;">
 
 <div class="deroulant" >
-<select name="ville" id="liste_ville" >
+<select name="ville" id="liste_ville" onchange="showVille(this.value)" >
 											<option value="1">Selectionner Votre Ville</option>
 											<?php
 											while($resultat2=fetch_object($exe2))
@@ -40,7 +48,7 @@
 											}
 											?>
 											</select>
-<select name="tri" id="tri" >
+<select name="tri" id="tri" onchange="showTri(this.value)">
 											<option value="1" ><?php if(isset($_SESSION['tri']) AND  $_SESSION['tri'] !="1"){echo "Desactiver Filtre";} else{ echo "Selectionner un Filtre";} ?></option>
 											<option value="ORDER BY liste_ile_nom ASC" <?php if(isset($_SESSION['tri']) AND $_SESSION['tri'] == "ORDER BY liste_ile_nom ASC" ){?> selected="selected" <?php } ?>>Nom d'Ile croissante</option>
 											<option value="ORDER BY liste_ile_nom DESC" <?php if(isset($_SESSION['tri']) AND $_SESSION['tri'] == "ORDER BY liste_ile_nom DESC" ){?> selected="selected" <?php } ?>>Nom d'Ile décroissante</option>
@@ -58,7 +66,16 @@
 		<th class="th-sm"> Meteo </th>
 	</tr>
 <?php
-while($resultat=fetch_object($exe))
+if(isset($exe3))
+{
+	$requete=$exe3;
+	}
+else
+{
+	$requete=$exe;
+}
+
+while($resultat=fetch_object($requete))
 {
 	?>
 	<tr>
@@ -98,6 +115,7 @@ while($resultat=fetch_object($exe))
 }
 ?>
 </table>
+
 <?php include "footer.php"; ?>
 </body>
 </html>

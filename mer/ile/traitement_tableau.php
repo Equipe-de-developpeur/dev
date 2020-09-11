@@ -1,13 +1,7 @@
 <?php
-include "meteo.php";
+include "../connect_pdo.php";
 include "calcul_distance.php";
-if(isset($_REQUEST['ile']) AND !empty($_REQUEST['ile']))
-{
-	
-	$_SESSION['ile']=$_REQUEST['ile'];
-}
-else
-{
+
 	if(isset($_REQUEST['id']) AND !empty($_REQUEST['id']))
 	{
 		$_SESSION['ville']=$_REQUEST['id'];
@@ -17,7 +11,7 @@ else
 	{
 		$_SESSION['tri']=$_REQUEST['tri'];
 	}
-}
+
 
 
 if(isset($_SESSION['ville']) AND ($_SESSION['ville']!="1") )
@@ -59,8 +53,57 @@ else if (((isset($_SESSION['tri']) AND isset($_SESSION['ville']) AND $_SESSION['
 	$sql="SELECT * FROM WD_liste_ile WHERE 1 ORDER BY liste_ile_nom ASC";
 }
 $exe=query($sql);
-$sql2="SELECT DISTINCT ville_proxi_nom FROM WD_ville_proxi WHERE 1 ORDER BY ville_proxi_nom ASC ";
-$exe2=query($sql2);
+
+
+?>
+	<tr>
+		<th class="th-sm"> Nom </th>
+		<th class="th-sm"> Ville </th>
+		<?php if(isset($_SESSION['ville']) AND ($_SESSION['ville']!="1")) { ?> <th class="th-sm"> Distance </th> <?php } ?>
+		<th class="th-sm"> Meteo </th>
+	</tr>
+<?php
+
+while($resultat=fetch_object($exe))
+{
+	?>
+	<tr>
+		<td><a href="ile/ville.php?ile=<?php echo $resultat->liste_ile_nom; ?>" target="_blank" style="color:blue;"><?php echo $resultat->liste_ile_nom; ?></a></td>
+		<td><?php echo $resultat->liste_ile_ville; ?></td>
+		<?php if(isset($_SESSION['ville']) AND ($_SESSION['ville']!="1")) { ?> <td><?php echo $resultat->liste_ile_distance; ?> km</td> <?php } ?>
+		<td>
+		<?php
+		if ( $resultat->liste_ile_ville == "Bandol")
+		{
+			$nom='bandol';
+		}
+		else if ( $resultat->liste_ile_ville == "La Seyne sur Mer")
+		{
+			$nom='seyne_sur_mer';
+		}
+		else if ( $resultat->liste_ile_ville == "Hyeres Les Palmiers")
+		{
+			$nom='hyeres';
+		}
+		else if ( $resultat->liste_ile_ville == "Six Fours Les Plages")
+		{
+			$nom='six_fours';
+		}
+		else if ( $resultat->liste_ile_ville == "Saint Raphael")
+		{
+			$nom='saint_raphael';
+		}
+		$meteo='<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#'.$nom.'">
+					Meteo
+					</button>';
+		echo $meteo;
+	?>
+	</td>
+	</tr>
+	<?php
+}
+?>
+
 
 ?>
 

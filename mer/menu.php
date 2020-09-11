@@ -73,9 +73,9 @@ $(window).scroll(function (event) {
 			 
 					<nav class="vertical" id="menu_vertical">
 						<ul>
-							<li><a href="<?php if(isset($menu4_)) {echo $menu4_;}else{ echo $menu4.'.php';}?>"><?php echo ucwords(str_replace('_',' ',$menu4));?></a></li>
-							<li><a href="<?php if(isset($menu5_)) {echo $menu5_;}else{ echo $menu5.'.php';}?>"><?php echo ucwords(str_replace('_',' ',$menu5));?></a></li>
-							<li><a href="<?php if(isset($menu6_)) {echo $menu6_;}else{ echo $menu6.'.php';}?>"><?php echo ucwords(str_replace('_',' ',$menu6));?></a></li>
+							<li><a href="<?php if(isset($menu4_)) {echo $menu4_;}else{ echo $menu4;}?>.php"><?php echo ucwords(str_replace('_',' ',$menu4));?></a></li>
+							<li><a href="<?php if(isset($menu5_)) {echo $menu5_;}else{ echo $menu5;}?>.php"><?php echo ucwords(str_replace('_',' ',$menu5));?></a></li>
+							<li><a href="<?php if(isset($menu6_)) {echo $menu6_;}else{ echo $menu6;}?>.php"><?php echo ucwords(str_replace('_',' ',$menu6));?></a></li>
 							<?php if(isset($menu7))
 							{
 								?>

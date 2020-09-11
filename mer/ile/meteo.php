@@ -228,28 +228,36 @@ $seyne_sur_mer='<div id="widget_ad5ec486becbcfcdab50f00145817b37" class="widget"
   
   										<script type="text/javascript">
 										
-	// Selection des Villes									
-$(document).ready(function(){
-        $("[name='ville'] option").click(function(){
-        	var selectValue = $("[name='ville'] option:selected").val();
-            if(selectValue){
-				
-				
-				location.replace('ile/ville.php?id='+selectValue);
-            }
-        });
-    });
+	
+	// Selection Ville en Ajax									
+										
+										
+	function showTri(str) {
+  
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("dtBasicExample").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET","ile/traitement_tableau.php?tri="+str,true);
+    xmlhttp.send();
+  
+}									
+	// Selection Filtre en Ajax	
+	function showVille(str) {
+  
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("dtBasicExample").innerHTML = this.responseText;
+		document.getElementById("tri").selectedIndex=0;
+      }
+    };
+    xmlhttp.open("GET","ile/traitement_tableau.php?id="+str,true);
+    xmlhttp.send();
+  
+}
 
-	// Selection des Filtres
-$(document).ready(function(){
-        $("[name='tri'] option").click(function(){
-        	var selectValue = $("[name='tri'] option:selected").val();
-            if(selectValue){
-				
-				
-				location.replace('ile/ville.php?tri='+selectValue);
-            }
-        });
-    });	
 	
 </script>
