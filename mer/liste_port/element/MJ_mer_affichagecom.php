@@ -2,7 +2,15 @@
     <div class="row">
         <!-- Affichage nom utilisateur -->
         <div class="col col-6">
-            <?php echo $j['commentaire_port_username']; ?>
+            <?php
+                $userID = $j['commentaire_port_utilisateur_id'];
+                $userJoin = "SELECT `wd_utilisateur`.`utilisateur_pseudo`
+                FROM `wd_utilisateur`
+                INNER JOIN `jm_mer_commentaire_port` ON `jm_mer_commentaire_port`.`commentaire_port_utilisateur_id` = `wd_utilisateur`.`utilisateur_id`
+                WHERE `commentaire_port_utilisateur_id` = $userID";
+                $user = $pdo->exec($userJoin);
+                echo $user;
+            ?>
         </div>
         <!-- Affichage date de publication -->
         <div class="col col-6 text-right">  

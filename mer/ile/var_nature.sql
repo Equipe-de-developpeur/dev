@@ -409,7 +409,7 @@ CREATE TABLE `WD_utilisateur` (
   `utilisateur_pseudo` varchar(255) NOT NULL,
   `utilisateur_password` varchar(255) NOT NULL,
   `utilisateur_email` varchar(255) NOT NULL,
-  `utilisateur_image` varchar(255) NOT NULL,
+  `utilisateur_image` varchar(255),
   `utilisateur_role` varchar(255) NOT NULL DEFAULT 'Membre',
   `utilisateur_nb_comm` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
