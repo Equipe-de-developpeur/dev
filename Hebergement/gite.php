@@ -110,29 +110,63 @@
 
 
                              <td>
-                                 <form action="moyenne_gite.php"method="post">
-                                 <input type="image" class="stars"id="leaf"data_value="1"src="img/mini_leaf_black.png"alt="mini logo feuille" value=1>
-                                 <input type="image"class="stars"id="leaf"data_value="2" src="img/mini_leaf.png" alt="mini logo feuille" value=2>
-                                 <input type="image" class="stars"id="leaf"data_value="3"src="img/mini_leaf.png" alt="mini logo feuille" value=3>
-                                 <input type="image"class="stars"id="leaf"data_value="4" src="img/mini_leaf.png" alt="mini logo feuille" value=4>
-                                 <input type="image" class="stars"id="leaf"data_value="5"src="img/mini_leaf.png" alt="mini logo feuille" value=5>
-                                 </form>
-                                </td>
+                                 <div class="row">
+                                     <form action="moyenne_gite.php" method="post">
+                                         <input type="hidden" value=<?php echo $id_gite ?> name="id">
+                                         <input type="hidden" value="1" name="note-feuille">
+                                         <input type="image"   onmouseover="changecolor()" onmouseout="rechangecolor()" name="" src="img/mini_leaf_black.png" alt="mini logo feuille">
+                                     </form>
+                                     <form action="moyenne_gite.php" method="post">
+                                         <input type="hidden" value=<?php echo $id_gite ?>name="id">
+                                         <input type="hidden" value="2" name="note-feuille">
+                                         <input type="image" id="leaf2" data_value="2" onmouseover="changecolor()" onmouseout="rechangecolor()" name="note-feuille" src="img/mini_leaf_black.png" alt="mini logo feuille" value=2>
+                                     </form>
+                                     <form action="moyenne_gite.php" method="post">
+                                         <input type="hidden" value=<?php echo $id_gite ?>name="id">
+                                         <input type="hidden" value="3" name="note-feuille">
+                                         <input type="image" id="leaf2" data_value="2" onmouseover="changecolor()" onmouseout="rechangecolor()" name="note-feuille" src="img/mini_leaf_black.png" alt="mini logo feuille" value=2>
+                                     </form>
+                                     <form action="moyenne_gite.php" method="post">
+                                         <input type="hidden" value=<?php echo $id_gite ?>name="id">
+                                         <input type="hidden" value="4" name="note-feuille">
+                                         <input type="image" id="leaf2" data_value="2" onmouseover="changecolor()" onmouseout="rechangecolor()" name="note-feuille" src="img/mini_leaf_black.png" alt="mini logo feuille" value=2>
+                                     </form>
+                                     <form action="moyenne_gite.php" method="post">
+                                         <input type="hidden" value=<?php echo $id_gite ?>name="id">
+                                         <input type="hidden" value="5" name="note-feuille">
+                                         <input type="image" id="leaf2" data_value="2" onmouseover="changecolor()" onmouseout="rechangecolor()" name="note-feuille" src="img/mini_leaf_black.png" alt="mini logo feuille" value=2>
+                                     </form>
+
+                                 </div>
+
+                             </td>
                          </div>
                          <!-- javascript notation -->
                          <script>
-                             document.getElementById("leaf").addEventListener("mouseover", mouseOver);
-                             document.getElementById("leaf").addEventListener("mouseout", mouseOut);
-                             function mouseover(){
-                                document.getElementById("leaf").src="img/mini_leaf.png";
+                             /* FONCTION QUI NE MARCHE PAS POUR NOTATION 
+                             function changecolor() {
+                                 if (document.getElementById("leaf1").onmouseover) {
+                                     document.getElementById("leaf1").src = "img/mini_leaf.png";
+                                 } else if (document.getElementById("leaf2").onmouseover) {
+                                     document.getElementById("leaf1").src = "img/mini_leaf.png";
+                                     document.getElementById("leaf2").src = "img/mini_leaf.png";
+                                 } else if (document.getElementById("leaf3").onmouseover) {
+                                     document.getElementById("leaf1").src = "img/mini_leaf.png";
+                                     document.getElementById("leaf2").src = "img/mini_leaf.png";
+                                     document.getElementById("leaf2").src = "img/mini_leaf.png";
+                                 }
                              }
-                             function mouseout(){
-                                document.getElementById("leaf").src="img/mini_leaf_black.png";
-                             }
-                                
 
-                             
-                             
+
+                             function rechangecolor() {
+                                 if (document.getElementById("leaf1").onmouseout) {
+                                     document.getElementById("leaf1").src = "img/mini_leaf_black.png";
+                                 }else if (document.getElementById("leaf2").onmouseover) {
+                                    document.getElementById("leaf1").src = "img/mini_leaf_black.png";
+                                    document.getElementById("leaf1").src = "img/mini_leaf_black.png";
+                                 }
+                             }
+                             */
                          </script>
 
 
@@ -173,7 +207,7 @@
 
      </article>
  </div>
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <?php
     include 'footer.php';
     ?>

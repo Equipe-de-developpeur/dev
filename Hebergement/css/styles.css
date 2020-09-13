@@ -61,37 +61,41 @@ a {
     font-weight: bold;
     text-transform: uppercase;
 }
-.connexion{
+
+.connexion {
     display: flex;
     justify-content: center;
-    
 }
+
 .connexion a {
     margin: 1vw;
     font-family: 'Fira Sans', sans-serif;
     color: white;
     font-weight: bold;
 }
-.password a{
+
+.password a {
     font-size: 0.8em;
 }
-.little_login_gite{
-    display: flex; 
 
-}
-.little_login_gite input{
-    margin: 2vw;
-}
-.little_login_gite button{
-    height: 30%;
-    
-    margin-left: 3vw;
-    
-}
-.input{
+.little_login_gite {
     display: flex;
 }
-.login-form{
+
+.little_login_gite input {
+    margin: 2vw;
+}
+
+.little_login_gite button {
+    height: 30%;
+    margin-left: 3vw;
+}
+
+.input {
+    display: flex;
+}
+
+.login-form {
     display: flex;
 }
 
@@ -119,7 +123,8 @@ a {
     margin: auto;
     padding-bottom: 30px;
 }
-.article_insert p{
+
+.article_insert p {
     text-align: left;
     width: 80%;
     margin: auto;
@@ -155,36 +160,37 @@ a {
     margin-top: 40px;
 }
 
-.table-gite thead th, .table-gite tbody td {
+.table-gite thead th,
+.table-gite tbody td {
     text-align: center;
 }
- .article_btn {
+
+.article_btn {
     margin: auto;
     text-align: center;
-    
 }
 
 
 /* END ARTICLES */
+
+
 /* interactive notation*/
 
 
-
-
 /* END INTERACTIVE NOTATION */
+
+
 /* form */
 
-
-
-.maj_form{
+.maj_form {
     margin: 3vw auto;
     display: flex;
-    justify-content: space-around; 
-}
-.maj_form label{
-    font-weight: bold;
+    justify-content: space-around;
 }
 
+.maj_form label {
+    font-weight: bold;
+}
 
 
 /* FOOTER  */
