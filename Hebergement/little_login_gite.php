@@ -33,14 +33,15 @@ if (!empty($_POST) && !empty($_POST['username'] && !empty($_POST['password']))) 
     <form action="login_gite.php" method="post" class='form-group login-form '>
         <div class="input">
             <input type="text" name="username" class="form-control" placeholder="Pseudo ou email">
-<div class="password">
-<input type="password" name="password" class="form-control" placeholder="Mot de passe">
-            <a href="password_forget_gite.php">(Mot de passe oublié ?)</a>
-</div>
-            
+            <div class="password">
+                <input type="password" name="password" class="form-control" placeholder="Mot de passe">
+                <a href="password_forget_gite.php">(Mot de passe oublié ?)</a>
+            </div>
         </div>
 
-        
+
+
+
 
         <button class="btn btn-primary">Se connecter</button>
     </form>

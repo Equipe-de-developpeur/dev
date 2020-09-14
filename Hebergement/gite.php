@@ -91,7 +91,7 @@
                      <tr>
                          <?php
                             // VARIABLE NOTE = DONNEES DANS LA TABLE NOTE
-                            $note = $donnees['note'];
+                            
                             // Ceci est la petite feuille pour la notation 
                             $feuille = '<img src="img/mini_leaf.png" alt="Mini logo feuille">';
                             // MIX ENTRE HTML ET PHP, AFFICHE LES DONNEES DE LA CATEGORIE NOM
@@ -100,7 +100,7 @@
                             echo '<td>' . $localisation . '</td>';
                             echo '<td>' ?> <?php
                                             //  BOUCLE PERMETTANT D'AFFICHER UNE PETITE FEUILLE POUR CHAQUE INDENTATION DE NOTE
-                                            for ($i = 1; $i <= $note; $i++) {
+                                            for ($i = 1; $i <= $note_moyenne; $i++) {
                                                 echo $feuille;
                                             }
                                             '</td>' ?>
@@ -108,39 +108,73 @@
 
 
 
+                        <?php
+                        // Récupération des données de la table gites 
+                            $note_gite_moyenne = $donnees['note_moyenne'];
+                            $nombre_note = $donnees['nombre_note'];
+                            $note_add = $donnees['note_add'];
+                        ?>
 
                              <td>
+                                 <!-- Si il n'y a pas de session auth active -->
+                             <?php if(!isset($_SESSION['auth'])): ?>
+                                <div class="alert alert-secondary">Connectez vous pour noter ce gîte</div>
+                             <?php else: ?>
+                                 <!-- Sinon : -->
                                  <div class="row">
+                                     <?php
+                                
+                                     
+                                     
+                                     ?>
                                      <form action="moyenne_gite.php" method="post">
                                          <input type="hidden" value=<?php echo $id_gite ?> name="id">
+                                         <input type="hidden" value=<?php echo $note_gite_moyenne ?> name="note_moyenne">
+                                         <input type="hidden" value=<?php echo $nombre_note ?> name="nombre_note">
+                                         <input type="hidden" value=<?php echo $note_add ?> name="note_add">
                                          <input type="hidden" value="1" name="note-feuille">
+                                         <input type="image"   onmouseover="changecolor()" onmouseout="rechangecolor()" name="" src="img/mini_leaf_black.png" alt="mini logo feuille">
+                                         </fieldset>
+                                     </form>
+                                   
+                                     <form action="moyenne_gite.php" method="post">
+                                         <input type="hidden" value=<?php echo $id_gite ?> name="id">
+                                         <input type="hidden" value=<?php echo $note_gite_moyenne ?> name="note_moyenne">
+                                         <input type="hidden" value=<?php echo $nombre_note ?> name="nombre_note">
+                                         <input type="hidden" value=<?php echo $note_add ?> name="note_add">
+                                         <input type="hidden" value="2" name="note-feuille">
                                          <input type="image"   onmouseover="changecolor()" onmouseout="rechangecolor()" name="" src="img/mini_leaf_black.png" alt="mini logo feuille">
                                      </form>
                                      <form action="moyenne_gite.php" method="post">
-                                         <input type="hidden" value=<?php echo $id_gite ?>name="id">
-                                         <input type="hidden" value="2" name="note-feuille">
-                                         <input type="image" id="leaf2" data_value="2" onmouseover="changecolor()" onmouseout="rechangecolor()" name="note-feuille" src="img/mini_leaf_black.png" alt="mini logo feuille" value=2>
-                                     </form>
-                                     <form action="moyenne_gite.php" method="post">
-                                         <input type="hidden" value=<?php echo $id_gite ?>name="id">
+                                         <input type="hidden" value=<?php echo $id_gite ?> name="id">
+                                         <input type="hidden" value=<?php echo $note_gite_moyenne ?> name="note_moyenne">
+                                         <input type="hidden" value=<?php echo $nombre_note ?> name="nombre_note">
+                                         <input type="hidden" value=<?php echo $note_add ?> name="note_add">
                                          <input type="hidden" value="3" name="note-feuille">
                                          <input type="image" id="leaf2" data_value="2" onmouseover="changecolor()" onmouseout="rechangecolor()" name="note-feuille" src="img/mini_leaf_black.png" alt="mini logo feuille" value=2>
                                      </form>
                                      <form action="moyenne_gite.php" method="post">
-                                         <input type="hidden" value=<?php echo $id_gite ?>name="id">
+                                         <input type="hidden" value=<?php echo $id_gite ?> name="id">
+                                         <input type="hidden" value=<?php echo $note_gite_moyenne ?> name="note_moyenne">
+                                         <input type="hidden" value=<?php echo $nombre_note ?> name="nombre_note">
+                                         <input type="hidden" value=<?php echo $note_add ?> name="note_add">
                                          <input type="hidden" value="4" name="note-feuille">
                                          <input type="image" id="leaf2" data_value="2" onmouseover="changecolor()" onmouseout="rechangecolor()" name="note-feuille" src="img/mini_leaf_black.png" alt="mini logo feuille" value=2>
                                      </form>
                                      <form action="moyenne_gite.php" method="post">
-                                         <input type="hidden" value=<?php echo $id_gite ?>name="id">
+                                         <input type="hidden" value=<?php echo $id_gite ?> name="id">
+                                         <input type="hidden" value=<?php echo $note_gite_moyenne ?> name="note_moyenne">
+                                         <input type="hidden" value=<?php echo $nombre_note ?> name="nombre_note">
+                                         <input type="hidden" value=<?php echo $note_add ?> name="note_add">
                                          <input type="hidden" value="5" name="note-feuille">
                                          <input type="image" id="leaf2" data_value="2" onmouseover="changecolor()" onmouseout="rechangecolor()" name="note-feuille" src="img/mini_leaf_black.png" alt="mini logo feuille" value=2>
-                                     </form>
-
+                                     </form> 
                                  </div>
-
+                                 <?php endif ?>
                              </td>
                          </div>
+
+
                          <!-- javascript notation -->
                          <script>
                              /* FONCTION QUI NE MARCHE PAS POUR NOTATION 
@@ -170,7 +204,7 @@
                          </script>
 
 
-                         <fieldset <?php if (isset($_SESSION['auth']) && $role == "admin") : ?>>
+                          <?php if (isset($_SESSION['auth']) && $role == "admin") : ?>
                              <td>
                                  <form action="maj_gite.php" method="post">
                                      <input name="id_maj" value="<?= $id_gite ?> '" type="hidden" />
@@ -184,7 +218,7 @@
                                  </form>
                              </td>
                          <?php endif ?>
-                         </fieldset>
+                         
                      <?php
                     }
 

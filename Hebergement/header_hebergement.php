@@ -46,7 +46,9 @@ if (session_status() == PHP_SESSION_NONE) {
             <a href="logout_gite.php">Se deconnecter</a>
         <?php else: ?>
 
+        <div class="inscription">
         <a href="register_gite.php">S'inscrire</a>
+        </div>
         <?php include 'little_login_gite.php'; ?>
         <?php endif ?>
     </div>

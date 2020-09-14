@@ -38,10 +38,6 @@ while ($donnees = $req->fetch()) {
 
 
 
-            <div class="input_form">
-                <label for="titre">Note /5 :</label>
-                <input type="number" name="note" id="note" value="<?php echo $note ?>"min=0 max=5>
-            </div>
 
 
 

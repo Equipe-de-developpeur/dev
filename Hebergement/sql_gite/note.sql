@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 11 sep. 2020 à 14:50
+-- Généré le :  lun. 14 sep. 2020 à 14:53
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -25,27 +25,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `gites`
+-- Structure de la table `note`
 --
 
-DROP TABLE IF EXISTS `gites`;
-CREATE TABLE IF NOT EXISTS `gites` (
+DROP TABLE IF EXISTS `note`;
+CREATE TABLE IF NOT EXISTS `note` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(255) NOT NULL,
-  `localisation` varchar(255) NOT NULL,
-  `note` int(5) NOT NULL DEFAULT 0,
-  `note_moyenne` int(5) NOT NULL,
+  `id_gite` int(11) NOT NULL,
+  `id_users` int(11) NOT NULL,
+  `note` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `gites`
+-- Déchargement des données de la table `note`
 --
 
-INSERT INTO `gites` (`id`, `nom`, `localisation`, `note`, `note_moyenne`) VALUES
-(39, 'Gîte de Floppy', 'Cabries', 5, 0),
-(47, 'ouioui', 'nonnon', 1, 0),
-(44, 'Gîte de Jérémy', 'Puget sur Argens', 3, 0);
+INSERT INTO `note` (`id`, `id_gite`, `id_users`, `note`) VALUES
+(1, 39, 20, 3),
+(2, 39, 20, 3),
+(3, 48, 20, 5);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

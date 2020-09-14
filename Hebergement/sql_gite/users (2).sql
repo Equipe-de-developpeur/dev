@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 11 sep. 2020 à 14:50
+-- Généré le :  lun. 14 sep. 2020 à 14:53
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `confirmation_token`, `confirmed_at`, `role`, `reset_token`, `reset_at`) VALUES
-(20, 'JEREMY', 'jeremvk@outlook.fr', '$2y$10$pwFFjXsVq3BfQVnKvuQBOuLFAbpHz0qzkjzPQKYqfkJYEqdBeqYim', NULL, '2020-09-09 09:24:12', 'user', NULL, '2020-09-11 09:54:55'),
+(20, 'JEREMY', 'jeremvk@outlook.fr', '$2y$10$pwFFjXsVq3BfQVnKvuQBOuLFAbpHz0qzkjzPQKYqfkJYEqdBeqYim', NULL, '2020-09-09 09:24:12', 'admin', NULL, '2020-09-11 09:54:55'),
 (19, 'Kenji_Yasuo', 'nguyen.kenji83700@gmail.com', '$2y$10$sf6Rkma/cd29to/k.h6QV.xxsEj0tH0HRu/v9GNoWe0aFwBHwRWeq', 'xsBUR1zwcE1SY9Rh6O5rGERtYhFJpRhsHpgWWIktySeuO4zn1z6pFJFoRmZ2', NULL, 'user', NULL, NULL),
 (21, 'aaa', 'aaa@aaa.fr', '$2y$10$UidaI86x1iqmdxIw21/jRObKjFuyGj5bEe.5NoBYXBfypFvkPYR3e', 'caAVBDFOsT9mdqcQo5ycJADu6B8rKvbg3P8cUXeYgkQ97kZrXXnG5VzUaNeh', NULL, 'user', NULL, NULL);
 COMMIT;

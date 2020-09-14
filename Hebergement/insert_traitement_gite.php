@@ -4,7 +4,7 @@ include 'config_bdd_gite.php';
 // Récupération des données du formulaire
 $nom = $_POST['nom'];
 $localisation = $_POST['localisation'];
-$note = $_POST['note'];
+
 
 // verification de la reception des données
 /*
@@ -14,12 +14,11 @@ echo $note;
 */
 
 // Procedure d'enregistrement des données du formulaire dans la bdd
-$req = $bdd->prepare("INSERT INTO gites (nom, localisation, note) VALUES (:nom, :localisation, :note)");
+$req = $bdd->prepare("INSERT INTO gites (nom, localisation) VALUES (:nom, :localisation)");
 
 if ($req->execute(array(
     'nom' => $nom,
     'localisation' => $localisation,
-    'note' => $note,
 ))) {
 ?>
 
@@ -28,7 +27,6 @@ if ($req->execute(array(
         <p>
             <strong>Nom du gîte :</strong> <?php echo $nom ?><br>
             <strong>Localisation :</strong> <?php echo $localisation ?><br>
-            <strong>Note :</strong> <?php echo $note ?>.</p>
         <a href="gite.php"><button class="btn btn-success article_btn ">Retournez à la liste des tableaux</button></a>
     </article>
 
