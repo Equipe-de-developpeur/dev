@@ -33,7 +33,7 @@
     width: 100%;
 }
 
-.commentaire:first-child {
+.commentaire:first-child, .demandeConnexion:first-child {
     margin-top: 2%;
 }
 

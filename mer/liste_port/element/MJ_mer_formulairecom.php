@@ -4,7 +4,7 @@ if(isset($_SESSION['utilisateur_id']) && $_SESSION['utilisateur_id'] != NULL){ ?
         <fieldset>
             <legend>Laissez un commentaire&nbsp:</legend>
             <input type="hidden" name="id" value="<?php echo $lieuID ?>">
-            <input type="hidden" id="username<?php echo $lieuID ?>" name="username" value="<?php echo $_SESSION['utilisateur_id']?>"><br>
+            <input type="hidden" id="username<?php echo $lieuID ?>" name="username" value="<?php echo $_SESSION['utilisateur_pseudo']?>"><br>
             <label for="commentaire<?php echo $lieuID ?>">Commentaire :</label>
             <textarea id="commentaire<?php echo $lieuID ?>" name="commentaire" rows="3" size="500" maxlenght="500" required>
             </textarea><br>

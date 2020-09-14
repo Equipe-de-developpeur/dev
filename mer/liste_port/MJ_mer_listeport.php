@@ -24,9 +24,7 @@
         if(isset($msg)){
             echo $msg;
         }
-        /*if(isset($_FILES['file'])) {
-            var_dump($_FILES['file']);
-        }*/
+
         ?>
         <div class="lport container-fluid">
             <div class="cadre_critere py-1 px-1">
