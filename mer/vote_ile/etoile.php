@@ -5,13 +5,13 @@
     	$vote = $_REQUEST['vote'];
     	
     	
-		$sql='INSERT INTO vote_ile (ile_id, vote, utilisateur_id) VALUES (:ile_id, :vote, :utilisateur_id)';
+		$sql='INSERT INTO wd_vote_ile (ile_id, vote, utilisateur_id) VALUES (:ile_id, :vote, :utilisateur_id)';
 		$vars['ile_id']=$ile_id;
 		$vars['vote']=$vote;
 		$vars['utilisateur_id']=$_SESSION['utilisateur_id'];
 		$exe=query($sql,$vars);
 		
-    	$sql="SELECT vote FROM vote_ile WHERE ile_id=:ile_id";
+    	$sql="SELECT vote FROM wd_vote_ile WHERE ile_id=:ile_id";
 		$vars2[':ile_id']=$ile_id;
 		$exe=query($sql,$vars2);
 		$nbrvote=0;

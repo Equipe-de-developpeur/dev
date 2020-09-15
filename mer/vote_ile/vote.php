@@ -20,7 +20,7 @@
         $nbrPixelsInDiv = $numStar * $starWidth; // Calcul largeur de la Div en px
         
         // Recuperation du nombre de vote , et leur valeur pour en faire une moyenne
-		$sql="SELECT vote, utilisateur_id FROM vote_ile WHERE ile_id=:ile_id";
+		$sql="SELECT vote, utilisateur_id FROM wd_vote_ile WHERE ile_id=:ile_id";
 		$vars[':ile_id']=$ile_id;
 		$exe=query($sql,$vars);
 		$nbrvote=0;

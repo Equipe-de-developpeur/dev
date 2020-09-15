@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 10 sep. 2020 à 16:32
+-- Généré le : mar. 15 sep. 2020 à 14:51
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.4.7
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_deux_frères_rocher`
+-- Structure de la table `wd_commentaire_deux_frères_rocher`
 --
 
-CREATE TABLE `WD_commentaire_deux_frères_rocher` (
+CREATE TABLE `wd_commentaire_deux_frères_rocher` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -36,10 +36,10 @@ CREATE TABLE `WD_commentaire_deux_frères_rocher` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `commentaire_deux_frères_rocher`
+-- Déchargement des données de la table `wd_commentaire_deux_frères_rocher`
 --
 
-INSERT INTO `WD_commentaire_deux_frères_rocher` (`comment_id`, `parent_comment_id`, `comment`, `comment_nom_membre`, `date`) VALUES
+INSERT INTO `wd_commentaire_deux_frères_rocher` (`comment_id`, `parent_comment_id`, `comment`, `comment_nom_membre`, `date`) VALUES
 (21, 0, 'Test incrementation comm', 'Sangohan83', '2020-09-06 20:58:48'),
 (22, 21, 'test numero 2', 'Sangohan83', '2020-09-06 20:59:20'),
 (23, 21, 'test 3', 'Sangohan83', '2020-09-10 15:18:07'),
@@ -48,10 +48,10 @@ INSERT INTO `WD_commentaire_deux_frères_rocher` (`comment_id`, `parent_comment_
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_les_fourmigues`
+-- Structure de la table `wd_commentaire_les_fourmigues`
 --
 
-CREATE TABLE `WD_commentaire_les_fourmigues` (
+CREATE TABLE `wd_commentaire_les_fourmigues` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -62,10 +62,10 @@ CREATE TABLE `WD_commentaire_les_fourmigues` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_le_lion_de_mer`
+-- Structure de la table `wd_commentaire_le_lion_de_mer`
 --
 
-CREATE TABLE `WD_commentaire_le_lion_de_mer` (
+CREATE TABLE `wd_commentaire_le_lion_de_mer` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -76,10 +76,10 @@ CREATE TABLE `WD_commentaire_le_lion_de_mer` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_le_lion_de_terre`
+-- Structure de la table `wd_commentaire_le_lion_de_terre`
 --
 
-CREATE TABLE `WD_commentaire_le_lion_de_terre` (
+CREATE TABLE `wd_commentaire_le_lion_de_terre` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -90,10 +90,10 @@ CREATE TABLE `WD_commentaire_le_lion_de_terre` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_rocher_du_rascas`
+-- Structure de la table `wd_commentaire_rocher_du_rascas`
 --
 
-CREATE TABLE `WD_commentaire_rocher_du_rascas` (
+CREATE TABLE `wd_commentaire_rocher_du_rascas` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -104,10 +104,10 @@ CREATE TABLE `WD_commentaire_rocher_du_rascas` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_des_embiez`
+-- Structure de la table `wd_commentaire_île_des_embiez`
 --
 
-CREATE TABLE `WD_commentaire_île_des_embiez` (
+CREATE TABLE `wd_commentaire_île_des_embiez` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -118,10 +118,10 @@ CREATE TABLE `WD_commentaire_île_des_embiez` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_des_vieilles`
+-- Structure de la table `wd_commentaire_île_des_vieilles`
 --
 
-CREATE TABLE `WD_commentaire_île_des_vieilles` (
+CREATE TABLE `wd_commentaire_île_des_vieilles` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -132,10 +132,10 @@ CREATE TABLE `WD_commentaire_île_des_vieilles` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_de_bagaud`
+-- Structure de la table `wd_commentaire_île_de_bagaud`
 --
 
-CREATE TABLE `WD_commentaire_île_de_bagaud` (
+CREATE TABLE `wd_commentaire_île_de_bagaud` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -146,10 +146,10 @@ CREATE TABLE `WD_commentaire_île_de_bagaud` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_de_bendor`
+-- Structure de la table `wd_commentaire_île_de_bendor`
 --
 
-CREATE TABLE `WD_commentaire_île_de_bendor` (
+CREATE TABLE `wd_commentaire_île_de_bendor` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -160,10 +160,10 @@ CREATE TABLE `WD_commentaire_île_de_bendor` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_de_la_redonne`
+-- Structure de la table `wd_commentaire_île_de_la_redonne`
 --
 
-CREATE TABLE `WD_commentaire_île_de_la_redonne` (
+CREATE TABLE `wd_commentaire_île_de_la_redonne` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -174,10 +174,10 @@ CREATE TABLE `WD_commentaire_île_de_la_redonne` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_de_porquerolles`
+-- Structure de la table `wd_commentaire_île_de_porquerolles`
 --
 
-CREATE TABLE `WD_commentaire_île_de_porquerolles` (
+CREATE TABLE `wd_commentaire_île_de_porquerolles` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -188,10 +188,10 @@ CREATE TABLE `WD_commentaire_île_de_porquerolles` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_de_port_cros`
+-- Structure de la table `wd_commentaire_île_de_port_cros`
 --
 
-CREATE TABLE `WD_commentaire_île_de_port_cros` (
+CREATE TABLE `wd_commentaire_île_de_port_cros` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -202,10 +202,10 @@ CREATE TABLE `WD_commentaire_île_de_port_cros` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_du_grand_gaou`
+-- Structure de la table `wd_commentaire_île_du_grand_gaou`
 --
 
-CREATE TABLE `WD_commentaire_île_du_grand_gaou` (
+CREATE TABLE `wd_commentaire_île_du_grand_gaou` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -216,10 +216,10 @@ CREATE TABLE `WD_commentaire_île_du_grand_gaou` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_du_grand_ribaud`
+-- Structure de la table `wd_commentaire_île_du_grand_ribaud`
 --
 
-CREATE TABLE `WD_commentaire_île_du_grand_ribaud` (
+CREATE TABLE `wd_commentaire_île_du_grand_ribaud` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -230,10 +230,10 @@ CREATE TABLE `WD_commentaire_île_du_grand_ribaud` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_du_grand_rouveau`
+-- Structure de la table `wd_commentaire_île_du_grand_rouveau`
 --
 
-CREATE TABLE `WD_commentaire_île_du_grand_rouveau` (
+CREATE TABLE `wd_commentaire_île_du_grand_rouveau` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -244,10 +244,10 @@ CREATE TABLE `WD_commentaire_île_du_grand_rouveau` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_du_levant`
+-- Structure de la table `wd_commentaire_île_du_levant`
 --
 
-CREATE TABLE `WD_commentaire_île_du_levant` (
+CREATE TABLE `wd_commentaire_île_du_levant` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -258,10 +258,10 @@ CREATE TABLE `WD_commentaire_île_du_levant` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_du_petit_gaou`
+-- Structure de la table `wd_commentaire_île_du_petit_gaou`
 --
 
-CREATE TABLE `WD_commentaire_île_du_petit_gaou` (
+CREATE TABLE `wd_commentaire_île_du_petit_gaou` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -272,10 +272,10 @@ CREATE TABLE `WD_commentaire_île_du_petit_gaou` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_du_petit_ribaud`
+-- Structure de la table `wd_commentaire_île_du_petit_ribaud`
 --
 
-CREATE TABLE `WD_commentaire_île_du_petit_ribaud` (
+CREATE TABLE `wd_commentaire_île_du_petit_ribaud` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -286,10 +286,32 @@ CREATE TABLE `WD_commentaire_île_du_petit_ribaud` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_du_petit_rouveau`
+-- Structure de la table `wd_commentaire_île_du_petit_rouveau`
 --
 
-CREATE TABLE `WD_commentaire_île_du_petit_rouveau` (
+CREATE TABLE `wd_commentaire_île_du_petit_rouveau` (
+  `comment_id` int(11) NOT NULL,
+  `parent_comment_id` int(11) NOT NULL,
+  `comment` varchar(255) NOT NULL,
+  `comment_nom_membre` varchar(100) NOT NULL,
+  `date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `wd_commentaire_île_du_petit_rouveau`
+--
+
+INSERT INTO `wd_commentaire_île_du_petit_rouveau` (`comment_id`, `parent_comment_id`, `comment`, `comment_nom_membre`, `date`) VALUES
+(1, 0, 'trgrgrg', 'Sangohan83', '2020-09-10 16:56:24'),
+(2, 1, 'geff', 'Sangohan83', '2020-09-10 16:56:30');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `wd_commentaire_île_d_or`
+--
+
+CREATE TABLE `wd_commentaire_île_d_or` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -300,10 +322,10 @@ CREATE TABLE `WD_commentaire_île_du_petit_rouveau` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_d_or`
+-- Structure de la table `wd_commentaire_île_rousse`
 --
 
-CREATE TABLE `WD_commentaire_île_d_or` (
+CREATE TABLE `wd_commentaire_île_rousse` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -314,10 +336,10 @@ CREATE TABLE `WD_commentaire_île_d_or` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_île_rousse`
+-- Structure de la table `wd_commentaire_îlot_de_la_gabinière`
 --
 
-CREATE TABLE `WD_commentaire_île_rousse` (
+CREATE TABLE `wd_commentaire_îlot_de_la_gabinière` (
   `comment_id` int(11) NOT NULL,
   `parent_comment_id` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -328,24 +350,10 @@ CREATE TABLE `WD_commentaire_île_rousse` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_îlot_de_la_gabinière`
+-- Structure de la table `wd_liste_ile`
 --
 
-CREATE TABLE `WD_commentaire_îlot_de_la_gabinière` (
-  `comment_id` int(11) NOT NULL,
-  `parent_comment_id` int(11) NOT NULL,
-  `comment` varchar(255) NOT NULL,
-  `comment_nom_membre` varchar(100) NOT NULL,
-  `date` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `liste_ile`
---
-
-CREATE TABLE `WD_liste_ile` (
+CREATE TABLE `wd_liste_ile` (
   `liste_ile_id` int(11) NOT NULL,
   `liste_ile_nom` varchar(50) DEFAULT NULL,
   `liste_ile_ville` varchar(50) DEFAULT NULL,
@@ -359,40 +367,40 @@ CREATE TABLE `WD_liste_ile` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `liste_ile`
+-- Déchargement des données de la table `wd_liste_ile`
 --
 
-INSERT INTO `WD_liste_ile` (`liste_ile_id`, `liste_ile_nom`, `liste_ile_ville`, `liste_ile_ecologie`, `liste_ile_nombre_de_vote`, `liste_ile_note_moyenne`, `liste_ile_latitude`, `liste_ile_longitude`, `liste_ile_distance`, `liste_ile_data`) VALUES
-(1, 'Île des Embiez', 'Six Fours Les Plages', NULL, 0, 0, 43.0762, 5.78468, 52.62, 'L\'île des Embiez (leis Embiers en occitan selon la norme classique ou leis Embiés en provençal selon la norme mistralienne, signifiant « les deux ») est une île française située à un kilomètre de Six-Fours-les-Plages près de Toulon. Elle est formée par la réunion des îles de la Tour Fondue (en fait, « fendue ») à l\'Ouest et Saint-Pierre ou de la Pinède à l\'Est, reliées par des limons et des alluvions.\r\n\r\nToute l’île a été façonnée dans un style bucolique cher à Paul Ricard, qui donne à l\'île son cachet. La circulation automobile y est très limitée : Paul Ricard a d’ailleurs mis à disposition de ses employés présents sur l’île des voiturettes et mobylettes électriques\r\n '),
-(2, 'Île du Grand Gaou', 'Six Fours Les Plages', NULL, 0, 0, 43.0703, 5.78152, 53.32, 'L\'Île du Grand Gaou est une île française du Var. Elle dépend administrativement de Six-Fours-les-Plages et fait géographiquement partie de l\'archipel des Embiez.\r\n\r\nLe site touristique est protégé pour ses plantes sous-marines de la famille des Posidoniaceae (Posidonie). L\'Île du grand Gaou renferme de nombreuses criques, est traversée par un sentier de découverte botanique et dispose d\'aires de pique-nique. Une passerelle la relie à l\'île du Petit Gaou\r\n\r\nL\'ensemble du site de la « Lagune du Brusc » est protégée par une charte Natura 2000, comprenant notamment les hauts fonds de l\'Archipel des Embiez, sur une superficie de 451 hectares'),
-(3, 'Île du Petit Gaou', 'Six Fours Les Plages', NULL, 0, 0, 43.0683, 5.78443, 53.47, 'L\'île du Gaou, est située dans le prolongement du port du Brusc, face à l\'île des Embiez. Ce petit paradis est accessible par une passerelle. Elle est très appréciée des habitants et des touristes qui aiment allez y faire un pique nique en famille ou entre amis, ou faire une partie de pétanque sous les pins. Ces fameux pins sculptés par le vent que l\'on nomme pins anémomorphosés.\r\nPetit coin sous les arbres, petites plages, grands espaces pour jouer au ballon, la presqu\'ile est assez variée et tout le monde y trouve son plaisir. Par mauvais temps le Gaou a même une petite ressemblance avec la Bretagne, et ce n\'est pas pour nous déplaire !'),
-(4, 'Île du Grand Rouveau', 'Six Fours Les Plages', NULL, 0, 0, 43.0806, 5.75886, 52.72, 'L\'île du Grand Rouveau fait partie de l\'archipel des Embiez qui comprend cinq îles avec le petit Rouveau, le petit Gaou, le grand Gaou et la plus grande l\'île des Embiez. Elle est située sur le territoire de la commune de Six-Fours-les-Plages dans le Var. Propriété du Conservatoire du Littoral depuis 2000, l\'île est gérée par la ville de Six-Fours-les-Plages avec le soutien de l\'initiative des Petites Iles de Méditerranée (initiative PIM), portée par la délégation internationale du Conservatoire du Littoral. C’est un endroit idéal pour la plongée sous marine. Aucune ligne régulière ne dessert l\'île.Au sommet de la petite île, à 17 m d’altitude se dresse le phare du Grand Rouveau. '),
-(5, 'Île du Petit Rouveau', 'Six Fours Les Plages', NULL, 0, 0, 43.0837, 5.76959, 52.14, 'L\'île du Petit Rouveau est une île française du Var. Elle appartient administrativement à Six-Fours-les-Plages. Il s\'agit d\'un îlot, lieu de nidification fréquentée par de nombreux goélands leucophée. Il fait partie de l\'archipel des Embiez. Ses 5 hectares de superficie marque l\'entrée dans la rade du Brusc'),
-(6, 'Île de Bagaud', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0112, 6.36214, 67.04, 'L\'Île de Bagaud ou îlot de Bagaud est, avec ses 59 hectares, une des plus petites des îles d\'Hyères. Proche de l\'Île de Port-Cros et à quelques kilomètres de Porquerolles, l\'île, qui est classée réserve intégrale de parc national, est actuellement inhabitée et interdite d\'accès. L\'île fait partie de la commune d\'Hyères.'),
-(7, 'Îlot de la Gabinière', 'Hyeres Les Palmiers', NULL, 0, 0, 42.9883, 6.3863, 70.23, 'L\'îlot de la Gabinière est un des îlots des îles d\'Hyères.\r\n\r\nSitué au sud de Port-Cros, il fait partie du Parc national de Port-Cros et est classé réserve intégrale. Cependant et en dépit de sa petite taille, il est connu pour ses sites de plongée sous-marine.\r\n\r\nSur l\'ensemble du parc de Port-Cros, ce site représente celui qui abrite une exceptionnelle concentration de mérous bruns (Epinephelus marginatus). '),
-(8, 'Rocher du Rascas', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0144, 6.38043, 67.48, 'Le rocher du Rascas est un des îlots des îles d\'Hyères.Situé au nord de Port-Cros, il fait partie du Parc national de Port-Cros. Il est classé réserve intégrale, et son accès est totalement interdit. '),
-(9, 'Île du Levant', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0284, 6.43704, 68.68, 'L’île du Levant est la fraction la plus orientale de la commune française d’Hyères, commune du département du Var en région Provence-Alpes-Côte d\'Azur. Cette île méditerranéenne, la plus orientale de l\'archipel des îles d\'Hyères, fait face au massif des Maures au large des communes de Bormes-les-Mimosas et du Lavandou, d\'où la majorité des dessertes est assurée.\r\n\r\nL\'archipel est initialement considéré dans sa globalité et l\'île n\'en fait que partie. Il revêt un rôle essentiel pour une navigation surtout côtière. Elle comporte un farot au Moyen Âge central puis un phare au début du XIXe siècle, qui signale au large l\'entrée est de la rade d\'Hyères. Le sémaphore de même époque, désormais désaffecté, sert aussi aux signaux. '),
-(10, 'Île de Porquerolles', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0002, 6.2023, 62.77, 'L’île de Porquerolles est la plus grande et la plus occidentale des trois îles d\'Hyères avec ses 12,54 km&#xB2; de superficie. Elle se situe à 2,6 km au sud-est de la Tour Fondue, l\'extrémité sud de la presqu\'île de Giens, et à 9,6 km à l\'ouest de l\'île de Port-Cros. Elle forme un arc orienté est-ouest, aux bords découpés, de 7,5 km de long sur 3 km de large. Son pourtour est d’une trentaine de kilomètres. L’île culmine au sémaphore à 142 m. Elle doit son état de conservation au fait qu\'elle est propriété de l\'État français depuis 1971 et bénéficie du statut de « parc national » depuis 2012.\r\n '),
-(11, 'Île de Port-Cros', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0091, 6.38441, 68.15, 'L\'île de Port-Cros est une des trois îles d\'Hyères, archipel côtier de la mer Méditerranée, dans le département du Var et la région Provence-Alpes-Côte d\'Azur. Elle se situe à 1,1 km à l\'ouest de l\'île du Levant et à 8,3 km au sud du cap Bénat, une pointe rocheuse du littoral de Bormes-les-Mimosas.\r\n\r\nL\'île de Port-Cros correspond au cœur du Parc national de Port-Cros, un établissement public à caractère administratif, placé sous l\'autorité du Ministère de chargé de l\'écologie. Il vise à protéger le patrimoine naturel de l\'île et du périmètre marin situé autour d\'elle. '),
-(12, 'Île du Grand Ribaud', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0188, 6.1346, 59.2, 'L\'île du Grand Ribaud se situe entre l\'île de Porquerolles et la presqu\'île de Giens, à 1 km au sud-ouest de l\'embarcadère de la Tour Fondue, à Hyères.\r\n\r\nCette île fut acquise par le Professeur Charles Richet, prix Nobel de physiologie en 1913. Elle appartient désormais à ses héritiers qui ont fondé une société civile. À leur demande, l\'île fut classée non constructible pour éviter les spéculations. Seules deux maisons existent sur le côté est ; une avec ses deux étages et une tourelle, l\'autre en longueur et sans étage.\r\n\r\nSa surface est de 16 hectares environ.\r\n\r\nSa côte ouest est rocailleuse et pauvre en végétation. Son centre est plus touffu, avec des chênes verts, arbousiers, myrtes et lentisques. Quelques pins et oliviers furent plantés avant la Seconde Guerre mondiale.\r\n\r\nDes viviers existent encore autour de l\'île où le professeur élevait des méduses et divers poissons venimeux utiles à ses recherches.\r\n\r\nLa pointe sud appartient à l\'État, avec son phare, un embarcadère et un vieux fort napoléonien.\r\n\r\nLe phare date de 1953, il a été reconstruit après les destructions de la Seconde Guerre mondiale. Il y avait un phare à cet endroit depuis 1851. '),
-(13, 'Île du Petit Ribaud', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0234, 6.13842, 58.78, 'L\'île du Petit Ribaud est un îlot se situant entre l\'île du Grand Ribaud et la presqu\'île de Giens, au sud-ouest de l\'embarcadère de la Tour Fondue, à Hyères.\r\n\r\nL\'îlot du Ribaudon se trouve entre la pointe de Terre Rouge et l\'île du Petit Ribaud.\r\nPetit Ribaud\r\n\r\nUne maison en pierre édifiée sur deux niveaux est présente sur le Petit Ribaud. Elle paraît abandonnée.\r\n\r\nElle a été mise en vente il y a plusieurs dizaines d\'années (parution dans les pages immobilier du Figaro magazine), mais elle n\'a pas trouvé preneur. Cette île présente en effet de nombreux handicaps : exposition très forte au vent (mistral et vent d\'Est), petit terrain, absence de port abrité, pas de plage, impossibilité de construire, insularité. Toutefois, le site est unique en raison de son emplacement et de sa rareté. L\'île jouit d\'un dispositif d\'alimentation en eau et en électricité. '),
-(14, 'Île de la Redonne', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0426, 6.08949, 55.78, 'L\'île de la Redonne est un territoire riche et sensible d\'un point de vue environnemental, comme de nombreux lieux voisins et bénéficie à ce titre de diverses protections.\r\n\r\nElle fait partie de la zone naturelle d’intérêt écologique, faunistique et floristique (ZNIEFF) continentale de type 2 de la presqu\'île de Giens, est entourée par la ZNIEFF marine de type 2 de la presqu\'île de Giens, fait partie du site Natura 2000 (Directive oiseaux) de type A (Zone de Protection Spéciale) Iles d\'Hyères et du site Natura 2000 (Directive Habitats, faune, flore) de type B (Zone Spéciale de Conservation) Rade d\'Hyères, depuis l\'arrêté du 26 juin 2014.\r\n\r\nL\'île est aussi intégrée à l\'aire marine adjacente du parc national de Port-Cros, réplique maritime de l\'aire potentielle d\'adhésion du parc national, couvrant l\'ensemble du territoire de la commune d\'Hyères et d\'autres communes voisines.\r\n\r\nEnfin, l\'ensemble de l\'île fait partie de plusieurs parcelles de terrains acquises et protégées par le conservatoire du littoral et des rivages lacustres, depuis le 13 octobre 1978, sous le titre « Presqu\'île de Giens », pour une surface totale de 642,07 hectares, sites et acquisitions comprises, tandis que la parcelle acquise, dont l\'île fait partie, a une superficie calculée de 102,285 hectares. Cette protection est de catégorie IV sur le classement d\'aires naturelles protégées de l\'UICN, au titre d\'aire gérée pour l\'habitat et les espèces. '),
-(15, 'Île de Bendor', 'Bandol', NULL, 0, 0, 43.1277, 5.75019, 47.96, 'L’île de Bendor est surnommée le « jardin des arts de la Méditerranée ». Paul Ricard, artiste peintre à ses heures et passionné d’art, a voulu faire de cette île le lieu de rencontre des artistes.\r\n\r\nOn peut croiser dans l\'ile, sous quantité de formes différentes (sculptures et ferronneries) la Croix de Bendor, symbole de l’île dessiné par Paul Ricard d’après la Croix des Templiers.\r\n\r\nL’île est parsemée de statues et d’œuvres d’art, dont le monolithe de Botinelly intitulé Nul bien sans peine, qui domine le débarcadère. L’œuvre fut érigée à la gloire de Pierre Puget, sculpteur, peintre et architecte provençal du XVIIe siècle à qui Paul Ricard emprunta la devise. Au sommet de l’île, la vierge du sculpteur marseillais Raymond Servian domine la mer et est l’objet d’un pèlerinage fervent chaque année pour le 15 août. On trouve aussi le « Neptune » œuvre imposante de Michel Barra et bien d’autres œuvres, bustes, statues et bas-reliefs nichés dans les jardins et les murs, créations d’élèves des Beaux-Arts de passage sur l’île. '),
-(16, 'Deux Frères (rocher)', 'La Seyne sur Mer', NULL, 0, 0, 43.118, 5.77344, 48.39, 'Les Deux Frères (ou les Freirets, ces deux formations rocheuses portaient le nom de Rochers des Freirets au XIXe siècle) sont deux rochers émergeant à la pointe du Cap Sicié (Var, France) et visibles depuis la plage des Sablettes à La Seyne-sur-Mer. C\'est un lieu qui accueille de nombreux plaisanciers ainsi que des clubs de plongée dont l\'objectif est la visite d\'une épave située à proximité immédiate.\r\n\r\nLa légende locale raconte que deux frères trouvèrent un soir une sirène blessée sur la plage. Ils la soignèrent et tombèrent éperdument amoureux et dans leur folie, ils s\'entretuèrent. La sirène, avant de regagner les flots, supplia Poséidon de leur laisser une forme apparente en souvenir de leur passion. Le dieu de la mer y dressa les deux rocs'),
-(17, 'Les Fourmigues', 'Hyeres Les Palmiers', NULL, 0, 0, 43.04, 6.06051, 55.64, 'Les Fourmigues sont des îles françaises du département du Var. Elles appartiennent administrativement à la commune de Hyères.\r\n\r\nC\'est un site très fréquenté de plongée sous-marine\r\n\r\nIl s\'agit de deux roches situées à l\'ouest de la presqu\'île de Giens. La Fourmigue est la plus grande des deux, le Fourmigon distant d\'une vingtaine de mètres à l\'ouest est plus petite. Une profondeur de 16-17 mètres sépare les deux îlots.\r\n\r\nÀ l\'est de la Fourmigue, une sèche, souvent appelée la « roche bleue » dans les centres de plongée locaux, remonte de 34 mètres jusqu\'à 9 mètres. '),
-(18, 'Île Rousse', 'Bandol', NULL, 0, 0, 43.1331, 5.71958, 48.3, 'L\'île Rousse est une île du département du Var. Elles appartiennent administrativement à la commune de Bandol. '),
-(19, 'Le Lion de mer', 'Saint Raphael', NULL, 0, 0, 43.4069, 6.76543, 67.36, 'Le Lion de mer est un îlot rocheux, composé de rochers roux (porphyre), situé dans la baie de Saint-Raphaël.\r\n\r\nUne Vierge trône sur le sommet de l\'île et la pointe est occupée par des installations techniques.\r\n\r\nLe site est également un spot de plongée reconnu. On y trouve notamment une voûte tapissée de coraux en fleur. Deux statues agrémentent la sortie du passage de l\'arche : la Vierge et la Sirène.\r\nIl se situe à proximité d\'un autre îlot rocheux appelé le Lion de terre. '),
-(20, 'Le Lion de terre', 'Saint Raphael', NULL, 0, 0, 43.4081, 6.77364, 67.98, 'Le lion de terre est un îlot rocheux, composé de rochers roux (porphyre), situé dans la baie de Saint-Raphaël, à l\'est du port de plaisance de Santa-Lucia. Il se situe à proximité d\'un autre îlot rocheux appelé le Lion de mer. '),
-(21, 'Île d\'Or', 'Saint Raphael', NULL, 0, 0, 43.4107, 6.84668, 73.71, 'L\'îlot est composé de rochers rouges — rhyolite — comme le reste du massif de l\'Esterel dont il fait partie et par ailleurs il bénéficie d\'un environnement particulier. En effet il se détache du rivage très proche car à terre la plage se compose d\'estérellites bleues qui côtoient le bleu, variant sans cesse, de la mer Méditerranée. Ainsi les nuances de la teinte de la mer diffèrent en fonction de l\'état du ciel qui s\'y reflète, tantôt éclatant tantôt chargé. À ces données il faut adjoindre suivant l\'heure l\'effet des rayons du soleil. Ceci explique l\'attrait du lieu pour de très nombreux artistes. '),
-(22, 'Île des Vieilles', 'Saint Raphael', NULL, 0, 0, 43.4272, 6.89415, 77.17, 'L\'île des Vieilles est un îlot rocheux, composé de rochers roux, située à l\'est de Saint-Raphaël, près du site d\'Anthéor. Il appartient au massif de l\'Esterel. C\'est l\'îlot le plus étendu de la côte de ce massif.\r\n\r\nLe nom de l\'île fait sans doute référence à un type de poisson méditerranéen dénommé vieille.\r\n\r\nEst également nommé localement île des Veilles en référence à l\'usage qui en aurait été fait pour prévenir les risques d\'échouage des navires. Au sud de l\'île se trouve la balise cardinale sud dite la chrétienne. Elle signale un endroit a contourner ou se sont échoués de nombreux navires. C\'est un remarquable site de plongée. \r\n\r\nCet îlot à la particularité d\'abriter des espèces botaniques qu\'on ne trouve plus à Anthéor sur les rives d\'en face');
+INSERT INTO `wd_liste_ile` (`liste_ile_id`, `liste_ile_nom`, `liste_ile_ville`, `liste_ile_ecologie`, `liste_ile_nombre_de_vote`, `liste_ile_note_moyenne`, `liste_ile_latitude`, `liste_ile_longitude`, `liste_ile_distance`, `liste_ile_data`) VALUES
+(1, 'Île des Embiez', 'Six Fours Les Plages', NULL, 0, 0, 43.0762, 5.78468, 97.26, 'L\'île des Embiez (leis Embiers en occitan selon la norme classique ou leis Embiés en provençal selon la norme mistralienne, signifiant « les deux ») est une île française située à un kilomètre de Six-Fours-les-Plages près de Toulon. Elle est formée par la réunion des îles de la Tour Fondue (en fait, « fendue ») à l\'Ouest et Saint-Pierre ou de la Pinède à l\'Est, reliées par des limons et des alluvions.\r\n\r\nToute l’île a été façonnée dans un style bucolique cher à Paul Ricard, qui donne à l\'île son cachet. La circulation automobile y est très limitée : Paul Ricard a d’ailleurs mis à disposition de ses employés présents sur l’île des voiturettes et mobylettes électriques\r\n '),
+(2, 'Île du Grand Gaou', 'Six Fours Les Plages', NULL, 0, 0, 43.0703, 5.78152, 97.82, 'L\'Île du Grand Gaou est une île française du Var. Elle dépend administrativement de Six-Fours-les-Plages et fait géographiquement partie de l\'archipel des Embiez.\r\n\r\nLe site touristique est protégé pour ses plantes sous-marines de la famille des Posidoniaceae (Posidonie). L\'Île du grand Gaou renferme de nombreuses criques, est traversée par un sentier de découverte botanique et dispose d\'aires de pique-nique. Une passerelle la relie à l\'île du Petit Gaou\r\n\r\nL\'ensemble du site de la « Lagune du Brusc » est protégée par une charte Natura 2000, comprenant notamment les hauts fonds de l\'Archipel des Embiez, sur une superficie de 451 hectares'),
+(3, 'Île du Petit Gaou', 'Six Fours Les Plages', NULL, 0, 0, 43.0683, 5.78443, 97.73, 'L\'île du Gaou, est située dans le prolongement du port du Brusc, face à l\'île des Embiez. Ce petit paradis est accessible par une passerelle. Elle est très appréciée des habitants et des touristes qui aiment allez y faire un pique nique en famille ou entre amis, ou faire une partie de pétanque sous les pins. Ces fameux pins sculptés par le vent que l\'on nomme pins anémomorphosés.\r\nPetit coin sous les arbres, petites plages, grands espaces pour jouer au ballon, la presqu\'ile est assez variée et tout le monde y trouve son plaisir. Par mauvais temps le Gaou a même une petite ressemblance avec la Bretagne, et ce n\'est pas pour nous déplaire !'),
+(4, 'Île du Grand Rouveau', 'Six Fours Les Plages', NULL, 0, 0, 43.0806, 5.75886, 98.81, 'L\'île du Grand Rouveau fait partie de l\'archipel des Embiez qui comprend cinq îles avec le petit Rouveau, le petit Gaou, le grand Gaou et la plus grande l\'île des Embiez. Elle est située sur le territoire de la commune de Six-Fours-les-Plages dans le Var. Propriété du Conservatoire du Littoral depuis 2000, l\'île est gérée par la ville de Six-Fours-les-Plages avec le soutien de l\'initiative des Petites Iles de Méditerranée (initiative PIM), portée par la délégation internationale du Conservatoire du Littoral. C’est un endroit idéal pour la plongée sous marine. Aucune ligne régulière ne dessert l\'île.Au sommet de la petite île, à 17 m d’altitude se dresse le phare du Grand Rouveau. '),
+(5, 'Île du Petit Rouveau', 'Six Fours Les Plages', NULL, 0, 0, 43.0837, 5.76959, 97.88, 'L\'île du Petit Rouveau est une île française du Var. Elle appartient administrativement à Six-Fours-les-Plages. Il s\'agit d\'un îlot, lieu de nidification fréquentée par de nombreux goélands leucophée. Il fait partie de l\'archipel des Embiez. Ses 5 hectares de superficie marque l\'entrée dans la rade du Brusc'),
+(6, 'Île de Bagaud', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0112, 6.36214, 67.98, 'L\'Île de Bagaud ou îlot de Bagaud est, avec ses 59 hectares, une des plus petites des îles d\'Hyères. Proche de l\'Île de Port-Cros et à quelques kilomètres de Porquerolles, l\'île, qui est classée réserve intégrale de parc national, est actuellement inhabitée et interdite d\'accès. L\'île fait partie de la commune d\'Hyères.'),
+(7, 'Îlot de la Gabinière', 'Hyeres Les Palmiers', NULL, 0, 0, 42.9883, 6.3863, 69.14, 'L\'îlot de la Gabinière est un des îlots des îles d\'Hyères.\r\n\r\nSitué au sud de Port-Cros, il fait partie du Parc national de Port-Cros et est classé réserve intégrale. Cependant et en dépit de sa petite taille, il est connu pour ses sites de plongée sous-marine.\r\n\r\nSur l\'ensemble du parc de Port-Cros, ce site représente celui qui abrite une exceptionnelle concentration de mérous bruns (Epinephelus marginatus). '),
+(8, 'Rocher du Rascas', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0144, 6.38043, 66.89, 'Le rocher du Rascas est un des îlots des îles d\'Hyères.Situé au nord de Port-Cros, il fait partie du Parc national de Port-Cros. Il est classé réserve intégrale, et son accès est totalement interdit. '),
+(9, 'Île du Levant', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0284, 6.43704, 63.23, 'L’île du Levant est la fraction la plus orientale de la commune française d’Hyères, commune du département du Var en région Provence-Alpes-Côte d\'Azur. Cette île méditerranéenne, la plus orientale de l\'archipel des îles d\'Hyères, fait face au massif des Maures au large des communes de Bormes-les-Mimosas et du Lavandou, d\'où la majorité des dessertes est assurée.\r\n\r\nL\'archipel est initialement considéré dans sa globalité et l\'île n\'en fait que partie. Il revêt un rôle essentiel pour une navigation surtout côtière. Elle comporte un farot au Moyen Âge central puis un phare au début du XIXe siècle, qui signale au large l\'entrée est de la rade d\'Hyères. Le sémaphore de même époque, désormais désaffecté, sert aussi aux signaux. '),
+(10, 'Île de Porquerolles', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0002, 6.2023, 76.69, 'L’île de Porquerolles est la plus grande et la plus occidentale des trois îles d\'Hyères avec ses 12,54 km&#xB2; de superficie. Elle se situe à 2,6 km au sud-est de la Tour Fondue, l\'extrémité sud de la presqu\'île de Giens, et à 9,6 km à l\'ouest de l\'île de Port-Cros. Elle forme un arc orienté est-ouest, aux bords découpés, de 7,5 km de long sur 3 km de large. Son pourtour est d’une trentaine de kilomètres. L’île culmine au sémaphore à 142 m. Elle doit son état de conservation au fait qu\'elle est propriété de l\'État français depuis 1971 et bénéficie du statut de « parc national » depuis 2012.\r\n '),
+(11, 'Île de Port-Cros', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0091, 6.38441, 67.23, 'L\'île de Port-Cros est une des trois îles d\'Hyères, archipel côtier de la mer Méditerranée, dans le département du Var et la région Provence-Alpes-Côte d\'Azur. Elle se situe à 1,1 km à l\'ouest de l\'île du Levant et à 8,3 km au sud du cap Bénat, une pointe rocheuse du littoral de Bormes-les-Mimosas.\r\n\r\nL\'île de Port-Cros correspond au cœur du Parc national de Port-Cros, un établissement public à caractère administratif, placé sous l\'autorité du Ministère de chargé de l\'écologie. Il vise à protéger le patrimoine naturel de l\'île et du périmètre marin situé autour d\'elle. '),
+(12, 'Île du Grand Ribaud', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0188, 6.1346, 78.85, 'L\'île du Grand Ribaud se situe entre l\'île de Porquerolles et la presqu\'île de Giens, à 1 km au sud-ouest de l\'embarcadère de la Tour Fondue, à Hyères.\r\n\r\nCette île fut acquise par le Professeur Charles Richet, prix Nobel de physiologie en 1913. Elle appartient désormais à ses héritiers qui ont fondé une société civile. À leur demande, l\'île fut classée non constructible pour éviter les spéculations. Seules deux maisons existent sur le côté est ; une avec ses deux étages et une tourelle, l\'autre en longueur et sans étage.\r\n\r\nSa surface est de 16 hectares environ.\r\n\r\nSa côte ouest est rocailleuse et pauvre en végétation. Son centre est plus touffu, avec des chênes verts, arbousiers, myrtes et lentisques. Quelques pins et oliviers furent plantés avant la Seconde Guerre mondiale.\r\n\r\nDes viviers existent encore autour de l\'île où le professeur élevait des méduses et divers poissons venimeux utiles à ses recherches.\r\n\r\nLa pointe sud appartient à l\'État, avec son phare, un embarcadère et un vieux fort napoléonien.\r\n\r\nLe phare date de 1953, il a été reconstruit après les destructions de la Seconde Guerre mondiale. Il y avait un phare à cet endroit depuis 1851. '),
+(13, 'Île du Petit Ribaud', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0234, 6.13842, 78.26, 'L\'île du Petit Ribaud est un îlot se situant entre l\'île du Grand Ribaud et la presqu\'île de Giens, au sud-ouest de l\'embarcadère de la Tour Fondue, à Hyères.\r\n\r\nL\'îlot du Ribaudon se trouve entre la pointe de Terre Rouge et l\'île du Petit Ribaud.\r\nPetit Ribaud\r\n\r\nUne maison en pierre édifiée sur deux niveaux est présente sur le Petit Ribaud. Elle paraît abandonnée.\r\n\r\nElle a été mise en vente il y a plusieurs dizaines d\'années (parution dans les pages immobilier du Figaro magazine), mais elle n\'a pas trouvé preneur. Cette île présente en effet de nombreux handicaps : exposition très forte au vent (mistral et vent d\'Est), petit terrain, absence de port abrité, pas de plage, impossibilité de construire, insularité. Toutefois, le site est unique en raison de son emplacement et de sa rareté. L\'île jouit d\'un dispositif d\'alimentation en eau et en électricité. '),
+(14, 'Île de la Redonne', 'Hyeres Les Palmiers', NULL, 0, 0, 43.0426, 6.08949, 79.62, 'L\'île de la Redonne est un territoire riche et sensible d\'un point de vue environnemental, comme de nombreux lieux voisins et bénéficie à ce titre de diverses protections.\r\n\r\nElle fait partie de la zone naturelle d’intérêt écologique, faunistique et floristique (ZNIEFF) continentale de type 2 de la presqu\'île de Giens, est entourée par la ZNIEFF marine de type 2 de la presqu\'île de Giens, fait partie du site Natura 2000 (Directive oiseaux) de type A (Zone de Protection Spéciale) Iles d\'Hyères et du site Natura 2000 (Directive Habitats, faune, flore) de type B (Zone Spéciale de Conservation) Rade d\'Hyères, depuis l\'arrêté du 26 juin 2014.\r\n\r\nL\'île est aussi intégrée à l\'aire marine adjacente du parc national de Port-Cros, réplique maritime de l\'aire potentielle d\'adhésion du parc national, couvrant l\'ensemble du territoire de la commune d\'Hyères et d\'autres communes voisines.\r\n\r\nEnfin, l\'ensemble de l\'île fait partie de plusieurs parcelles de terrains acquises et protégées par le conservatoire du littoral et des rivages lacustres, depuis le 13 octobre 1978, sous le titre « Presqu\'île de Giens », pour une surface totale de 642,07 hectares, sites et acquisitions comprises, tandis que la parcelle acquise, dont l\'île fait partie, a une superficie calculée de 102,285 hectares. Cette protection est de catégorie IV sur le classement d\'aires naturelles protégées de l\'UICN, au titre d\'aire gérée pour l\'habitat et les espèces. '),
+(15, 'Île de Bendor', 'Bandol', NULL, 0, 0, 43.1277, 5.75019, 96.88, 'L’île de Bendor est surnommée le « jardin des arts de la Méditerranée ». Paul Ricard, artiste peintre à ses heures et passionné d’art, a voulu faire de cette île le lieu de rencontre des artistes.\r\n\r\nOn peut croiser dans l\'ile, sous quantité de formes différentes (sculptures et ferronneries) la Croix de Bendor, symbole de l’île dessiné par Paul Ricard d’après la Croix des Templiers.\r\n\r\nL’île est parsemée de statues et d’œuvres d’art, dont le monolithe de Botinelly intitulé Nul bien sans peine, qui domine le débarcadère. L’œuvre fut érigée à la gloire de Pierre Puget, sculpteur, peintre et architecte provençal du XVIIe siècle à qui Paul Ricard emprunta la devise. Au sommet de l’île, la vierge du sculpteur marseillais Raymond Servian domine la mer et est l’objet d’un pèlerinage fervent chaque année pour le 15 août. On trouve aussi le « Neptune » œuvre imposante de Michel Barra et bien d’autres œuvres, bustes, statues et bas-reliefs nichés dans les jardins et les murs, créations d’élèves des Beaux-Arts de passage sur l’île. '),
+(16, 'Deux Frères (rocher)', 'La Seyne sur Mer', NULL, 0, 0, 43.118, 5.77344, 95.72, 'Les Deux Frères (ou les Freirets, ces deux formations rocheuses portaient le nom de Rochers des Freirets au XIXe siècle) sont deux rochers émergeant à la pointe du Cap Sicié (Var, France) et visibles depuis la plage des Sablettes à La Seyne-sur-Mer. C\'est un lieu qui accueille de nombreux plaisanciers ainsi que des clubs de plongée dont l\'objectif est la visite d\'une épave située à proximité immédiate.\r\n\r\nLa légende locale raconte que deux frères trouvèrent un soir une sirène blessée sur la plage. Ils la soignèrent et tombèrent éperdument amoureux et dans leur folie, ils s\'entretuèrent. La sirène, avant de regagner les flots, supplia Poséidon de leur laisser une forme apparente en souvenir de leur passion. Le dieu de la mer y dressa les deux rocs'),
+(17, 'Les Fourmigues', 'Hyeres Les Palmiers', NULL, 0, 0, 43.04, 6.06051, 81.56, 'Les Fourmigues sont des îles françaises du département du Var. Elles appartiennent administrativement à la commune de Hyères.\r\n\r\nC\'est un site très fréquenté de plongée sous-marine\r\n\r\nIl s\'agit de deux roches situées à l\'ouest de la presqu\'île de Giens. La Fourmigue est la plus grande des deux, le Fourmigon distant d\'une vingtaine de mètres à l\'ouest est plus petite. Une profondeur de 16-17 mètres sépare les deux îlots.\r\n\r\nÀ l\'est de la Fourmigue, une sèche, souvent appelée la « roche bleue » dans les centres de plongée locaux, remonte de 34 mètres jusqu\'à 9 mètres. '),
+(18, 'Île Rousse', 'Bandol', NULL, 0, 0, 43.1331, 5.71958, 98.82, 'L\'île Rousse est une île du département du Var. Elles appartiennent administrativement à la commune de Bandol. '),
+(19, 'Le Lion de mer', 'Saint Raphael', NULL, 0, 0, 43.4069, 6.76543, 13.79, 'Le Lion de mer est un îlot rocheux, composé de rochers roux (porphyre), situé dans la baie de Saint-Raphaël.\r\n\r\nUne Vierge trône sur le sommet de l\'île et la pointe est occupée par des installations techniques.\r\n\r\nLe site est également un spot de plongée reconnu. On y trouve notamment une voûte tapissée de coraux en fleur. Deux statues agrémentent la sortie du passage de l\'arche : la Vierge et la Sirène.\r\nIl se situe à proximité d\'un autre îlot rocheux appelé le Lion de terre. '),
+(20, 'Le Lion de terre', 'Saint Raphael', NULL, 0, 0, 43.4081, 6.77364, 13.48, 'Le lion de terre est un îlot rocheux, composé de rochers roux (porphyre), situé dans la baie de Saint-Raphaël, à l\'est du port de plaisance de Santa-Lucia. Il se situe à proximité d\'un autre îlot rocheux appelé le Lion de mer. '),
+(21, 'Île d\'Or', 'Saint Raphael', NULL, 0, 0, 43.4107, 6.84668, 13.06, 'L\'îlot est composé de rochers rouges — rhyolite — comme le reste du massif de l\'Esterel dont il fait partie et par ailleurs il bénéficie d\'un environnement particulier. En effet il se détache du rivage très proche car à terre la plage se compose d\'estérellites bleues qui côtoient le bleu, variant sans cesse, de la mer Méditerranée. Ainsi les nuances de la teinte de la mer diffèrent en fonction de l\'état du ciel qui s\'y reflète, tantôt éclatant tantôt chargé. À ces données il faut adjoindre suivant l\'heure l\'effet des rayons du soleil. Ceci explique l\'attrait du lieu pour de très nombreux artistes. '),
+(22, 'Île des Vieilles', 'Saint Raphael', NULL, 0, 0, 43.4272, 6.89415, 12.72, 'L\'île des Vieilles est un îlot rocheux, composé de rochers roux, située à l\'est de Saint-Raphaël, près du site d\'Anthéor. Il appartient au massif de l\'Esterel. C\'est l\'îlot le plus étendu de la côte de ce massif.\r\n\r\nLe nom de l\'île fait sans doute référence à un type de poisson méditerranéen dénommé vieille.\r\n\r\nEst également nommé localement île des Veilles en référence à l\'usage qui en aurait été fait pour prévenir les risques d\'échouage des navires. Au sud de l\'île se trouve la balise cardinale sud dite la chrétienne. Elle signale un endroit a contourner ou se sont échoués de nombreux navires. C\'est un remarquable site de plongée. \r\n\r\nCet îlot à la particularité d\'abriter des espèces botaniques qu\'on ne trouve plus à Anthéor sur les rives d\'en face');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `recuperation`
+-- Structure de la table `wd_recuperation`
 --
 
-CREATE TABLE `WD_recuperation` (
+CREATE TABLE `wd_recuperation` (
   `recuperation_id` int(11) NOT NULL,
   `code_recuperation` varchar(255) NOT NULL,
   `utilisateur_email` varchar(255) NOT NULL
@@ -401,34 +409,34 @@ CREATE TABLE `WD_recuperation` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `utilisateur`
+-- Structure de la table `wd_utilisateur`
 --
 
-CREATE TABLE `WD_utilisateur` (
+CREATE TABLE `wd_utilisateur` (
   `utilisateur_id` int(11) NOT NULL,
   `utilisateur_pseudo` varchar(255) NOT NULL,
   `utilisateur_password` varchar(255) NOT NULL,
   `utilisateur_email` varchar(255) NOT NULL,
-  `utilisateur_image` varchar(255) NOT NULL,
+  `utilisateur_image` varchar(255) DEFAULT NULL,
   `utilisateur_role` varchar(255) NOT NULL DEFAULT 'Membre',
   `utilisateur_nb_comm` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `utilisateur`
+-- Déchargement des données de la table `wd_utilisateur`
 --
 
-INSERT INTO `WD_utilisateur` (`utilisateur_id`, `utilisateur_pseudo`, `utilisateur_password`, `utilisateur_email`, `utilisateur_image`, `utilisateur_role`, `utilisateur_nb_comm`) VALUES
-(9, 'Sangohan83', '0288f4ec2ac957a5f5deabe504896af3292e5616', 'david.walter.72000@gmail.com', '9.jpg', 'Admin', 4),
+INSERT INTO `wd_utilisateur` (`utilisateur_id`, `utilisateur_pseudo`, `utilisateur_password`, `utilisateur_email`, `utilisateur_image`, `utilisateur_role`, `utilisateur_nb_comm`) VALUES
+(9, 'Sangohan83', '0288f4ec2ac957a5f5deabe504896af3292e5616', 'david.walter.72000@gmail.com', '9.jpg', 'Admin', 6),
 (17, 'Sergeserge', '388ad1c312a488ee9e12998fe097f2258fa8d5ee', 'baldacci.serge@gmail.com', '17.png', 'Membre', 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `ville_proxi`
+-- Structure de la table `wd_ville_proxi`
 --
 
-CREATE TABLE `WD_ville_proxi` (
+CREATE TABLE `wd_ville_proxi` (
   `ville_proxi_id` int(11) NOT NULL,
   `ville_proxi_nom` varchar(50) DEFAULT NULL,
   `ville_proxi_lat` float DEFAULT NULL,
@@ -436,10 +444,10 @@ CREATE TABLE `WD_ville_proxi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `ville_proxi`
+-- Déchargement des données de la table `wd_ville_proxi`
 --
 
-INSERT INTO `WD_ville_proxi` (`ville_proxi_id`, `ville_proxi_nom`, `ville_proxi_lat`, `ville_proxi_long`) VALUES
+INSERT INTO `wd_ville_proxi` (`ville_proxi_id`, `ville_proxi_nom`, `ville_proxi_lat`, `ville_proxi_long`) VALUES
 (1, 'Seillons-Source-d\'Argens', 43.4964, 5.88362),
 (2, 'Néoules', 43.3, 6.01667),
 (3, 'Solliès-Toucas', 43.2, 6.01667),
@@ -594,325 +602,367 @@ INSERT INTO `WD_ville_proxi` (`ville_proxi_id`, `ville_proxi_nom`, `ville_proxi_
 (152, 'Trigance', 43.7667, 6.45),
 (153, 'Ginasservis', 43.6667, 5.85);
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `wd_vote_ile`
+--
+
+CREATE TABLE `wd_vote_ile` (
+  `id` int(11) NOT NULL,
+  `ile_id` int(11) NOT NULL,
+  `utilisateur_id` int(11) NOT NULL,
+  `vote` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `wd_vote_ile`
+--
+
+INSERT INTO `wd_vote_ile` (`id`, `ile_id`, `utilisateur_id`, `vote`) VALUES
+(17, 16, 9, 4),
+(18, 12, 9, 3),
+(19, 9, 9, 3),
+(20, 18, 9, 4),
+(21, 18, 14, 2),
+(22, 18, 85, 3),
+(23, 18, 15, 1),
+(24, 18, 25, 5),
+(25, 18, 88, 5),
+(26, 18, 99, 5),
+(27, 22, 9, 4);
+
 --
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `commentaire_deux_frères_rocher`
+-- Index pour la table `wd_commentaire_deux_frères_rocher`
 --
-ALTER TABLE `WD_commentaire_deux_frères_rocher`
+ALTER TABLE `wd_commentaire_deux_frères_rocher`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_les_fourmigues`
+-- Index pour la table `wd_commentaire_les_fourmigues`
 --
-ALTER TABLE `WD_commentaire_les_fourmigues`
+ALTER TABLE `wd_commentaire_les_fourmigues`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_le_lion_de_mer`
+-- Index pour la table `wd_commentaire_le_lion_de_mer`
 --
-ALTER TABLE `WD_commentaire_le_lion_de_mer`
+ALTER TABLE `wd_commentaire_le_lion_de_mer`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_le_lion_de_terre`
+-- Index pour la table `wd_commentaire_le_lion_de_terre`
 --
-ALTER TABLE `WD_commentaire_le_lion_de_terre`
+ALTER TABLE `wd_commentaire_le_lion_de_terre`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_rocher_du_rascas`
+-- Index pour la table `wd_commentaire_rocher_du_rascas`
 --
-ALTER TABLE `WD_commentaire_rocher_du_rascas`
+ALTER TABLE `wd_commentaire_rocher_du_rascas`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_des_embiez`
+-- Index pour la table `wd_commentaire_île_des_embiez`
 --
-ALTER TABLE `WD_commentaire_île_des_embiez`
+ALTER TABLE `wd_commentaire_île_des_embiez`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_des_vieilles`
+-- Index pour la table `wd_commentaire_île_des_vieilles`
 --
-ALTER TABLE `WD_commentaire_île_des_vieilles`
+ALTER TABLE `wd_commentaire_île_des_vieilles`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_de_bagaud`
+-- Index pour la table `wd_commentaire_île_de_bagaud`
 --
-ALTER TABLE `WD_commentaire_île_de_bagaud`
+ALTER TABLE `wd_commentaire_île_de_bagaud`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_de_bendor`
+-- Index pour la table `wd_commentaire_île_de_bendor`
 --
-ALTER TABLE `WD_commentaire_île_de_bendor`
+ALTER TABLE `wd_commentaire_île_de_bendor`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_de_la_redonne`
+-- Index pour la table `wd_commentaire_île_de_la_redonne`
 --
-ALTER TABLE `WD_commentaire_île_de_la_redonne`
+ALTER TABLE `wd_commentaire_île_de_la_redonne`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_de_porquerolles`
+-- Index pour la table `wd_commentaire_île_de_porquerolles`
 --
-ALTER TABLE `WD_commentaire_île_de_porquerolles`
+ALTER TABLE `wd_commentaire_île_de_porquerolles`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_de_port_cros`
+-- Index pour la table `wd_commentaire_île_de_port_cros`
 --
-ALTER TABLE `WD_commentaire_île_de_port_cros`
+ALTER TABLE `wd_commentaire_île_de_port_cros`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_du_grand_gaou`
+-- Index pour la table `wd_commentaire_île_du_grand_gaou`
 --
-ALTER TABLE `WD_commentaire_île_du_grand_gaou`
+ALTER TABLE `wd_commentaire_île_du_grand_gaou`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_du_grand_ribaud`
+-- Index pour la table `wd_commentaire_île_du_grand_ribaud`
 --
-ALTER TABLE `WD_commentaire_île_du_grand_ribaud`
+ALTER TABLE `wd_commentaire_île_du_grand_ribaud`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_du_grand_rouveau`
+-- Index pour la table `wd_commentaire_île_du_grand_rouveau`
 --
-ALTER TABLE `WD_commentaire_île_du_grand_rouveau`
+ALTER TABLE `wd_commentaire_île_du_grand_rouveau`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_du_levant`
+-- Index pour la table `wd_commentaire_île_du_levant`
 --
-ALTER TABLE `WD_commentaire_île_du_levant`
+ALTER TABLE `wd_commentaire_île_du_levant`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_du_petit_gaou`
+-- Index pour la table `wd_commentaire_île_du_petit_gaou`
 --
-ALTER TABLE `WD_commentaire_île_du_petit_gaou`
+ALTER TABLE `wd_commentaire_île_du_petit_gaou`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_du_petit_ribaud`
+-- Index pour la table `wd_commentaire_île_du_petit_ribaud`
 --
-ALTER TABLE `WD_commentaire_île_du_petit_ribaud`
+ALTER TABLE `wd_commentaire_île_du_petit_ribaud`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_du_petit_rouveau`
+-- Index pour la table `wd_commentaire_île_du_petit_rouveau`
 --
-ALTER TABLE `WD_commentaire_île_du_petit_rouveau`
+ALTER TABLE `wd_commentaire_île_du_petit_rouveau`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_d_or`
+-- Index pour la table `wd_commentaire_île_d_or`
 --
-ALTER TABLE `WD_commentaire_île_d_or`
+ALTER TABLE `wd_commentaire_île_d_or`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_île_rousse`
+-- Index pour la table `wd_commentaire_île_rousse`
 --
-ALTER TABLE `WD_commentaire_île_rousse`
+ALTER TABLE `wd_commentaire_île_rousse`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `commentaire_îlot_de_la_gabinière`
+-- Index pour la table `wd_commentaire_îlot_de_la_gabinière`
 --
-ALTER TABLE `WD_commentaire_îlot_de_la_gabinière`
+ALTER TABLE `wd_commentaire_îlot_de_la_gabinière`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Index pour la table `liste_ile`
+-- Index pour la table `wd_liste_ile`
 --
-ALTER TABLE `WD_liste_ile`
+ALTER TABLE `wd_liste_ile`
   ADD PRIMARY KEY (`liste_ile_id`);
 
 --
--- Index pour la table `recuperation`
+-- Index pour la table `wd_recuperation`
 --
-ALTER TABLE `WD_recuperation`
+ALTER TABLE `wd_recuperation`
   ADD PRIMARY KEY (`recuperation_id`);
 
 --
--- Index pour la table `utilisateur`
+-- Index pour la table `wd_utilisateur`
 --
-ALTER TABLE `WD_utilisateur`
+ALTER TABLE `wd_utilisateur`
   ADD PRIMARY KEY (`utilisateur_id`);
 
 --
--- Index pour la table `ville_proxi`
+-- Index pour la table `wd_ville_proxi`
 --
-ALTER TABLE `WD_ville_proxi`
+ALTER TABLE `wd_ville_proxi`
   ADD PRIMARY KEY (`ville_proxi_id`);
+
+--
+-- Index pour la table `wd_vote_ile`
+--
+ALTER TABLE `wd_vote_ile`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT pour la table `commentaire_deux_frères_rocher`
+-- AUTO_INCREMENT pour la table `wd_commentaire_deux_frères_rocher`
 --
-ALTER TABLE `WD_commentaire_deux_frères_rocher`
+ALTER TABLE `wd_commentaire_deux_frères_rocher`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_les_fourmigues`
+-- AUTO_INCREMENT pour la table `wd_commentaire_les_fourmigues`
 --
-ALTER TABLE `WD_commentaire_les_fourmigues`
+ALTER TABLE `wd_commentaire_les_fourmigues`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_le_lion_de_mer`
+-- AUTO_INCREMENT pour la table `wd_commentaire_le_lion_de_mer`
 --
-ALTER TABLE `WD_commentaire_le_lion_de_mer`
+ALTER TABLE `wd_commentaire_le_lion_de_mer`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_le_lion_de_terre`
+-- AUTO_INCREMENT pour la table `wd_commentaire_le_lion_de_terre`
 --
-ALTER TABLE `WD_commentaire_le_lion_de_terre`
+ALTER TABLE `wd_commentaire_le_lion_de_terre`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_rocher_du_rascas`
+-- AUTO_INCREMENT pour la table `wd_commentaire_rocher_du_rascas`
 --
-ALTER TABLE `WD_commentaire_rocher_du_rascas`
+ALTER TABLE `wd_commentaire_rocher_du_rascas`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_des_embiez`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_des_embiez`
 --
-ALTER TABLE `WD_commentaire_île_des_embiez`
+ALTER TABLE `wd_commentaire_île_des_embiez`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_des_vieilles`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_des_vieilles`
 --
-ALTER TABLE `WD_commentaire_île_des_vieilles`
+ALTER TABLE `wd_commentaire_île_des_vieilles`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_de_bagaud`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_de_bagaud`
 --
-ALTER TABLE `WD_commentaire_île_de_bagaud`
+ALTER TABLE `wd_commentaire_île_de_bagaud`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_de_bendor`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_de_bendor`
 --
-ALTER TABLE `WD_commentaire_île_de_bendor`
+ALTER TABLE `wd_commentaire_île_de_bendor`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_de_la_redonne`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_de_la_redonne`
 --
-ALTER TABLE `WD_commentaire_île_de_la_redonne`
+ALTER TABLE `wd_commentaire_île_de_la_redonne`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_de_porquerolles`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_de_porquerolles`
 --
-ALTER TABLE `WD_commentaire_île_de_porquerolles`
+ALTER TABLE `wd_commentaire_île_de_porquerolles`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_de_port_cros`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_de_port_cros`
 --
-ALTER TABLE `WD_commentaire_île_de_port_cros`
+ALTER TABLE `wd_commentaire_île_de_port_cros`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_du_grand_gaou`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_du_grand_gaou`
 --
-ALTER TABLE `WD_commentaire_île_du_grand_gaou`
+ALTER TABLE `wd_commentaire_île_du_grand_gaou`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_du_grand_ribaud`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_du_grand_ribaud`
 --
-ALTER TABLE `WD_commentaire_île_du_grand_ribaud`
+ALTER TABLE `wd_commentaire_île_du_grand_ribaud`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_du_grand_rouveau`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_du_grand_rouveau`
 --
-ALTER TABLE `WD_commentaire_île_du_grand_rouveau`
+ALTER TABLE `wd_commentaire_île_du_grand_rouveau`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_du_levant`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_du_levant`
 --
-ALTER TABLE `WD_commentaire_île_du_levant`
+ALTER TABLE `wd_commentaire_île_du_levant`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_du_petit_gaou`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_du_petit_gaou`
 --
-ALTER TABLE `WD_commentaire_île_du_petit_gaou`
+ALTER TABLE `wd_commentaire_île_du_petit_gaou`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_du_petit_ribaud`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_du_petit_ribaud`
 --
-ALTER TABLE `WD_commentaire_île_du_petit_ribaud`
+ALTER TABLE `wd_commentaire_île_du_petit_ribaud`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_du_petit_rouveau`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_du_petit_rouveau`
 --
-ALTER TABLE `WD_commentaire_île_du_petit_rouveau`
+ALTER TABLE `wd_commentaire_île_du_petit_rouveau`
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_d_or`
+--
+ALTER TABLE `wd_commentaire_île_d_or`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_d_or`
+-- AUTO_INCREMENT pour la table `wd_commentaire_île_rousse`
 --
-ALTER TABLE `WD_commentaire_île_d_or`
+ALTER TABLE `wd_commentaire_île_rousse`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire_île_rousse`
+-- AUTO_INCREMENT pour la table `wd_commentaire_îlot_de_la_gabinière`
 --
-ALTER TABLE `WD_commentaire_île_rousse`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `commentaire_îlot_de_la_gabinière`
---
-ALTER TABLE `WD_commentaire_îlot_de_la_gabinière`
+ALTER TABLE `wd_commentaire_îlot_de_la_gabinière`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `liste_ile`
+-- AUTO_INCREMENT pour la table `wd_liste_ile`
 --
-ALTER TABLE `WD_liste_ile`
+ALTER TABLE `wd_liste_ile`
   MODIFY `liste_ile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT pour la table `recuperation`
+-- AUTO_INCREMENT pour la table `wd_recuperation`
 --
-ALTER TABLE `WD_recuperation`
+ALTER TABLE `wd_recuperation`
   MODIFY `recuperation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT pour la table `utilisateur`
+-- AUTO_INCREMENT pour la table `wd_utilisateur`
 --
-ALTER TABLE `WD_utilisateur`
+ALTER TABLE `wd_utilisateur`
   MODIFY `utilisateur_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT pour la table `ville_proxi`
+-- AUTO_INCREMENT pour la table `wd_ville_proxi`
 --
-ALTER TABLE `WD_ville_proxi`
+ALTER TABLE `wd_ville_proxi`
   MODIFY `ville_proxi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
+
+--
+-- AUTO_INCREMENT pour la table `wd_vote_ile`
+--
+ALTER TABLE `wd_vote_ile`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
