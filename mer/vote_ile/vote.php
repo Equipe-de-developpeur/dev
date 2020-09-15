@@ -59,7 +59,7 @@
         $getJSON = array('numStar' => $numStar, 'ile_id' => $ile_id); // Creation du JSON avec le nombre de dauphin et ile_id
         $getJSON = json_encode($getJSON);
         $starBar = '<div id="'.$ile_id.'">';
-        $starBar .= '<div class="star_bar" style="width:'.$nbrPixelsInDiv.'px; height:'.$starHeight.'px; background: linear-gradient(to right, #ffc600 0px,#ffc600 '.$numEnlightedPX.'px,#ccc '.$numEnlightedPX.'px,#ccc '.$nbrPixelsInDiv.'px);" rel='.$getJSON.'>';
+        $starBar .= '<div class="star_bar" style="width:'.$nbrPixelsInDiv.'px; height:'.$starHeight.'px; background: linear-gradient(to right, #0034ff 0px,#0034ff '.$numEnlightedPX.'px,#ccc '.$numEnlightedPX.'px,#ccc '.$nbrPixelsInDiv.'px);" rel='.$getJSON.'>';
         for ($i=1; $i<=$numStar; $i++) {
             $starBar .= '<div title="'.$i.'/'.$numStar.'" id="'.$i.'" class="star"';
             if( !isset($novote) AND isset($_SESSION['utilisateur_id'])) $starBar .= ' onmouseover="overStar('.$ile_id.', '.$i.', '.$numStar.'); return false;" onmouseout="outStar('.$ile_id.', '.$i.', '.$numStar.'); return false;" onclick="voteMedia('.$ile_id.', '.$i.', '.$numStar.', '.$starWidth.', '.$starHeight.'); return false;"';

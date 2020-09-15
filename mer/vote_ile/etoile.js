@@ -21,7 +21,7 @@
                 // Calcul background et enleve le mouseover
                 var nbrPixelsInDiv = numStar * starWidth;
                 var numEnlightedPX = Math.round(nbrPixelsInDiv * data.avg / numStar);
-                $('#' + ile_id + ' .star_bar').attr('style', 'width:' + nbrPixelsInDiv + 'px; height:' + starHeight + 'px; background: linear-gradient(to right, #ffc600 0%,#ffc600 ' + numEnlightedPX + 'px,#ccc ' + numEnlightedPX + 'px,#ccc 100%);');
+                $('#' + ile_id + ' .star_bar').attr('style', 'width:' + nbrPixelsInDiv + 'px; height:' + starHeight + 'px; background: linear-gradient(to right, #0034ff 0%,#0034ff ' + numEnlightedPX + 'px,#ccc ' + numEnlightedPX + 'px,#ccc 100%);');
                 $.each($('#' + ile_id + ' .star_bar > div'), function () {
                     $(this).removeAttr('onmouseover onclick');
                 });
