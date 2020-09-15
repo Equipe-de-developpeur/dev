@@ -50,6 +50,36 @@
     max-width: 425px;
 }
 
+.anchorDiv {
+    float: left;
+}
+
+label.fas:before {
+    content: '\f13d';
+}
+
+.anchorDiv:not(:checked) > input.anchorLogo {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0,0,0,0);
+}
+
+.anchorDiv:not(:checked) > label {
+
+    float: right;
+    padding: 0.1em;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1.2;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+
+.anchorDiv > input:checked ~ label {
+    color: #0f8581;
+    text-shadow: 1px 1px #3B5573;
+}
+
 textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

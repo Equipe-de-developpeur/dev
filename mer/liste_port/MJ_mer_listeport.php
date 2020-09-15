@@ -3,6 +3,7 @@
 
     <head>
         <link rel="stylesheet" href="css/MJ_mer_listeport.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php header('Set-Cookie: cross-site-cookie=name; SameSite=None; Secure'); ?>
     </head>
@@ -12,6 +13,7 @@
         include "../header.php";
         include_once 'element/MJ_mer_connexionbdd.php';
         include_once "element/MJ_mer_creationcom.php";
+        include_once "element/MJ_mer_creationvote.php";
 
         if (isset($_POST["username"])) {
             $ID = $_POST["id"];
@@ -19,12 +21,14 @@
 
         include "element/MJ_mer_envoiefichier.php";
         include "element/MJ_mer_traitementcom.php";
+        include "element/MJ_mer_traitementvote.php";
         
         //Affichage message de réception
         if(isset($msg)){
             echo $msg;
         }
 
+        var_dump($_SESSION);
         ?>
         <div class="lport container-fluid">
             <div class="cadre_critere py-1 px-1">
@@ -89,7 +93,7 @@
                                                     <a class="lien" href="<?php echo $i['liste_port_lien']?>" target="_blank">Site Officiel</a><br>
                                                     Localisation : <?php echo $i['liste_port_localisation'] ?> <br>
                                                     <?php include 'element/MJ_mer_logoaction.php' ?> <br>
-                                                    <!-- Emplacement Vote -->
+                                                    <?php include 'element/MJ_mer_vote.php' ?> <br>
                                                 </p>
                                             </div>
                                             <div class="col-md">

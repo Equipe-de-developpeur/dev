@@ -1,5 +1,6 @@
 <?php
 if(isset($_SESSION['utilisateur_id']) && $_SESSION['utilisateur_id'] != NULL){ ?>
+    
     <form action="MJ_mer_listeport.php" method="post" class="commentaire p-1" enctype="multipart/form-data">
         <fieldset>
             <legend>Laissez un commentaire&nbsp:</legend>
