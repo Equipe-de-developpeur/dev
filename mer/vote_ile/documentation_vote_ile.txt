@@ -1,0 +1,18 @@
+Systeme de notation
+
+
+langage : AJAX PHP HTML CSS MySql
+
+	affichage de 5 dauphins
+		-> vote unique par ile et par utilisateur ( suppression de onmouseover apres le vote )
+			-> enregistrement base de données, utilisateur_id / ile_id / vote
+			-> message de success
+			-> message si l'utilisateur a deja voté
+		-> background jaune généré en fonction de la moyenne des votes
+			-> moyenne * width d'un dauphin
+		-> affichage de la moyenne et le nombre de vote
+		
+
+Taille de l'image dauphin 30px x 32px
+	taille du background max et taille de la div generées par la fonction starBar (nombre de dauphin, ile_id, width, height)
+		-> width * nombre de dauphin = width_div

@@ -18,6 +18,7 @@ if(isset($_SESSION['ile']) AND !empty($_SESSION['ile']))
 <title><?php echo $resultat_ile->liste_ile_nom;?></title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="ile/css/commentaire.css">
+<link rel="stylesheet" href="ile/css/bootstrap.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -26,6 +27,7 @@ if(isset($_SESSION['ile']) AND !empty($_SESSION['ile']))
 {
 	background: url("ile/img/<?php echo str_replace(' ','_',$resultat_ile->liste_ile_nom);?>.jpg");
 }
+
 </style>
 </head>
 <body>
@@ -41,8 +43,9 @@ if(isset($_SESSION['ile']) AND !empty($_SESSION['ile']))
 </div> 
 <div class="row">
 <div class="description col-sm-12">
-<div class="col-sm-6" style="margin:auto; padding-left:2vw;">
+<div class="col-sm-6" style="margin:auto; padding-left:2vw; margin-top: 4vw;">
 <!-- Prochainement systeme de note -->
+<?php include 'vote_ile/vote.php'; ?>
 </div> 
 <div class="col-sm-6 ecrit" style="text-align: justify;">
 <p> <?php echo $resultat_ile->liste_ile_data;?> </p>
