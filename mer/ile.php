@@ -57,6 +57,7 @@ $exe=query($sql);
 											
 </select>
 </div>
+<div style="max-width:100%; overflow:auto;">
 <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
 	<tr>
 		<th class="th-sm"> Nom </th>
@@ -114,7 +115,7 @@ while($resultat=fetch_object($requete))
 }
 ?>
 </table>
-
+</div>
 <?php include "footer.php"; ?>
 </body>
 </html>

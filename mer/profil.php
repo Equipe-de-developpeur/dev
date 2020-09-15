@@ -5,10 +5,15 @@ require "connect_pdo.php";
 require "menu_co.php";
 include "update_image.php";
 testSession();
+if(basename($_SERVER['HTTP_REFERER']) !="profil.php")
+{
+	$_SESSION['precedent']=$_SERVER['HTTP_REFERER'];
+}
 if(isset($_POST['submit']))	
 {
 	if(isset($_REQUEST['utilisateur_password'] ) AND !empty($_REQUEST['utilisateur_password']) AND isset($_REQUEST['utilisateur_password2'] ) AND !empty($_REQUEST['utilisateur_password2']))
 	{	
+
 		$changement_mdp= new Changement_mdp($_SESSION['utilisateur_id'],$_REQUEST['utilisateur_password'],$_REQUEST['utilisateur_password2']);
 	}
 	else
@@ -128,7 +133,7 @@ if(isset($_POST['submit']))
                                 <input class="contenue" type="password" placeholder="Confirmation MDP" name="utilisateur_password2" value="<?php if(isset($_COOKIE['mot_de_passe'])){echo "";} ?>" /> 
 								</div>
 								<br/>
-								<button  class="btn btn-outline-info my-2 my-sm-0" ><a href="<?php echo $_SERVER['HTTP_REFERER']; ?>"style="color:white !important; text-decoration:none;">Retour</a>
+								<button  class="btn btn-outline-info my-2 my-sm-0" ><a href="<?php if(!empty($_SESSION['precedent'])){ echo $_SESSION['precedent'];} else {echo $_SERVER['HTTP_REFERER'];} ?>"style="color:white !important; text-decoration:none;">Retour</a>
 								</button>
 								<button type="submit" name="submit"  class="btn btn-outline-info my-2 my-sm-0" style="color:white !important;" >Valider
 								</button>

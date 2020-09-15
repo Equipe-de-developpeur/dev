@@ -209,7 +209,7 @@ class Changement_mdp
 			{
 				$this->utilisateur_password=sha1($this->utilisateur_password);
 				$vars2['utilisateur_password']=$this->utilisateur_password;
-				if(updateDefault($this->utilisateur_id,"utilisateur","utilisateur_id",$vars2))
+				if(updateDefault($this->utilisateur_id,"WD_utilisateur","utilisateur_id",$vars2))
 				{
 					$sql="SELECT utilisateur_email FROM WD_utilisateur WHERE utilisateur_id=:utilisateur_id";
 					$vars[':utilisateur_id']=$this->utilisateur_id;
