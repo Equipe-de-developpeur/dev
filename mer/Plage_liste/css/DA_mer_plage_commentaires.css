@@ -26,6 +26,14 @@
     margin: auto;
 }
 
+@media screen and (max-width:768px) {
+    .SectionCommentairesPlage {
+        flex-direction: column;
+        width: 95%;
+        color: #00000033;
+    }
+}
+
 
 /* Ecriture du Commentaire */
 
@@ -77,6 +85,7 @@
     margin: auto;
     padding: 1%;
     margin: 2%;
+    margin: auto;
 }
 
 

@@ -25,7 +25,9 @@ include("DA_mer_plage_liste_bdd.php");?>
         <!--Champ d'écriture du Commentaires-->
 
         <div class="ChampDeRechercheCommentairesPlage">
-          <textarea name="NewCommentaires" id="NewCommentaires" rows="5" cols="30" minlength="3" maxlength="500" placeholder="Vous pouvez écrire votre commentaire ici. Penser a mentionner l'endroit dont vous parlez" required></textarea>
+        <input type="text" id="nom" name="nom" maxlength="30" placeholder="Nom" autocomplete="">
+        <input type="text" id="lieu" name="lieu" maxlength="50" placeholder="Lieux" autocomplete="">
+          <textarea name="NewCommentaires" id="NewCommentaires" rows="6" cols="40" minlength="3" maxlength="500" placeholder="Vous pouvez écrire votre commentaire ici. Penser a mentionner l'endroit dont vous parlez" required></textarea>
         </div>
 
         <!--Envoi du Commentaire-->
@@ -74,7 +76,8 @@ while ($donnees = $req2->fetch())
 $commentaires_plage_id = $donnees['commentaires_plage_id'];
 $textes = $donnees['commentaires_plage_textes'];
 $noms = $donnees['commentaires_plage_noms'];
-$dates = $donnees['commentaires_plage_dates'];
+$lieux = $donnees['commentaires_plage_lieux'];
+$dates = date("d-m-Y  H:i:s", strtotime($donnees['commentaires_plage_dates']));
 
 
 
@@ -84,6 +87,7 @@ echo ('
       <div class="DebutCommentairesPlage" id="'.$commentaires_plage_id.'">
         <div class="Entete">
           <p class="NomAuteur">'.$noms.'</p>
+          <p class="NomAuteur">'.$lieux.'</p>
           <p class="DateEnvoi">'.$dates.'</p>
         </div>
         <div class="Contenu">

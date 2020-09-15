@@ -5,6 +5,8 @@ include("DA_mer_plage_liste_bdd.php");
 
 // Récupération des données du formulaire
 $NewCommentaires = htmlspecialchars($_POST['NewCommentaires']);
+$commentaires_plage_noms = htmlspecialchars($_POST['nom']);
+$commentaires_plage_lieux = htmlspecialchars($_POST['lieu']);
 
 
  /*vérification de la bonne reception des champs
@@ -14,10 +16,12 @@ exit();*/
 
 // procédure d'enregistrement de la news dans la table
 
-$req2 = $connexion->prepare("INSERT INTO da_commentaires_plage (commentaires_plage_textes) VALUES(:NewCommentaires)");
+$req2 = $connexion->prepare("INSERT INTO da_commentaires_plage (commentaires_plage_textes, commentaires_plage_noms, commentaires_plage_lieux) VALUES(:NewCommentaires, :commentaire_plage_noms, :commentaire_plage_lieux)");
 
 if ($req2->execute(array(
   'NewCommentaires' => $NewCommentaires,
+  'commentaire_plage_noms' => $commentaires_plage_noms,
+  'commentaire_plage_lieux' => $commentaires_plage_lieux,
   )) )
 {
   $id_comm=$connexion->lastInsertId('da_commentaires_plage');

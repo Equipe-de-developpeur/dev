@@ -52,6 +52,7 @@
     margin: auto;
     color: #3795E2;
     margin-top: 2%;
+    overflow: auto;
 }
 
 table {
