@@ -17,9 +17,9 @@
     <br /><br />
     <?php
     function starBar($numStar, $ile_id, $starWidth, $starHeight) {
-        $nbrPixelsInDiv = $numStar * $starWidth; // Calculate the DIV width in pixel
+        $nbrPixelsInDiv = $numStar * $starWidth; // Calcul largeur de la Div en px
         
-        // vote average and number of vote from the database
+        // Recuperation du nombre de vote , et leur valeur pour en faire une moyenne
 		$sql="SELECT vote, utilisateur_id FROM vote_ile WHERE ile_id=:ile_id";
 		$vars[':ile_id']=$ile_id;
 		$exe=query($sql,$vars);
@@ -53,10 +53,10 @@
 			$deja_vote='<p style="font-size:medium; color:green;">Donnez votre avis</p>';
 		}
 		
-        //num of pixel to colorize (in yellow)
+        //Nombre de px à colorier en jaune
         $numEnlightedPX = round($nbrPixelsInDiv * $average / $numStar, 0);
         
-        $getJSON = array('numStar' => $numStar, 'ile_id' => $ile_id); // We create a JSON with the number of stars and the media ID
+        $getJSON = array('numStar' => $numStar, 'ile_id' => $ile_id); // Creation du JSON avec le nombre de dauphin et ile_id
         $getJSON = json_encode($getJSON);
         $starBar = '<div id="'.$ile_id.'">';
         $starBar .= '<div class="star_bar" style="width:'.$nbrPixelsInDiv.'px; height:'.$starHeight.'px; background: linear-gradient(to right, #ffc600 0px,#ffc600 '.$numEnlightedPX.'px,#ccc '.$numEnlightedPX.'px,#ccc '.$nbrPixelsInDiv.'px);" rel='.$getJSON.'>';
@@ -66,7 +66,7 @@
             $starBar .= '></div>';
         }
         $starBar .= '</div>';
-        $starBar .= '<div class="resultMedia'.$ile_id.'" style="font-size: medium; color: grey; margin-top:1vw;">'; // We show the vote score and number of votes
+        $starBar .= '<div class="resultMedia'.$ile_id.'" style="font-size: medium; color: grey; margin-top:1vw;">'; // Affichage de la moyenne du vote et du nombre de vote
         if ($nbrvote == 0) $starBar .= 'Aucun vote';
 		else if ($nbrvote == 1) $starBar .= '<p>Rating: ' . $average . '/' . $numStar . ' (' . $nbrvote . ' vote)</p>';
         else $starBar .= 'Rating: ' . $average . '/' . $numStar . ' (' . $nbrvote . ' votes)';

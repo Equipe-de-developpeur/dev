@@ -54,8 +54,7 @@ $exe=query($sql);
 											<option value="ORDER BY liste_ile_nom DESC" <?php if(isset($_SESSION['tri']) AND $_SESSION['tri'] == "ORDER BY liste_ile_nom DESC" ){?> selected="selected" <?php } ?>>Nom d'Ile décroissante</option>
 											<option value="ORDER BY liste_ile_ville ASC" <?php if(isset($_SESSION['tri']) AND $_SESSION['tri'] == "ORDER BY liste_ile_ville ASC" ){?> selected="selected" <?php } ?>>Ville à proximité croissante</option>
 											<option value="ORDER BY liste_ile_ville DESC" <?php if(isset($_SESSION['tri']) AND $_SESSION['tri'] == "ORDER BY liste_ile_ville DESC" ){?> selected="selected" <?php } ?>>Ville à proximité décroissante</option>
-											<?php if(isset($_SESSION['ville']) AND ($_SESSION['ville']!="1")) { ?><option value="ORDER BY liste_ile_distance ASC" <?php if(isset($_SESSION['tri']) AND $_SESSION['tri'] == "ORDER BY liste_ile_distance ASC" ){?> selected="selected" <?php } ?>>Distance croissante</option><?php } ?>
-											<?php if(isset($_SESSION['ville']) AND ($_SESSION['ville']!="1")) { ?><option value="ORDER BY liste_ile_distance DESC" <?php if(isset($_SESSION['tri']) AND $_SESSION['tri'] == "ORDER BY liste_ile_distance DESC" ){?> selected="selected" <?php } ?>>Distance décroissante</option><?php } ?>
+											
 </select>
 </div>
 <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">

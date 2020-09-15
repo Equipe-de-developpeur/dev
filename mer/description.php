@@ -9,7 +9,11 @@ if(isset($_SESSION['ile']) AND !empty($_SESSION['ile']))
 	$exe_recup=query($sql_recup,$vars);
 	$resultat_ile=fetch_object($exe_recup);
 }
-
+else
+{
+	?><script> location.replace("ile.php"); </script><?php
+			exit;
+}
 
 ?>
 
