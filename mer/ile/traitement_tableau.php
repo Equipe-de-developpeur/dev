@@ -105,7 +105,6 @@ while($resultat=fetch_object($exe))
 ?>
 
 
-?>
 
 
 
