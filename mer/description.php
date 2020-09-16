@@ -47,7 +47,7 @@ else
 </div> 
 <div class="row">
 <div class="description col-sm-12">
-<div class="col-sm-6" style="margin:auto; padding-left:2vw; margin-top: 4vw;">
+<div class="col-sm-6" style="margin:auto; padding-left:2vw; margin-top: 8vw;">
 <!-- Prochainement systeme de note -->
 <?php include 'vote_ile/vote.php'; ?>
 </div> 
