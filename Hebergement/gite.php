@@ -75,7 +75,7 @@
              <?php
 
                 // SELECTIONNE TOUT DANS LA BDD gites
-                $req = $bdd->query('SELECT * FROM gites');
+                $req = $bdd->query('SELECT * FROM `gites` LEFT JOIN note ON gites.id=note.id_gite');
                 // TANT QU'IL Y A DES DONNEES AFFICHE LES LIGNE PAR LIGNE DANS UN TABLEAU
                 while ($donnees = $req->fetch()) {
                     // Enregistrement des données sous forme de variables
@@ -84,6 +84,7 @@
                     $localisation = $donnees['localisation'];
                     $id_gite = $donnees['id'];
                     $note_moyenne = $donnees['note_moyenne'];
+                    $note= $donnees['note'];
 
                 ?>
 
@@ -98,35 +99,53 @@
                             echo '<td>' . $nom . '</td>';
                             // MIX ENTRE HTML ET PHP, AFFICHE LES DONNEES DE LA CATEGORIE NOM
                             echo '<td>' . $localisation . '</td>';
-                            echo '<td>' ?> <?php
-                                            //  BOUCLE PERMETTANT D'AFFICHER UNE PETITE FEUILLE POUR CHAQUE INDENTATION DE NOTE
-                                            for ($i = 1; $i <= $note_moyenne; $i++) {
-                                                echo $feuille;
-                                            }
-                                            '</td>' ?>
-                         <div class="interactive_notation">
-
-
-
-                        <?php
+                            echo '<td>' ?> 
+                        
+                            <?php
                         // Récupération des données de la table gites 
                             $note_gite_moyenne = $donnees['note_moyenne'];
                             $nombre_note = $donnees['nombre_note'];
                             $note_add = $donnees['note_add'];
                         ?>
+                            <?php
+                                            //  BOUCLE PERMETTANT D'AFFICHER UNE PETITE FEUILLE POUR CHAQUE INDENTATION DE NOTE
+                                            for ($i = 1; $i <= $note_moyenne; $i++) {
+                                                echo $feuille;
+                                            }
+                                            '</td>' ?>
+                         
+                         <td>
 
-                             <td>
-                                 <!-- Si il n'y a pas de session auth active -->
-                             <?php if(!isset($_SESSION['auth'])): ?>
-                                <div class="alert alert-secondary">Connectez vous pour noter ce gîte</div>
-                             <?php else: ?>
-                                 <!-- Sinon : -->
-                                 <div class="row">
-                                     <?php
-                                
+                            
+                       <?php  ?>
+
+
+
+
+
+
+                            <!-- Si il n'y a pas de session auth active -->
+                            <?php if(!isset($_SESSION['auth'])){ ?>
+                                <div class="alert alert-secondary">Connectez vous pour noter ce gîte</div> 
+                            <?php }
+                            
+                            else if ($note!=NULL)
+                            {
+                                for ($i = 1; $i <= $note; $i++) {
+                                    echo $feuille;
+                                }
+                            }
+                            
+                            
+                            
+                            else{ ?>
+
+                                    
+                            
+
+                                                <!-- Sinon : -->
+                                 <div class="row"style="display: flex; justify-content: center;">
                                      
-                                     
-                                     ?>
                                      <form action="moyenne_gite.php" method="post">
                                          <input type="hidden" value=<?php echo $id_gite ?> name="id">
                                          <input type="hidden" value=<?php echo $note_gite_moyenne ?> name="note_moyenne">
@@ -170,9 +189,13 @@
                                          <input type="image" id="leaf2" data_value="2" onmouseover="changecolor()" onmouseout="rechangecolor()" name="note-feuille" src="img/mini_leaf_black.png" alt="mini logo feuille" value=2>
                                      </form> 
                                  </div>
-                                 <?php endif ?>
-                             </td>
-                         </div>
+                                 </td>
+                                        <?php  
+                                        }
+                                        
+                                     ?>
+                             
+                         
 
 
                          <!-- javascript notation -->
@@ -207,7 +230,7 @@
                           <?php if (isset($_SESSION['auth']) && $role == "admin") : ?>
                              <td>
                                  <form action="maj_gite.php" method="post">
-                                     <input name="id_maj" value="<?= $id_gite ?> '" type="hidden" />
+                                     <input name="id_maj" value="<?= $id_gite ?>" type="hidden" />
                                      <input type="submit" name="maj" value="maj" class="btn btn-primary text-center" /></form>
                              </td>
 
@@ -221,7 +244,7 @@
                          
                      <?php
                     }
-
+                
                         ?>
                      </tr>
                  </tbody>

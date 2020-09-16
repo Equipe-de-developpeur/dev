@@ -5,14 +5,14 @@ include "config_bdd_gite.php";
 // Recuperation des donnes de formulaire
 $id_maj = $_POST['id_maj'];
 // Requette de recuperation de la ligne de la table correspondante
-$req = $bdd->query("SELECT * FROM gites WHERE id='$id_maj'");
+$req = $bdd->query("SELECT nom, localisation, id FROM gites WHERE id = $id_maj");
 // execution de cete requette dans une bouche pour recuperer les donnees dans un tableau
 while ($donnees = $req->fetch()) {
     // Enregistrement des données sous forme de variables
     $id_gite = $donnees['id'];
     $nom = $donnees['nom'];
     $localisation = $donnees['localisation'];
-    $note = $donnees['note'];
+    
 }
 ?>
 <article class="article article_1">
@@ -21,7 +21,8 @@ while ($donnees = $req->fetch()) {
         <div class="maj_form">
             <div class="input_form">
                 
-                <input type="hidden" name="id_gite" id="id_gite" readonly value="<?php echo $id_maj ?>"><br>
+                <input type="hidden" name="id_gite" id="id_gite" readonly value=<?php echo $id_maj ?> >
+                <br>
 
             </div>
 
