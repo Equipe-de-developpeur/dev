@@ -1,6 +1,6 @@
 .carousel-control-prev-icon
 {
-	background-image: url("../img/fleche_prev.png");
+	background-image: url("../img/fleche_prev.png")!important;
 	width:60%;
 	height:60%;
 }
@@ -10,7 +10,7 @@
 }
 .carousel-control-next-icon
 {
-	background-image: url("../img/fleche_next.png");
+	background-image: url("../img/fleche_next.png")!important;
 	width:60%;
 	height:60%;
 }

@@ -17,30 +17,7 @@ include "formulaire_co.php";
 
  <style>
  
- .col-sm-8
-{
-	margin:auto;
-}
-.age
-{
-	text-align:right;
-}
-.eleve
-{
-	text-align:left;
-}
-.form-check
-{
-	padding-left:45%;
-}
-select
-{
-	margin-right:1vw;
-}
-.row
-{
-	font-size:1vw;
-}
+
 select {
     border: 2px outset aquamarine;
 }

@@ -68,7 +68,7 @@ while($resultat=fetch_object($exe))
 {
 	?>
 	<tr>
-		<td><a href="ile/ville.php?ile=<?php echo $resultat->liste_ile_nom; ?>" target="_blank" style="color:blue;"><?php echo $resultat->liste_ile_nom; ?></a></td>
+		<td><a href="ile/ville.php?ile=<?php echo $resultat->liste_ile_nom; ?>&ile_id=<?php echo $resultat->liste_ile_id; ?>" target="_blank" style="color:blue;"><?php echo $resultat->liste_ile_nom; ?></a></td>
 		<td><?php echo $resultat->liste_ile_ville; ?></td>
 		<?php if(isset($_SESSION['ville']) AND ($_SESSION['ville']!="1")) { ?> <td><?php echo $resultat->liste_ile_distance; ?> km</td> <?php } ?>
 		<td>
