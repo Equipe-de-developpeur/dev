@@ -27,8 +27,6 @@
         if(isset($msg)){
             echo $msg;
         }
-
-        var_dump($_SESSION);
         ?>
         <div class="lport container-fluid">
             <div class="cadre_critere py-1 px-1">
