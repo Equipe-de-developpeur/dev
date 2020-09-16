@@ -55,6 +55,12 @@
     overflow: auto;
 }
 
+@media screen and (max-width: 768px) {
+    .TableauListesPlage {
+        width: 100% !important;
+    }
+}
+
 table {
     border-collapse: collapse;
     border: 2px solid #3795E2;

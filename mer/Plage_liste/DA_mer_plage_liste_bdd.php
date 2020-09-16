@@ -1,6 +1,8 @@
 <!-- Page prenant en charge la connexion à la bdd -->
 
   <?php
+
+
   // Construction des variables de connexion serveur Mysql
   $serveur = 'localhost';
   $loginsql = 'root';

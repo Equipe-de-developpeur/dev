@@ -88,11 +88,7 @@ $req = $connexion->query("SELECT * FROM da_liste_plage WHERE 1");
   echo ('
   <th>Plages</th>
   <th>Villes</th>
-  <th>Liens</th>
-  <th>Distances</th>
-  <th>Actions</th>
-  <th>Note Moyenne</th>
-  <th>Votre Avis</th>
+  <th>Détails</th>
 </tr>
 </thead>
 <tbody>');
@@ -116,19 +112,8 @@ $votre_avis = $donnees['liste_plage_votre_avis'];
         <tr>
           <td>'.$lieux.'</td>
           <td>'.$villes.'</td>
-          <td><a href="'.$liens.'" target="_blank" rel="noopener noreferrer">Cliquer</a></td>
-          <td>'.$distances.'</td>
-          <td>'.$actions.'</td>
-          <td class="Moyenne">
-            <img src="'.$note_moyenne.'" alt="Dauphin Bleu">
-            <img src="'.$note_moyenne.'" alt="Dauphin Bleu">
-            <img src="'.$note_moyenne.'" alt="Dauphin Bleu">
-          </td>
-          <td class="Avis">
-            <img src="'.$votre_avis.'" alt="Dauphin Gris">
-            <img src="'.$votre_avis.'" alt="Dauphin Gris">
-            <img src="'.$votre_avis.'" alt="Dauphin Gris">
-          </td>');
+          <td><a href="../Plage_liste/DA_mer_plage_liste_details.php?id='.$liste_plage_id.'" rel="noopener noreferrer">Détails</a></td>
+');
 echo('</tr>');
           //Fermeture du tableau
 }
