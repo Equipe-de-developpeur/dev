@@ -1,0 +1,112 @@
+.bodyListePort {
+    background-color: #0f8581;
+    font-family: Fira Sans Extra Condensed;
+}
+
+.cadre_critere, .esp_com {
+    background-color: #3B5573 !important;
+}
+
+.lport {
+    color: #3792E2 !important;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.policeColor {
+    color: #A63F02 !important;
+}
+
+.demandeConnexion {
+    background-color: #A63F02 !important;
+    color: #ffffff !important;
+}
+
+.affichage, .commentaire {
+    background-color: #ffffff !important;
+}
+
+.commentaire, .demandeConnexion {
+    margin-bottom: 2%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 100%;
+}
+
+.commentaire:first-child, .demandeConnexion:first-child {
+    margin-top: 2%;
+}
+
+.lien {
+    text-decoration: underline;
+}
+
+.responsive-iframe {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: 425px;
+}
+
+.anchorDiv {
+    float: left;
+}
+
+label.fas:before {
+    content: '\f13d';
+}
+
+.anchorDiv:not(:checked) > input.anchorLogo {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0,0,0,0);
+}
+
+.anchorDiv:not(:checked) > label {
+
+    float: right;
+    padding: 0.1em;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1.2;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+
+.anchorDiv > input:checked ~ label {
+    color: #0f8581;
+    text-shadow: 1px 1px #3B5573;
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 100%;
+}
+
+@media screen and (min-device-width: 980px) {
+    .lport {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
+}
+
+@media screen and (max-device-width: 979px) {
+    .lport {
+        margin-left: 0%;
+        margin-right: 0%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-device-width: 767px){
+    .responsive-iframe {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
