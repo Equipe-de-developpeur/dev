@@ -7,6 +7,8 @@
     $req = $bdd ->prepare("DELETE FROM gites WHERE id ='$id_supp'");
 
     if($req->execute()){
+        session_start();
+        $_SESSION['flash']['success'] = "Le gite à bien été supprimé";
         header("location:gite.php");
     }else{
         echo 'Un problème est survenu';

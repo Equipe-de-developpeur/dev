@@ -5,16 +5,17 @@ include 'header_hebergement.php'; ?>
     <?php
     // Récupération des données du formulaire
     $id_gite = $_POST['id_gite'];
-    $nom_upd = $_POST['nom'];
-    $localisation_upd = $_POST['localisation'];
+    $nom_upd = htmlspecialchars($_POST['nom']);
+    $localisation_upd = htmlspecialchars($_POST['localisation']);
+    $description_upd = htmlspecialchars($_POST['description']);
    
 
 
     // procédure de la mise à jour des infos du gite
-    $req = $bdd->prepare("UPDATE gites SET nom = '$nom_upd', localisation = '$localisation_upd' WHERE id = '$id_gite'");
+    $req = $bdd->prepare("UPDATE gites SET nom = '$nom_upd', localisation = '$localisation_upd', description = '$description_upd' WHERE id = '$id_gite'");
     // $req = $bdd->prepare('UPDATE gites SET nom = :nom_upd, localisation = :localisation_upd, note = :note_upd WHERE id = :id_gite");
 
-    if ($req->execute([$nom_upd, $localisation_upd, $id_gite]
+    if ($req->execute([$nom_upd, $localisation_upd,$description_upd, $id_gite]
        
     )) {
         echo '<h2>Les informations ont bien été modifiées</h2> 

@@ -16,37 +16,7 @@
          <p><br> La prise en compte de ces critères techniques ne suffit pas: une démarche pédagogique d'écocitoyenneté doit aussi être engagée afin de sensibiliser les hôtes au respect de l'environnement et à sa protection.</p>
          <h2>Quelques gites présents dans le var</h2>
 
-         <!--<table class="table table-bordered table-gite">
-             <thead class="thead-light">
-                 <th>Nom du gîte</th>
-                 <th>Localisation</th>
-                 <th>Notation</th>
-             </thead>
-             <tbody>
-                 <tr>
-                     <td>Ecogites du bivosque</td>
-                     <td>Bivosque</td>
-                     <td>
-                         <img src="img/mini_leaf.png" alt="Mini logo feuille">
-                         <img src="img/mini_leaf.png" alt="Mini logo feuille">
-                         <img src="img/mini_leaf.png" alt="Mini logo feuille">
-                         <img src="img/mini_leaf.png" alt="Mini logo feuille">
-                         <img src="img/mini_leaf.png" alt="Mini logo feuille">
-                     </td>
-                      https://www.airbnb.fr/rooms/31353425?source_impression_id=p3_1598274342_vYWvmY3lcuxojC2r 
-                     </tr>
-                 <tr>
-                     <td>Gite du var</td>
-                     <td>Saint raphael</td>
-                     <td>
-                         <img src="img/mini_leaf.png" alt="Mini logo feuille">
-                         <img src="img/mini_leaf.png" alt="Mini logo feuille">
-                         <img src="img/mini_leaf.png" alt="Mini logo feuille">
-
-                     </td>
-                 </tr>
-             </tbody>
-         </table>  -->
+         
          <?php
 
             ?>
@@ -63,7 +33,7 @@
                  <th>Localisation</th>
                  <th>Notation moyenne</th>
                  <th>Votre note</th>
-                 <?php if (isset($_SESSION['auth']) && $role == "admin") : ?>>
+                 <?php if (isset($_SESSION['auth']) && $role == "admin") : ?>
                  <th>Maj</th>
                  <th>Supp</th>
              <?php endif ?>
@@ -94,37 +64,43 @@
                             // VARIABLE NOTE = DONNEES DANS LA TABLE NOTE
                             
                             // Ceci est la petite feuille pour la notation 
-                            $feuille = '<img src="img/mini_leaf.png" alt="Mini logo feuille">';
-                            // MIX ENTRE HTML ET PHP, AFFICHE LES DONNEES DE LA CATEGORIE NOM
-                            echo '<td>' . $nom . '</td>';
-                            // MIX ENTRE HTML ET PHP, AFFICHE LES DONNEES DE LA CATEGORIE NOM
-                            echo '<td>' . $localisation . '</td>';
-                            echo '<td>' ?> 
+                            $feuille = '<img src="img/mini_leaf.png" alt="Mini logo feuille">';?>
+                             <!-- MIX ENTRE HTML ET PHP, AFFICHE LES DONNEES DE LA CATEGORIE NOM -->
+                            
+                            <td>
+                            
+                            <a href="article_gite.php?id=<?php echo $id_gite ?>" ><?php echo $nom ?></a>
+
+                            </form></td>
+
+                            
+                             <td><form action="article_gite.php"method="get" id="article_gite">
+                             <input type="hidden" name="id" value="<?php echo $id_gite ?>">
+                            <a href="#" onclick="document.getElementById('article_gite').submit()"><?php echo $localisation ?></a>
+
+                            </form></td>
+                           
                         
                             <?php
                         // Récupération des données de la table gites 
                             $note_gite_moyenne = $donnees['note_moyenne'];
                             $nombre_note = $donnees['nombre_note'];
                             $note_add = $donnees['note_add'];
-                        ?>
-                            <?php
+                        ?>  <td>
+                                     <?php
                                             //  BOUCLE PERMETTANT D'AFFICHER UNE PETITE FEUILLE POUR CHAQUE INDENTATION DE NOTE
                                             for ($i = 1; $i <= $note_moyenne; $i++) {
                                                 echo $feuille;
                                             }
-                                            '</td>' ?>
+                                             ?>
                          
-                         <td>
+                                        </td>
 
                             
-                       <?php  ?>
+                       
 
-
-
-
-
-
-                            <!-- Si il n'y a pas de session auth active -->
+                            <td>
+                                 <!-- Si il n'y a pas de session auth active -->
                             <?php if(!isset($_SESSION['auth'])){ ?>
                                 <div class="alert alert-secondary">Connectez vous pour noter ce gîte</div> 
                             <?php }
@@ -135,9 +111,7 @@
                                     echo $feuille;
                                 }
                             }
-                            
-                            
-                            
+                    
                             else{ ?>
 
                                     
