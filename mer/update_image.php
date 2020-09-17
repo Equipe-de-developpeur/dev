@@ -8,11 +8,15 @@
     // validate image size. Size is calculated in Bytes
     if($_FILES['profileImage']['size'] <= 2097152) {
 		$extensionUpload = strtolower(substr(strrchr($_FILES['profileImage']['name'], '.'), 1));
-      $msg = "Image supérieur à 2Mo";
-      $msg_class = "alert-danger";
+      
     }
+	else
+	{
+		$msg = "Image supérieur à 2Mo";
+      $msg_class = "alert-danger";
+	}
     // Upload image only if no errors
-    if (empty($error)) {
+    if (empty($msg)) {
 		if(in_array($extensionUpload, $extensionsValides)) {
 			$target_file = "img/photo_profil/".$_SESSION['utilisateur_id'].".".$extensionUpload;
 			if(!file_exists("img/photo_profil/"))
@@ -30,11 +34,15 @@
 		}
         
       } else {
-        $error = "Il y a une erreur d'upload de l'Image";
-        $msg = "alert-danger";
+        $msg = "Il y a une erreur d'upload de l'Image";
+        $msg_class = "alert-danger";
       }
     }
-		
+	else
+	{
+		$msg = "Extension invalide";
+      $msg_class = "alert-danger";
+	}	
 	}
   }
 ?>
