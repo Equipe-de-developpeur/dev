@@ -59,7 +59,7 @@ if(isset($_POST['submit']))
 									
 									if($recuperation_mdp->utilisateur_erreur)
 									{
-										echo $changement_mdp->getErreur();
+										echo $recuperation_mdp->getErreur();
 									}
 								}
 								?>

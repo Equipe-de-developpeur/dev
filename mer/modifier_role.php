@@ -1,6 +1,5 @@
 <?php
 include "connect_pdo.php";
-include "function.php";
 if(isset($_REQUEST['role']) AND !empty($_REQUEST['role']))
 {
 	$role=explode('_',$_REQUEST['role']);

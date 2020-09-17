@@ -53,7 +53,7 @@ testSession_admin();
 				<th>Modification</th>
 			</tr>
 			<?php
-			$reqarticle = query("SELECT utilisateur_id, utilisateur_pseudo,utilisateur_role,utilisateur_nb_comm FROM WD_utilisateur ORDER BY `utilisateur`.`utilisateur_pseudo` ASC");
+			$reqarticle = query("SELECT utilisateur_id, utilisateur_pseudo,utilisateur_role,utilisateur_nb_comm FROM WD_utilisateur ORDER BY `WD_utilisateur`.`utilisateur_pseudo` ASC");
 			while($resultat= fetch_object($reqarticle))
 			{
 				

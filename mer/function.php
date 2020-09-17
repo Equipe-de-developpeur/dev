@@ -275,7 +275,7 @@ class Recuperation_mdp
 							$message='<br> Vous avez bien changé votre Mot de Passe';
 							$entete = "Content-type: text/html; charset= utf8\n";
 							mail($this->utilisateur_email,'Changement MDP',$message,$entete);
-							$sql=" DELETE FROM `WD_recuperation` WHERE `recuperation`.`utilisateur_email` = :utilisateur_email ";
+							$sql=" DELETE FROM `WD_recuperation` WHERE `WD_recuperation`.`utilisateur_email` = :utilisateur_email ";
 							$vars3[':utilisateur_email']=$this->utilisateur_email;
 							query($sql,$vars3);
 							header('Location: ile.php');
