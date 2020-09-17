@@ -25,8 +25,8 @@ if ($req2->execute(array(
   )) )
 {
   $id_comm=$connexion->lastInsertId('da_commentaires_plage');
-echo "Le commentaire à bien été enregistrée<br/><br/>Commentaires : $NewCommentaires";
-echo "<br><a href=DA_mer_plage_liste.php>Retour à la liste des plages</a>";
+/*echo "Le commentaire à bien été enregistrée<br/><br/>Commentaires : $NewCommentaires";
+echo "<br><a href=DA_mer_plage_liste.php>Retour à la liste des plages</a>";*/
 
 header('Location: DA_mer_plage_liste.php#'.$id_comm);
 }

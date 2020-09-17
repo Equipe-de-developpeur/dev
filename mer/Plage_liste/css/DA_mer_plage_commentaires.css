@@ -64,10 +64,9 @@
 
 .ChampDeRechercheCommentairesPlage input {
     background-color: white;
-    width: 90%;
+    width: 40%;
     margin: auto;
     color: #0A5957;
-    margin-top: 20%;
     padding: 2%;
     margin-bottom: 5%;
 }
@@ -96,9 +95,15 @@
     width: 90%;
     margin: auto;
     color: #3795E2;
-    padding: 1%;
+    padding: 2%;
     margin: 2%;
     margin-left: 5%;
+}
+
+.DateEnvoi {
+    font-size: 70%;
+    margin: auto;
+    color: black;
 }
 
 
