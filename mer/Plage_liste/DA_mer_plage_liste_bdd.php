@@ -24,16 +24,18 @@
     $connexion = new PDO('mysql:host=' . $serveur . ';dbname=' . $labase . ';charset=utf8', $loginsql, $passsql);
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    include_once 'DA_mer_plage_liste_table.php';
+    //include_once 'DA_mer_plage_liste_table.php';
 
 
-    include_once 'DA_mer_plage_liste_complete.php';
+    //include_once 'DA_mer_plage_liste_complete.php';
   }
 
   // Prise en charge des erreurs de connexion.
   catch (Exception $e) {
     die('Erreur :' . $e->getMessage());
   }
+
+  
   ?>
 
 
