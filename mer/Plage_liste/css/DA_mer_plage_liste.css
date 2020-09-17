@@ -1,7 +1,11 @@
 /* Listes plage */
 
+body {
+    background-image: url(../img/fond_plage_body.jpg);
+    background-size: cover;
+}
+
 #ListesPlage {
-    background-color: #0F8581;
     text-align: center;
 }
 
@@ -23,7 +27,6 @@
 
 .RechercheListesPlage form {
     background-color: #0A5957;
-    width: 100%;
     color: white;
     display: flex;
     flex-direction: row;

@@ -1,8 +1,6 @@
 /* Commentaires Plage */
 
 #CommentairesPlage {
-    background-color: #0F8581;
-    height: 300px;
     text-align: center;
 }
 
@@ -86,7 +84,7 @@
     margin: 2%;
     margin: auto;
     height: 325px;
-    overflow-y: scroll; 
+    overflow-y: scroll;
 }
 
 

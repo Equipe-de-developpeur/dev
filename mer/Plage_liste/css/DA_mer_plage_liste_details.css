@@ -1,7 +1,9 @@
 .details {
-    background-color: #0A5957;
-    color: white;
+    background-image: url(../img/fond_plage_body.jpg);
+    background-size: cover;
+    background-position: bottom;
     text-align: center;
+    overflow: hidden;
 }
 
 .details a {

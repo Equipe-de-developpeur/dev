@@ -10,7 +10,7 @@
 
   <title>Listes Plage</title>
 </head>
-<body style="background-color: #0F8581;">
+<body>
 
 <?php
   include 'DA_mer_plage_liste_tableau.php';
