@@ -64,7 +64,8 @@
                             // VARIABLE NOTE = DONNEES DANS LA TABLE NOTE
                             
                             // Ceci est la petite feuille pour la notation 
-                            $feuille = '<img src="img/mini_leaf.png" alt="Mini logo feuille">';?>
+                            $feuille_verte = '<img src="img/mini_leaf.png" alt="Mini logo feuille">';
+                            $feuille_grise = '<img src="img/mini_leaf_black.png" alt="Mini logo feuille">';?>
                              <!-- MIX ENTRE HTML ET PHP, AFFICHE LES DONNEES DE LA CATEGORIE NOM -->
                             
                             <td>
@@ -88,10 +89,17 @@
                             $note_add = $donnees['note_add'];
                         ?>  <td>
                                      <?php
-                                            //  BOUCLE PERMETTANT D'AFFICHER UNE PETITE FEUILLE POUR CHAQUE INDENTATION DE NOTE
-                                            for ($i = 1; $i <= $note_moyenne; $i++) {
-                                                echo $feuille;
+                                            //  BOUCLE PERMETTANT D'AFFICHER UNE PETITE FEUILLE POUR CHAQUE INDENTATION DE $i jusqu'a nore moyenne
+                                            
+                                            $i = 0;
+                                            while($i < $note_moyenne){
+                                                echo $feuille_verte;
+                                                $i++;
+                                                // Boucle for pour compléter par des feuilles grises jusqu'a 5 (La notation étant /5)
+                                            }for($u = $i; $u < 5; $u++){
+                                                echo $feuille_grise;
                                             }
+
                                              ?>
                          
                                         </td>
@@ -107,9 +115,14 @@
                             
                             else if ($note!=NULL)
                             {
-                                for ($i = 1; $i <= $note; $i++) {
-                                    echo $feuille;
-                                }
+                                $i = 0;
+                                            while($i < $note){
+                                                echo $feuille_verte;
+                                                $i++;
+                                                // Boucle for pour compléter par des feuilles grises jusqu'a 5 (La notation étant /5)
+                                            }for($u = $i; $u < 5; $u++){
+                                                echo $feuille_grise;
+                                            }
                             }
                     
                             else{ ?>
