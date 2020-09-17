@@ -2,10 +2,14 @@
   $msg = "";
   $msg_class = "";
   if (isset($_POST['save_image'])) {
+	if($_FILES['profileImage']['size'] !=0){
+	
+		 
     $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
     $profileImageName = time() . '-' . $_FILES["profileImage"]["name"];
     // VALIDATION
     // validate image size. Size is calculated in Bytes
+	
     if($_FILES['profileImage']['size'] <= 2097152) {
 		$extensionUpload = strtolower(substr(strrchr($_FILES['profileImage']['name'], '.'), 1));
       
@@ -43,6 +47,12 @@
 		$msg = "Extension invalide";
       $msg_class = "alert-danger";
 	}	
+	}
+  }
+  else
+	{
+		$msg = "Aucun Fichier sélectionné";
+      $msg_class = "alert-danger";
 	}
   }
 ?>
