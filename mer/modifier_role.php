@@ -7,7 +7,7 @@ if(isset($_REQUEST['role']) AND !empty($_REQUEST['role']))
 	$role=explode('_',$_REQUEST['role']);
 	$vars[':utilisateur_role']=$role[0];
 	$vars[':utilisateur_id']=$role[1];
-$exe = query("SELECT utilisateur_id, utilisateur_pseudo,utilisateur_role,utilisateur_nb_comm FROM WD_utilisateur ORDER BY `WD_utilisateur`.`utilisateur_pseudo` ASC");
+
 	if($vars[':utilisateur_id']!=$_SESSION['utilisateur_id'])
 	{
 		$sql="UPDATE `WD_utilisateur` SET `utilisateur_role` =:utilisateur_role WHERE `utilisateur_id` =:utilisateur_id";
@@ -21,6 +21,7 @@ $exe = query("SELECT utilisateur_id, utilisateur_pseudo,utilisateur_role,utilisa
 		$msg="Impossible de changer votre role";
 		$msg_class="alert-danger";
 	}
+	$exe = query("SELECT utilisateur_id, utilisateur_pseudo,utilisateur_role,utilisateur_nb_comm FROM WD_utilisateur ORDER BY `WD_utilisateur`.`utilisateur_pseudo` ASC");
 	?>
 	
 	
@@ -45,7 +46,6 @@ $exe = query("SELECT utilisateur_id, utilisateur_pseudo,utilisateur_role,utilisa
 			
 			while($resultat= fetch_object($exe))
 			{
-
 				?>
 				<tr>
 					<td> <?php echo $resultat->utilisateur_pseudo; ?></td>
