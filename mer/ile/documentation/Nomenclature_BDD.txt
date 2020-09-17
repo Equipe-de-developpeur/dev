@@ -1,5 +1,8 @@
 Nomenclature BDD
 
+	nom base de donnée : var_nature
+
+
 	Nom de la table coherente avec son contenue
 		-> ne pas utiliser les caracteres suivants : ' " ( ) , ; : ! < > - [ ] { } = # ^ \ / ? | ~ + * % $ 
 		-> eviter les espaces, remplacer ceux ci par des underscore  : _  
