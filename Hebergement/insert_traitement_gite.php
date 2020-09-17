@@ -4,7 +4,7 @@ include 'config_bdd_gite.php';
 // Récupération des données du formulaire
 $nom = htmlspecialchars($_POST['nom']);
 $localisation = htmlspecialchars($_POST['localisation']);
-$description = htmlspecialchars($_POST['localisation']);
+$description = htmlspecialchars($_POST['description']);
 $description = nl2br($description);
 
 
