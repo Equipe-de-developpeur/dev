@@ -54,7 +54,7 @@ $exe=query($sql);
 											
 </select>
 </div>
-<div style="max-width:100%; overflow:auto;">
+<div style="max-width:100%; overflow:auto;" id="ile_var">
 <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
 	<tr>
 		<th class="th-sm"> Nom </th>

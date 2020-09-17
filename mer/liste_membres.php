@@ -44,7 +44,17 @@ testSession_admin();
 	
 		
         <hr style="margin-top:60px;">
-        <div>
+        <div id="admin">
+		<?php
+		if(!empty($msg))
+		{
+			?>
+			<div class="alert <?php echo $msg_class ?>" role="alert" style="width:70%; margin: 1vw auto;">
+									<?php echo $msg; ?>
+									</div>
+			<?php
+		}
+		?>
 		<table class="tableau">
 			<tr>
 				<th>Utilisateur</th>
@@ -63,31 +73,32 @@ testSession_admin();
 					<td> <?php echo $resultat->utilisateur_role; ?></td>
 					<td> <?php echo $resultat->utilisateur_nb_comm; ?></td>
 					<td>
-						<select name="role_<?php echo $resultat->utilisateur_id; ?>" id="role" >
+						<select name="role_<?php echo $resultat->utilisateur_id; ?>" id="role" onchange="Change_role(this.value)">
 							<option value="Membre_<?php echo $resultat->utilisateur_id; ?>" <?php if( $resultat->utilisateur_role=="Membre" ){?> selected="selected" <?php } ?>><?php echo "Membre"; ?></option>
 							<option value="Admin_<?php echo $resultat->utilisateur_id; ?>" <?php if( $resultat->utilisateur_role=="Admin" ){?> selected="selected" <?php } ?>><?php echo "Admin"; ?></option>
 						</select>
 					</td>
 				</tr>
-				<script>
 				
-		$(document).ready(function(){
-        $("[name='role_<?php echo $resultat->utilisateur_id; ?>'] option").click(function(){
-        	var selectValue = $("[name='role_<?php echo $resultat->utilisateur_id; ?>'] option:selected").val();
-            if(selectValue){
-				
-				
-				location.replace('modifier_role.php?role='+selectValue);
-            }
-        });
-    });
-		</script>
 				<?php
 			}
 			?>
 		</table>
 		<hr>
         </div>
-		
+	<script>
+	function Change_role(str) {
+  
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("admin").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET","modifier_role.php?role="+str,true);
+    xmlhttp.send();
+  
+}									
+</script>		
     </body>
 </html>

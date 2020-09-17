@@ -237,7 +237,7 @@ $seyne_sur_mer='<div id="widget_ad5ec486becbcfcdab50f00145817b37" class="widget"
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("dtBasicExample").innerHTML = this.responseText;
+        document.getElementById("ile_var").innerHTML = this.responseText;
       }
     };
     xmlhttp.open("GET","ile/traitement_tableau.php?tri="+str,true);
@@ -250,7 +250,7 @@ $seyne_sur_mer='<div id="widget_ad5ec486becbcfcdab50f00145817b37" class="widget"
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("dtBasicExample").innerHTML = this.responseText;
+        document.getElementById("ile_var").innerHTML = this.responseText;
 		document.getElementById("tri").selectedIndex=0;
       }
     };

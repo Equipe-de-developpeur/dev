@@ -42,20 +42,32 @@ if(isset($_SESSION['ville']) AND ($_SESSION['ville']!="1") )
 	
 	
 	$sql="SELECT * FROM WD_liste_ile WHERE 1 ORDER BY liste_ile_distance ASC";
-	
+	$msg = $_SESSION['ville'];
 }
 if(isset($_SESSION['tri']) AND ($_SESSION['tri']!="1"))
 {
 	$sql="SELECT * FROM WD_liste_ile WHERE 1 ".$_SESSION['tri'];
+	$msg = " Filtre avec succés";
 }
 else if (((isset($_SESSION['tri']) AND isset($_SESSION['ville']) AND $_SESSION['ville']=="1") AND ($_SESSION['tri']=="1")) || (!isset($_SESSION['tri']) AND !isset($_SESSION['ville'])))
 {
 	$sql="SELECT * FROM WD_liste_ile WHERE 1 ORDER BY liste_ile_nom ASC";
+	$msg = "Aucun filtre";
 }
 $exe=query($sql);
 
+			$msg_class = "alert-success";
+			if(!empty($msg))
+		{
+			?>
+			<div class="alert <?php echo $msg_class ?>" role="alert" style="width:70%; margin: 1vw auto; text-align:center;">
+									<?php echo $msg; ?>
+									</div>
+			<?php
+		}
 
 ?>
+	<table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
 	<tr>
 		<th class="th-sm"> Nom </th>
 		<th class="th-sm"> Ville </th>
@@ -103,7 +115,7 @@ while($resultat=fetch_object($exe))
 	<?php
 }
 ?>
-
+</table>
 
 
 
