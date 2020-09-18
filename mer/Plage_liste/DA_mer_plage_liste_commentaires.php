@@ -26,7 +26,7 @@ include("DA_mer_plage_liste_bdd.php");?>
 
         <div class="ChampDeRechercheCommentairesPlage">
         <input type="text" id="nom" name="nom" maxlength="30" placeholder="Nom" autocomplete="" required>
-        <input type="text" id="lieu" name="lieu" maxlength="50" placeholder="Lieux" autocomplete="" required>
+        <input type="text" id="lieu" name="lieu" maxlength="40" placeholder="Lieux" autocomplete="" required>
           <textarea name="NewCommentaires" id="NewCommentaires" rows="6" cols="40" minlength="3" maxlength="500" placeholder="Vous pouvez écrire votre commentaire ici. Penser a mentionner l'endroit dont vous parlez" required></textarea>
         </div>
 

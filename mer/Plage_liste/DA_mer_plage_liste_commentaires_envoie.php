@@ -8,7 +8,6 @@ $NewCommentaires = htmlspecialchars($_POST['NewCommentaires']);
 $commentaires_plage_noms = htmlspecialchars($_POST['nom']);
 $commentaires_plage_lieux = htmlspecialchars($_POST['lieu']);
 
-
  /*vérification de la bonne reception des champs
 echo $NewCommentaires;
 exit();*/

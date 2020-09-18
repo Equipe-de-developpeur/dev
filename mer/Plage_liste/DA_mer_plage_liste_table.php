@@ -27,7 +27,7 @@ $table2 = "CREATE TABLE IF NOT EXISTS $nom_table2 (
   commentaires_plage_id INT PRIMARY KEY AUTO_INCREMENT,
   commentaires_plage_textes VARCHAR(2000) NOT NULL,
   commentaires_plage_noms VARCHAR(50),
-  commentaires_plage_dates VARCHAR(300),
+  commentaires_plage_dates DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   commentaires_plage_lieux VARCHAR(50),
   commentaires_plage_réponses VARCHAR(2000)
   
