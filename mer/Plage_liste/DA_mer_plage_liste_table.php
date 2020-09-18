@@ -1,13 +1,13 @@
 <?php
 
-include "DA_mer_plage_liste_bdd.php";
+
 // Création de la table da_liste_plage dans la base var_nature
 
 $nom_table1 = 'da_liste_plage';
 
 $table1 = "CREATE TABLE IF NOT EXISTS $nom_table1 (
   liste_plage_id INT PRIMARY KEY AUTO_INCREMENT,
-  liste_plage_lieux VARCHAR(50) NULL,
+  liste_plage_lieux VARCHAR(50) NULL UNIQUE,
   liste_plage_villes VARCHAR(50) NULL,
   liste_plage_liens VARCHAR(300) NULL,
   liste_plage_distances VARCHAR(10)NULL,
