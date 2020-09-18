@@ -6,8 +6,8 @@
   // Construction des variables de connexion serveur Mysql
   $serveur = 'localhost';
   $loginsql = 'root';
-  $passsql = '';
-  $labase = '';
+  $passsql = 'root';
+  $labase = 'var_nature';
 
   // Connexion au serveur 
   try {
@@ -24,10 +24,10 @@
     $connexion = new PDO('mysql:host=' . $serveur . ';dbname=' . $labase . ';charset=utf8', $loginsql, $passsql);
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    //include_once 'DA_mer_plage_liste_table.php';
+    include_once 'DA_mer_plage_liste_table.php';
 
 
-    //include_once 'DA_mer_plage_liste_complete.php';
+    include_once 'DA_mer_plage_liste_complete.php';
   }
 
   // Prise en charge des erreurs de connexion.
