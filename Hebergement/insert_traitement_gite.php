@@ -6,12 +6,13 @@ $nom = htmlspecialchars($_POST['nom']);
 $localisation = htmlspecialchars($_POST['localisation']);
 $description = htmlspecialchars($_POST['description']);
 $description = nl2br($description);
-
+// Si une photo est postée et si le nom n'est pas vide
 if(isset($_FILES['picture']) && !empty($_FILES['picture']['name'])){
     $tailleMax = 2097152;
     $FileExtension = array('jpg', 'jpeg', 'png','gif');
-    if($_FILES['avatar']['size'] <= $tailleMax){
-
+    // Si la taille de la photo est inférieure a $tailleMax
+    if($_FILES['picture']['size'] <= $tailleMax){
+        $uploadExtension = strtolower(substr(strrchr($_FILES['picture']['name'], '.'), 1));
     }else{
         session_start();
         $_SESSION['flash']['danger'] = "Votre photo est trop volumineuse, elle ne doit pas dépasser 2Mo.";
