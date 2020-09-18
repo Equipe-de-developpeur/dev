@@ -7,7 +7,7 @@
   $serveur = 'localhost';
   $loginsql = 'root';
   $passsql = 'root';
-  $labase = 'var_nature';
+  $labase = '';
 
   // Connexion au serveur 
   try {
@@ -25,8 +25,6 @@
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     include_once 'DA_mer_plage_liste_table.php';
-
-
     include_once 'DA_mer_plage_liste_complete.php';
   }
 
