@@ -5,8 +5,9 @@
 
 
     if($_POST && !empty($_POST['new_comment'])){
+        
         $req = $bdd->prepare("INSERT INTO comments SET comments = ?, id_gite = ?, id_user = ?,date_comment = NOW()");
-    if($req->execute([$_POST['new_comment'], $_POST['id_gite'], $_POST['id_user']])){
+    if($req->execute([htmlspecialchars($_POST['new_comment']), $_POST['id_gite'], $_POST['id_user']])){
         header('Location: ' . $_SERVER['HTTP_REFERER']);
         
     }else{

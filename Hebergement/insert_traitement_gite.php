@@ -7,7 +7,17 @@ $localisation = htmlspecialchars($_POST['localisation']);
 $description = htmlspecialchars($_POST['description']);
 $description = nl2br($description);
 
+if(isset($_FILES['picture']) && !empty($_FILES['picture']['name'])){
+    $tailleMax = 2097152;
+    $FileExtension = array('jpg', 'jpeg', 'png','gif');
+    if($_FILES['avatar']['size'] <= $tailleMax){
 
+    }else{
+        session_start();
+        $_SESSION['flash']['danger'] = "Votre photo est trop volumineuse, elle ne doit pas dépasser 2Mo.";
+        header('Location:gite.php');
+    }
+}
 
 // verification de la reception des données
 /*
