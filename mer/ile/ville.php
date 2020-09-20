@@ -7,7 +7,7 @@ if(isset($_REQUEST['ile']) AND !empty($_REQUEST['ile']))
 		$_SESSION['ile_id']=$_REQUEST['ile_id'];
 	}
 	$_SESSION['ile']=$_REQUEST['ile'];
-	header('Location: ../description.php');
+	header('Location: description.php');
 	exit;
 }
 else
@@ -21,7 +21,7 @@ else
 	{
 		$_SESSION['tri']=$_REQUEST['tri'];
 	}
-	header('Location: ../ile.php');
+	header('Location: ile.php');
 	exit;
 }
 ?>

@@ -240,7 +240,7 @@ $seyne_sur_mer='<div id="widget_ad5ec486becbcfcdab50f00145817b37" class="widget"
         document.getElementById("ile_var").innerHTML = this.responseText;
       }
     };
-    xmlhttp.open("GET","ile/traitement_tableau.php?tri="+str,true);
+    xmlhttp.open("GET","traitement_tableau.php?tri="+str,true);
     xmlhttp.send();
   
 }									
@@ -254,7 +254,7 @@ $seyne_sur_mer='<div id="widget_ad5ec486becbcfcdab50f00145817b37" class="widget"
 		document.getElementById("tri").selectedIndex=0;
       }
     };
-    xmlhttp.open("GET","ile/traitement_tableau.php?id="+str,true);
+    xmlhttp.open("GET","traitement_tableau.php?id="+str,true);
     xmlhttp.send();
   
 }

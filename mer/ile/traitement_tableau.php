@@ -1,5 +1,5 @@
 <?php
-include "../connect_pdo.php";
+include "../espace_membre/connect_pdo.php";
 include "calcul_distance.php";
 
 	if(isset($_REQUEST['id']) AND !empty($_REQUEST['id']))
@@ -80,7 +80,7 @@ while($resultat=fetch_object($exe))
 {
 	?>
 	<tr>
-		<td><a href="ile/ville.php?ile=<?php echo $resultat->liste_ile_nom; ?>&ile_id=<?php echo $resultat->liste_ile_id; ?>" target="_blank" style="color:blue;"><?php echo $resultat->liste_ile_nom; ?></a></td>
+		<td><a href="ville.php?ile=<?php echo $resultat->liste_ile_nom; ?>&ile_id=<?php echo $resultat->liste_ile_id; ?>" target="_blank" style="color:blue;"><?php echo $resultat->liste_ile_nom; ?></a></td>
 		<td><?php echo $resultat->liste_ile_ville; ?></td>
 		<?php if(isset($_SESSION['ville']) AND ($_SESSION['ville']!="1")) { ?> <td><?php echo $resultat->liste_ile_distance; ?> km</td> <?php } ?>
 		<td>
