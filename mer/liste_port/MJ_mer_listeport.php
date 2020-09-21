@@ -36,10 +36,10 @@
                     <label for="critere">Classez par :</label>
                     <select id="critere" name="critere">
                         <option value="nom">Nom</option>
-                        <option value="localisation">Lieu</option>
-                        <option value="pp">Label Port Propres</option>
-                        <option value="aeb">Label Actifs en Biodiversité</option>
-                        <option value="pb">Label Pavillon Bleu</option>
+                        <option value="localisation" <?php if(isset($_POST['critere'])) { if ($_POST['critere'] == "localisation") { echo "selected";}} ?>>Lieu</option>
+                        <option value="pp" <?php if(isset($_POST['critere'])) { if ($_POST['critere'] == "pp") { echo "selected";}} ?>>Label Port Propres</option>
+                        <option value="aeb" <?php if(isset($_POST['critere'])) { if ($_POST['critere'] == "aeb") { echo "selected";}} ?>>Label Actifs en Biodiversité</option>
+                        <option value="pb" <?php if(isset($_POST['critere'])) { if ($_POST['critere'] == "pb") { echo "selected";}} ?>>Label Pavillon Bleu</option>
                     </select>
                     <input class="mt-1" type="submit" value="Classer">
                 </form>

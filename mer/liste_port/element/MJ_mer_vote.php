@@ -64,9 +64,9 @@ if(isset($_SESSION['utilisateur_id']) && $_SESSION['utilisateur_id'] != NULL){
     $sqlvote->execute();
     $voteFetch = $sqlvote->fetch(PDO::FETCH_ASSOC);
     //On récupère dans $voteGot le valeur du vote. Si il est non existant, il sera NULL.
-	if($voteFetch)
+	if(isset($voteFetch))
 	{
-		$voteGot = $voteFetch['vote_port_value'];
+        $voteGot = $voteFetch['vote_port_value'];
 	}
     else
 	{

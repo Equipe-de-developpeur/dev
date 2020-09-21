@@ -18,7 +18,7 @@ if(isset($_POST["anchor"])) {
 	}
     else
 	{
-		$voteGotMod="0";
+		$voteGotMod=NULL;
 	}
 
     //On vérifie qu'une valeur a bien été attribué à $voteGotMod, ou en d'autre mot que l'utilisateur a déjà voté sur ce port
