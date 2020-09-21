@@ -25,7 +25,8 @@
   $plageliste = new PlageListe;
   if (isset($_REQUEST['VOTER'])) {
     $plageliste->notation();
-    header('Location: ' . $_SERVER['HTTP_REFERER']); //Rafraichir la page si il y a 1 vote existant
+	?><script> location.replace("<?php echo $_SERVER['HTTP_REFERER']; ?>"); </script><?php
+ //Rafraichir la page si il y a 1 vote existant
   }
   while ($donnees = $req->fetch()) {
     // Enregistrement des données sous forme de variables
@@ -143,7 +144,7 @@
       echo ('
           <div class="test4">
           <form action="" method="post">
-            <div class="note">
+            <div class="note2">
 
             <input type="hidden" name="idLocation" value="$lieuID">
      
@@ -177,7 +178,7 @@
       echo ('
           <div class="test4">
           <form action="" method="post">
-            <div class="note">
+            <div class="note2">
 
             <input type="hidden" name="idLocation" value="$lieuID">
      
@@ -210,7 +211,7 @@
       echo ('
           <div class="test4">
           <form action="" method="post">
-            <div class="note">
+            <div class="note2">
 
             <input type="hidden" name="idLocation" value="$lieuID">
      
@@ -243,7 +244,7 @@
       echo ('
           <div class="test4">
           <form action="" method="post">
-            <div class="note">
+            <div class="note2">
 
             <input type="hidden" name="idLocation" value="$lieuID">
      
@@ -276,7 +277,7 @@
       echo ('
           <div class="test4">
           <form action="" method="post">
-            <div class="note">
+            <div class="note2">
 
             <input type="hidden" name="idLocation" value="$lieuID">
      
@@ -309,7 +310,7 @@
       echo ('
           <div class="test4">
           <form action="" method="post">
-            <div class="note">
+            <div class="note2">
 
             <input type="hidden" name="idLocation" value="$lieuID">
      
