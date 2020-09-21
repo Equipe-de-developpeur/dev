@@ -1,7 +1,7 @@
 <!-- reçois les informations de la page inserer.php et réaliser le traitement d’enregistrement dans la base de données -->
 
 <?php
-include("DA_mer_plage_liste_bdd.php");
+include("../MODEL/DA_mer_plage_liste_bdd.php");
 
 // Récupération des données du formulaire
 $NewCommentaires = htmlspecialchars($_POST['NewCommentaires']);
@@ -27,7 +27,7 @@ if ($req2->execute(array(
 /*echo "Le commentaire à bien été enregistrée<br/><br/>Commentaires : $NewCommentaires";
 echo "<br><a href=DA_mer_plage_liste.php>Retour à la liste des plages</a>";*/
 
-header('Location: DA_mer_plage_liste.php#'.$id_comm);
+header('Location: ../DA_mer_plage_liste.php#'.$id_comm);
 }
 else
 {

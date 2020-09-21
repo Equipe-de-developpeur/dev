@@ -16,8 +16,8 @@
 
   <?php
 
-  include "DA_mer_plage_liste_bdd.php";
-  include "DA_mer_plage_liste_detail_vote.php";
+  include "MODEL/DA_mer_plage_liste_bdd.php";
+  include "MODEL/DA_mer_plage_liste_detail_vote.php";
 
   $id = $_REQUEST['id'];
   $req = $connexion->query("SELECT * FROM da_liste_plage WHERE `liste_plage_id`=$id");
@@ -352,7 +352,7 @@
 
 
 
-  <a style="color:#3795E2" href="../Plage_liste/DA_mer_plage_liste.php" rel="noopener noreferrer" >Retour</a>
+  <a style="color:#3795E2" href="DA_mer_plage_liste.php" rel="noopener noreferrer" >Retour</a>
 <?php 	include "../espace_membre/footer.php"; ?>
 </body>
 

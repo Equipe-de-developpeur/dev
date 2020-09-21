@@ -14,10 +14,10 @@
 <body>
 
 <?php
-  include 'DA_mer_plage_liste_tableau.php';
+  include 'View/DA_mer_plage_liste_tableau.php';
 ?>
 <?php
- include 'DA_mer_plage_liste_commentaires.php';
+ include 'View/DA_mer_plage_liste_commentaires.php';
 ?>
 <?php 	include "../espace_membre/footer.php"; ?>
 </body>
