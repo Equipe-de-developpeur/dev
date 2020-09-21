@@ -1,0 +1,11 @@
+Header pour les listes
+
+	Creation du fichier header_mer.php
+		-> CSS special 
+			-> Plage
+			-> Port
+			-> ile
+				-> Description de l'ile
+		-> Affichage du nom de la page port / ile / plage en fonction de celles-ci
+		-> Image en fonction du nom de page port / plage / ile
+	include de cette page dans les conditions du fichier header.php

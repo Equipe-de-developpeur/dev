@@ -1,0 +1,28 @@
+Systeme de Connexion
+
+Mise en place d'une base de donnée pour recuperer :
+	->pseudo
+	->nom
+	->prenom
+	->email
+	->password
+Ensuite dans la base de donnée il y a egalement pour plus tard
+	->image
+	->role
+	->nombre de vote
+	
+	
+	Niveau Front
+	-> Creation d'une page  de connexion
+		-> lien vers page d'inscription
+		-> mot de passe oublié
+		-> systeme de cookie pour retenir pseudo et mot de passe
+		
+	Niveau Back
+	-> Récuperation des données du formulaire
+	-> Verifie si l'email et le pseudo existent deja dans la base de donnée
+		-> si au moins l'un des deux existent => message d'erreur present
+	-> Encrypte les mots de passe en sha1
+	-> Creation des variables $_SESSION['utilisateur_id'], $_SESSION['utilisateur_pseudo'], $_SESSION['utilisateur_role']
+	-> Creation de cookie sur 365 jours
+	

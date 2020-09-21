@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php 	include "../espace_membre/header.php"; ?>
 <html lang="fr">
 
 <head>
@@ -8,7 +9,7 @@
 
   <link rel="stylesheet" style="text/css" href="css/DA_mer_plage_liste_details.css">
 
-  <title>Plage liste détails</title>
+  <title>Plage liste détails</title> 
 </head>
 
 <body>
@@ -24,7 +25,8 @@
   $plageliste = new PlageListe;
   if (isset($_REQUEST['VOTER'])) {
     $plageliste->notation();
-    header('Location: ' . $_SERVER['HTTP_REFERER']); //Rafraichir la page si il y a 1 vote existant
+	?><script> location.replace("<?php echo $_SERVER['HTTP_REFERER']; ?>"); </script><?php
+ //Rafraichir la page si il y a 1 vote existant
   }
   while ($donnees = $req->fetch()) {
     // Enregistrement des données sous forme de variables
@@ -72,58 +74,58 @@
         <div class="test1">');
     if ($note_moyenne == 0) {
       echo ('
-          <img src="img/DauphinGris.png" alt="Dauphin gris">
-            <img src="img/DauphinGris.png" alt="Dauphin gris">
-            <img src="img/DauphinGris.png" alt="Dauphin gris"> 
-            <img src="img/DauphinGris.png" alt="Dauphin gris">
-            <img src="img/DauphinGris.png" alt="Dauphin gris">
+          <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
+            <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
+            <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris"> 
+            <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
+            <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
           ');
     }
     if ($note_moyenne <= 1.5 && $note_moyenne > 0) {
       echo ('
-          <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-          <img src="img/DauphinGris.png" alt="Dauphin gris">
-          <img src="img/DauphinGris.png" alt="Dauphin gris"> 
-          <img src="img/DauphinGris.png" alt="Dauphin gris">
-          <img src="img/DauphinGris.png" alt="Dauphin gris">
+          <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+          <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
+          <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris"> 
+          <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
+          <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
         ');
     }
     if ($note_moyenne > 1.5 && $note_moyenne <= 2.2) {
       echo ('
-          <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-          <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-            <img src="img/DauphinGris.png" alt="Dauphin gris">
-            <img src="img/DauphinGris.png" alt="Dauphin gris">
-            <img src="img/DauphinGris.png" alt="Dauphin gris">
+          <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+          <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+            <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
+            <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
+            <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
 
           ');
     }
     if ($note_moyenne > 2.2 && $note_moyenne <= 3) {
       echo ('
-            <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-            <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-            <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-              <img src="img/DauphinGris.png" alt="Dauphin gris">
-              <img src="img/DauphinGris.png" alt="Dauphin gris">
+            <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+            <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+            <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+              <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
+              <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
             ');
     }
     if ($note_moyenne > 3 && $note_moyenne <= 4) {
       echo ('
-              <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-              <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-              <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-              <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-                <img src="img/DauphinGris.png" alt="Dauphin gris">
+              <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+              <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+              <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+              <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+                <img class="dauph" src="img/DauphinGris.png" alt="Dauphin gris">
     
               ');
     }
     if ($note_moyenne > 4) {
       echo ('
-                <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-                <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-                <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-                <img src="img/DauphinBleu.png" alt="Dauphin bleu">
-                <img src="img/DauphinBleu.png" alt="Dauphin bleu">
+                <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+                <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+                <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+                <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
+                <img class="dauph" src="img/DauphinBleu.png" alt="Dauphin bleu">
                 ');
     }
 
@@ -142,23 +144,23 @@
       echo ('
           <div class="test4">
           <form action="" method="post">
-            <div class="note">
+            <div class="note2">
 
             <input type="hidden" name="idLocation" value="$lieuID">
      
-        <label for="note1" class="labelButon"><img class="A2" src="img/DauphinGris.png" alt="Dauphin gris"></label>
+        <label for="note1" class="labelButon"><img class="A2" class="dauph" src="img/DauphinGris.png" alt="Dauphin gris"></label>
         <input class="c" type="radio" name="note" id="note1" value="1">
          
-        <label for="note2" class="labelButon"><img class="A2" src="img/DauphinGris.png" alt="Dauphin gris"></label>
+        <label for="note2" class="labelButon"><img class="A2" class="dauph" src="img/DauphinGris.png" alt="Dauphin gris"></label>
         <input class="c" type="radio" name="note" id="note2" value="2">
          
-        <label for="note3" class="labelButon"><img class="A2" src="img/DauphinGris.png" alt="Dauphin gris"></label>
+        <label for="note3" class="labelButon"><img class="A2" class="dauph" src="img/DauphinGris.png" alt="Dauphin gris"></label>
         <input class="c" type="radio" checked name="note" id="note3" value="3">
          
-        <label for="note4" class="labelButon"><img class="A2" src="img/DauphinGris.png" alt="Dauphin gris"></label>
+        <label for="note4" class="labelButon"><img class="A2" class="dauph" src="img/DauphinGris.png" alt="Dauphin gris"></label>
         <input class="c" type="radio" name="note" id="note4" value="4">
          
-        <label for="note5" class="labelButon"><img class="A2" src="img/DauphinGris.png" alt="Dauphin gris"></label>
+        <label for="note5" class="labelButon"><img class="A2" class="dauph" src="img/DauphinGris.png" alt="Dauphin gris"></label>
         <input class="c" type="radio" name="note" id="note5" value="5">
          
      
@@ -176,7 +178,7 @@
       echo ('
           <div class="test4">
           <form action="" method="post">
-            <div class="note">
+            <div class="note2">
 
             <input type="hidden" name="idLocation" value="$lieuID">
      
@@ -209,7 +211,7 @@
       echo ('
           <div class="test4">
           <form action="" method="post">
-            <div class="note">
+            <div class="note2">
 
             <input type="hidden" name="idLocation" value="$lieuID">
      
@@ -242,7 +244,7 @@
       echo ('
           <div class="test4">
           <form action="" method="post">
-            <div class="note">
+            <div class="note2">
 
             <input type="hidden" name="idLocation" value="$lieuID">
      
@@ -275,7 +277,7 @@
       echo ('
           <div class="test4">
           <form action="" method="post">
-            <div class="note">
+            <div class="note2">
 
             <input type="hidden" name="idLocation" value="$lieuID">
      
@@ -308,7 +310,7 @@
       echo ('
           <div class="test4">
           <form action="" method="post">
-            <div class="note">
+            <div class="note2">
 
             <input type="hidden" name="idLocation" value="$lieuID">
      
@@ -351,7 +353,7 @@
 
 
   <a href="../Plage_liste/DA_mer_plage_liste.php" rel="noopener noreferrer">Retour</a>
-
+<?php 	include "../espace_membre/footer.php"; ?>
 </body>
 
 </html>

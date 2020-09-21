@@ -1,0 +1,12 @@
+Systeme de Droits
+
+
+Creation d'une fonction testSession()
+						-> Verifie si la variable $_SESSION['utilisateur_id'] existe
+							-> si oui acces à l'écriture des commentaires et un espace membre pour editer son profil
+						
+Creation d'une fonction testSessionAdmin()	
+						->Verifie si la variable $_SESSION['utilisateur_role'] est égale à "Admin"
+							-> si oui apparition du lien Admin qui lui permet de voir une liste d'utilisateur et de pouvoir changer leur role
+							-> Autorise l'acces à liste_membres.php
+								-> sinon renvoie à l'accueil

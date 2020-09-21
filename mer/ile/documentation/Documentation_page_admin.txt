@@ -1,0 +1,4 @@
+Mise en place d'un tableau
+	-> recuperation du pseudo de l'utilisateur, son role et son nombre de commentaires
+	-> menu deroulant en select pour changer le role des utilisateurs ( pour le moment membre et admin )
+	-> accessible que pour l'admin

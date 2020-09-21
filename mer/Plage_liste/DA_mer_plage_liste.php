@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php 	include "../espace_membre/header.php"; ?>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -18,6 +19,6 @@
 <?php
  include 'DA_mer_plage_liste_commentaires.php';
 ?>
-
+<?php 	include "../espace_membre/footer.php"; ?>
 </body>
 </html>

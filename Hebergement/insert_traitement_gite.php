@@ -2,12 +2,9 @@
 include 'header_hebergement.php';
 include 'config_bdd_gite.php';
 // Récupération des données du formulaire
-$nom = htmlspecialchars($_POST['nom']);
-$localisation = htmlspecialchars($_POST['localisation']);
-$description = htmlspecialchars($_POST['description']);
-$description = nl2br($description);
-
-
+$nom = $_POST['nom'];
+$localisation = $_POST['localisation'];
+$note = $_POST['note'];
 
 // verification de la reception des données
 /*
@@ -17,13 +14,12 @@ echo $note;
 */
 
 // Procedure d'enregistrement des données du formulaire dans la bdd
-if(!empty($nom) && !empty($localisation)){
-    $req = $bdd->prepare("INSERT INTO gites (nom, localisation, description) VALUES (:nom, :localisation, :description)");
+$req = $bdd->prepare("INSERT INTO gites (nom, localisation, note) VALUES (:nom, :localisation, :note)");
 
 if ($req->execute(array(
     'nom' => $nom,
     'localisation' => $localisation,
-    'description' => $description,
+    'note' => $note,
 ))) {
 ?>
 
@@ -32,7 +28,7 @@ if ($req->execute(array(
         <p>
             <strong>Nom du gîte :</strong> <?php echo $nom ?><br>
             <strong>Localisation :</strong> <?php echo $localisation ?><br>
-            <strong>Description : </strong> <?php echo $description?>
+            <strong>Note :</strong> <?php echo $note ?>.</p>
         <a href="gite.php"><button class="btn btn-success article_btn ">Retournez à la liste des tableaux</button></a>
     </article>
 
@@ -49,10 +45,5 @@ if ($req->execute(array(
     // prise en charge des messages d'erreurs
     print_r($req->errorInfo());
 }
-}else{
-    $_SESSION['flash']['danger'] = 'Veuillez renseigner au minimum le nom et la localisation de votre gite.';
-    header('Location:gite.php');
-}
-
 
 ?>

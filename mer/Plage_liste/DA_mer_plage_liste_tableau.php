@@ -112,7 +112,7 @@ $votre_avis = $donnees['liste_plage_votre_avis'];
         <tr>
           <td>'.$lieux.'</td>
           <td>'.$villes.'</td>
-          <td><a href="../Plage_liste/DA_mer_plage_liste_details.php?id='.$liste_plage_id.'" rel="noopener noreferrer">Détails</a></td>
+          <td><a href="../Plage_liste/DA_mer_plage_liste_details.php?id='.$liste_plage_id.'" rel="noopener noreferrer" style="color:#3795E2;">Détails</a></td>
 ');
 echo('</tr>');
           //Fermeture du tableau

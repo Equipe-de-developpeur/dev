@@ -15,10 +15,12 @@ span {
     text-decoration: underline;
 }
 
-img {
+.dauph{
     width: 10%;
 }
-
+.A2{
+	width:50%;
+}
 
 /* NOTATION */
 
@@ -42,7 +44,7 @@ img {
     color: silver;
 }
 
-.note {
+.note2 {
     text-decoration: none;
 }
 

@@ -1,0 +1,11 @@
+Langage : JS, PHP, Mysql
+
+Profil Membre
+
+-> Affichage de l'image
+	-> possibilité d'update sa photo avec previsualisation
+		-> fenetre modale
+-> Affichage de l'adresse Mail / role de l'utilisateur / Pseudo
+
+-> Possibilité de modifier son mot de passe avec confirmation du mot de passe
+	-> avec un update

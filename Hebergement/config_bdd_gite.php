@@ -13,8 +13,5 @@ $dbname = 'gites_hebergement';
                     die('Erreur : ' . $e->getMessage());
                 }
 
-                $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                
-
                 // Si tout va bien, on peut continuer
                 ?>
