@@ -352,7 +352,7 @@
 
 
 
-  <a href="../Plage_liste/DA_mer_plage_liste.php" rel="noopener noreferrer">Retour</a>
+  <a style="color:#3795E2" href="../Plage_liste/DA_mer_plage_liste.php" rel="noopener noreferrer" >Retour</a>
 <?php 	include "../espace_membre/footer.php"; ?>
 </body>
 
