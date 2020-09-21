@@ -25,10 +25,12 @@ if(isset($_POST["anchor"])) {
     if(isset($voteGotMod)){
         //L'utilisateur a déjà voté, on prépare donc une modification
         $insertVote = $pdo->prepare("UPDATE `jm_mer_vote_port` SET `vote_port_value` = '$voteSent' WHERE `vote_port_user` = '$voteUser' AND `vote_port_location` = '$voteLocalisation'");
+        $msg = "Votre vote a bien été modifié.";
     }
     else {
         //L'utilisateur n'a pas encore voté, on prépare donc une insertion
         $insertVote = $pdo->prepare("INSERT INTO `jm_mer_vote_port`(`vote_port_value`, `vote_port_user`, `vote_port_location`) VALUES ('$voteSent', '$voteUser', '$voteLocalisation')");
+        $msg = "Votre vote a bien été enregistré.";
     }
     $insertVote->execute();
 }

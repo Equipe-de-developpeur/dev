@@ -366,7 +366,7 @@ class Recuperation_code
 function testSession(){
 	if(!isset($_SESSION['utilisateur_id']))
 	{
-		?><script> location.replace("ile.php"); </script><?php
+		?><script> location.replace("../ile/ile.php"); </script><?php
 			exit;
 	}
 }
@@ -380,7 +380,7 @@ function testSession_admin(){
 	if(!isset($_SESSION['utilisateur_id']) OR ((isset($_SESSION['utilisateur_role']) AND $_SESSION['utilisateur_role']!="Admin" )))
 	{
 		
-			?><script> location.replace("ile.php"); </script><?php
+			?><script> location.replace("../ile/ile.php"); </script><?php
 			exit;
 		
 	}

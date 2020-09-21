@@ -26,8 +26,14 @@
         include "element/MJ_mer_traitementvote.php";
         
         //Affichage message de réception
-        if(isset($msg)){
-            echo $msg;
+        if(isset($msg)){ ?>
+            <div class="alert alert-light alert-dismissible fade show lport" role="alert">
+                <?php echo $msg; ?>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <?php    
         }
         ?>
         <div class="lport container-fluid">
