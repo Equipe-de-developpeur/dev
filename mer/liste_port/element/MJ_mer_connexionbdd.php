@@ -3,7 +3,7 @@
 //Identifiant de connexion, à changer selon le serveur
 $host = "localhost";
 $user = "root";
-$password = "root";
+$password = "";
 $dbname = "var_nature";
 
 try {
