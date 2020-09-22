@@ -36,6 +36,7 @@
         <?php    
         }
         ?>
+        <!-- Formulaire de classement -->
         <div class="lport container-fluid">
             <div class="cadre_critere py-1 px-1">
                 <form action="MJ_mer_listeport.php" method="post">
@@ -46,6 +47,7 @@
                         <option value="pp" <?php if(isset($_POST['critere'])) { if ($_POST['critere'] == "pp") { echo "selected";}} ?>>Label Port Propres</option>
                         <option value="aeb" <?php if(isset($_POST['critere'])) { if ($_POST['critere'] == "aeb") { echo "selected";}} ?>>Label Actifs en Biodiversité</option>
                         <option value="pb" <?php if(isset($_POST['critere'])) { if ($_POST['critere'] == "pb") { echo "selected";}} ?>>Label Pavillon Bleu</option>
+                        <option value="avis" <?php if(isset($_POST['critere'])) { if ($_POST['critere'] == "avis") { echo "selected";}} ?>>Vote</option>
                     </select>
                     <input class="mt-1" type="submit" value="Classer">
                 </form>

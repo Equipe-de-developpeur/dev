@@ -33,6 +33,23 @@ if(isset($_POST["anchor"])) {
         $msg = "Votre vote a bien été enregistré.";
     }
     $insertVote->execute();
+
+    //On récupère les votes faits sur ce port
+    $sqlAverage = $pdo->prepare("SELECT `vote_port_value` FROM `jm_mer_vote_port` WHERE `vote_port_location` = '$voteLocalisation'");
+    $sqlAverage->execute();
+    $averageFetch = $sqlAverage->fetchAll(PDO::FETCH_ASSOC);
+
+    //On récupère le nombre de vote
+    $nbVote = count($averageFetch);
+    $average = 0;
+    foreach($averageFetch as $x) {
+        $average += $x['vote_port_value'];
+    }
+    //On fait le calcul de la moyenne
+    $average = $average / $nbVote;
+
+    $insertAvrg = $pdo->prepare("UPDATE `jm_mer_liste_port` SET `liste_port_moyenne` = '$average' WHERE `liste_port_lieu_id` = '$voteLocalisation'");
+    $insertAvrg->execute();
 }
 
 ?>

@@ -1,33 +1,5 @@
 <?php
-//On récupère les votes faits sur ce port
-$sqlAverage = $pdo->prepare("SELECT `vote_port_value` FROM `jm_mer_vote_port` WHERE `vote_port_location` = $lieuID");
-$sqlAverage->execute();
-$averageFetch = $sqlAverage->fetchAll(PDO::FETCH_ASSOC);
-//On initialise la moyenne
-$average = 0;
-//On récupère le nombre de vote
-$nbVote = count($averageFetch);
-//Si il y a eu un ou des vote(s)
-if($nbVote != 0) {
-    //On récupère tous les votes
-    foreach($averageFetch as $x) {
-        $average += $x['vote_port_value'];
-    }
-    //On fait le calcul de la moyenne
-    $average = $average / $nbVote;
-}
-//Si la moyenne n'est pas un chiffre entier
-if (gettype($average) != "integer") {
-    //On récupère sa valeur entière
-    $averageArrondie = intval($average);
-    //Et on l'arrondie à 2 chiffres après la virgule pour l'affichage
-    $average = round($average, 2);
-}
-//Sinon, s'il est déjà un entier
-else {
-    //On récupère sa valeur quand même dans la même variable
-    $averageArrondie = $average;
-}
+    $averageArrondie = $i['liste_port_moyenne'];
 ?>
 
 <p class="mb-0">Note moyenne :</p>
@@ -51,8 +23,6 @@ else {
     <?php if($averageArrondie == 1) { echo "checked"; } ?> disabled>
     <label for="average-1-<?php echo $lieuID ?>" title="Mauvais" class="fas"></label>
 </div>
-<!-- Affichage plus précis de la moyenne -->
-<p class="mt-5"><?php echo $average ?>/5</p>
 
 <?php
 
@@ -73,7 +43,7 @@ if(isset($_SESSION['utilisateur_id']) && $_SESSION['utilisateur_id'] != NULL){
 		$voteGot="0";
 	}
 ?>
-    <p class="mb-0">Votre avis :</p>
+    <p class="mt-5 mb-0">Votre avis :</p>
     <!-- On crée le formulaire de vote -->
     <form action="MJ_mer_listeport.php" method="post" class="anchorDiv">
         <!-- On récupère secretement les informations du port et de l'utilisateur -->

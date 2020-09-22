@@ -3,7 +3,7 @@
 //Identifiant de connexion, à changer selon le serveur
 $host = "localhost";
 $user = "root";
-$password = "";
+$password = "root";
 $dbname = "var_nature";
 
 try {
@@ -25,7 +25,8 @@ try {
         liste_port_label_aeb TINYINT(2) NOT NULL,
         liste_port_label_pb TINYINT(1) NOT NULL,
         liste_port_localisation VARCHAR(100) NOT NULL,
-        liste_port_carte VARCHAR(255) NOT NULL
+        liste_port_carte VARCHAR(255) NOT NULL,
+        liste_port_moyenne INT(5)
     )";
     /*
     lieu -> nom du port
@@ -35,6 +36,7 @@ try {
     label_pb -> certificat port propres ; 0 = Non, 1 = Oui
     localisation -> nom de la ville où est situé le port
     carte -> lien vers une carte en ligne indiquant le lieu
+    moyenne -> moyenne des votes pour le port
     */
     $pdo->exec($table);
     //Insertion des données
