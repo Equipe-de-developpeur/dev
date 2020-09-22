@@ -49,7 +49,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="inscription">
         <a href="register_gite.php">S'inscrire</a>
         </div>
-        <?php include 'little_login_gite.php'; ?>
+        
         <?php endif ?>
     </div>
 <!-- REGARDER LA VIDEO DE GRAFIKART TIME CODE : 51.38 -->

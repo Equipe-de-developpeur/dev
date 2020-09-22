@@ -38,11 +38,6 @@ if (!empty($_POST) && !empty($_POST['username'] && !empty($_POST['password']))) 
                 <a href="password_forget_gite.php">(Mot de passe oublié ?)</a>
             </div>
         </div>
-
-
-
-
-
         <button class="btn btn-primary">Se connecter</button>
     </form>
 </div>

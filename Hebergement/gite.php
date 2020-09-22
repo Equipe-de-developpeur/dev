@@ -40,12 +40,14 @@
 
              </thead>
 
-
-
              <?php
+    if(isset($_SESSION['auth'])) {
+        $id_user = $_SESSION['auth']['id'];
+    }        
 
                 // SELECTIONNE TOUT DANS LA BDD gites
-                $req = $bdd->query('SELECT * FROM `gites` LEFT JOIN note ON gites.id=note.id_gite');
+                $req = $bdd->query(' SELECT * FROM `note` INNER JOIN users ON  note.id_users = users.id
+                right JOIN gites ON note.id_gite = gites.id');
                 // TANT QU'IL Y A DES DONNEES AFFICHE LES LIGNE PAR LIGNE DANS UN TABLEAU
                 while ($donnees = $req->fetch()) {
                     // Enregistrement des données sous forme de variables
@@ -55,7 +57,11 @@
                     $id_gite = $donnees['id'];
                     $note_moyenne = $donnees['note_moyenne'];
                     $note= $donnees['note'];
-
+                    $noteIdUsers = $donnees['id_users'];
+                    $noteIdGite = $donnees['id_gite'];
+                    
+                
+                
                 ?>
 
                  <tbody>
@@ -89,6 +95,9 @@
                             $note_add = $donnees['note_add'];
                         ?>  <td>
                                      <?php
+
+
+
                                             //  BOUCLE PERMETTANT D'AFFICHER UNE PETITE FEUILLE POUR CHAQUE INDENTATION DE $i jusqu'a nore moyenne
                                             
                                             $i = 0;
@@ -108,14 +117,20 @@
                        
 
                             <td>
+                            
                                  <!-- Si il n'y a pas de session auth active -->
-                            <?php if(!isset($_SESSION['auth'])){ ?>
+                            <?php
+                             
+                           
+                     
+                             if(!isset($_SESSION['auth'])){ ?>
                                 <div class="alert alert-secondary">Connectez vous pour noter ce gîte</div> 
                             <?php }
                             
-                            else if ($note!=NULL)
+                            elseif(($noteIdUsers == $id_user) && ($note!=NULL))
                             {
                                 $i = 0;
+                                
                                             while($i < $note){
                                                 echo $feuille_verte;
                                                 $i++;
@@ -124,7 +139,8 @@
                                                 echo $feuille_grise;
                                             }
                             }
-                    
+                        
+                        
                             else{ ?>
 
                                     
@@ -179,7 +195,7 @@
                                  </td>
                                         <?php  
                                         }
-                                        
+                                    
                                      ?>
                              
                          

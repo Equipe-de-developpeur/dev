@@ -6,7 +6,7 @@ include 'functions_gite.php';
 
 <?php 
 // Si $_POST n'est pas vide :
-if(!empty($_POST)){
+if(isset($_POST) && !empty($_POST)){
     $errors = array();
 // Si $_POST est vide ou n'est pas compris dans les critères [a-zA-Z0-9_]
     if(empty($_POST['username']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['username']) ){
