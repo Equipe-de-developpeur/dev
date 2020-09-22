@@ -44,12 +44,14 @@ if (session_status() == PHP_SESSION_NONE) {
         <?php if(isset($_SESSION['auth'])): ?>
            
             <a href="logout_gite.php">Se deconnecter</a>
+            <a href="account_gite.php">Mon profil</a>
         <?php else: ?>
+
 
         <div class="inscription">
         <a href="register_gite.php">S'inscrire</a>
+        <a href="login_gite.php">Se connecter</a>
         </div>
-        
         <?php endif ?>
     </div>
 <!-- REGARDER LA VIDEO DE GRAFIKART TIME CODE : 51.38 -->

@@ -17,7 +17,7 @@
             $_SESSION['auth'] = $user; 
             $_SESSION['flash']['success'] = 'Vous êtes maintenant connecté';
             // Redirige vers account_gite.php
-            header('Location:account_gite.php');
+            header('Location:gite.php');
             // Fin de la requête
             exit();
             // Sinon renvoie un message d'erreur

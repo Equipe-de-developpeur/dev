@@ -25,6 +25,9 @@ if ($req->execute(array(
     'localisation' => $localisation,
     'description' => $description,
 ))) {
+
+    $gite_id = $bdd->lastInsertId();
+   
 ?>
 
     <article class="article article_1 article_insert container">
@@ -33,7 +36,7 @@ if ($req->execute(array(
             <strong>Nom du gîte :</strong> <?php echo $nom ?><br>
             <strong>Localisation :</strong> <?php echo $localisation ?><br>
             <strong>Description : </strong> <?php echo $description?>
-        <a href="gite.php"><button class="btn btn-success article_btn ">Retournez à la liste des tableaux</button></a>
+        <a href="<?php echo 'article_gite.php?id=' .$gite_id. '' ?>"><button class="btn btn-success article_btn ">Retournez à la liste des tableaux</button></a>
     </article>
 
 
