@@ -12,6 +12,7 @@
     width: 80%;
     margin: auto;
     color: white;
+    margin-top: 3%;
 }
 
 
@@ -43,7 +44,7 @@
 /* Recherche commentaires plage */
 
 .RechercheCommentairesPlage {
-    background-color: #0A5957;
+    background-color: #3B5773;
     width: 85%;
     margin-left: 5%;
     margin: auto;
@@ -53,7 +54,7 @@
 }
 
 .ChampEnvoiCommentairesPlage input {
-    background-color: #0A5957;
+    background-color: #3B5773;
     width: 90%;
     margin: auto;
     color: white;
@@ -64,7 +65,7 @@
     background-color: white;
     width: 40%;
     margin: auto;
-    color: #0A5957;
+    color: #3B5773;
     padding: 2%;
     margin-bottom: 5%;
 }
@@ -98,6 +99,18 @@
     padding: 2%;
     margin: 2%;
     margin-left: 5%;
+}
+
+.répondre {
+    color: #0A5957;
+    border: 1px solid black;
+    padding: 1.5%;
+    font-size: 70%;
+    border-radius: 10px;
+}
+
+.répondre:hover {
+    color: #3795E2;
 }
 
 .DateEnvoi {

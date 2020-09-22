@@ -1,6 +1,6 @@
 <!-- Connexion à la base de donnée -->
 
-<?php include "MODEL/DA_mer_plage_liste_bdd.php";?>
+<?php include "MODEL/DA_mer_plage_liste_MODEL.php";?>
 
 <!--Listes Plage-->
 
@@ -18,6 +18,8 @@
 
 include_once "DA_mer_plage_liste_recherche.php";
 
+$bdd = new DA_mer_plage_liste_bdd_MODEL;
+$connexion=$bdd->connexionbdd();
 $req = $connexion->query("SELECT * FROM da_liste_plage WHERE 1");
 
 
@@ -55,7 +57,7 @@ $votre_avis = $donnees['liste_plage_votre_avis'];
         <tr>
           <td>'.$lieux.'</td>
           <td>'.$villes.'</td>
-          <td><a href="../Plage_liste/DA_mer_plage_liste_details.php?id='.$liste_plage_id.'" rel="noopener noreferrer" style="color:#3795E2;">Détails</a></td>
+          <td><a href="DA_mer_plage_liste.php?id='.$liste_plage_id.'" rel="noopener noreferrer" style="color:#3795E2;">Détails</a></td>
 ');
 echo('</tr>');
           //Fermeture du tableau

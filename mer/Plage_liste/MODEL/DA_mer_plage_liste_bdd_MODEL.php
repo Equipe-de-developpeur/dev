@@ -5,7 +5,8 @@
 class DA_mer_plage_liste_bdd_MODEL
 {
 
-  protected function connexionbdd()
+
+  public function connexionbdd()
   {
     // Construction des variables de connexion serveur Mysql
     $serveur = 'localhost';
@@ -28,7 +29,7 @@ class DA_mer_plage_liste_bdd_MODEL
   }
 
 
-  protected function creationbdd()
+  public function creationbdd()
   {
 
     $connexion = $this->connexionbdd();

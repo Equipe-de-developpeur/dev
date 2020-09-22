@@ -19,14 +19,14 @@ body {
 /* Recherche */
 
 .RechercheListesPlage {
-    background-color: #0A5957;
+    background-color: #3B5773;
     width: 78%;
     margin: auto;
     color: white;
 }
 
 .RechercheListesPlage form {
-    background-color: #0A5957;
+    background-color: #3B5773;
     color: white;
     display: flex;
     flex-direction: row;
@@ -40,7 +40,7 @@ body {
 }
 
 .ChampRechercheListesPlage input {
-    background-color: #0A5957;
+    background-color: #3B5773;
     margin: auto;
     color: white;
     padding: 5%;
@@ -74,6 +74,8 @@ thead tr,
 thead tr th {
     background-color: #3B5773;
     padding: 0.5%;
+    line-height: 200%;
+    font-size: 115%;
 }
 
 td,
@@ -85,4 +87,3 @@ th {
 td {
     text-align: center;
 }
-

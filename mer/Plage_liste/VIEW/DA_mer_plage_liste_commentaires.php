@@ -1,6 +1,4 @@
-<?php
 
-include "MODEL/DA_mer_plage_liste_bdd.php"; ?>
 
 <section id="CommentairesPlage">
 
@@ -52,11 +50,12 @@ include "MODEL/DA_mer_plage_liste_bdd.php"; ?>
         $noms = $donnees['commentaires_plage_noms'];
         $lieux = $donnees['commentaires_plage_lieux'];
         $dates = date("d-m-Y  H:i:s", strtotime($donnees['commentaires_plage_dates']));
-
-
+        $id_parent = $donnees ['commentaires_plage_id_parent'];
 
 
         /*Début Commentaires*/
+
+        
         echo ('
       <div class="DebutCommentairesPlage" id="' . $commentaires_plage_id . '">
         <div class="Entete">
@@ -67,30 +66,17 @@ include "MODEL/DA_mer_plage_liste_bdd.php"; ?>
         </div>
         <div class="Contenu">
           <p class="Texte">' . $textes . '</p>
+        </div>');
+
+        if ($id_parent == 0){
+          echo('
+        <div>
+        <a class="répondre" href="">Répondre</a>
         </div>
-        <div class="reponse">
-        <a href=""">Répondre</a>
       </div>');
       }
 
-      /*Réponse Commentaires*/
-
-      /*echo ('
-      <div class="ReponseCommentairesPlage">
-        <div class="Entete">
-          <p class="NomAuteur">Nom</p>
-          <p class="DateEnvoi">25/08/2020 à 17h40</p>
-        </div>
-        <div class="Contenu">
-          <p class="Texte">Moi aussi !</p>
-        </div>
-      </div>');*/
-
-
-
       echo ('</div></div></section>');
-
-
-
+    }
 
       ?>

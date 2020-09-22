@@ -1,7 +1,7 @@
 <!-- reçois les informations de la page inserer.php et réaliser le traitement d’enregistrement dans la base de données -->
 
 <?php
-include("../MODEL/DA_mer_plage_liste_bdd.php");
+include("../MODEL/DA_mer_plage_liste_MODEL.php");
 
 // Récupération des données du formulaire
 $NewCommentaires = htmlspecialchars($_POST['NewCommentaires']);
@@ -15,6 +15,8 @@ exit();*/
 
 // procédure d'enregistrement de la news dans la table
 
+$bdd = new DA_mer_plage_liste_bdd_MODEL;
+$connexion=$bdd->connexionbdd();
 $req2 = $connexion->prepare("INSERT INTO da_commentaires_plage (commentaires_plage_textes, commentaires_plage_noms, commentaires_plage_lieux) VALUES(:NewCommentaires, :commentaire_plage_noms, :commentaire_plage_lieux)");
 
 if ($req2->execute(array(
