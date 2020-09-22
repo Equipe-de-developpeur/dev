@@ -2,7 +2,7 @@
 
 include "../MODEL/DA_mer_plage_liste_bdd.php";
 
-class DA_mer_plage_liste_controller
+class DA_mer_plage_liste_CONTROLLER
 {
   
   /* Système de recherche des plages */
