@@ -18,14 +18,17 @@
 
          
          <?php
-
+        
             ?>
          <?php
             include 'config_bdd_gite.php';
-            $witch = $bdd->query("SELECT * FROM users");
+            if(isset($_SESSION['auth'])) {
+                $id_user = $_SESSION['auth']['id'];
+            
+            $witch = $bdd->query("SELECT * FROM users WHERE id= $id_user");
             $donnee = $witch->fetch();
             $role = $donnee['role'];
-
+        }
             ?>
          <table class="table table-bordered table-gite">
              <thead class="thead-light">
@@ -41,13 +44,11 @@
              </thead>
 
              <?php
-    if(isset($_SESSION['auth'])) {
-        $id_user = $_SESSION['auth']['id'];
-    }        
+   
 
                 // SELECTIONNE TOUT DANS LA BDD gites
                 $req = $bdd->query(' SELECT * FROM `note` INNER JOIN users ON  note.id_users = users.id
-                right JOIN gites ON note.id_gite = gites.id');
+                RIGHT JOIN gites ON note.id_gite = gites.id');
                 // TANT QU'IL Y A DES DONNEES AFFICHE LES LIGNE PAR LIGNE DANS UN TABLEAU
                 while ($donnees = $req->fetch()) {
                     // Enregistrement des données sous forme de variables
@@ -127,7 +128,7 @@
                                 <div class="alert alert-secondary">Connectez vous pour noter ce gîte</div> 
                             <?php }
                             
-                            elseif(($noteIdUsers == $id_user) && ($note!=NULL))
+                            elseif(($noteIdUsers == $id_user) && ($id_gite == $noteIdGite) && ($note!=NULL))
                             {
                                 $i = 0;
                                 
