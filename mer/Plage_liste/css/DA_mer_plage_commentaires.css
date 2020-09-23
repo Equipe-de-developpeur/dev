@@ -93,12 +93,11 @@
 
 .DebutCommentairesPlage {
     background-color: white;
-    width: 90%;
-    margin: auto;
     color: #3795E2;
     padding: 2%;
     margin: 2%;
     margin-left: 5%;
+    overflow-wrap: break-word;
 }
 
 .répondre {
@@ -123,12 +122,12 @@
 /* Réponse commentaires plage */
 
 .ReponseCommentairesPlage {
-    background-color: white;
-    width: 75%;
+    background-color: rgb(241, 239, 239);
     color: #3795E2;
-    padding: 1%;
+    padding: 2%;
     margin: 2%;
-    margin-left: 20%;
+    margin-left: 15%;
+    overflow-wrap: break-word;
 }
 
 .Entete {
@@ -138,4 +137,9 @@
 
 .Contenu .Texte {
     color: #0A5957;
+}
+
+::placeholder {
+    font-size: 80%;
+    text-align: center;
 }
