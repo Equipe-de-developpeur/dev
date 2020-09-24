@@ -21,7 +21,7 @@
 .SectionCommentairesPlage {
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
@@ -79,7 +79,7 @@
 
 .BaseCommentairesPlage {
     background-color: #3B5773;
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 1%;
     margin: 2%;
@@ -142,4 +142,15 @@
 ::placeholder {
     font-size: 80%;
     text-align: center;
+}
+
+#lieu {
+    height: 3.8vw;
+    border: 0px;
+}
+
+@media screen and (max-width:768px) {
+    #lieu {
+        height: 7vw;
+    }
 }
