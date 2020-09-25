@@ -24,6 +24,10 @@
         include "element/MJ_mer_envoiefichier.php";
         include "element/MJ_mer_traitementcom.php";
         include "element/MJ_mer_traitementvote.php";
+        require "classes/MJ_mer_reponseCom.class.php";
+        require "classes/MJ_mer_reponseForm.class.php";
+        require "classes/MJ_mer_reponseGet.class.php";
+        require "classes/MJ_mer_reponseShow.class.php";
         
         //Affichage message de réception
         if(isset($msg)){ ?>
@@ -113,7 +117,7 @@
                                             <!-- Affichage Commentaire -->
                                             <?php 
                                             //Collecte des commentaires
-                                            $sqlcom = $pdo->prepare("SELECT * FROM `jm_mer_commentaire_port` WHERE `commentaire_port_lieu_id` = $lieuID");
+                                            $sqlcom = $pdo->prepare("SELECT * FROM `jm_mer_commentaire_port` WHERE `commentaire_port_lieu_id` = $lieuID AND `commentaire_port_parent_id` IS NULL");
                                             $sqlcom->execute();
                                             $listecom = $sqlcom->fetchALL(PDO::FETCH_ASSOC);
                                         

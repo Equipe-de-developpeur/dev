@@ -1,7 +1,7 @@
 <?php
 $server = "localhost"; // localisation du serveur MSSQL
 $name = "root"; // Login de l'utilisateur
-$password = ""; // Password de l'utilisateur
+$password = "root"; // Password de l'utilisateur
 $base = "var_nature"; // Nom de la Base de donn�es
 
 $dsn = 'mysql:dbname='.$base.';host='.$server;
