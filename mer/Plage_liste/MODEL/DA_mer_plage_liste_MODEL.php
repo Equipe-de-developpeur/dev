@@ -92,7 +92,7 @@ class DA_mer_plage_liste_MODEL extends DA_mer_plage_liste_bdd_MODEL
 
 
 
-  public function commentaires()
+  /*public function commentaires()
   {
     $connexion = $this->connexionbdd();
     // Création de la table da_commentaires_plage dans la base var_nature
@@ -113,7 +113,7 @@ class DA_mer_plage_liste_MODEL extends DA_mer_plage_liste_bdd_MODEL
     $connexion->exec($table2);
   }
 
-
+*/
 
   public function notation()
   {
