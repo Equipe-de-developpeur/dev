@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="entry.css">
 </head>
 <body>
-<h2>Insertion de la plante dans la bdd</h2>
+<h1 id="titreh1">Insertion de la plante dans la bdd</h1>
 <?php
 include "connexion_bdd.php";
 
@@ -31,13 +32,22 @@ if($req->execute(array(
     'dat' => $dat,
 ))) {
     echo
-    '<div class="alert alert-success" role="alert">
+    '<h2 id="titreh2">
         La plante à bien été enregistrée<br>
-    </div>
-    Voici un récapitulatif de votre news : <br> Nom de la plante : <strong>' . $nom_espece . '<strong><br> Description : <strong><br>' . $nom_latin . 
-    '<strong><br>' . $lieu . '<strong><br>' . $dat . '<strong><br>';
+    </h2>
+    <div class="resultat">
+    <p style="text-align:center;font-weight:bold;">Voici un récapitulatif de votre news :</p> 
+    <br> 
+    <p>Nom de l\'espèce: <b style="background-color:#f7f7f7"><br>' . $nom_espece . '</b></p> 
+    <p>Nom latin de la plante: <b style="background-color:#f7f7f7"><br>' . $nom_latin . '</b></p>
+    <p>Lieu de la plante: <b style="background-color:#f7f7f7"><br>' . $lieu . '</b></p>
+    <p>Date de la plante: <b style="background-color:#f7f7f7"><br>' . $dat . '</b></p>
+    </div>';
 
-    echo '<a href="index.php" class="btn btn-primary" role="button">Retour au formulaire</a>';
+    echo '
+        <p class="newlink">
+        <a href="form.php">Retour au formulaire</a>
+        </p>';
 }   else {
     echo '
     <div class="alert alert-danger" role="alert">

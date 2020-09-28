@@ -4,12 +4,12 @@
 $serveur = "localhost";
 $logsql = "root";
 $mdpsql = "";
-$bdd = "formationphp";
+$bdd = "formation";
 
 try {
     
     //Première tentative de connexion au serveur
-    $connexion = new PDO("mysql:host=localhost;charset=utf8", $logsql, $mdpsql);
+    $connexion = new PDO("mysql:host=localhost;charset=utf8", 'root', '');
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     //Création de la base de donnée si non existante
@@ -18,7 +18,7 @@ try {
     $connexion->exec($base);
     
     //Deuxième connexion au serveur et connexion à la base de donnée
-    $connexion = new PDO("mysql:host=localhost;dbname=$bdd;charset=utf8", $logsql, $mdpsql);
+    $connexion = new PDO("mysql:host=localhost;dbname=$bdd;charset=utf8", 'root', '');
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     /* Création de la table `nature`*/
 
@@ -30,10 +30,29 @@ try {
     `lieu` text NOT NULL,
     PRIMARY KEY (`id`)) 
     ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8";
- 
+
+
+    $tableau="CREATE TABLE IF NOT EXISTS `membre` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `pseudo` varchar(250) NOT NULL,
+    `pass` varchar(250) NOT NULL,
+    `email` varchar(250) NOT NULL,
+    `dat_de_naissance` date NOT NULL,
+    PRIMARY KEY (`id`)
+    ) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8";
+
+    $tablu="CREATE TABLE IF NOT EXISTS `groupes` (
+        `id_groupe` int(11) NOT NULL AUTO_INCREMENT,
+        `membre` varchar(255) NOT NULL,
+        `administrateur` varchar(255) NOT NULL,
+        `modérateur` varchar(255) NOT NULL,
+        PRIMARY KEY (`id_groupe`)
+    ) ENGINE=MyISAM DEFAULT CHARSET=utf8";
+    
         /*Déchargement des données de la table nature */
         $connexion->exec($table);
-
+        $connexion->exec($tableau);
+        $connexion->exec($tablu);
 
 }
 //Affichage de l'erreur pdo
