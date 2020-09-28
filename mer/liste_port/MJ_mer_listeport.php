@@ -14,8 +14,7 @@
         <?php
         
         include_once 'element/MJ_mer_connexionbdd.php';
-        include_once "element/MJ_mer_creationcom.php";
-        include_once "element/MJ_mer_creationvote.php";
+        include_once "element/MJ_mer_creationtable.php";
 
         if (isset($_POST["username"])) {
             $ID = $_POST["id"];
