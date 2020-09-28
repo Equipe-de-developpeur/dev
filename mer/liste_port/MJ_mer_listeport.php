@@ -20,9 +20,7 @@
             $ID = $_POST["id"];
         }
 
-        include "element/MJ_mer_envoiefichier.php";
-        include "element/MJ_mer_traitementcom.php";
-        include "element/MJ_mer_traitementvote.php";
+        include "element/MJ_mer_traitementpost.php";
         require "classes/MJ_mer_reponseCom.class.php";
         require "classes/MJ_mer_reponseForm.class.php";
         require "classes/MJ_mer_reponseGet.class.php";
