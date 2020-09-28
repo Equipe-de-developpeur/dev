@@ -52,9 +52,6 @@
                     </select>
                     <input class="mt-1" type="submit" value="Classer">
                 </form>
-                <?php
-                include 'element/MJ_mer_classement.php';
-                ?>
             </div>
 
             <div class="affichage px-1">
