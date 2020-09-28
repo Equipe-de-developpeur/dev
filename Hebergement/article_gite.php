@@ -29,10 +29,11 @@ while ($donnees = $req->fetch()) {
   <?php
   if(isset($_SESSION['auth'])){
     $id_user = $_SESSION['auth']['id'];
+    
   }
-  
+  include 'add_comment_gite.php';
 
-  include 'add_comment_gite.php' ?>
+   ?>
 
   <?php
   $req = $bdd->query("SELECT * FROM gites INNER JOIN comments ON gites.id = comments.id_gite
