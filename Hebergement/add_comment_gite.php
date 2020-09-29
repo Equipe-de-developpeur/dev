@@ -23,12 +23,20 @@
 <hr class="comment_separator">
 <form action="add_comment_gite.php"method="post"class="form-group">
 
+      
+    
 <input type="text"class='form-control'placeholder="Ajouter un commentaire"name="new_comment">
 <?php if(isset($_SESSION['auth'])): ?>
 <input type="hidden"name="id_user"value = <?php echo $id_user ?>>
 <?php endif ?>
 <input type="hidden"name="id_gite"value = <?php echo $id_gite ?>>
+<?php if(!isset($_SESSION['auth'])) : ?>
+    <div class="alert alert-secondary">Inscrivez vous ou connectez vous pour ajouter un commentaire sur ce gite.</div>
+    <?php elseif(isset($_SESSION['auth'])): ?>
 <button class="btn btn-primary">Envoyer</button>
+<?php  endif ?>
+
+
 </form>
 
 </div>

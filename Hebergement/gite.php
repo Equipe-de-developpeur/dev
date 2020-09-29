@@ -128,7 +128,7 @@
                                 <div class="alert alert-secondary">Connectez vous pour noter ce gîte</div> 
                             <?php }
                             
-                            elseif(($noteIdUsers == $id_user) && ($id_gite == $noteIdGite) && ($note!=NULL))
+                            elseif(isset($noteIdUsers) && ($note != NULL) )
                             {
                                 $i = 0;
                                 
@@ -142,7 +142,7 @@
                             }
                         
                         
-                            else{ ?>
+                            elseif(!isset($noteIdUsers)){ ?>
 
                                     
                             
