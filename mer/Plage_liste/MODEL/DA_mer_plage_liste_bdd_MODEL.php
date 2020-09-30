@@ -1,11 +1,9 @@
-<!-- Page prenant en charge la connexion à la bdd -->
+<!-- Page prenant en charge la connexion à la bdd, ainsi que la création -->
 
 <?php
 
 class DA_mer_plage_liste_bdd_MODEL
 {
-
-
   public function connexionbdd()
   {
     // Construction des variables de connexion serveur Mysql
@@ -27,7 +25,6 @@ class DA_mer_plage_liste_bdd_MODEL
       die('Erreur :' . $e->getMessage());
     }
   }
-
 
   public function creationbdd()
   {

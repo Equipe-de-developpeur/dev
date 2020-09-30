@@ -26,7 +26,7 @@
 
   <?php
   if ($title == "Liste plage") {
-    include 'View/DA_mer_plage_liste_tableau.php';
+    require 'View/DA_mer_plage_liste_tableau.php';
     include 'View/DA_mer_plage_liste_commentaires.php';
   }
 
