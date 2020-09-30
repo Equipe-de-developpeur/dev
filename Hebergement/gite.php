@@ -1,6 +1,7 @@
  <?php
     include 'header_hebergement.php';
-    include 'functions_gite.php';    ?>
+    include 'functions_gite.php'; 
+    include 'lien_connexion_gite.php';   ?>
  <div class="main container-fluid">
 
      <h2>Les Gîtes dans le var</h2>
@@ -46,9 +47,8 @@
              <?php
    
 
-                // SELECTIONNE TOUT DANS LA BDD gites
-                $req = $bdd->query(' SELECT * FROM `note` INNER JOIN users ON  note.id_users = users.id
-                RIGHT JOIN gites ON note.id_gite = gites.id');
+                // SELECTIONNE TOUTES LES DONNEES DE LA TABLE GITES. CHAQUE INFO NE RESSORT QU'UNE FOIS GRACE AU DISTINCT
+                $req = $bdd->query(' SELECT DISTINCT * FROM gites');
                 // TANT QU'IL Y A DES DONNEES AFFICHE LES LIGNE PAR LIGNE DANS UN TABLEAU
                 while ($donnees = $req->fetch()) {
                     // Enregistrement des données sous forme de variables
@@ -57,11 +57,17 @@
                     $localisation = $donnees['localisation'];
                     $id_gite = $donnees['id'];
                     $note_moyenne = $donnees['note_moyenne'];
-                    $note= $donnees['note'];
-                    $noteIdUsers = $donnees['id_users'];
-                    $noteIdGite = $donnees['id_gite'];
-                    
-                
+                //    On défini la note de base sur 0 afin de que si une note n'est pas définie il ne prenne pas la note du gîte précédent.
+                    $note=0;
+                    if(isset($_SESSION['auth'])) : 
+                    $noteIdUsers = $id_user;
+                    $noteIdGite = $id_gite;
+                    // Deuxième requête afin de séléctionner la note de la table note quand l'id du gîte correspond au gite en question et que l'id_users correspond à l'id de la personne connectée
+                    $req2 = $bdd->query(' SELECT  note FROM note WHERE id_gite='.$id_gite.' AND id_users='.$id_user);
+                    while ($donnees = $req2->fetch()) {
+                        $note= $donnees['note'];
+                    }
+                endif;
                 
                 ?>
 
@@ -124,31 +130,26 @@
                              
                            
                      
-                             if(!isset($_SESSION['auth'])){ ?>
+                             if(!isset($_SESSION['auth'])): ?>
                                 <div class="alert alert-secondary">Connectez vous pour noter ce gîte</div> 
-                            <?php }
+                            <?php 
                             
-                            elseif(isset($noteIdUsers) && ($note != NULL) )
-                            {
-                                $i = 0;
+                            elseif(($note > 0) && ($noteIdUsers == $id_user) && isset($noteIdGite) ) : 
+                             $i = 0;
                                 
-                                            while($i < $note){
-                                                echo $feuille_verte;
-                                                $i++;
-                                                // Boucle for pour compléter par des feuilles grises jusqu'a 5 (La notation étant /5)
-                                            }for($u = $i; $u < 5; $u++){
-                                                echo $feuille_grise;
-                                            }
-                            }
+                                while($i < $note){
+                                    echo $feuille_verte;
+                                    $i++;
+                                    // Boucle for pour compléter par des feuilles grises jusqu'a 5 (La notation étant /5)
+                                }for($u = $i; $u < 5; $u++){
+                                    echo $feuille_grise;
+                                }
+                                    ?>
+                                
                         
-                        
-                            elseif(!isset($noteIdUsers)){ ?>
-
-                                    
-                            
-
-                                                <!-- Sinon : -->
-                                 <div class="row"style="display: flex; justify-content: center;">
+                          <?php  else : ?>
+                            <!-- Sinon : -->
+                            <div class="row"style="display: flex; justify-content: center;">
                                      
                                      <form action="moyenne_gite.php" method="post">
                                          <input type="hidden" value=<?php echo $id_gite ?> name="id">
@@ -193,9 +194,17 @@
                                          <input type="image" id="leaf2" data_value="2" onmouseover="changecolor()" onmouseout="rechangecolor()" name="note-feuille" src="img/mini_leaf_black.png" alt="mini logo feuille" value=2>
                                      </form> 
                                  </div>
+                                   
+                                
+                    <?php endif ?>
+                                    
+                            
+
+                                            
+                                 
                                  </td>
                                         <?php  
-                                        }
+                
                                     
                                      ?>
                              
@@ -244,13 +253,10 @@
                                      <input type="submit" name="supp_maj" value="supp" class="btn">
                                  </form>
                              </td>
-                         <?php endif ?>
-                         
-                     <?php
-                    }
-                
-                        ?>
+                          <?php endif; 
+                          }?>
                      </tr>
+                          
                  </tbody>
          </table>
 
@@ -271,4 +277,5 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <?php
     include 'footer.php';
+
     ?>

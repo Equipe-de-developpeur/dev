@@ -1,6 +1,7 @@
 <?php
 include 'header_hebergement.php';
 include 'config_bdd_gite.php';
+include 'lien_connexion_gite.php';
 $id_gite = $_GET['id'];
 
 $req = $bdd->query("SELECT * FROM gites WHERE id = $id_gite");
