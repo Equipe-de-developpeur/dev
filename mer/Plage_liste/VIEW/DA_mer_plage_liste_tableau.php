@@ -1,7 +1,10 @@
 <!-- Connexion à la base de donnée -->
 
 <?php include "MODEL/DA_mer_plage_liste_MODEL.php";?>
-
+<?php $bdd = new DA_mer_plage_liste_bdd_MODEL;
+$connexion=$bdd->creationbdd();
+$connexion=$bdd->connexionbdd(); ?>
+<?php include "../espace_membre/header.php"; ?>
 <!--Listes Plage-->
 
 <section id="ListesPlage">
@@ -18,8 +21,9 @@
 
 include_once "DA_mer_plage_liste_recherche.php";
 
-$bdd = new DA_mer_plage_liste_bdd_MODEL;
-$connexion=$bdd->connexionbdd();
+
+$bdd2 = new DA_mer_plage_liste_MODEL;
+$connexion2=$bdd2->liste();
 $req = $connexion->query("SELECT * FROM da_liste_plage WHERE 1");
 
 

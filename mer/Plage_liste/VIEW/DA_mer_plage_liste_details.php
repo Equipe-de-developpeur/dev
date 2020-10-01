@@ -1,5 +1,5 @@
 <?php
-
+ include "../espace_membre/header.php";
 include "MODEL/DA_mer_plage_liste_MODEL.php";
 
 

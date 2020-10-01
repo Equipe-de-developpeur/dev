@@ -32,7 +32,7 @@
             <input type="text" id="nom" name="nom" maxlength="30" value="<?= $nom ?>" autocomplete="" required readonly>
 
             <select id="lieu" name="lieu">
-              <option >VAR</option>
+              <option>VAR</option>
               <optgroup label="Plages">
                 <?php
                 $bdd = new DA_mer_plage_liste_bdd_MODEL;
@@ -45,12 +45,12 @@
 
                 ?>
 
-                <option><?= $lieux ?></option>
+                  <option><?= $lieux ?></option>
 
-            <?php } ?>
-            </optgroup>
-            <optgroup label="Villes">
-            <?php
+                <?php } ?>
+              </optgroup>
+              <optgroup label="Villes">
+                <?php
                 $bdd = new DA_mer_plage_liste_bdd_MODEL;
                 $connexion = $bdd->connexionbdd();
                 $req = $connexion->query("SELECT DISTINCT liste_plage_villes FROM da_liste_plage WHERE 1");
@@ -61,11 +61,11 @@
 
                 ?>
                   <option><?= $villes ?></option>
-                  <?php } ?>
-            </optgroup>
+                <?php } ?>
+              </optgroup>
             </select>
 
-            <textarea name="NewCommentaires" id="NewCommentaires" rows="6" cols="40" minlength="3" maxlength="500" placeholder="Vous pouvez écrire votre commentaire ici.<?="\n\n"?>Vous devez être connecter pour écrire un commentaire" required></textarea>
+            <textarea name="NewCommentaires" id="NewCommentaires" rows="6" cols="40" minlength="3" maxlength="500" placeholder="Vous pouvez écrire votre commentaire ici.<?= "\n\n" ?>Vous devez être connecter pour écrire un commentaire" required></textarea>
         </div>
         <div class="ChampEnvoiCommentairesPlage">
           <input type="submit" value="ENVOYER">
@@ -73,15 +73,11 @@
       </form>
 
     <?php } else { ?>
-
-
       <input type="text" id="nom" name="nom" maxlength="30" value="NOM" autocomplete="" required readonly>
       <input type="text" id="lieu" name="lieu" maxlength="50" placeholder="Lieux" autocomplete="" required readonly>
-      <textarea name="NewCommentaires" id="NewCommentaires" rows="6" cols="40" minlength="3" maxlength="500" placeholder="Vous pouvez écrire votre commentaire ici.<?="\n\n"?>Vous devez être connecter pour écrire un commentaire" required readonly></textarea>
+      <textarea name="NewCommentaires" id="NewCommentaires" rows="6" cols="40" minlength="3" maxlength="500" placeholder="Vous pouvez écrire votre commentaire ici.<?= "\n\n" ?>Vous devez être connecter pour écrire un commentaire" required readonly></textarea>
     </div>
     </form>
-
-
   <?php } ?>
   <!--fermeture du else-->
 
@@ -95,7 +91,8 @@
   <div class="BaseCommentairesPlage">
 
     <?php
-
+    $bdd2 = new DA_mer_plage_liste_MODEL;
+    $connexion2 = $bdd2->commentaires();
     $req2 = $connexion->query("SELECT * FROM da_commentaires_plage WHERE commentaires_plage_id_parent = '0'");
 
     while ($donnees = $req2->fetch()) {
@@ -106,24 +103,25 @@
       $dates = date("d-m-Y  H:i:s", strtotime($donnees['commentaires_plage_dates']));
       $id_parent = $donnees['commentaires_plage_id_parent'];
       $commentaires_plage_id = $donnees['commentaires_plage_id'];
+    ?>
 
+      <!-- Début Commentaires -->
 
-
-      /*Début Commentaires*/
-      echo ('
-      <div class="DebutCommentairesPlage" id="' . $commentaires_plage_id . '">
+      <div class="DebutCommentairesPlage" id=<?= $commentaires_plage_id ?>>
         <div class="Entete">
-          <p class="NomAuteur">' . $noms . '&nbsp;&nbsp;</p>
-          <p class="DateEnvoi">' . $dates . '&nbsp;&nbsp;</p>
-          <p class="NomLieu">' . $lieux . '</p>
+          <p class="NomAuteur"><?= $noms ?>&nbsp;&nbsp;</p>
+          <p class="DateEnvoi"><?= $dates ?>&nbsp;&nbsp;</p>
+          <p class="NomLieu"><?= $lieux ?></p>
         </div>
         <div class="Contenu">
-          <p class="Texte">' . $textes . '</p>
+          <p class="Texte"><?= $textes ?></p>
         </div>
         <div>
-        <button class="répondre" name="' . $textes . '" id="' . $commentaires_plage_id . '" >Répondre</button>
+          <button class="répondre" name=<?= $textes ?> id=<?= $commentaires_plage_id ?>>Répondre</button>
         </div>
-        </div>');
+      </div>
+
+      <?php
 
       $req3 = $connexion->query("SELECT * FROM da_commentaires_plage WHERE commentaires_plage_id_parent = '" . $commentaires_plage_id . "'");
 
@@ -135,37 +133,38 @@
         $dates = date("d-m-Y  H:i:s", strtotime($donnees['commentaires_plage_dates']));
         $id_parent = $donnees['commentaires_plage_id_parent'];
         $commentaires_plage_id = $donnees['commentaires_plage_id'];
+      ?>
 
-        echo ('
-          <div class="ReponseCommentairesPlage" id="' . $commentaires_plage_id . '">
-        <div class="Entete">
-          <p class="NomAuteur">' . $noms . '&nbsp;&nbsp;</p>
-          <p class="DateEnvoi">' . $dates . '&nbsp;&nbsp;</p>
-          <p class="NomLieu">' . $lieux . '</p>
-          
+
+        <div class="ReponseCommentairesPlage" id=<?= $commentaires_plage_id ?>>
+          <div class="Entete">
+            <p class="NomAuteur"><?= $noms ?>&nbsp;&nbsp;</p>
+            <p class="DateEnvoi"><?= $dates ?>&nbsp;&nbsp;</p>
+            <p class="NomLieu"><?= $lieux ?></p>
+
+          </div>
+          <div class="Contenu">
+            <p class="Texte"><?= $textes ?></p>
+          </div>
+
+
         </div>
-        <div class="Contenu">
-          <p class="Texte">' . $textes . '</p>
-        </div>');
+    <?php   }
+    }    ?>
+  </div>
+  </div>
+</section>
 
 
-        echo ('</div>');
-      }
-    }
-    echo ('</div></div></section>');
+<script>
+  $(document).on('click', '.répondre', function() {
+    var commentaires_plage_id = $(this).attr("id");
+    var commentaires = $(this).attr("name");
+    commentaires = "Répondre à : \n" + commentaires;
+    $('#commentaires_plage_id_parent').val(commentaires_plage_id);
+    $('#NewCommentaires').focus();
+    $('#NewCommentaires').css("background-color", "rgb(241, 239, 239)");
+    $('#NewCommentaires').attr("placeholder", commentaires);
 
-
-    ?>
-
-    <script>
-      $(document).on('click', '.répondre', function() {
-        var commentaires_plage_id = $(this).attr("id");
-        var commentaires = $(this).attr("name");
-        commentaires = "Répondre à : \n" + commentaires;
-        $('#commentaires_plage_id_parent').val(commentaires_plage_id);
-        $('#NewCommentaires').focus();
-        $('#NewCommentaires').css("background-color", "rgb(241, 239, 239)");
-        $('#NewCommentaires').attr("placeholder", commentaires);
-
-      });
-    </script>
+  });
+</script>

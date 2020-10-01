@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include "../espace_membre/header.php"; ?>
+
 <html lang="fr">
 
 <head>

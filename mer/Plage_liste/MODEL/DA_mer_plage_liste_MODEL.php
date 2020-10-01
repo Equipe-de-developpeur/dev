@@ -30,7 +30,7 @@ class DA_mer_plage_liste_MODEL extends DA_mer_plage_liste_bdd_MODEL
 
     // Insertion des données 
 
-    include "DA_mer_plage_liste_table.php";
+    //include "DA_mer_plage_liste_table.php";
     $insert = "INSERT IGNORE INTO $nom_table1(liste_plage_lieux,liste_plage_villes,liste_plage_liens,liste_plage_distances,liste_plage_actions) 
     VALUES
     ('Ayguade','Hyères','https://www.hyeres-tourisme.com/equipement-loisir/plage-de-layguade/','km','Pavillon bleu'),
@@ -92,7 +92,7 @@ class DA_mer_plage_liste_MODEL extends DA_mer_plage_liste_bdd_MODEL
 
 
 
-  /*public function commentaires()
+  public function commentaires()
   {
     $connexion = $this->connexionbdd();
     // Création de la table da_commentaires_plage dans la base var_nature
@@ -113,7 +113,6 @@ class DA_mer_plage_liste_MODEL extends DA_mer_plage_liste_bdd_MODEL
     $connexion->exec($table2);
   }
 
-*/
 
   public function notation()
   {

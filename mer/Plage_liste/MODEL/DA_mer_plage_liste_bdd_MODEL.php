@@ -4,21 +4,19 @@
 
 class DA_mer_plage_liste_bdd_MODEL
 {
-  public function connexionbdd()
-  {
-    // Construction des variables de connexion serveur Mysql
-    $serveur = 'localhost';
-    $loginsql = 'root';
-    $passsql = '';
-    $labase = 'var_nature';
+  public $serveur = 'localhost';
+  public $loginsql = 'root';
+  public $passsql = '';
+  public $labase = 'var_nature';
 
-    // Connexion à la base
+  public function connexionserveur()
+  {
     try {
-      $connexion = new PDO('mysql:host=' . $serveur . ';dbname=' . $labase . ';charset=utf8', $loginsql, $passsql);
+      $connexion = new PDO("mysql:host=$this->serveur;charset=utf8", $this->loginsql, $this->passsql);
+
       $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
+
       return $connexion;
-      
     }
     // Prise en charge des erreurs de connexion.
     catch (Exception $e) {
@@ -28,11 +26,27 @@ class DA_mer_plage_liste_bdd_MODEL
 
   public function creationbdd()
   {
+    $connexion = $this->connexionserveur();
 
-    $connexion = $this->connexionbdd();
-
-    $bdd = "CREATE DATABASE IF NOT EXISTS var_nature CHARACTER SET utf8 COLLATE utf8_general_ci";
+    $bdd = "CREATE DATABASE IF NOT EXISTS $this->labase CHARACTER SET utf8 COLLATE utf8_general_ci";
     $connexion->exec($bdd);
+
+    return $connexion;
+  }
+
+  public function connexionbdd()
+  {
+    // Connexion à la base
+    try {
+      $connexion = new PDO('mysql:host=' . $this->serveur . ';dbname=' . $this->labase . ';charset=utf8', $this->loginsql, $this->passsql);
+      $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+      return $connexion;
+    }
+    // Prise en charge des erreurs de connexion.
+    catch (Exception $e) {
+      die('Erreur :' . $e->getMessage());
+    }
   }
 }
 
