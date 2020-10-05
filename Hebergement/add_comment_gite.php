@@ -24,10 +24,11 @@
 <form action="add_comment_gite.php"method="post"class="form-group">
 
       
-    
-<input type="text"class='form-control'placeholder="Ajouter un commentaire"name="new_comment">
 <?php if(isset($_SESSION['auth'])): ?>
+<input type="text"class='form-control'placeholder="Ajouter un commentaire"name="new_comment">
 <input type="hidden"name="id_user"value = <?php echo $id_user ?>>
+<?php else: ?>
+    <input type="text"class='form-control'placeholder="Ajouter un commentaire"name="new_comment" readonly>
 <?php endif ?>
 <input type="hidden"name="id_gite"value = <?php echo $id_gite ?>>
 <?php if(!isset($_SESSION['auth'])) : ?>
