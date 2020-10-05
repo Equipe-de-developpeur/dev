@@ -61,6 +61,7 @@
   <div class="avis">
     <p><span>Votre avis :</span></p>
 
+    <?php if (isset($_SESSION['utilisateur_id'])) {?>
     <!-- note = 0 (pas encore de vote) -->
     <?php if ($votre_avis == 0) { ?>
 
@@ -251,4 +252,6 @@
 
                     <input type="Submit" value="MODIFIER" name="VOTER">
                   </form>
-                <?php } ?>
+                <?php } }else {
+                  echo('Vous devez être connecter pour voter');
+                }?>
