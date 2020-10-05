@@ -7,7 +7,7 @@ $id = $_REQUEST['id'];
 
 $bdd = new DA_mer_plage_liste_bdd_MODEL;
 $connexion = $bdd->connexionbdd();
-$req = $connexion->query("SELECT * FROM da_liste_plage WHERE `liste_plage_id`=$id --AND 'utilisateur_id'=$utilisateur");
+$req = $connexion->query("SELECT * FROM da_liste_plage WHERE `liste_plage_id`=$id");
 
 $plageliste = new DA_mer_plage_liste_MODEL;
 if (isset($_REQUEST['VOTER'])) {
