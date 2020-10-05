@@ -126,7 +126,7 @@ class DA_mer_plage_liste_MODEL extends DA_mer_plage_liste_bdd_MODEL
     $table3 = "CREATE TABLE IF NOT EXISTS $nom_table3 (
   vote_plage_id INT PRIMARY KEY AUTO_INCREMENT,
   vote_plage_note FLOAT NOT NULL,
-  vote_plage_lieu_id INT(99) NOT NULL
+  vote_plage_lieu_id INT NOT NULL
 )";
 
     $connexion->exec($table3);
