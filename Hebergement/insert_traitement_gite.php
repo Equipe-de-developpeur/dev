@@ -1,11 +1,12 @@
 <?php
 include 'header_hebergement.php';
 include 'config_bdd_gite.php';
+include 'functions_gite.php';
 // Récupération des données du formulaire
-$nom = htmlspecialchars($_POST['nom']);
-$localisation = htmlspecialchars($_POST['localisation']);
-$description = htmlspecialchars($_POST['description']);
-$description = nl2br($description);
+$nom = valid_donnees($_POST['nom']);
+$localisation = valid_donnees($_POST['localisation']);
+$description = valid_donnees($_POST['description']);
+$description = valid_donnees($description);
 
 
 

@@ -58,6 +58,9 @@
                         $localisation = $donnees['localisation'];
                         $id_gite = $donnees['id'];
                         $note_moyenne = $donnees['note_moyenne'];
+                        $note_gite_moyenne = $donnees['note_moyenne'];
+                        $nombre_note = $donnees['nombre_note'];
+                        $note_add = $donnees['note_add'];
                         //    On défini la note de base sur 0 afin de que si une note n'est pas définie il ne prenne pas la note du gîte précédent.
                         $note = 0;
                         if (isset($_SESSION['auth'])) :
@@ -102,9 +105,7 @@
 
                              <?php
                                 // Récupération des données de la table gites 
-                                $note_gite_moyenne = $donnees['note_moyenne'];
-                                $nombre_note = $donnees['nombre_note'];
-                                $note_add = $donnees['note_add'];
+                               
                                 ?> <td>
                                  <?php
 

@@ -16,7 +16,7 @@ if(isset($_POST) && !empty($_POST)){
         // SINON PREPARE UNE REQUETTE QUI SELECTIONNE TOUS LES ID DANS USERS OU USERNAME EST EGAL AU POST
         $req = $bdd->prepare("SELECT id FROM users WHERE username = ?");
         // EXECUTE LA REQUETTE
-        $req->execute([$_POST['username']]);
+        $req->execute([valid_donnees($_POST['username'])]);
         // SI IL TROUVE UN USERNAME STOCKE LE SOUS FORME DE TABLEAU DANS $user
         $user = $req->fetch();
         if($user){

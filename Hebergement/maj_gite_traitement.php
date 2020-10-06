@@ -1,18 +1,20 @@
 <?php
 include 'config_bdd_gite.php';
-include 'header_hebergement.php'; ?>
+include 'header_hebergement.php';
+include 'functions_gite.php'; ?>
+
 <article class="article article_1">
     <?php
     // Récupération des données du formulaire
     $id_gite = $_POST['id_gite'];
-    $nom_upd = htmlspecialchars($_POST['nom']);
-    $localisation_upd = htmlspecialchars($_POST['localisation']);
-    $description_upd = htmlspecialchars($_POST['description']);
+    $nom_upd = valid_donnees($_POST['nom']);
+    $localisation_upd = valid_donnees($_POST['localisation']);
+    $description_upd = valid_donnees($_POST['description']);
    
 
 
     // procédure de la mise à jour des infos du gite
-    $req = $bdd->prepare("UPDATE gites SET nom = '$nom_upd', localisation = '$localisation_upd', description = '$description_upd' WHERE id = '$id_gite'");
+    $req = $bdd->prepare("UPDATE gites SET nom = '$nom_upd', localisation = '$localisation_upd', description = '$description_upd' WHERE id = $id_gite");
     // $req = $bdd->prepare('UPDATE gites SET nom = :nom_upd, localisation = :localisation_upd, note = :note_upd WHERE id = :id_gite");
 
     if ($req->execute([$nom_upd, $localisation_upd,$description_upd, $id_gite]
