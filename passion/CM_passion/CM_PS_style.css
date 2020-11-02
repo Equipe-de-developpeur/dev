@@ -1,0 +1,547 @@
+/*****************************************************************TOUT***************************************************************************/
+    .container {
+        background-color: #fff;
+        box-shadow: 5px 5px 25px grey;
+        padding: 20px;
+    }
+
+    header {
+      position: static;
+      height: auto;
+      width: 100%;
+      min-height: 55px;
+      display: block;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (max-width: 600px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+    .navbar-brand, .nav-link {
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      color: white;
+    }
+
+    body,
+    html {
+        padding: 0;
+        margin: 0;
+        font-size: 1em;
+    }
+
+    p {
+      text-align: justify center;
+      color: rgb(0, 0, 0);
+      background-color: rgba(255, 255, 255, 0.911);
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .footer {
+      background-color: #222;
+      color: rgb(255, 255, 255);
+      max-width: 100%;
+      height: auto;
+    }
+
+    .footer-copyright {
+      background-color: #222;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      align-content: center;
+    }
+
+    .icones-footer {
+      list-style-type: none;
+      display: flex;
+      float: left;
+      min-width: 5vw;
+    }
+    .icones-footer > li > a > img{
+      padding: 5px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .button {
+      background-color: white;
+      color: black;
+      border: 2px solid #ff0000;
+    }
+
+/***************************************************** MON ART ***************************************************************************/
+      .bodymonart{
+        background-color: rgba(98, 163, 98, 0.965);
+      }
+  
+      .h1monart, .h3monart {
+          text-align: center;
+          color: rgb(0, 0, 0);
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px, #ffffff 1px -1px;
+      }
+
+      .pmonart {
+          text-align: justify;
+          text-align: center;
+          text-decoration: whitesmoke;
+          font-family: 'Times New Roman', Times, serif;
+          background-color: rgba(73, 214, 134, 0.808);
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;     
+      }
+      
+      ul.icons li {
+        list-style-type: none;
+        width: 30px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        float: left;
+        align-content: center;
+        text-align: center;
+      }
+  
+      element.style {
+        background-position: left top, center top;
+      }
+  
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+  
+        @media (max-width: 600x) {
+          .bd-placeholder-mon_art-lg {
+            font-size: 3.5rem;
+          }
+        }
+  
+        @media only screen and (max-width: 600px) {
+       body {
+        background-image: url(https://i.pinmon_art.com/564x/ae/b8/b2/aeb8b27f0f6f91b13440ce6b82230513.jpg);
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        }
+        }
+  
+        .imgpeinture {
+          text-align:center;
+          align-content: center;
+          width: 50px;
+          height: auto;
+          vertical-align: middle;
+          margin-left: 490px;
+        }
+  
+        * {box-sizing:border-box}
+  
+        /* Slideshow container */
+        .carousel-inner{
+          max-width: 550px;
+          position: relative;
+          margin: auto;
+        }
+  
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+  
+        /* Fading animation */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+  
+        @-webkit-keyframes fade {
+          from {opacity: .4}
+          to {opacity: 1}
+        }
+  
+        @keyframes fade {
+          from {opacity: .4}
+          to {opacity: 1}
+        }
+  
+        .jss135 {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        .oc-body {
+            margin: 0;
+            color: #000;
+        }
+        .course {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        /* Gallery*/
+        * {
+          box-sizing: border-box;
+        }
+  
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+          position: relative;
+        }
+  
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+  
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+  
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+  
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+  
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+  
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #000000;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+  
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: #222;
+          padding: 2px 16px;
+          color: white;
+        }
+  
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+  
+        /* Six columns side by side */
+        .column {
+          width: 16.66%;
+        }
+  
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+  
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+
+/**********************************************************CULTURE JAPONAISE***************************************************************************/ 
+          .bodyculturejap {
+            background-image: url(img/culturejaponaise2/fond.jpg);
+            display: block;
+            width: 100%;
+            margin: 0 15 0 15px;
+          }
+      
+          .h1culturejap {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            background-image: url("https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014619_960_720.jpg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: "moalang";
+            text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px, #ffffff 1px -1px;
+          }
+      
+          .div1 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            background-image: url("https://cdn.pixabay.com/photo/2015/09/09/20/18/sushi-933065_960_720.jpg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: "moalang";
+            display: block;
+            text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px, #ffffff 1px -1px;
+          }
+      
+          .gallery {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border: 1px solid rgb(255, 255, 255);
+            margin-left: 240px;
+            vertical-align: middle;
+            align-content: center;
+            text-align: center;
+            width: 50%;
+            height: auto;
+            background-color: tomato;
+          }
+      
+          div.gallery img {
+            width: 50%;
+            height: auto;
+            margin: auto;
+            align-content: center;
+            vertical-align: middle;
+            background-position: center;
+          }
+      
+          .gallery:hover {
+            vertical-align: middle;
+            border: 1px solid rgb(99, 12, 238);
+            max-width: 50%;
+            height: auto;
+            align-content: center;
+          }
+      
+          .h3culturejap {
+            text-align: center;
+            color: rgb(238, 12, 12);
+            font-family: fantasy;
+            text-transform: uppercase;
+          }
+      
+          .container {
+            text-align: center;
+            align-content: center;
+            max-width: 100%;
+            height: auto;
+          }
+      
+          .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+          }
+      
+            @media only screen and (max-width: 600px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+            @media only screen and (max-width: 600px) {
+           .bodyculturejap {
+            background-image: url(img/culturejaponaise2/fond.jpg);
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: auto;
+           }
+            
+            .gallery {
+            max-width: 100%;
+            height: auto;
+            float: none;
+            margin: auto;
+            align-content: center;
+            vertical-align: middle;
+            background-position: center;
+            font-weight: bold;
+            }
+      
+            div.gallery img {
+            width: 100%;
+            height: auto;
+            margin: auto;
+            align-content: center;
+            vertical-align: middle;
+            background-position: center;
+            }
+      
+            div.gallery desc {
+              font-weight: bold;
+              align-content: center;
+            }
+      
+            .gallery:hover {
+            vertical-align: middle;
+            border: 1px solid rgb(99, 12, 238);
+            width: 100%;
+            height: auto;
+            align-content: center;
+            font-weight: bold;
+          }
+      
+          ul.icons li {
+            list-style-type: none;
+            width: 30px;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            float: left;
+            align-content: center;
+            text-align: center;
+          }
+      
+          element.style {
+            background-position: left top, center top;
+          }
+            }
+            .jss135 {
+          display: inline-block;
+          margin-right: 8px;
+          margin-bottom: 8px;
+            }
+          .oc-body {
+          margin: 0;
+          color: #000;
+          }
+          .course {
+          list-style-type: none;
+          padding-left: 0;
+          margin: 0;
+          }
+
+/*********************************************************** CULTURE JAPONAISE 2 ************************************************************/
+.bodyculturejap2 {
+  background-image: url(img/culturejaponaise2/fond.jpg);
+}
+
+.h1culturejap2 {
+ text-align: center;
+ color:rgb(0, 0, 0);
+ background-image: url("https://drouotstatic.zonesecure.org/images/perso/full/LOT/62/11461/56.jpg");
+ background-position: center;
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+ font-family: "moalang";
+ display: block;
+ text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px, #ffffff 1px -1px;
+}
+
+.h2culturejap2 {
+text-align: center;
+color:rgb(0, 0, 0);
+background-image: url("https://i.pinimg.com/564x/1d/66/9a/1d669ab10720bfda6f0f748827c66b32.jpg");
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+font-family: "moalang";
+display: block;
+text-shadow: #ffffff 1px 1px, #ffffff -1px 1px, #ffffff -1px -1px, #ffffff 1px -1px;
+}
+
+.h3culturejap2 {
+color: rgba(255, 0, 0, 0.616);
+background-color: white;
+font-style: italic;
+font-weight: bold;
+text-align: center;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.div.gallery, .div.gallery2 {
+  margin: 5px;
+  border: 1px solid rgb(112, 116, 173);
+  width: 180px;
+  height: auto;
+  float: none;
+  margin: auto;
+  align-content: center;
+  vertical-align: middle;
+  background-position: center;
+}
+
+.div.gallery:hover,  .div.gallery2:hover  {
+  border: 1px solid rgb(112, 116, 173);
+}
+
+.div.gallery img, .div.gallery2 img {
+  width: 100%;
+  height: auto;
+}
+
+.div.desc, .div.desc2  {
+  padding: 15px;
+  text-align: center;
+}
+
+  @media only screen and (max-width: 600px) {
+ body {
+  background-image: url(https://i.pinimg.com/564x/ae/b8/b2/aeb8b27f0f6f91b13440ce6b82230513.jpg), url(img/background.jpg);
+  display: block;
+  width: 100%;
+  margin: 0 15 0 15px;
+ }
+  .modeDeVie{
+    color: red;
+    width: 100%;
+    display: block;
+  }
+  .gallery {
+    width: 100%;
+    display: block;
+  }
+}
+.text1, .text2, .text3 {
+  text-align: center;
+}

@@ -1,0 +1,172 @@
+		.menu1
+		{
+			color:rgb(146, 224, 242) !important;
+		}
+		#menu_vertical {
+			position: absolute;
+		z-index: 10000;
+		left:0;
+		display:none;
+		top: 13.5vw;
+		max-width:25%;
+		background: rgba(0, 0, 0, 0.7);
+		max-height: 30vw;
+		line-height: 3em;
+		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+		color:white;
+		}
+		#menu_vertical ul {
+				margin: 0;
+				padding-right:3vw;
+				display:contents;
+			}
+
+				#menu_vertical ul li {
+					font-size: 1.6vw;
+					font-family: fira sans extra condensed;
+					font-weight: bold;
+					list-style:none;
+					margin-right:3vw;
+					margin-left:2vw;
+					
+				}
+				#menu_vertical ul li:hover
+				{
+					color:burlywood;
+				}
+					#menu_vertical ul li a {
+						display: block;
+						color: inherit;
+						text-decoration: none;
+						height: 3em;
+						line-height: 3em;
+						padding: 0 0.5em 0 0.5em;
+						outline: 0;
+					}
+#menu_vertical_bouton
+{
+	background-color: transparent;
+	border: 2px solid black;
+	border-right: 2px dashed burlywood;
+	min-width: 15%;
+	font-size: 1.6vw;
+	font-family: fira sans extra condensed;
+	font-weight: bold;
+	color:burlywood;
+}
+
+	.navbar-toggler-icon {
+		background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=00FBD8')!important;
+		width: 2vw!important;
+		height: 2vw!important;
+	}
+	#header {
+		position: absolute;
+		z-index: 10000;
+		left: 0;
+		top: 6vw;
+		width: 100%;
+		background: rgba(0, 0, 0, 0);
+		height: 6vw;
+		line-height: 3em;
+		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+		color:white;
+	}
+	#header img
+	{
+		height: 8vw;
+		position: absolute;
+		right: 5vw;
+		top: -5.8vw;
+	}
+		
+
+		#header nav {
+			position: absolute;
+			top: 2.3vw;
+			height: 5vw;
+			line-height: 3vw;
+			width:50%;
+			background: rgba(0, 0, 0, 0.7);
+			display:inline-flex;
+			border:1px solid black;
+			
+		}
+
+			#header nav ul {
+				margin: 0;
+				text-align:end;
+				padding-right:3vw;
+				margin-left:auto;
+			}
+
+				#header nav ul li {
+					display: inline-block;
+					font-size: 1.6vw;
+					font-family: fira sans extra condensed;
+					font-weight: bold;
+				}
+				#header nav ul li:hover
+				{
+					color:burlywood;
+				}
+					#header nav ul li a {
+						display: block;
+						color: inherit;
+						text-decoration: none;
+						height: 3em;
+						line-height: 3em;
+						padding: 0 0.5em 0 0.5em;
+						outline: 0;
+					}
+
+		@media screen and (max-width: 1024px)
+		{
+			
+			
+			#menu_vertical_bouton
+			{
+				font-size:3vw;
+			}
+			.navbar-toggler-icon {
+				
+				height:4vw!important;
+				width:4vw!important;
+			}
+			
+			
+			#header nav {
+				width:100%;
+				top:0;
+				height:9vw;
+			}
+			#header
+			{
+				top:0;
+			}
+			#header img
+			{
+				top:11vw;
+				height:10vw;
+			}
+			#header nav ul
+			{
+				text-align:center;
+				padding-right:10vw;
+				margin-right:auto;
+			}
+			#header nav ul li
+			{
+				font-size:3vw;
+			}
+			
+			#menu_vertical{
+				left:0;
+				max-width:45%;
+			}
+			
+			#menu_vertical ul li
+			{
+				font-size:3vw;
+			}
+		}

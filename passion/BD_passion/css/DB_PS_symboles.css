@@ -37,7 +37,7 @@
 /* SCROLL TOP */
 html {
   scroll-behavior: smooth;
-  transition-duration: 2s;
+  transition-duration: 0.5s;
 }
 .scroll{
   color: rgb(51, 51, 51);
@@ -46,6 +46,10 @@ html {
 .scroll:hover{
   text-decoration: none;
   color: rgb(0, 0, 0);
+}
+/*Scroll quand modal ouvert*/
+.modal-open{
+  overflow-y: auto!important;
 }
 /* FLIP BOX */
  /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -155,4 +159,22 @@ html {
   .nav-link{
     background-color: rgb(102, 207, 119);
 }
+}
+@media screen and (max-width: 375px) {
+  .flip-box-front{
+    width: 310px!important;
+    height: 310px!important;
+  }
+  .flip-box-back > img{
+    width: 310px!important;
+    height: 310px!important;
+  }
+  .buttonResponsiveMobile{
+    border: 5px solid white!important;
+  }  
+  .btn-outline-success{
+    color: white!important;
+    font-weight: bold!important;
+  }
+  
 }

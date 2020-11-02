@@ -1,0 +1,98 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    /* FOOTER  */
+    
+    .footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+		background-color: rgba(31, 26, 23, 0.85);
+    }
+    
+    .title {
+        color: #0F8581;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 1em;
+        margin: 30px 10px 10px 10px;
+    }
+    
+    .contact {
+        width: 60px;
+        margin: auto;
+    }
+    
+    .contact a {
+        color: white;
+    }
+    
+    .reseaux-sociaux {
+		justify-content: space-between;
+		margin: 30px 10px 10px 10px;
+		text-align: center;
+		
+    }
+    
+    .reseaux-sociaux img {
+        width: 7%;
+        margin: auto;
+    }
+	
+	.img-fluid{
+		width: 60px;
+		margin-right: 0px;
+		margin-left: 190px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+    /* END FOOTER */
+	
+	/* Media queries */
+    
+    @media only screen and (max-width: 577px) {
+        .footer {
+            display: flex;
+            flex-direction: column;
+        }
+        .title {
+			margin-top: 16px;
+            font-size: 0.8em;
+			text-align: center;
+        }
+        .reseaux-sociaux {
+            width: 200px;
+			margin: auto;
+        }
+        .img-fluid {
+            margin-left: 45%;
+            width: 40px;
+			
+        }
+	
+    }
+	
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+		
+
+        .title {
+			font-size: 1em;
+			margin: 16px 0 16px 0;
+        }
+        .contact {
+            font-size: 1.5em;
+			margin: 16px 0 16px 0;
+        }
+       
+		.img-fluid { 
+            width: 60px;
+			margin: 16px 0 16px 70px;
+		}
+	
+	}
+	
+	/* END Media queries */
