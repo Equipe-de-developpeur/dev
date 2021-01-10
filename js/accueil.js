@@ -22,7 +22,7 @@ ctx.lineWidth = "4";
 ctx.strokeStyle = "#3b5773";
 ctx.rect(8, 8, 290, 140);
 ctx.stroke();
-ctx.clearRect(150, 75, -150, -300);
+ctx.clearRect(150, 75, -300, -100);
 
 //HEBERGEMENT
 
